@@ -34,6 +34,6 @@ Restant a faire
 #. motorisation robot
 #. Continuer robot 2024
 #. gestion coupe de robotique
-#. tuto sphinx / hebergement github et wifi
+#. tuto sphinx 
 #. tuto ros2
 #. ajouter des warning et des infos

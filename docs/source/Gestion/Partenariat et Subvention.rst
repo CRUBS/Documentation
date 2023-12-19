@@ -34,23 +34,33 @@ a la fin du projet presenter un bilan moral et financier
 
 En prensentant un projet au nom du bde nous pouvons ainsi toucher de l’argent pour la participation a la coupe de robotique
 
-1.1.3.1. 2022-2023
+2022-2023
+*********
+
 Nous avons donc deposer un dossier a la fsdie en fin 2022 et nous avons recu le financement courant fevrier 2023. Nous avions presenter un projet necessitant un budget de 3000 € et nous avions demander a la fsdie de financer 40% ce projet soit 1200 €. nous avions en tant que cofinancement l’entreprise Coriolis Composites.
 
 le dossier presenter est ici sur le drive du club : https://drive.google.com/drive/u/0/folders/1kwcVIV-iy9JuzpI_yzn_k8ba-iMOJs_t
 
-1.1.4. Coriolis Composites
+Coriolis Composites
+===================
+
 ../_images/coriolis.png
 Coriolis Composites develops, produces and commercializes robotic cells and value-added software for automated composite additive manufacturing. Its strong expertise in composite technologies allows Coriolis Composites to offer off-the-shelf and tailored solutions to your industry.
 
-1.1.4.1. 2022-2023
+2022-2023
+*********
+
 Nous sommes aller voir l’entreprise en physique a queven en octobre, nous avons prit un rendez vous pour presenter notre projet a un employer qui a ensuite presenter ce projet lors d’un conseil. l’entreprise a accepter de nous accompagner et de financer 40% de notre projets a 3000€. nous avions ainsi notre coffinanceur pour le dossier de la fsdie
 
-1.1.4.2. 2023-2024
+2023-2024
+*********
 Reprise de contact avec notre interlocuteur de l’année precedante, Ivan HARDY. ce dernier nous reoriente vers Matthieu DUPUIS
 
-1.1.5. IGUS
+IGUS
+====
+
 IGUS est une entreprise specialiser dans la realisation de piece mecanique plastique sans graisse.
 
-1.1.5.1. 2023-2024
+2023-2024
+*********
 L’entreprise est venu durant l’ete 2023 pour poser un IGUS corner au sein du club. Ce presentoir est gratuit et renouveller par l’entreprise tous les ans. L’objectif est de travailler avec IGUS afin d’obtenir des echantillon permettant d’ameliorer les robots

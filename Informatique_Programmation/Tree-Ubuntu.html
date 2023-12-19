@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.4. Ubuntu &#8212; Documentation Doc Outil Crubs 1.0.0</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="2.4.1. Introduction" href="Ubuntu.html" />
+    <link rel="prev" title="2.3.1. Introduction" href="Raspbian.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="ubuntu">
+<h1><span class="section-number">2.4. </span>Ubuntu<a class="headerlink" href="#ubuntu" title="Lien permanent vers ce titre">¶</a></h1>
+<a class="with-shadow float-right reference internal image-reference" href="../_images/ubuntu.png"><img alt="../_images/ubuntu.png" class="with-shadow float-right align-center" src="../_images/ubuntu.png" style="width: 180.0px; height: 149.4px;" /></a>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contenu:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Ubuntu.html">2.4.1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ubuntu.html#hotspot-wifi-et-ip-fixes">2.4.2. Hotspot WIFI et IP fixes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Ubuntu.html#commandes-utiles">2.4.2.1. Commandes utiles</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Ubuntu.html#ssh">2.4.3. SSH</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Ubuntu.html#wlan0">2.4.3.1. wlan0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ubuntu.html#eth0">2.4.3.2. eth0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ubuntu.html#depanage">2.4.3.3. depanage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Ubuntu.html#fixer-nom-des-ports-usb">2.4.4. Fixer nom des ports USB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ubuntu.html#autres-commandes">2.4.5. Autres commandes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Ubuntu.html#interface-graphique">2.4.5.1. Interface graphique</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Ubuntu.html#activation-des-interfaces-de-bus">2.4.6. Activation des Interfaces de bus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Ubuntu.html#i2c">2.4.6.1. I2C</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ubuntu.html#spi">2.4.6.2. SPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ubuntu.html#can">2.4.6.3. CAN</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Rédacteur</p></td>
+<td><ul class="simple">
+<li><p>LOUVEAU Nicolas</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>Année d’écriture</p></td>
+<td><ul class="simple">
+<li><p>2022-2023</p></li>
+<li><p>2023-2024</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Dernière modification</p></td>
+<td><ul class="simple">
+<li><p>27/11/2023</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>Statut d’écriture</p></td>
+<td><ul class="simple">
+<li><p>en cours</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Statut de relecture</p></td>
+<td><ul class="simple">
+<li><p>0</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Doc Outil Crubs</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Gestion/Tree.html">1. Gestion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="Tree.html">2. Programmation et Informatique</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Tree-Doc_sphinx.html">2.1. Doc Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-Raspberry_Pi.html">2.2. Raspberry PI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-Raspbian.html">2.3. Raspbian OS</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.4. Ubuntu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-ROS_Arduino.html">2.5. ROS-Arduino</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-ROS2.html">2.6. ROS2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-Arduino.html">2.7. Arduino</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Robot-2023/Tree.html">3. Robots Coupe de France de Robotique 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Robot-2024/Tree.html">4. Robots Coupe de France de Robotique 2024</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Voron-0.1/Tree.html">5. Imprimante 3D Voron 0.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CAO/Tree.html">6. CAO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAO/Tree.html">7. FAO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Banc-de-test/Tree.html">8. Banc de test portatif</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="Tree.html"><span class="section-number">2. </span>Programmation et Informatique</a><ul>
+      <li>Previous: <a href="Raspbian.html" title="Chapitre précédent"><span class="section-number">2.3.1. </span>Introduction</a></li>
+      <li>Next: <a href="Ubuntu.html" title="Chapitre suivant"><span class="section-number">2.4.1. </span>Introduction</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, CRUBS.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/Informatique_Programmation/Tree-Ubuntu.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

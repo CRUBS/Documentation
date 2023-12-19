@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3.7.1. Introduction &#8212; Documentation Doc Outil Crubs 1.0.0</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="4. Robots Coupe de France de Robotique 2024" href="../Robot-2024/Tree.html" />
+    <link rel="prev" title="3.7. Lidar" href="Tree-Lidar.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="introduction">
+<h1><span class="section-number">3.7.1. </span>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Afin de permetre aux robots de reperer leur environnement et principalement les robots adversaires, plusieur solutions existent. Apres avoir observer des resultats trop imprecis avec les prototypes des balises, nous avons du nous rabattratre sur la solution la plus couteuse qui est l’achat de deux lidar. Nous avons selectionner les LD06, ces derniers sont deja utiliser dans le domaine de la robotique et par des equipes de la coupe de france ainsi tous les packages ROS2 existent pour ce dernier</p>
+</div>
+<div class="section" id="cablage">
+<h1><span class="section-number">3.7.2. </span>Cablage<a class="headerlink" href="#cablage" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Un module de conversion ttl vers serie est necessaire afin de connecter le lidar a la pi en USB (ref : CP2102). voici le cablage :</p>
+<ol class="arabic simple">
+<li><p>lidar pin 1 : blanc : tx -&gt; module ttl : rx</p></li>
+<li><p>lidar pin 2 : jaune : pwm -&gt; N/A</p></li>
+<li><p>lidar pin 3 : rouge : gnd -&gt; module ttl : gnd</p></li>
+<li><p>lidar pin 4 : bleu : 5v -&gt; module ttl : 5v</p></li>
+</ol>
+</div>
+<div class="section" id="installation">
+<h1><span class="section-number">3.7.3. </span>Installation<a class="headerlink" href="#installation" title="Lien permanent vers ce titre">¶</a></h1>
+<p>tuto video suivis : <a class="reference external" href="https://www.youtube.com/watch?v=OJWAsV6-0GE">https://www.youtube.com/watch?v=OJWAsV6-0GE</a></p>
+<p>creation d’un workspace avant de telecharger les paquets:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p ldlidar_ros2_ws/src
+<span class="nb">cd</span> ldlidar_ros2_ws/src
+</pre></div>
+</div>
+<p>puis copie d’un repertoire git</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/ldrobotSensorTeam/ldlidar_stl_ros2.git
+<span class="nb">cd</span> ~
+</pre></div>
+</div>
+<p>vous pouvez desormais brancher le lidar et verfier avec la commande suivante le nom de son ports USB</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls /dev/ttyUSB*
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/port_name.png"><img alt="../_images/port_name.png" class="align-center" src="../_images/port_name.png" style="width: 359.0px; height: 37.0px;" /></a>
+<p>noter bien le numero du port USB, dans mon cas /dev/ttyUSB0
+ajoutons lui les droits</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo chmod <span class="m">777</span> /dev/ttyUSB0
+</pre></div>
+</div>
+<p>nous allons maintenant modifier le fichier de launch du lidar afin de lui indiquer le ports sur lequel ce dernier est connecter</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~
+<span class="nb">cd</span> ldlidar_ros2_ws/src/ldlidar_stl_ros2/launch
+nano ld06.launch.py
+</pre></div>
+</div>
+<p>maintenant trouvez la ligne suivante et modifier la en fonction de votre ports USB utiliser par le lidar, dans mon cas le /dev/ttyUSB0  est deja indiquer par defaut a la ligne 45</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;port_name&#39;</span><span class="p">:</span> <span class="s1">&#39;/dev/ttyUSB0&#39;</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/launch_file.png"><img alt="../_images/launch_file.png" class="align-center" src="../_images/launch_file.png" style="width: 411.0px; height: 356.0px;" /></a>
+<p>une fois la modification effectuer pour pouvez fermer et enregistrer le fichier avec ctrl+x puis y</p>
+<p>a l’avanir le nom du port usb utiliser sera fixer en tant que “/dev/Lidar_LD06” (se referer au tuto dans la configuration Ubuntu).</p>
+</div>
+<div class="section" id="lancement-du-lidar">
+<h1><span class="section-number">3.7.4. </span>Lancement du lidar<a class="headerlink" href="#lancement-du-lidar" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Maintenant que le package du lidar est correctement configurer, nous allons pouvoir le faire fonctionner afin de visualiser notre environnemment</p>
+<p>Nous devons build le package puis sourcer les variables d’environnement</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~
+<span class="nb">cd</span> ldlidar_ros2_ws
+colcon build
+<span class="nb">source</span> install/setup.sh
+<span class="nb">source</span> ~/.bashrc
+</pre></div>
+</div>
+<p>nous pouvons enfin lancer le noeud du lidar</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 launch ldlidar_stl_ros2 ld06.launch.py
+</pre></div>
+</div>
+<p>dans un nouveau terminal vous pouvez verifier que le topic /scan est bien present</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 topic list
+</pre></div>
+</div>
+</div>
+<div class="section" id="visualisation-du-lidar">
+<h1><span class="section-number">3.7.5. </span>Visualisation du lidar<a class="headerlink" href="#visualisation-du-lidar" title="Lien permanent vers ce titre">¶</a></h1>
+<p>lancer le lidar comme vu au dessus puis lancement de rviz</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rviz2
+</pre></div>
+</div>
+<p>en bas a gauche de la fenetre cliquer sur Add puis dans le volets qui viens de s’ouvrir choisir LaserScan et Ok</p>
+<p>vous allez maintenant devoir selectionner plusieurs parametre du menu de gauche</p>
+<ol class="arabic simple">
+<li><p>dans Global Options &gt; Fixed Frame choisir base_link</p></li>
+<li><p>dans LaserScan &gt; Topic choisir /scan</p></li>
+</ol>
+<p>des points de couleurs de couleur devrais apparaitre dans l’interface centrale de rviz representant les resultats du lidar</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Doc Outil Crubs</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Gestion/Tree.html">1. Gestion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Informatique_Programmation/Tree.html">2. Programmation et Informatique</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="Tree.html">3. Robots Coupe de France de Robotique 2023</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Tree-Introduction.html">3.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-ArchiRobot1.html">3.2. Architecture Robot 1 PI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-ArchiRobot2.html">3.3. Architecture Robot 2 POU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-Configuration_Ubuntu.html">3.4. Configuration_Ubuntu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-Motorisation.html">3.5. Motorisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-Alimentation.html">3.6. Alimentation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="Tree-Lidar.html">3.7. Lidar</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Robot-2024/Tree.html">4. Robots Coupe de France de Robotique 2024</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Voron-0.1/Tree.html">5. Imprimante 3D Voron 0.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CAO/Tree.html">6. CAO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAO/Tree.html">7. FAO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Banc-de-test/Tree.html">8. Banc de test portatif</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="Tree.html"><span class="section-number">3. </span>Robots Coupe de France de Robotique 2023</a><ul>
+  <li><a href="Tree-Lidar.html"><span class="section-number">3.7. </span>Lidar</a><ul>
+      <li>Previous: <a href="Tree-Lidar.html" title="Chapitre précédent"><span class="section-number">3.7. </span>Lidar</a></li>
+      <li>Next: <a href="../Robot-2024/Tree.html" title="Chapitre suivant"><span class="section-number">4. </span>Robots Coupe de France de Robotique 2024</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, CRUBS.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/Robot-2023/Lidar.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

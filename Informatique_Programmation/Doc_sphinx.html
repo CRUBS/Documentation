@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.1.1. Introduction &#8212; Documentation Doc Outil Crubs 1.0.0</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="2.2. Raspberry PI" href="Tree-Raspberry_Pi.html" />
+    <link rel="prev" title="2.1. Doc Sphinx" href="Tree-Doc_sphinx.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="introduction">
+<h1><span class="section-number">2.1.1. </span>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Cette documentation a ete commencer en 2022. L’objectif est de garder une trace du travail realiser par les membres du CRUBS entre 2021 et 2024. c’est 3 année ont ete fructueuse avec un retour a la coupe de france de robotique et il serait dommage de perdre tout le travail realiser. Cette page a donc pour but de permettre une reprise de cette documentation pour continuer le travail. Cette docuemtation est creer dans un language que l’on appel le RestructuredText.</p>
+<p>la <a class="reference external" href="https://www.sphinx-doc.org/en/master/">documentation sphinx</a> est disponible en ligne et sera utile en cas de besoin</p>
+<p>Info supplementaire sur la syntax du restructuredText : <a class="reference external" href="https://sublime-and-sphinx-guide.readthedocs.io/en/latest/lists.html">https://sublime-and-sphinx-guide.readthedocs.io/en/latest/lists.html</a></p>
+</div>
+<div class="section" id="commencement">
+<h1><span class="section-number">2.1.2. </span>Commencement<a class="headerlink" href="#commencement" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="generation">
+<h2><span class="section-number">2.1.2.1. </span>Generation<a class="headerlink" href="#generation" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+<div class="section" id="ordonancement-des-fichiers-et-des-dossiers">
+<h2><span class="section-number">2.1.2.2. </span>Ordonancement des fichiers et des dossiers<a class="headerlink" href="#ordonancement-des-fichiers-et-des-dossiers" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+<div class="section" id="index">
+<h2><span class="section-number">2.1.2.3. </span>index<a class="headerlink" href="#index" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+<div class="section" id="compilation">
+<h2><span class="section-number">2.1.2.4. </span>compilation<a class="headerlink" href="#compilation" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+</div>
+<div class="section" id="generalites">
+<h1><span class="section-number">2.1.3. </span>Generalités<a class="headerlink" href="#generalites" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="titres">
+<h2><span class="section-number">2.1.3.1. </span>Titres<a class="headerlink" href="#titres" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>ceci est texte
+
+<span class="gh">ici un titre principale</span>
+<span class="gh">=======================</span>
+
+<span class="gh">maintenant un titre secondaire</span>
+<span class="gh">******************************</span>
+
+<span class="gh">et enfin un titre teriaire</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="format-de-texte">
+<h2><span class="section-number">2.1.3.2. </span>Format de texte<a class="headerlink" href="#format-de-texte" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>texte en <span class="ge">*italique*</span>
+</pre></div>
+</div>
+<p>texte en <em>italique</em></p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>texte en <span class="gs">**gras**</span>
+</pre></div>
+</div>
+<p>texte en <strong>italique</strong></p>
+</div>
+<div class="section" id="liste-et-enumeration">
+<h2><span class="section-number">2.1.3.3. </span>Liste et enumeration<a class="headerlink" href="#liste-et-enumeration" title="Lien permanent vers ce titre">¶</a></h2>
+<p>liste numerauté</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="m">#.</span> point 1
+<span class="m">#.</span> point 2
+<span class="m">#.</span> point 3
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>point 1</p></li>
+<li><p>point 2</p></li>
+<li><p>point 3</p></li>
+</ol>
+<p>liste a point</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="m">*</span> point 1
+<span class="m">*</span> point 2
+<span class="m">*</span> point 3
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>point 1</p></li>
+<li><p>point 2</p></li>
+<li><p>point 3</p></li>
+</ul>
+</div>
+<div class="section" id="tableaux">
+<h2><span class="section-number">2.1.3.4. </span>tableaux<a class="headerlink" href="#tableaux" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+<div class="section" id="notes">
+<h2><span class="section-number">2.1.3.5. </span>notes<a class="headerlink" href="#notes" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
+        ceci est une note
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ceci est une note</p>
+</div>
+</div>
+<div class="section" id="warnings">
+<h2><span class="section-number">2.1.3.6. </span>warnings<a class="headerlink" href="#warnings" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">warning</span><span class="p">::</span>
+        ceci est un warning
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>ceci est un warning</p>
+</div>
+</div>
+</div>
+<div class="section" id="ajout-de-media">
+<h1><span class="section-number">2.1.4. </span>Ajout de media<a class="headerlink" href="#ajout-de-media" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Attention les syntaxe sont a respecter imperativement, les tabulation, saut de ligne, espace, etc …</p>
+<div class="section" id="block-de-code">
+<h2><span class="section-number">2.1.4.1. </span>block de code<a class="headerlink" href="#block-de-code" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Exemple d’un block de code a ajouter a la page, vous pouvez evidement remplacer « pyhton » par le language que vous utiliser.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> <span class="k">python</span>
+
+        <span class="kn">import</span> <span class="nn">math</span>
+
+        <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World !&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+                <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="images">
+<h2><span class="section-number">2.1.4.2. </span>images<a class="headerlink" href="#images" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> chemin/de/limage.png
+   <span class="nc">:scale:</span> 20 %
+   <span class="nc">:align:</span> center
+   <span class="nc">:class:</span> with_shadow float_right
+</pre></div>
+</div>
+<p>ici l’image est rescale a 20% de sa taille originale, elle est aligner au centre de la page horizontalement. La ligne class, permet de la placer a droite de la page sans faire descendre le texte ce que j’utilise pour les toctree de chaque sujet</p>
+<p>beaucoup de parametre existe dans la doc</p>
+</div>
+<div class="section" id="hyperlien">
+<h2><span class="section-number">2.1.4.3. </span>hyperlien<a class="headerlink" href="#hyperlien" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="s">`exemple de lien </span><span class="si">&lt;page_web.html&gt;</span><span class="s">`_</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="lien-documentation">
+<h2><span class="section-number">2.1.4.4. </span>lien documentation<a class="headerlink" href="#lien-documentation" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="m">-</span> <span class="na">:doc:</span><span class="nv">`/Chemin/dans/la/doc`</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="herberger-la-documentation-sur-github">
+<h1><span class="section-number">2.1.5. </span>Herberger la documentation sur github<a class="headerlink" href="#herberger-la-documentation-sur-github" title="Lien permanent vers ce titre">¶</a></h1>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Doc Outil Crubs</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Gestion/Tree.html">1. Gestion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="Tree.html">2. Programmation et Informatique</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="Tree-Doc_sphinx.html">2.1. Doc Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-Raspberry_Pi.html">2.2. Raspberry PI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-Raspbian.html">2.3. Raspbian OS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-Ubuntu.html">2.4. Ubuntu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-ROS_Arduino.html">2.5. ROS-Arduino</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-ROS2.html">2.6. ROS2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-Arduino.html">2.7. Arduino</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Robot-2023/Tree.html">3. Robots Coupe de France de Robotique 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Robot-2024/Tree.html">4. Robots Coupe de France de Robotique 2024</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Voron-0.1/Tree.html">5. Imprimante 3D Voron 0.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CAO/Tree.html">6. CAO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAO/Tree.html">7. FAO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Banc-de-test/Tree.html">8. Banc de test portatif</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="Tree.html"><span class="section-number">2. </span>Programmation et Informatique</a><ul>
+  <li><a href="Tree-Doc_sphinx.html"><span class="section-number">2.1. </span>Doc Sphinx</a><ul>
+      <li>Previous: <a href="Tree-Doc_sphinx.html" title="Chapitre précédent"><span class="section-number">2.1. </span>Doc Sphinx</a></li>
+      <li>Next: <a href="Tree-Raspberry_Pi.html" title="Chapitre suivant"><span class="section-number">2.2. </span>Raspberry PI</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, CRUBS.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/Informatique_Programmation/Doc_sphinx.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

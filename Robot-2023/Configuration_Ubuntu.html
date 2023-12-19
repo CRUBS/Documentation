@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3.4.1. Introduction &#8212; Documentation Doc Outil Crubs 1.0.0</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="3.5. Motorisation" href="Tree-Motorisation.html" />
+    <link rel="prev" title="3.4. Configuration_Ubuntu" href="Tree-Configuration_Ubuntu.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="introduction">
+<h1><span class="section-number">3.4.1. </span>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Nous prevoyons d’utiliser ros2 donc beosin de ubuntu 22.04 LTS arm64
+utilisation de pi4 4Go</p>
+</div>
+<div class="section" id="mises-a-jour">
+<h1><span class="section-number">3.4.2. </span>Mises a jour<a class="headerlink" href="#mises-a-jour" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Je recommande d’utiliser l’interface graphqiue pour ces premieres etapes.</p>
+<p>commencons par mettre a jour la pi</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span>
+sudo apt update
+sudo apt-get update
+sudo apt upgrade
+sudo apt-get upgrade
+</pre></div>
+</div>
+<p>ensuite il va falloir installer le service de ssh</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install openssh-client
+sudo apt-get install openssh-server
+sudo systemctl <span class="nb">enable</span> ssh
+sudo systemctl start ssh
+sudo systemctl status ssh
+</pre></div>
+</div>
+<p>verifions que le service ssh c’est bien installer, vous devriez le voir actif comme ci dessous</p>
+<a class="reference internal image-reference" href="../_images/ssh_systemctl1.png"><img alt="../_images/ssh_systemctl1.png" class="align-center" src="../_images/ssh_systemctl1.png" style="width: 810.0px; height: 450.0px;" /></a>
+</div>
+<div class="section" id="hotspot-wifi-et-ip-fixes">
+<h1><span class="section-number">3.4.3. </span>Hotspot WIFI et IP fixes<a class="headerlink" href="#hotspot-wifi-et-ip-fixes" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Nous allons maitenant configurer un hotspot wifi afin de se connecter sur la pi en ssh et de permetre aux robot et balises de communiquer sur un meme reseaux</p>
+<p>installons les outils de reseaux qui ne sont pas encore present apres la mise a jour</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install network-manager
+sudo apt install wpasupplicant
+sudo apt install ifupdown
+</pre></div>
+</div>
+<p>desactivation de cloud init</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo bash -c <span class="s2">&quot;echo &#39;network: {config: disabled}&#39; &gt; /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg&quot;</span>
+</pre></div>
+</div>
+<p>Nous allons maintenant modifier le fichier de configuration du reseau, nous en profiterons pour ajouter des ip fixes pour faciliter les acces en ssh avec ces dernieres.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo nano /etc/netplan/*.yaml
+</pre></div>
+</div>
+<p>puis rentrer le texte suivant en prenant sois de modifier « yourssid » et « yourpassword » par le nom du resau wifi et le mot de passe que vous voulez.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>network:
+  version: <span class="m">2</span>
+  renderer: NetworkManager
+  ethernets:
+    eth0:
+      dhcp4: <span class="nb">true</span>
+      optional: <span class="nb">true</span>
+      addresses: <span class="o">[</span><span class="m">192</span>.168.2.10/24<span class="o">]</span>
+  wifis:
+    wlan0:
+      dhcp4: <span class="nb">true</span>
+      optional: <span class="nb">true</span>
+      addresses: <span class="o">[</span><span class="m">192</span>.168.1.10/24<span class="o">]</span>
+      access-points:
+        <span class="s2">&quot;yourssid&quot;</span>:
+          password: <span class="s2">&quot;yourpassword&quot;</span>
+          mode: ap
+</pre></div>
+</div>
+<p>rappel : ctrl + x puis y pour quitter le fichier</p>
+<p>desactivons l’ipv6 qui ne nous sera pas necessaire, dans le fichier suivant:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo nano /etc/sysctl.conf
+</pre></div>
+</div>
+<p>rajouter la ligne suivante a la fin du fichier :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>net.ipv6.conf.all.disable_ipv6<span class="o">=</span><span class="m">1</span>
+</pre></div>
+</div>
+<p>Avant d’appliquer cette configuration nous devons imperativement oublier tout les reseaux wifi sur laquel la pi c’est connecter. en effet cette derniere ne peut pas emmetre de reseau en meme temps qu’elle est connecter a un autre</p>
+<p>une fois les wifi oublier nous pouvons maintenant appliquer notre configuration et redemarer</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo sysctl -p
+sudo netplan generate
+sudo netplan apply
+sudo reboot
+</pre></div>
+</div>
+<p>un reseau wifi devrais maitenant etre disponible des que la pi aura redemarer</p>
+<a class="reference internal image-reference" href="../_images/wifi3.png"><img alt="../_images/wifi3.png" class="align-center" src="../_images/wifi3.png" style="width: 334.0px; height: 69.0px;" /></a>
+<p>noter que vous pourez toujours connecter la pi a un reseau wifi (par exmple pour l’installation de ros2) mais cette derniere ne pourra pas emmetre son reseau et il faudra penser a lui faire oublier la derniere connection wifi par securite</p>
+<div class="section" id="commandes-utiles">
+<h2><span class="section-number">3.4.3.1. </span>Commandes utiles<a class="headerlink" href="#commandes-utiles" title="Lien permanent vers ce titre">¶</a></h2>
+<p>quelque commande utile concernant le wifi avec le terminal</p>
+<p>desactivation et reactivation du hotspot</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nmcli radio wwan off
+</pre></div>
+</div>
+<p>lister les wifi disponible</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nmcli dev wifi list
+</pre></div>
+</div>
+<p>se connecter a un wifi</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo nmcli dev wifi connect network-ssid password <span class="s2">&quot;network-password&quot;</span>
+</pre></div>
+</div>
+<p>en remplacant network-ssid par le nom du wifi present dans la liste et « network-password » par le mot de passe (garder les «  »)</p>
+<p>pour oublier un reseau
+commencer par trouver votre reseau que vous voulez oublier dans la liste avec la commande suivante</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nmcli -t -f TYPE,UUID,NAME con
+</pre></div>
+</div>
+<p>vous devriez obtenir un resultat du genre : 802-11-wireless:12345678-31d1-51e7-a60e-3a52e52b4495:YourWifiName, copie la suite de chiffre et lettre pour l’ajouter dans la commande si dessous</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo nmcli c delete choosedUUID
+</pre></div>
+</div>
+<p>exemple : sudo nmcli c delete 12345678-31d1-51e7-a60e-3a52e52b4495</p>
+</div>
+</div>
+<div class="section" id="ssh">
+<h1><span class="section-number">3.4.4. </span>SSH<a class="headerlink" href="#ssh" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Pour ce connecter en ssh il faut utiliser la commande suivante sur votre pc:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh utilisateur@addressip
+</pre></div>
+</div>
+<p>a partir de se que nous avons mit en place, nous avons donc:</p>
+<div class="section" id="wlan0">
+<h2><span class="section-number">3.4.4.1. </span>wlan0<a class="headerlink" href="#wlan0" title="Lien permanent vers ce titre">¶</a></h2>
+<p>sur l’interface wlan0 apres s’etre connecter au reseaux wifi emit par la pi
+rentrer la commande suivante dans un terminal</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh crubs@192.168.1.10
+</pre></div>
+</div>
+</div>
+<div class="section" id="eth0">
+<h2><span class="section-number">3.4.4.2. </span>eth0<a class="headerlink" href="#eth0" title="Lien permanent vers ce titre">¶</a></h2>
+<p>sur l’interface eth0 apres avoir connecter un cable ethernet:</p>
+<p>Brancher le cable ethernet puis direction le panneau de controle windows (touche Win puis rechercher panel). Réseau et Internet &gt; Centre de résau et partage &gt; Ethernet &gt; Propriete &gt; cocher puis doucle cliquer Protocole Internet version 4 (TCP/IPv4)</p>
+<a class="reference internal image-reference" href="../_images/setup_eth0_windows_11.png"><img alt="../_images/setup_eth0_windows_11.png" class="align-center" src="../_images/setup_eth0_windows_11.png" style="width: 899.25px; height: 499.75px;" /></a>
+<a class="reference internal image-reference" href="../_images/setup_eth0_windows_21.png"><img alt="../_images/setup_eth0_windows_21.png" class="align-center" src="../_images/setup_eth0_windows_21.png" style="width: 1112.25px; height: 394.75px;" /></a>
+<p>renseigner maintenant une addresse IP sur le meme reseau. ici par exemple 192.168.2.5 avec le meme masque 255.255.255.0.
+Je recommande vivement d’enlever ces changements des la manipulation fini. en effet vous risquez d’avoir de gros probleme des que vous vous connecterez a un autre reseaux ethernet</p>
+<p>enfin vous pouvez retourner dans un terminal pour rentrer la commande suivante</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh crubs@192.168.2.10
+</pre></div>
+</div>
+</div>
+<div class="section" id="depanage">
+<h2><span class="section-number">3.4.4.3. </span>depanage<a class="headerlink" href="#depanage" title="Lien permanent vers ce titre">¶</a></h2>
+<p>l’erreur ci dessous vous empechant de vous connecter en ssh peut subvenir sur votre pc.</p>
+<a class="reference internal image-reference" href="../_images/error_ssh1.png"><img alt="../_images/error_ssh1.png" class="align-center" src="../_images/error_ssh1.png" style="width: 582.75px; height: 209.25px;" /></a>
+<p>Rentrez simplement la commande suivante puis reessayer la connection ssh en acceptant le message avec y.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen -R <span class="m">192</span>.168.2.10
+ssh-keygen -R <span class="m">192</span>.168.1.10
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="fixer-nom-des-ports-usb">
+<h1><span class="section-number">3.4.5. </span>Fixer nom des ports USB<a class="headerlink" href="#fixer-nom-des-ports-usb" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Afin de piloter le robot, deux cartes arduino sont utiliser se qui amene a un probleme d’identification de ces dernieres par les codes. en effet au demarage la pi attribues un nom de paripherique a chaque appareil en fonction de la vitesse de demarage des cartes, ce qui est aleatoire. nous devons donc faire en sorte d’attribuer un nom fixe en fonction de l’appereil connecter.</p>
+<p>commecez par debrancher tout les paripherique de la pi et rallumer</p>
+<p>pour tout cette serie d’etape nous devons passer en super utilisateur</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo su -
+</pre></div>
+</div>
+<p>brancher une premier carte puis identifier son nom actuel:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls -l /dev/ttyACM*
+</pre></div>
+</div>
+<p>une fois le port identifier, ici ttyACM1, nous devons recuperer les données de la carte</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>udevadm info --name<span class="o">=</span>/dev/ttyACM0 --attribute-walk
+</pre></div>
+</div>
+<p>reperer les premier idProduct et idVendor et noter les.</p>
+<p>toujours en tant que super utilisateur nous devons creer une nouvelle regle</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> etc/udev/rules.d/
+sudo nano <span class="m">10</span>-usb-serial.rules
+</pre></div>
+</div>
+<p>ajouter la ligne suivante avec les parametre idVendor et idProduct obtenus</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">SUBSYSTEM</span><span class="o">==</span><span class="s2">&quot;tty&quot;</span>, ATTRS<span class="o">{</span>idVendor<span class="o">}==</span><span class="s2">&quot;2341&quot;</span>, ATTRS<span class="o">{</span>idProduct<span class="o">}==</span><span class="s2">&quot;0042&quot;</span>, <span class="nv">SYMLINK</span><span class="o">+=</span><span class="s2">&quot;NouveauNom&quot;</span>
+</pre></div>
+</div>
+<p>vous pouvez appliquer la regle fraichement creer avec la commande suivante mais je vous recommande de redemarer quand meme</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo udevadm trigger
+sudo reboot
+</pre></div>
+</div>
+<p>apres redemarage vous pouvez verifier de la maniere suivante</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls -l /dev/NouveauNom
+</pre></div>
+</div>
+<p>et vous devriez obtenir le resultat suivant</p>
+<p>vous pouvez appliquer de nouveau la meme methode en changeant la carte a nommer et en suivant les etapes precedante
+tuto suivis : <a class="reference external" href="https://dominoc925.blogspot.com/2019/11/fix-usb-serial-adapters-to-static.html">https://dominoc925.blogspot.com/2019/11/fix-usb-serial-adapters-to-static.html</a></p>
+</div>
+<div class="section" id="ros2-au-demarrage">
+<h1><span class="section-number">3.4.6. </span>ROS2 au demarrage<a class="headerlink" href="#ros2-au-demarrage" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Afin de lancer le middleware ROS2 au demarrage de la PI il est necessaire d’ecrire plusieurs fichier :</p>
+<p>On commence par creer un executable comportant les commandes a executer pour demarrer le robot</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo nano /usr/bin/ros2_launch_script.sh
+</pre></div>
+</div>
+<p>puis on y ajoute les lignes suivante :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="nb">source</span> /opt/ros/humble/setup.bash
+<span class="nb">source</span> /home/crubs/Documents/Robot2/install/setup.bash
+ros2 launch ldlidar_stl_ros2 ld06.launch.py <span class="p">&amp;</span> ros2 launch robot_bringup lancement.launch.py
+</pre></div>
+</div>
+<p>noté qu’ici on lance le launch lancement.launch.py et ld06.launch.py, cette ligne est a adapter celon les besoins.</p>
+<p>Enfin on creer un service nommé « ros2_launch » qui lancera le precedant executable creer</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo nano /etc/systemd/system/ros2_launch.service
+</pre></div>
+</div>
+<p>et on y ajoute les lignes suivantes :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>Unit<span class="o">]</span>
+<span class="nv">Description</span><span class="o">=</span>ROS2 Launch Service
+<span class="nv">After</span><span class="o">=</span>network.target
+
+<span class="o">[</span>Service<span class="o">]</span>
+<span class="nv">ExecStart</span><span class="o">=</span>/usr/bin/ros2_launch_script.sh
+<span class="nv">User</span><span class="o">=</span>crubs
+<span class="nv">Group</span><span class="o">=</span>crubs
+
+<span class="o">[</span>Install<span class="o">]</span>
+<span class="nv">WantedBy</span><span class="o">=</span>multi-user.target
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Doc Outil Crubs</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Gestion/Tree.html">1. Gestion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Informatique_Programmation/Tree.html">2. Programmation et Informatique</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="Tree.html">3. Robots Coupe de France de Robotique 2023</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Tree-Introduction.html">3.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-ArchiRobot1.html">3.2. Architecture Robot 1 PI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-ArchiRobot2.html">3.3. Architecture Robot 2 POU</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="Tree-Configuration_Ubuntu.html">3.4. Configuration_Ubuntu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-Motorisation.html">3.5. Motorisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-Alimentation.html">3.6. Alimentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-Lidar.html">3.7. Lidar</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Robot-2024/Tree.html">4. Robots Coupe de France de Robotique 2024</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Voron-0.1/Tree.html">5. Imprimante 3D Voron 0.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CAO/Tree.html">6. CAO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAO/Tree.html">7. FAO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Banc-de-test/Tree.html">8. Banc de test portatif</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="Tree.html"><span class="section-number">3. </span>Robots Coupe de France de Robotique 2023</a><ul>
+  <li><a href="Tree-Configuration_Ubuntu.html"><span class="section-number">3.4. </span>Configuration_Ubuntu</a><ul>
+      <li>Previous: <a href="Tree-Configuration_Ubuntu.html" title="Chapitre précédent"><span class="section-number">3.4. </span>Configuration_Ubuntu</a></li>
+      <li>Next: <a href="Tree-Motorisation.html" title="Chapitre suivant"><span class="section-number">3.5. </span>Motorisation</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, CRUBS.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/Robot-2023/Configuration_Ubuntu.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

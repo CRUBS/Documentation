@@ -1,0 +1,468 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.6.1. Introduction &#8212; Documentation Doc Outil Crubs 1.0.0</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="2.7. Arduino" href="Tree-Arduino.html" />
+    <link rel="prev" title="2.6. ROS2" href="Tree-ROS2.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="introduction">
+<h1><span class="section-number">2.6.1. </span>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h1>
+<p>ROS 2, ou Robot Operating System 2, est une plateforme open-source conçue pour faciliter le développement de logiciels pour les robots. Il s’agit d’une évolution de ROS, offrant une architecture plus modulaire et des améliorations de performance par rapport à son prédécesseur. ROS 2 a été conçu pour être plus adaptable à un large éventail de matériel et de systèmes d’exploitation, ce qui en fait une solution polyvalente pour la robotique. Il offre des outils et des bibliothèques pour la gestion des communications, la gestion des périphériques, la planification de trajectoires, et bien plus encore, facilitant ainsi le développement de robots et de systèmes robotiques complexes.</p>
+<a class="reference internal image-reference" href="../_images/ROS_topic.gif"><img alt="../_images/ROS_topic.gif" class="align-center" src="../_images/ROS_topic.gif" style="width: 854.0px; height: 480.0px;" /></a>
+<p>La distribution ros2 que nous utilisons est « Humble », dont voici la doc : <a class="reference external" href="https://docs.ros.org/en/humble/Tutorials.html">https://docs.ros.org/en/humble/Tutorials.html</a></p>
+</div>
+<div class="section" id="installation-et-setup">
+<h1><span class="section-number">2.6.2. </span>Installation et Setup<a class="headerlink" href="#installation-et-setup" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Impératif : ROS2 doit être installer sur une version de l’OS Ubuntu 22.0x, une version inférieure telle qu’un Ubuntu 20.0x ne pourra installer ROS2.</p>
+<p>Si vous avez déjà une version de ros ou de ros2 installer sur votre pc nous recommandons de les retirer pour ne pas rencontrer de problème par la suite.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get purge ros-*
+sudo apt-get autoremove
+</pre></div>
+</div>
+<p>Attention il est possible que cette démarche d’installation ne fonctionne plus, à ce moment veuillez vous referez à la documentation de ros2 et mettez à jour cette documentation : <a class="reference external" href="https://docs.ros.org/en/humble/Installation/Alternatives/Ubuntu-Development-Setup.html">https://docs.ros.org/en/humble/Installation/Alternatives/Ubuntu-Development-Setup.html</a></p>
+<p>Commençons par mettre à jour la Pi.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span>
+sudo apt update
+sudo apt-get update
+sudo apt upgrade
+sudo apt-get upgrade
+</pre></div>
+</div>
+<p>Vérifions la configuration en utf-8.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>locale  <span class="c1"># check for UTF-8</span>
+
+sudo apt update <span class="o">&amp;&amp;</span> sudo apt install locales
+sudo locale-gen en_US en_US.UTF-8
+sudo update-locale <span class="nv">LC_ALL</span><span class="o">=</span>en_US.UTF-8 <span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8
+<span class="nb">export</span> <span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8
+
+locale  <span class="c1"># verify settings</span>
+</pre></div>
+</div>
+<p>Téléchargement des dépôts ROS2.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install software-properties-common
+sudo add-apt-repository universe
+
+sudo apt update <span class="o">&amp;&amp;</span> sudo apt install curl -y
+sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+
+
+<span class="c1"># Ajout du repo a la liste des paquets</span>
+<span class="nb">echo</span> <span class="s2">&quot;deb [arch=</span><span class="k">$(</span>dpkg --print-architecture<span class="k">)</span><span class="s2"> signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu </span><span class="k">$(</span>. /etc/os-release <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="nv">$UBUNTU_CODENAME</span><span class="k">)</span><span class="s2"> main&quot;</span> <span class="p">|</span> sudo tee /etc/apt/sources.list.d/ros2.list &gt; /dev/null
+
+sudo apt update
+sudo apt upgrade
+</pre></div>
+</div>
+<p>Installations de ros2 et de ces composantes de navigation, cela peut prendre un bon moment.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install ros-humble-desktop
+sudo apt install ros-humble-ros-base
+sudo apt install ros-dev-tools
+
+<span class="nb">echo</span> <span class="s2">&quot;source /opt/ros/humble/setup.bash&quot;</span> &gt;&gt; .bashrc
+
+<span class="nb">source</span> .bashrc
+
+sudo apt install ros-humble-navigation2 ros-humble-nav2-bringup ros-humble-turtlebot3*
+</pre></div>
+</div>
+<p>Installation et sourçage des variables d’environnement de service dds pour la communication à distance. Cela peut être très long. Une fenêtre vous demandant d’accepter la licence RTI s’ouvrira pendant l’installation, vous devez accepter.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install -q -y rti-connext-dds-6.0.1
+
+<span class="nb">cd</span> /opt/rti.com/rti_connext_dds-6.0.1/resource/scripts <span class="o">&amp;&amp;</span> <span class="nb">source</span> ./rtisetenv_x64Linux4gcc7.3.0.bash<span class="p">;</span> <span class="nb">cd</span> -
+</pre></div>
+</div>
+<p>Installation de colcon pour build les packages.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install python3-colcon-common-extensions
+</pre></div>
+</div>
+<p>Lancement de la demo pour vérifier la bonne installation de ros2.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run demo_nodes_cpp talker
+</pre></div>
+</div>
+<p>Enfin, on peut supprimer les paquets téléchargés déjà installer puis reboot.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt autoremove
+sudo reboot
+</pre></div>
+</div>
+</div>
+<div class="section" id="bien-commencer">
+<h1><span class="section-number">2.6.3. </span>Bien commencer<a class="headerlink" href="#bien-commencer" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="creation-d-un-workspace">
+<h2><span class="section-number">2.6.3.1. </span>Creation d’un workspace<a class="headerlink" href="#creation-d-un-workspace" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Un workspace, littéralement « espace de travail », est un dossier qui contient vos fichiers source (les packages), les install, les logs et les fichiers sources compilés.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p ~/ros2_ws/src
+</pre></div>
+</div>
+<p>Vous créer ici le workspace de nom « ros2_ws » (vous pouvez l’appeler comme vous le souhaitez.) et par la même ocasion le dossier src qui contiendra les packages.</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>attention votre workspace doit etre creer par l’utilisateur et non le root. vous pourvez verifier avec la commande suivante a qui appartient le dossier dans lequel vous vous placer</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ll
+</pre></div>
+</div>
+<p>vous pouvez voir sur l’image ci dessous a qui appatienne les dossiers:</p>
+<p>pour modifier le proprietaire du fichier :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo chown nom_utilisateur nom_dossier
+</pre></div>
+</div>
+<p>maintenant le dossier nous appartient</p>
+</div>
+<div class="section" id="creation-d-un-package">
+<h2><span class="section-number">2.6.3.2. </span>Création d’un package<a class="headerlink" href="#creation-d-un-package" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Afin de séparer les différentes parties d’un projet, il est recommandé de créer plusieurs package dans le dossier src de votre espace de travail.</p>
+<p>On commence par se rendre dans le dossier source de notre workspace précédemment créer.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ros2_ws/src
+</pre></div>
+</div>
+<p>Puis on créer le package.</p>
+<div class="section" id="python">
+<h3><span class="section-number">2.6.3.2.1. </span>python<a class="headerlink" href="#python" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 pkg create --build-type ament_python my_package
+</pre></div>
+</div>
+</div>
+<div class="section" id="c">
+<h3><span class="section-number">2.6.3.2.2. </span>C++<a class="headerlink" href="#c" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 pkg create --build-type ament_cmake my_package
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="programmes-type">
+<h2><span class="section-number">2.6.3.3. </span>Programmes type<a class="headerlink" href="#programmes-type" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Voici un premier nœud type dans lequel on retrouve tout ce qui est nécessaire pour commencer.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rclpy</span> <span class="c1">#lib ro2</span>
+<span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span> <span class="c1">#import de la classe Node</span>
+<span class="kn">from</span> <span class="nn">std_msgs.msg</span> <span class="kn">import</span> <span class="n">String</span> <span class="c1">#import du type de message de topic String, cette ligne doit etre adapté</span>
+
+<span class="c1">#création de notre neoud, ce dernier est un objet herité de la classe Node de la librairie</span>
+<span class="k">class</span> <span class="nc">MyNode</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;my_node&#39;</span><span class="p">)</span> <span class="c1">#nom du noeud en parametre</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">publisher_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="s1">&#39;my_topic&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="c1">#creation d&#39;un publisher (type de message, nom du topic, timeout)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subscription_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="s1">&#39;my_topic&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">callback</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="c1">#creation d&#39;un subscriber (type de message, nom du topic, fonction a appeler, timeout)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">timer_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_timer</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">timer_callback</span><span class="p">)</span> <span class="c1">#creation d&#39;un timer (periode, fonction a appeler)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Node initialized&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+        <span class="c1">#cette fonction est appeler a chaque fois qu&#39;un message est lu</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Received message: &quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="n">msg</span><span class="o">.</span><span class="n">data</span><span class="p">)</span> <span class="c1">#renvoie du message lu</span>
+
+    <span class="k">def</span> <span class="nf">timer_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># cette fonction est appeler a une certaine frequence definis</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">String</span><span class="p">()</span> <span class="c1">#creation de l&#39;objet msg</span>
+        <span class="n">msg</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="s1">&#39;Hello, ROS 2!&#39;</span> <span class="c1">#on remplis le message</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">publisher_</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span> <span class="c1">#on publie sur le publisher</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Published message: &quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="n">msg</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1">#en dessous les lignes suivante sont obligatoire et toujours en fin de programme</span>
+<span class="c1">#creation de la fonction main</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
+    <span class="n">node</span> <span class="o">=</span> <span class="n">MyNode</span><span class="p">()</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="build-d-un-workspace-avec-colcon">
+<h2><span class="section-number">2.6.3.4. </span>Build d’un workspace avec colcon<a class="headerlink" href="#build-d-un-workspace-avec-colcon" title="Lien permanent vers ce titre">¶</a></h2>
+<p>À chaque fois qu’un fichier est modifié, il est nécessaire de compiler de nouveau votre espace de travail. Pour cela, placer vous dans le vôtre workspace puis entrer la commande suivante</p>
+<p>Commencer par vous placer dans votre workspace :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ros2_ws
+</pre></div>
+</div>
+<p>Puis vous pouvez compiler.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon build
+</pre></div>
+</div>
+<p>Vous pouvez aussi build un package en particulier pour gagner du temps</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon build --packages-select my_package
+</pre></div>
+</div>
+<p>Une fois le build terminer il est nécessaire de sourcer de nouveau votre travail. La compilation à créer le fichier sh nécessaire à l’installation.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> install/setup.sh
+</pre></div>
+</div>
+<div class="section" id="alias">
+<h3><span class="section-number">2.6.3.4.1. </span>alias<a class="headerlink" href="#alias" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour simplifier la compilation, je recommande de créer un alias pour ne pas à avoir a lancer les deux ligne précédente, pour cela, nous allons éditer le fichier bashrc qui gère votre terminal.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo nano ~/.bashrc
+</pre></div>
+</div>
+<p>Et y rajouter la ligne suivante à la fin :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">alias</span> <span class="nv">rb</span><span class="o">=</span><span class="s1">&#39;colcon build &amp;&amp; source install/setup.sh&#39;</span>
+</pre></div>
+</div>
+<p>Maintenant en entrant la commande “rb” dans votre terminal, la compilation puis le sourçage s’effectuera.</p>
+</div>
+</div>
+</div>
+<div class="section" id="configuration-des-executables">
+<h1><span class="section-number">2.6.4. </span>Configuration des executables<a class="headerlink" href="#configuration-des-executables" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="id1">
+<h2><span class="section-number">2.6.4.1. </span>Python<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Lors de la creation d’un package un fichier setup.py est automatiquement creer. ce fichier permet de parametrer les executable. cette etape est importante afin d’executer vos scripts.</p>
+<p>Vous deverz rajouter la ligne suivante dans la liste “console_scripts a la fin du fichier:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;my_script = my_package.my_script:main&#39;</span>
+</pre></div>
+</div>
+<p>ce qui signifie :</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>nom_de_l_executable = nom_du_package.nom_du_script:main
+</pre></div>
+</div>
+<p>attention a bien suivre la structure du noeud presenter si dessus</p>
+<p>vous pouvez en ajouter plusieurs tel que:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>from setuptools import setup
+
+<span class="nv">package_name</span> <span class="o">=</span> <span class="s1">&#39;my_package&#39;</span>
+
+setup<span class="o">(</span>
+    <span class="nv">name</span><span class="o">=</span>package_name,
+    <span class="nv">version</span><span class="o">=</span><span class="s1">&#39;0.0.0&#39;</span>,
+    <span class="nv">packages</span><span class="o">=[</span>package_name<span class="o">]</span>,
+    <span class="nv">data_files</span><span class="o">=[</span>
+        <span class="o">(</span><span class="s1">&#39;share/ament_index/resource_index/packages&#39;</span>,
+            <span class="o">[</span><span class="s1">&#39;resource/&#39;</span> + package_name<span class="o">])</span>,
+        <span class="o">(</span><span class="s1">&#39;share/&#39;</span> + package_name, <span class="o">[</span><span class="s1">&#39;package.xml&#39;</span><span class="o">])</span>,
+    <span class="o">]</span>,
+    <span class="nv">install_requires</span><span class="o">=[</span><span class="s1">&#39;setuptools&#39;</span><span class="o">]</span>,
+    <span class="nv">zip_safe</span><span class="o">=</span>True,
+    <span class="nv">maintainer</span><span class="o">=</span><span class="s1">&#39;ubuntu&#39;</span>,
+    <span class="nv">maintainer_email</span><span class="o">=</span><span class="s1">&#39;ubuntu@todo.todo&#39;</span>,
+    <span class="nv">description</span><span class="o">=</span><span class="s1">&#39;TODO: Package description&#39;</span>,
+    <span class="nv">license</span><span class="o">=</span><span class="s1">&#39;TODO: License declaration&#39;</span>,
+    <span class="nv">tests_require</span><span class="o">=[</span><span class="s1">&#39;pytest&#39;</span><span class="o">]</span>,
+    <span class="nv">entry_points</span><span class="o">={</span>
+        <span class="s1">&#39;console_scripts&#39;</span>: <span class="o">[</span>
+                <span class="s1">&#39;exec_1 = my_package.script_1:main&#39;</span>,
+                <span class="s1">&#39;exec_2 = my_package.script_2:main&#39;</span>
+        <span class="o">]</span>,
+    <span class="o">}</span>,
+<span class="o">)</span>
+</pre></div>
+</div>
+<p>ici nous avons ajouter les execetuable exec_1 et exec_2 qui appelle les fonction main de script_1 et script_2</p>
+</div>
+<div class="section" id="id2">
+<h2><span class="section-number">2.6.4.2. </span>C++<a class="headerlink" href="#id2" title="Lien permanent vers ce titre">¶</a></h2>
+<p>na</p>
+</div>
+</div>
+<div class="section" id="configuration-des-launch">
+<h1><span class="section-number">2.6.5. </span>Configuration des Launch<a class="headerlink" href="#configuration-des-launch" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Avant de creer vos fichier launch vous devez creer un dossier specifique dans votre package si ce dernier n’esxiste pas</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir launch
+</pre></div>
+</div>
+<div class="section" id="id3">
+<h2><span class="section-number">2.6.5.1. </span>Python<a class="headerlink" href="#id3" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Voici maintenant un exemple de fichier launch. ici ce dernier lance 3 executable. beaucoup de parametre peuvent etre ajouter.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">launch</span> <span class="kn">import</span> <span class="n">LaunchDescription</span>
+<span class="kn">from</span> <span class="nn">launch_ros.actions</span> <span class="kn">import</span> <span class="n">Node</span>
+
+<span class="k">def</span> <span class="nf">generate_launch_description</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">LaunchDescription</span><span class="p">([</span>
+        <span class="n">Node</span><span class="p">(</span>
+            <span class="n">package</span><span class="o">=</span><span class="s1">&#39;nom_du_package_de_lexecutable&#39;</span><span class="p">,</span>
+            <span class="n">executable</span><span class="o">=</span><span class="s1">&#39;nom_de_lexecutable_a_lancer&#39;</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;nom_pour_vous_y_retrouver_vous_pouvez_remettre_le_nom_de_lexecutable&#39;</span>
+        <span class="p">),</span>
+        <span class="n">Node</span><span class="p">(</span>
+            <span class="n">package</span><span class="o">=</span><span class="s1">&#39;turtlesim&#39;</span><span class="p">,</span>
+            <span class="n">executable</span><span class="o">=</span><span class="s1">&#39;turtlesim_node&#39;</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;sim&#39;</span>
+        <span class="p">),</span>
+        <span class="n">Node</span><span class="p">(</span>
+            <span class="n">package</span><span class="o">=</span><span class="s1">&#39;turtlesim&#39;</span><span class="p">,</span>
+            <span class="n">executable</span><span class="o">=</span><span class="s1">&#39;mimic&#39;</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;mimic&#39;</span><span class="p">,</span>
+            <span class="n">remappings</span><span class="o">=</span><span class="p">[</span>
+                <span class="p">(</span><span class="s1">&#39;/input/pose&#39;</span><span class="p">,</span> <span class="s1">&#39;/turtlesim1/turtle1/pose&#39;</span><span class="p">),</span>
+                <span class="p">(</span><span class="s1">&#39;/output/cmd_vel&#39;</span><span class="p">,</span> <span class="s1">&#39;/turtlesim2/turtle1/cmd_vel&#39;</span><span class="p">),</span>
+            <span class="p">]</span>
+        <span class="p">)</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
+<p>un launch file peut lancer des executable present dans un autre package que celui ou se trouve votre launch file</p>
+</div>
+</div>
+<div class="section" id="commandes-importantes">
+<h1><span class="section-number">2.6.6. </span>Commandes importantes<a class="headerlink" href="#commandes-importantes" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="les-executable">
+<h2><span class="section-number">2.6.6.1. </span>Les executable<a class="headerlink" href="#les-executable" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Un exécutable lance un nœud.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run nom_paquet nom_executable
+</pre></div>
+</div>
+</div>
+<div class="section" id="les-launchs">
+<h2><span class="section-number">2.6.6.2. </span>Les launchs<a class="headerlink" href="#les-launchs" title="Lien permanent vers ce titre">¶</a></h2>
+<p>un launch lance plusieurs executable.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run nom_paquet nom_launch
+</pre></div>
+</div>
+</div>
+<div class="section" id="les-topics">
+<h2><span class="section-number">2.6.6.3. </span>les topics<a class="headerlink" href="#les-topics" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Lister les topics :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 topic list
+</pre></div>
+</div>
+<p>Ecouter un topic</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 topic <span class="nb">echo</span> /nom_du_topic
+</pre></div>
+</div>
+<p>Info sur le topic</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 topic info /nom_du_topic
+</pre></div>
+</div>
+</div>
+<div class="section" id="les-noeuds">
+<h2><span class="section-number">2.6.6.4. </span>les noeuds<a class="headerlink" href="#les-noeuds" title="Lien permanent vers ce titre">¶</a></h2>
+<p>lister les noeud :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 node list
+</pre></div>
+</div>
+</div>
+<div class="section" id="rqt-graph">
+<h2><span class="section-number">2.6.6.5. </span>rqt graph<a class="headerlink" href="#rqt-graph" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Permet de visualiser les liens entre les nœuds et les topics sous forme visuelle.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run rqt_graph rqt_graph
+</pre></div>
+</div>
+</div>
+<div class="section" id="rviz">
+<h2><span class="section-number">2.6.6.6. </span>rviz<a class="headerlink" href="#rviz" title="Lien permanent vers ce titre">¶</a></h2>
+<p>rviz permet de visualiser l’environnement détecté par le robot. Par exemple visualiser les données du lidar</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rviz2
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Doc Outil Crubs</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Gestion/Tree.html">1. Gestion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="Tree.html">2. Programmation et Informatique</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Tree-Doc_sphinx.html">2.1. Doc Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-Raspberry_Pi.html">2.2. Raspberry PI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-Raspbian.html">2.3. Raspbian OS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-Ubuntu.html">2.4. Ubuntu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-ROS_Arduino.html">2.5. ROS-Arduino</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="Tree-ROS2.html">2.6. ROS2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-Arduino.html">2.7. Arduino</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Robot-2023/Tree.html">3. Robots Coupe de France de Robotique 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Robot-2024/Tree.html">4. Robots Coupe de France de Robotique 2024</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Voron-0.1/Tree.html">5. Imprimante 3D Voron 0.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CAO/Tree.html">6. CAO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAO/Tree.html">7. FAO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Banc-de-test/Tree.html">8. Banc de test portatif</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="Tree.html"><span class="section-number">2. </span>Programmation et Informatique</a><ul>
+  <li><a href="Tree-ROS2.html"><span class="section-number">2.6. </span>ROS2</a><ul>
+      <li>Previous: <a href="Tree-ROS2.html" title="Chapitre précédent"><span class="section-number">2.6. </span>ROS2</a></li>
+      <li>Next: <a href="Tree-Arduino.html" title="Chapitre suivant"><span class="section-number">2.7. </span>Arduino</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, CRUBS.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/Informatique_Programmation/ROS2.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

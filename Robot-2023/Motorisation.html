@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3.5.1. Introduction &#8212; Documentation Doc Outil Crubs 1.0.0</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="3.6. Alimentation" href="Tree-Alimentation.html" />
+    <link rel="prev" title="3.5. Motorisation" href="Tree-Motorisation.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="introduction">
+<h1><span class="section-number">3.5.1. </span>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Afin de piloter les roues des robots, nous avons fait le choix d’opter pour des moteur pas à pas (nema 17 2 phases) ces derniers ont la possibilité d’etre facilement utilisable a partir d’une carte arduino equipper d’un shield pouvant accueilleir jusqu’a 5 drivers de moteur pas à pas, le tout forme ce que l’on appelle une RAMPS c’est un systeme beaucoup utilisé dans le dommaine des imprimante 3D.</p>
+<a class="reference internal image-reference" href="../_images/ramps16.png"><img alt="../_images/ramps16.png" class="align-center" src="../_images/ramps16.png" style="width: 647.1px; height: 576.0px;" /></a>
+<div class="section" id="principe-de-fonctionnement-des-nema">
+<h2><span class="section-number">3.5.1.1. </span>Principe de fonctionnement des nema<a class="headerlink" href="#principe-de-fonctionnement-des-nema" title="Lien permanent vers ce titre">¶</a></h2>
+<a class="reference internal image-reference" href="../_images/nema_pos.png"><img alt="../_images/nema_pos.png" class="align-center" src="../_images/nema_pos.png" style="width: 663.2px; height: 299.2px;" /></a>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=jPTvo6boZkk">https://www.youtube.com/watch?v=jPTvo6boZkk</a></p>
+<p><a class="reference external" href="https://www.youtube.com/watch?time_continue=0&amp;v=eyqwLiowZiU&amp;embeds_referring_euri=https%3A%2F%2Faccu-components.com%2F">https://www.youtube.com/watch?time_continue=0&amp;v=eyqwLiowZiU&amp;embeds_referring_euri=https%3A%2F%2Faccu-components.com%2F</a></p>
+</div>
+</div>
+<div class="section" id="pilotage-des-moteurs">
+<h1><span class="section-number">3.5.2. </span>Pilotage des moteurs<a class="headerlink" href="#pilotage-des-moteurs" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Une fois brancher sur une ramps, le nema peuvent facilement etre piloter par l’arduino, le tout est de savoir comment.</p>
+<a class="reference internal image-reference" href="../_images/tmc_2209.png"><img alt="../_images/tmc_2209.png" class="align-center" src="../_images/tmc_2209.png" style="width: 480.0px; height: 480.0px;" /></a>
+<ol class="arabic simple">
+<li><p>EN : le pin enable permet d’alimenter le moteur, en general un niveau 0 allimentera le moteur et un niveau 1 le coupera</p></li>
+<li><p>DIR : ce pin permet simplement de definir le sens du moteur selon le niveau logique du pin</p></li>
+<li><p>STEP : ce pin est le plus important ce dernier va piloter la vitesse de rotation du moteur. a partir de l’envoie d’un signal carre, chaque periode de ce signal permettra d’effectuer un micro pas</p></li>
+<li><p>MS0, MS1, MS2 : ces pins du drivers vont permettre de choisir le nombre de micro pas a ajouter au nema. le controle du niveau logique de ces dernier ne se fait pas par l’arduino mais mais des cavalier qui se trouve sous chaque drivers. pour savoir le nombre de micro pas choisis il faut se refferer a un tableau qui est propre a chaque drivers. placer un cavalier correspond a un niveau logique 1</p></li>
+<li><p>A1, A2, B1, B2: sont les sortie, ces pin vont directement piloter le bobinage des nemas.</p></li>
+</ol>
+<p>la solution qui est la plus simple a mettre en oeuvre reste de creer une boucle qui inverse l’etat du pin de sortie celon une certaine periode tel que :</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span> <span class="nb">setup</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nf">pinMode</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="kr">INPUT</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kr">void</span> <span class="nb">loop</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nf">digitalWrite</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="o">!</span><span class="nf">digitalRead</span><span class="p">(</span><span class="mi">13</span><span class="p">));</span>
+        <span class="nf">delayMicroseconds</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>cette methode a l’avantage d’etre tres simple a mettre en oeuvre mais reste tres gourmant en temps pour un microprocesseur. Ainsi cette methode reste tres bien dans le cas du clignotement d’une led a base frequence mais pour genrer un signal carre a haute frequence cela risque de poser probleme. En effet des que l’on ajoute plusieurs moteur avec cette methode, la vitesse maximale pouvant etre atteinte diminue et un programe plus complet penera a effectuer le reste de ces intruction. Par ailleur il n’est pas non plus garanti que le delay soit respecter et la periode de notre signal de sortie risque d’etre fortement impacter</p>
+<p>Pour eviter cela il existe une autre solution, l’utilisation des interruptions.</p>
+</div>
+<div class="section" id="les-interuptions">
+<h1><span class="section-number">3.5.3. </span>Les interuptions<a class="headerlink" href="#les-interuptions" title="Lien permanent vers ce titre">¶</a></h1>
+<p>afin de piloter de piloter les moteur de maniere tres precise nous llons donc utiliser les interuptions. les interuptions utilise les timers, ces derniers correspondent a un compteur mais ce dernier a l’avantage de ne pas etre impacter par le niveau d’utilisatyion du proceseur. en d’autre therme, meme si le programme est lourd en calcul, le timer continuera de s’incrementer avec la frequence du processeur.</p>
+<p>C’est la que les interuptions interviennent. ce dernier est une fonction qui sera executer au moment un timer aura atteint la valeur voulu. Ainsi, nous allons pouvoir generer un signal carre en inverser l’etat d’un port arduino a chaque fois que le timer atteint la valeur souhaiter, et en faisant varier cette valeur nous allons pouvoir changer la frequence de ce signal carree.</p>
+<p>celon les microprocesseur, les timers sont coder sur un certain nombre d’octet, ainsi lors ce  que l’on veut se servir d’un timer il faut faire attention a ce que notre periode puisse etre compter. il exsite une solution dans le cas ou la valeur maximale ne peut pas etre atteinte : les prescalaire. il faudra donc attendre qu’un premier registre du timer ateigne la valeur du prescalaire avant d’incrementer de un le registre du timer de l’interuption. nous pouvons ainis compter bien plus loin.</p>
+<p>Voici comment mettre en place une interuption sur le timer 3 avec arduino</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="nf">pinMode</span><span class="p">(</span><span class="mi">36</span><span class="p">,</span> <span class="kr">OUTPUT</span><span class="p">);</span> <span class="c1">//creation d&#39;un port temoin pour lire le signal</span>
+<span class="kr">volatile</span> <span class="kr">int</span> <span class="n">period</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">;</span> <span class="c1">//creation de la periode variable</span>
+
+<span class="kr">void</span> <span class="nb">setup</span><span class="p">()</span> <span class="p">{</span>
+
+        <span class="n">noInterrupt</span><span class="p">();</span> <span class="c1">//desactivation des interruptions le temps de travailler dessus</span>
+        <span class="n">TCCR3A</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">//reset du registre A du timer 3</span>
+        <span class="n">TCCR3B</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">//reset du registre B du timer 3</span>
+        <span class="n">TCCR3B</span> <span class="o">|=</span> <span class="n">B00000001</span><span class="p">;</span> <span class="c1">//ecriture dans le registre B du timer 3 pour definir qu&#39;il n&#39;y a pas de prescaler</span>
+        <span class="n">TCNT3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">//remise a 0 du compteur</span>
+        <span class="n">OCR3A</span> <span class="o">=</span> <span class="n">period</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="c1">//creation de la valeur de comparaison</span>
+
+        <span class="n">TIMSK3</span> <span class="o">|=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">OCIE3A</span><span class="p">);</span> <span class="c1">// on allume l&#39;interuption sur la comparaison du timer</span>
+
+        <span class="nf">interrupts</span><span class="p">();</span> <span class="n">et</span> <span class="n">on</span> <span class="n">fini</span> <span class="n">par</span> <span class="n">ralumer</span> <span class="n">les</span> <span class="n">interuptions</span>
+<span class="p">}</span>
+
+<span class="c1">//ici la fonction de l&#39;interuption, elle sera executer a chaque fois que la comparaison entre</span>
+<span class="n">la</span> <span class="n">valeur</span> <span class="n">de</span> <span class="n">OCR3A</span> <span class="n">et</span> <span class="n">celle</span> <span class="n">du</span> <span class="n">timer</span> <span class="n">sera</span> <span class="n">egale</span>
+<span class="nf">ISR</span><span class="p">(</span><span class="n">TIMER3_COMPA_vect</span><span class="p">){</span>
+        <span class="nf">digitalWrite</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="o">!</span><span class="nf">digitalRead</span><span class="p">(</span><span class="mi">13</span><span class="p">));</span> <span class="c1">//inversion du pin 13 pour faire tourner le moteur</span>
+
+        <span class="n">OCR3A</span> <span class="o">=</span> <span class="n">period</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="c1">// on reetabli la valeur de comparaison par securiter</span>
+        <span class="n">TCNT3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">//on remet le compteur a 0</span>
+<span class="p">}</span>
+
+<span class="c1">// la variable period peut etre modifier pendant l&#39;evolution du programme</span>
+<span class="c1">//cela peut se faire directement dans la boucle loop ou dans une fonction via un message ROS ou serie par exemple.</span>
+<span class="c1">//cela se fait en inserant le block suivant:</span>
+<span class="nf">noInterrupts</span><span class="p">();</span>
+<span class="n">period</span> <span class="o">=</span> <span class="n">newval</span><span class="p">;</span>
+<span class="n">OCR3A</span> <span class="o">=</span> <span class="n">period</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+<span class="nf">interrupts</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>il suffit maintenenant de dupliquer la partie presente dans le setup et le l’interruption en ramplacant les 3 par le numero de celui que vous souhaiter utiliser. De cette maniere chaque moteur fonctionera sur son interrution. attention, toute les carte arduino ne possede pas les meme timer dans le cas d’une arduino mega il y a 4 timer 16 bits ainsi le moteur 1er est controler par le timer1, le 2nd par le timer3, le 3eme par le timer4 et enfin le 4eme moteur par le timer5.</p>
+<div class="section" id="confli-servo-h">
+<h2><span class="section-number">3.5.3.1. </span>!!!!!! confli servo.h !!!!!!!<a class="headerlink" href="#confli-servo-h" title="Lien permanent vers ce titre">¶</a></h2>
+<p>la biliotheque servo.h utilise les timer afin de piloter des servomoteurs. a la compilation vous aurez donc une erreur indiquant la sur utilisation d’un vecteur. il est donc neccessaire de modifier la bibliotheque pour que cette derniere n’utilise pas le timer que nous utilisons.
+Pour cela diriger dans votre dossier d’instalation d’Arduino IDE. pour moi arduino-1.8.19. suivez ensuite le chemin suivant:
+arduino-1.8.19 &gt; libraries &gt; Servo &gt; src &gt; avr
+ouvre ensuite le fichier ServoTimers.h, trouvez ensuite les lignes suivantes qui correspondent a votre processeur, ici pour un arduino mega:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Say which 16 bit timers can be used and in what order</span>
+<span class="cp">#if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)</span>
+<span class="cp">#define _useTimer5</span>
+<span class="cp">#define _useTimer1</span>
+<span class="cp">#define _useTimer3</span>
+<span class="cp">#define _useTimer4</span>
+<span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span> <span class="n">_timer1</span><span class="p">,</span> <span class="n">_timer3</span><span class="p">,</span> <span class="n">_timer4</span><span class="p">,</span> <span class="n">_timer5</span><span class="p">,</span> <span class="n">_Nbr_16timers</span> <span class="p">}</span> <span class="n">timer16_Sequence_t</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>nous allons devoir desactiver l’utilisation de notre timer. pour cela on retire tout simplement ce qui mentionne notre timer 3 tel que:
+cette action est evidement aplicable pour tout les timer qui devrais etre utiliser par des interuptions</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Say which 16 bit timers can be used and in what order</span>
+<span class="cp">#if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)</span>
+<span class="cp">#define _useTimer5</span>
+<span class="cp">#define _useTimer1</span>
+<span class="cp">#define _useTimer4</span>
+<span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span> <span class="n">_timer1</span><span class="p">,</span> <span class="n">_timer4</span><span class="p">,</span> <span class="n">_timer5</span><span class="p">,</span> <span class="n">_Nbr_16timers</span> <span class="p">}</span> <span class="n">timer16_Sequence_t</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>nous pouvons maintenant rouvir ArduinoIDE et recompiler sans encombre notre programme</p>
+<p>c’est un mecanisme materiel du mp qui permet au peripherique d’indiquer qu’ils ont besoin d’une ressource (delamotte)</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Doc Outil Crubs</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Gestion/Tree.html">1. Gestion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Informatique_Programmation/Tree.html">2. Programmation et Informatique</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="Tree.html">3. Robots Coupe de France de Robotique 2023</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Tree-Introduction.html">3.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-ArchiRobot1.html">3.2. Architecture Robot 1 PI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-ArchiRobot2.html">3.3. Architecture Robot 2 POU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-Configuration_Ubuntu.html">3.4. Configuration_Ubuntu</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="Tree-Motorisation.html">3.5. Motorisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-Alimentation.html">3.6. Alimentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-Lidar.html">3.7. Lidar</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Robot-2024/Tree.html">4. Robots Coupe de France de Robotique 2024</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Voron-0.1/Tree.html">5. Imprimante 3D Voron 0.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CAO/Tree.html">6. CAO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAO/Tree.html">7. FAO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Banc-de-test/Tree.html">8. Banc de test portatif</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="Tree.html"><span class="section-number">3. </span>Robots Coupe de France de Robotique 2023</a><ul>
+  <li><a href="Tree-Motorisation.html"><span class="section-number">3.5. </span>Motorisation</a><ul>
+      <li>Previous: <a href="Tree-Motorisation.html" title="Chapitre précédent"><span class="section-number">3.5. </span>Motorisation</a></li>
+      <li>Next: <a href="Tree-Alimentation.html" title="Chapitre suivant"><span class="section-number">3.6. </span>Alimentation</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, CRUBS.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/Robot-2023/Motorisation.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4.1.1. Sujet &#8212; Documentation Doc Outil Crubs 1.0.0</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="4.2. Architecture Robot Principal" href="Tree-ArchiRobot.html" />
+    <link rel="prev" title="4.1. Introduction" href="Tree-Introduction.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="sujet">
+<h1><span class="section-number">4.1.1. </span>Sujet<a class="headerlink" href="#sujet" title="Lien permanent vers ce titre">¶</a></h1>
+<p>L’espace, frontière de l’infini vers laquelle voyage notre vaisseau spatial, notre première étape est : Mars. Mais si on arrive à l’heure du déjeuner, comment allons-nous faire pour nous sustenter ? Après tout, les gâteaux de mémère Monique ont tous été mangés l’an passé !</p>
+<p>C’est pourquoi nos robots ont une mission très importante pour la bonne réussite de notre voyage : préparer le terrain et faire des réserves de nourriture ! Ou plus exactement, faire en sorte que la serre autonome déjà mis en place survive assez longtemps pour que nos astronautes puissent récolter des fruits et légumes, et ainsi survivre et continuer leur long voyage !</p>
+<a class="reference internal image-reference" href="../_images/logo_cdfr_2024.png"><img alt="../_images/logo_cdfr_2024.png" class="align-center" src="../_images/logo_cdfr_2024.png" style="width: 240.0px; height: 240.0px;" /></a>
+<p>Génoise, crème, glaçage et sans oublier la fameuse cerise, voilà de quoi cuisiner pour réjouir Grand-mère
+Monique. À vos cuillères !</p>
+<p>Ces missions seront :</p>
+<ol class="arabic simple">
+<li><p>Rempoter les plantes et les mettre en culture,</p></li>
+<li><p>Orienter les panneaux solaires pour que la serre ne perde pas d’énergie,</p></li>
+<li><p>Assurer la pollinisation des plantes</p></li>
+<li><p>Reorienter les panneaux solaires</p></li>
+<li><p>Retourner se recharger les batteries, à la fin de la journée de travail,</p></li>
+<li><p>Anticiper le futur rendement de la récolte.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/plateau_cdfr_2024.png"><img alt="../_images/plateau_cdfr_2024.png" class="align-center" src="../_images/plateau_cdfr_2024.png" style="width: 480.0px; height: 239.20000000000002px;" /></a>
+</div>
+<div class="section" id="choix">
+<h1><span class="section-number">4.1.2. </span>Choix<a class="headerlink" href="#choix" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="generalites">
+<h2><span class="section-number">4.1.2.1. </span>Généralités<a class="headerlink" href="#generalites" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous mettrons la priorité a la realisation du robot principal et finir la navigation autonome avant de commencer a realiser le reste</p>
+</div>
+<div class="section" id="prehenseurs">
+<h2><span class="section-number">4.1.2.2. </span>Prehenseurs<a class="headerlink" href="#prehenseurs" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le robot principal sera equipé d’un elevateur concu une fois. L’objectif et de garder le principe de l’elavateur du prehenseur et de simplement changer l’outil de prehension en s’adaptant au sujet de chaque année. Cet elevateur sera en test sur le robot 1</p>
+</div>
+<div class="section" id="alimentation">
+<h2><span class="section-number">4.1.2.3. </span>Alimentation<a class="headerlink" href="#alimentation" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Carte d’alimentation plus professionelle, cms, mignaturisation, ajout d’un niveau de batterie. Realisation de la carte par une entreprise locale ou en ligne
+- <a class="reference internal" href="../Robot-2023/Tree-Alimentation.html"><span class="doc">Alimentation</span></a></p>
+</div>
+<div class="section" id="motorisation">
+<h2><span class="section-number">4.1.2.4. </span>Motorisation<a class="headerlink" href="#motorisation" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Changement complet de la motorisation du robot, on essaie de passer sur les moteurs DC avec encodeur le tout fournis par Eric SENN. Pour le pilotage, realisation d’une carte par moteur, ce dernier est asservis en vitesse en local grace a l’encodeu. en entree la commande (vitesse et sens) en sortie la nb de rad effectué a une certaine frequence</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../Robot-2023/Tree-Motorisation.html"><span class="doc">Motorisation</span></a></p></li>
+</ul>
+</div>
+<div class="section" id="detection-d-obstacle">
+<h2><span class="section-number">4.1.2.5. </span>Detection d’obstacle<a class="headerlink" href="#detection-d-obstacle" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Concervation du lidar pour la detection des robot ennemis. Nous aportons quelque modificaiton</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../Robot-2023/Tree-Lidar.html"><span class="doc">Lidar</span></a></p></li>
+<li><p><a class="reference internal" href="Tree-Lidar.html"><span class="doc">Amelioration du LIDAR</span></a></p></li>
+</ul>
+<p>Necessite de rajouter un autre moyen de detection proche du sol pour detecter les pami, lasers ? infrarouge ? ultrasons ?</p>
+</div>
+</div>
+<div class="section" id="robot-principal">
+<h1><span class="section-number">4.1.3. </span>Robot Principal<a class="headerlink" href="#robot-principal" title="Lien permanent vers ce titre">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="Tree-ArchiRobot.html"><span class="doc">Architecture Robot Principal</span></a></p></li>
+</ul>
+<div class="section" id="objectifs">
+<h2><span class="section-number">4.1.3.1. </span>Objectifs<a class="headerlink" href="#objectifs" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le robot n°1 sera le principal, il aura pour but de :</p>
+<ol class="arabic simple">
+<li><p>Rammasser les plantes</p></li>
+<li><p>Rammasser les pots</p></li>
+<li><p>Rempoter les plantes dans les pots</p></li>
+<li><p>Reorienter les panneaux solaires</p></li>
+<li><p>Prevoir les futurs recolte (prevision des points)</p></li>
+</ol>
+</div>
+<div class="section" id="architecture">
+<h2><span class="section-number">4.1.3.2. </span>Architecture<a class="headerlink" href="#architecture" title="Lien permanent vers ce titre">¶</a></h2>
+<p>en prevision du sujet de cette année, deux modelisation de robots on ete preparer en avance. une base differentielle et une base holonome a 3 roues. Il nous faut choisir une geometrie entre ces deux dernieres. les ascenseurs ayant prouver leur efficacite, c’est derniers sont pour l’instant concerver sur les bases</p>
+<p>indefini</p>
+</div>
+</div>
+<div class="section" id="pami-petit-actionneur-mobile-independant">
+<h1><span class="section-number">4.1.4. </span>PAMI (Petit actionneur mobile independant)<a class="headerlink" href="#pami-petit-actionneur-mobile-independant" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Les PMI font leur retour a la coupe de france de robotique, maintenant sous le nom de PAMI. c’est dernier sont des modules d’une taille superieur a un cube de 60 mm de cote et une hauteur inferieur a 150 mm.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="Tree-ArchiPAMI.html"><span class="doc">Architecture PAMIs</span></a></p></li>
+</ul>
+<div class="section" id="id1">
+<h2><span class="section-number">4.1.4.1. </span>Objectifs<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Les PAMIs sront secondaire, il auront pour but de :</p>
+<ol class="arabic simple">
+<li><p>Rentrer dans les zone de cultivation</p></li>
+<li><p>Poliniser les plantes</p></li>
+</ol>
+</div>
+<div class="section" id="id2">
+<h2><span class="section-number">4.1.4.2. </span>Architecture<a class="headerlink" href="#id2" title="Lien permanent vers ce titre">¶</a></h2>
+<p>indefini</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Doc Outil Crubs</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Gestion/Tree.html">1. Gestion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Informatique_Programmation/Tree.html">2. Programmation et Informatique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Robot-2023/Tree.html">3. Robots Coupe de France de Robotique 2023</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="Tree.html">4. Robots Coupe de France de Robotique 2024</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="Tree-Introduction.html">4.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-ArchiRobot.html">4.2. Architecture Robot Principal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-ArchiPAMI.html">4.3. Architecture PAMIs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-Alimentation.html">4.4. Alimentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-Motorisation.html">4.5. Motorisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-Lidar.html">4.6. Amelioration du LIDAR</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Voron-0.1/Tree.html">5. Imprimante 3D Voron 0.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CAO/Tree.html">6. CAO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAO/Tree.html">7. FAO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Banc-de-test/Tree.html">8. Banc de test portatif</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="Tree.html"><span class="section-number">4. </span>Robots Coupe de France de Robotique 2024</a><ul>
+  <li><a href="Tree-Introduction.html"><span class="section-number">4.1. </span>Introduction</a><ul>
+      <li>Previous: <a href="Tree-Introduction.html" title="Chapitre précédent"><span class="section-number">4.1. </span>Introduction</a></li>
+      <li>Next: <a href="Tree-ArchiRobot.html" title="Chapitre suivant"><span class="section-number">4.2. </span>Architecture Robot Principal</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, CRUBS.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/Robot-2024/Introduction.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

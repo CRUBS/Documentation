@@ -15,7 +15,10 @@ Historiquement le club recoit de l’argent de l’ecole, ce montant s’eleve a
 
 FSDIE
 =====
+
 ../_images/fsdie.png
+
+
 Le FSDIE, Fonds de Solidarité et de Développement des Initiatives Etudiantes, permet de financer des projets d’associations étudiantes de l’université dans des domaines variés : projets humanitaires, activités culturelles ou sportives, animation du campus…
 
 un calendrier est mit a jour tous les ans avec les date limite de depose des dossier et la date des convention
@@ -45,6 +48,9 @@ Coriolis Composites
 ===================
 
 ../_images/coriolis.png
+
+
+
 Coriolis Composites develops, produces and commercializes robotic cells and value-added software for automated composite additive manufacturing. Its strong expertise in composite technologies allows Coriolis Composites to offer off-the-shelf and tailored solutions to your industry.
 
 2022-2023

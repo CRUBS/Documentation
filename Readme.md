@@ -1,1 +1,1 @@
-Accès : [lien](https://crubs.github.io/Documentation/)
+Accès à la documentation en ligne : [Documentation](https://crubs.github.io/Documentation/)

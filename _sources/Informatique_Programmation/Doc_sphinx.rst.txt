@@ -12,6 +12,24 @@ Info supplementaire sur la syntax du restructuredText : https://sublime-and-sphi
 Commencement
 ============
 
+Installation
+************
+
+Windows
+^^^^^^^
+
+.. code-block:: bash
+
+	pip install -U sphinx
+
+linux (Debian / Ubuntu)
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: bash
+
+	apt-get install python3-sphinx
+
+
 Generation
 **********
 

@@ -31,12 +31,16 @@ Historique
 Éditions 2023-2024
 ******************
 
+- :doc:`/Robot-2024/Tree`
+
 Sujet : Farming mars
 
-objectifs : fiabiliser les réaliser
+objectifs : fiabiliser les réalisations
 
 Éditions 2022-2023
 ******************
+
+- :doc:`/Robot-2023/Tree`
 
 Sujet : The cherry on the cake
 
@@ -44,13 +48,15 @@ objectif : participer aux 5 matchs
 
 Le club s'est rendu pres a la competition. Nous sommes partis a 9 en 4 voitures. Nous avons loger en mobilhome (7 places) dans le camping Le Pavillon https://www.campinglepavillon.com/ a proximité de la roche sur yon. nous sommes partis le mercredi matin et nous sommes repartis le dimanche matin
 
-- match 1 :
-- match 2 :
-- match 3 :
-- match 4 :
-- match 5 :
+92 equippes presentes, 81 homologué
 
-classement : 
+- match 1 : 31 pts
+- match 2 : 39 pts
+- match 3 : 21 pts
+- match 4 : 21 pts
+- match 5 : 51 pts
+
+classement : 43ème 
 
 
 Éditions 2021-2022
@@ -62,9 +68,11 @@ objectif : s'homologuer
 
 le club s'est enfin rendu de nouveau a la competition apres plusieurs année. le robot n'etait pas tout a fait preparer et a reussis de justesse s'homologue et participer a un seul match. les roulement de someil se sont moyenne bien roganiser mais tout le monde s'urvecu et en garde quand meme un bon souvenir de se retour a la competitions
 
-- match 5 :
+? equippes presentes, 66 homologués
 
-classement :
+- match 5 : 35 pts
+
+classement : 64ème
 
 Éditions 2020-2021
 ******************

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2.6.1. Introduction &mdash; Documentation Doc Outil Crubs 1.0.0</title>
+  <title>2.2.1. Introduction &mdash; Documentation Doc Outil Crubs 1.0.0</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="2.7. Arduino" href="Tree-Arduino.html" />
-    <link rel="prev" title="2.6. ROS2" href="Tree-ROS2.html" /> 
+    <link rel="next" title="2.3. Raspberry PI" href="Tree-Raspberry_Pi.html" />
+    <link rel="prev" title="2.2. ROS2" href="Tree-ROS2.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -85,10 +85,11 @@
 <li class="toctree-l2"><a class="reference internal" href="Tree-Doc_sphinx.html">2.1. Doc Sphinx</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="Doc_sphinx.html">2.1.1. Introduction</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Doc_sphinx.html#commencement">2.1.2. Commencement</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="Doc_sphinx.html#generation">2.1.2.1. Generation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Doc_sphinx.html#ordonancement-des-fichiers-et-des-dossiers">2.1.2.2. Ordonancement des fichiers et des dossiers</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Doc_sphinx.html#index">2.1.2.3. index</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Doc_sphinx.html#compilation">2.1.2.4. compilation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Doc_sphinx.html#installation">2.1.2.1. Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Doc_sphinx.html#generation">2.1.2.2. Generation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Doc_sphinx.html#ordonancement-des-fichiers-et-des-dossiers">2.1.2.3. Ordonancement des fichiers et des dossiers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Doc_sphinx.html#index">2.1.2.4. index</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Doc_sphinx.html#compilation">2.1.2.5. compilation</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="Doc_sphinx.html#generalites">2.1.3. Generalités</a><ul>
@@ -110,100 +111,100 @@
 <li class="toctree-l3"><a class="reference internal" href="Doc_sphinx.html#herberger-la-documentation-sur-github">2.1.5. Herberger la documentation sur github</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="Tree-Raspberry_Pi.html">2.2. Raspberry PI</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Raspberry_Pi.html">2.2.1. Introduction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Raspberry_Pi.html#demarage">2.2.2. Demarage</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="Raspberry_Pi.html#installation">2.2.2.1. Installation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Raspberry_Pi.html#mises-a-jours">2.2.2.2. Mises à jours</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="Tree-ROS2.html">2.2. ROS2</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.2.1. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-et-setup">2.2.2. Installation et Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bien-commencer">2.2.3. Bien commencer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creation-d-un-workspace">2.2.3.1. Creation d’un workspace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creation-d-un-package">2.2.3.2. Création d’un package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#programmes-type">2.2.3.3. Programmes type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#build-d-un-workspace-avec-colcon">2.2.3.4. Build d’un workspace avec colcon</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#configuration-des-executables">2.2.4. Configuration des executables</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">2.2.4.1. Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">2.2.4.2. C++</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#configuration-des-launch">2.2.5. Configuration des Launch</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">2.2.5.1. Python</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#commandes-importantes">2.2.6. Commandes importantes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#les-executable">2.2.6.1. Les executable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#les-launchs">2.2.6.2. Les launchs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#les-topics">2.2.6.3. les topics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#les-noeuds">2.2.6.4. les noeuds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rqt-graph">2.2.6.5. rqt graph</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rviz">2.2.6.6. rviz</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="Tree-Raspbian.html">2.3. Raspbian OS</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Raspbian.html">2.3.1. Introduction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Raspbian.html#addresse-ip-statique">2.3.2. Addresse IP statique</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Raspbian.html#hotspot-wifi">2.3.3. Hotspot WIFI</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="Raspbian.html#prerequis">2.3.3.1. Prerequis</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Raspbian.html#addresse-ip-fixe-en-wifi">2.3.3.2. Addresse IP fixe en wifi</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Raspbian.html#configuration-du-server-dhcp">2.3.3.3. Configuration du server DHCP</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Raspbian.html#parametrage-du-reseau-wifi">2.3.3.4. Parametrage du reseau wifi</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Raspbian.html#test">2.3.3.5. Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-Raspberry_Pi.html">2.3. Raspberry PI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Raspberry_Pi.html">2.3.1. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Raspberry_Pi.html#demarage">2.3.2. Demarage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Raspberry_Pi.html#installation">2.3.2.1. Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Raspberry_Pi.html#mises-a-jours">2.3.2.2. Mises à jours</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="Tree-Ubuntu.html">2.4. Ubuntu</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Ubuntu.html">2.4.1. Introduction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Ubuntu.html#hotspot-wifi-et-ip-fixes">2.4.2. Hotspot WIFI et IP fixes</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="Ubuntu.html#commandes-utiles">2.4.2.1. Commandes utiles</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="Ubuntu.html#ssh">2.4.3. SSH</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="Ubuntu.html#wlan0">2.4.3.1. wlan0</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Ubuntu.html#eth0">2.4.3.2. eth0</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Ubuntu.html#depanage">2.4.3.3. depanage</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="Ubuntu.html#fixer-nom-des-ports-usb">2.4.4. Fixer nom des ports USB</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Ubuntu.html#autres-commandes">2.4.5. Autres commandes</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="Ubuntu.html#interface-graphique">2.4.5.1. Interface graphique</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="Ubuntu.html#activation-des-interfaces-de-bus">2.4.6. Activation des Interfaces de bus</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="Ubuntu.html#i2c">2.4.6.1. I2C</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Ubuntu.html#spi">2.4.6.2. SPI</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Ubuntu.html#can">2.4.6.3. CAN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-Raspbian.html">2.4. Raspbian OS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Raspbian.html">2.4.1. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Raspbian.html#addresse-ip-statique">2.4.2. Addresse IP statique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Raspbian.html#hotspot-wifi">2.4.3. Hotspot WIFI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Raspbian.html#prerequis">2.4.3.1. Prerequis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Raspbian.html#addresse-ip-fixe-en-wifi">2.4.3.2. Addresse IP fixe en wifi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Raspbian.html#configuration-du-server-dhcp">2.4.3.3. Configuration du server DHCP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Raspbian.html#parametrage-du-reseau-wifi">2.4.3.4. Parametrage du reseau wifi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Raspbian.html#test">2.4.3.5. Test</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="Tree-ROS_Arduino.html">2.5. ROS-Arduino</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ROS_Arduino.html">2.5.1. Installation et Setup</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ROS_Arduino.html#lancement-d-une-liaison-serie-ros-arduino">2.5.2. Lancement d’une liaison serie ROS - Arduino</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-Ubuntu.html">2.5. Ubuntu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Ubuntu.html">2.5.1. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Ubuntu.html#hotspot-wifi-et-ip-fixes">2.5.2. Hotspot WIFI et IP fixes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Ubuntu.html#commandes-utiles">2.5.2.1. Commandes utiles</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="Tree-ROS2.html">2.6. ROS2</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">2.6.1. Introduction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#installation-et-setup">2.6.2. Installation et Setup</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#bien-commencer">2.6.3. Bien commencer</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#creation-d-un-workspace">2.6.3.1. Creation d’un workspace</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#creation-d-un-package">2.6.3.2. Création d’un package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#programmes-type">2.6.3.3. Programmes type</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#build-d-un-workspace-avec-colcon">2.6.3.4. Build d’un workspace avec colcon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Ubuntu.html#ssh">2.5.3. SSH</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Ubuntu.html#wlan0">2.5.3.1. wlan0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Ubuntu.html#eth0">2.5.3.2. eth0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Ubuntu.html#depanage">2.5.3.3. depanage</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#configuration-des-executables">2.6.4. Configuration des executables</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id1">2.6.4.1. Python</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id2">2.6.4.2. C++</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Ubuntu.html#fixer-nom-des-ports-usb">2.5.4. Fixer nom des ports USB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Ubuntu.html#autres-commandes">2.5.5. Autres commandes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Ubuntu.html#interface-graphique">2.5.5.1. Interface graphique</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#configuration-des-launch">2.6.5. Configuration des Launch</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id3">2.6.5.1. Python</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#commandes-importantes">2.6.6. Commandes importantes</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#les-executable">2.6.6.1. Les executable</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#les-launchs">2.6.6.2. Les launchs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#les-topics">2.6.6.3. les topics</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#les-noeuds">2.6.6.4. les noeuds</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#rqt-graph">2.6.6.5. rqt graph</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#rviz">2.6.6.6. rviz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Ubuntu.html#activation-des-interfaces-de-bus">2.5.6. Activation des Interfaces de bus</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Ubuntu.html#i2c">2.5.6.1. I2C</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Ubuntu.html#spi">2.5.6.2. SPI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Ubuntu.html#can">2.5.6.3. CAN</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="Tree-Arduino.html">2.7. Arduino</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Arduino.html">2.7.1. Arduino</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Arduino.html#liaison-serie">2.7.2. Liaison serie</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="Arduino.html#cote-arduino">2.7.2.1. Cote arduino</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Arduino.html#cote-python">2.7.2.2. Cote python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-Arduino.html">2.6. Arduino</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Arduino.html">2.6.1. Arduino</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Arduino.html#liaison-serie">2.6.2. Liaison serie</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Arduino.html#cote-arduino">2.6.2.1. Cote arduino</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Arduino.html#cote-python">2.6.2.2. Cote python</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="Arduino.html#les-interuptions">2.7.3. Les interuptions</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="Arduino.html#interruptions-sur-un-pin">2.7.3.1. interruptions sur un pin</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Arduino.html#interruptions-sur-timer">2.7.3.2. interruptions sur timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Arduino.html#les-interuptions">2.6.3. Les interuptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Arduino.html#interruptions-sur-un-pin">2.6.3.1. interruptions sur un pin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Arduino.html#interruptions-sur-timer">2.6.3.2. interruptions sur timer</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Tree-ROS_Arduino.html">2.7. ROS-Arduino</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ROS_Arduino.html">2.7.1. Installation et Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ROS_Arduino.html#lancement-d-une-liaison-serie-ros-arduino">2.7.2. Lancement d’une liaison serie ROS - Arduino</a></li>
 </ul>
 </li>
 </ul>
@@ -540,8 +541,8 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="Tree.html"><span class="section-number">2. </span>Programmation et Informatique</a></li>
-          <li class="breadcrumb-item"><a href="Tree-ROS2.html"><span class="section-number">2.6. </span>ROS2</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">2.6.1. </span>Introduction</li>
+          <li class="breadcrumb-item"><a href="Tree-ROS2.html"><span class="section-number">2.2. </span>ROS2</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">2.2.1. </span>Introduction</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/Informatique_Programmation/ROS2.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -552,13 +553,13 @@
            <div itemprop="articleBody">
              
   <div class="section" id="introduction">
-<h1><span class="section-number">2.6.1. </span>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h1>
+<h1><span class="section-number">2.2.1. </span>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h1>
 <p>ROS 2, ou Robot Operating System 2, est une plateforme open-source conçue pour faciliter le développement de logiciels pour les robots. Il s’agit d’une évolution de ROS, offrant une architecture plus modulaire et des améliorations de performance par rapport à son prédécesseur. ROS 2 a été conçu pour être plus adaptable à un large éventail de matériel et de systèmes d’exploitation, ce qui en fait une solution polyvalente pour la robotique. Il offre des outils et des bibliothèques pour la gestion des communications, la gestion des périphériques, la planification de trajectoires, et bien plus encore, facilitant ainsi le développement de robots et de systèmes robotiques complexes.</p>
 <a class="reference internal image-reference" href="../_images/ROS_topic.gif"><img alt="../_images/ROS_topic.gif" class="align-center" src="../_images/ROS_topic.gif" style="width: 854.0px; height: 480.0px;" /></a>
 <p>La distribution ros2 que nous utilisons est « Humble », dont voici la doc : <a class="reference external" href="https://docs.ros.org/en/humble/Tutorials.html">https://docs.ros.org/en/humble/Tutorials.html</a></p>
 </div>
 <div class="section" id="installation-et-setup">
-<h1><span class="section-number">2.6.2. </span>Installation et Setup<a class="headerlink" href="#installation-et-setup" title="Lien permanent vers ce titre">¶</a></h1>
+<h1><span class="section-number">2.2.2. </span>Installation et Setup<a class="headerlink" href="#installation-et-setup" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Impératif : ROS2 doit être installer sur une version de l’OS Ubuntu 22.0x, une version inférieure telle qu’un Ubuntu 20.0x ne pourra installer ROS2.</p>
 <p>Si vous avez déjà une version de ros ou de ros2 installer sur votre pc nous recommandons de les retirer pour ne pas rencontrer de problème par la suite.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get purge ros-*
@@ -633,9 +634,9 @@ sudo reboot
 </div>
 </div>
 <div class="section" id="bien-commencer">
-<h1><span class="section-number">2.6.3. </span>Bien commencer<a class="headerlink" href="#bien-commencer" title="Lien permanent vers ce titre">¶</a></h1>
+<h1><span class="section-number">2.2.3. </span>Bien commencer<a class="headerlink" href="#bien-commencer" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="creation-d-un-workspace">
-<h2><span class="section-number">2.6.3.1. </span>Creation d’un workspace<a class="headerlink" href="#creation-d-un-workspace" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.2.3.1. </span>Creation d’un workspace<a class="headerlink" href="#creation-d-un-workspace" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Un workspace, littéralement « espace de travail », est un dossier qui contient vos fichiers source (les packages), les install, les logs et les fichiers sources compilés.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p ~/ros2_ws/src
 </pre></div>
@@ -656,7 +657,7 @@ sudo reboot
 <p>maintenant le dossier nous appartient</p>
 </div>
 <div class="section" id="creation-d-un-package">
-<h2><span class="section-number">2.6.3.2. </span>Création d’un package<a class="headerlink" href="#creation-d-un-package" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.2.3.2. </span>Création d’un package<a class="headerlink" href="#creation-d-un-package" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Afin de séparer les différentes parties d’un projet, il est recommandé de créer plusieurs package dans le dossier src de votre espace de travail.</p>
 <p>On commence par se rendre dans le dossier source de notre workspace précédemment créer.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ros2_ws/src
@@ -664,20 +665,20 @@ sudo reboot
 </div>
 <p>Puis on créer le package.</p>
 <div class="section" id="python">
-<h3><span class="section-number">2.6.3.2.1. </span>python<a class="headerlink" href="#python" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><span class="section-number">2.2.3.2.1. </span>python<a class="headerlink" href="#python" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 pkg create --build-type ament_python my_package
 </pre></div>
 </div>
 </div>
 <div class="section" id="c">
-<h3><span class="section-number">2.6.3.2.2. </span>C++<a class="headerlink" href="#c" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><span class="section-number">2.2.3.2.2. </span>C++<a class="headerlink" href="#c" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 pkg create --build-type ament_cmake my_package
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="programmes-type">
-<h2><span class="section-number">2.6.3.3. </span>Programmes type<a class="headerlink" href="#programmes-type" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.2.3.3. </span>Programmes type<a class="headerlink" href="#programmes-type" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Voici un premier nœud type dans lequel on retrouve tout ce qui est nécessaire pour commencer.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rclpy</span> <span class="c1">#lib ro2</span>
 <span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span> <span class="c1">#import de la classe Node</span>
@@ -717,7 +718,7 @@ sudo reboot
 </div>
 </div>
 <div class="section" id="build-d-un-workspace-avec-colcon">
-<h2><span class="section-number">2.6.3.4. </span>Build d’un workspace avec colcon<a class="headerlink" href="#build-d-un-workspace-avec-colcon" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.2.3.4. </span>Build d’un workspace avec colcon<a class="headerlink" href="#build-d-un-workspace-avec-colcon" title="Lien permanent vers ce titre">¶</a></h2>
 <p>À chaque fois qu’un fichier est modifié, il est nécessaire de compiler de nouveau votre espace de travail. Pour cela, placer vous dans le vôtre workspace puis entrer la commande suivante</p>
 <p>Commencer par vous placer dans votre workspace :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ros2_ws
@@ -736,7 +737,7 @@ sudo reboot
 </pre></div>
 </div>
 <div class="section" id="alias">
-<h3><span class="section-number">2.6.3.4.1. </span>alias<a class="headerlink" href="#alias" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><span class="section-number">2.2.3.4.1. </span>alias<a class="headerlink" href="#alias" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Pour simplifier la compilation, je recommande de créer un alias pour ne pas à avoir a lancer les deux ligne précédente, pour cela, nous allons éditer le fichier bashrc qui gère votre terminal.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo nano ~/.bashrc
 </pre></div>
@@ -750,9 +751,9 @@ sudo reboot
 </div>
 </div>
 <div class="section" id="configuration-des-executables">
-<h1><span class="section-number">2.6.4. </span>Configuration des executables<a class="headerlink" href="#configuration-des-executables" title="Lien permanent vers ce titre">¶</a></h1>
+<h1><span class="section-number">2.2.4. </span>Configuration des executables<a class="headerlink" href="#configuration-des-executables" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="id1">
-<h2><span class="section-number">2.6.4.1. </span>Python<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.2.4.1. </span>Python<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Lors de la creation d’un package un fichier setup.py est automatiquement creer. ce fichier permet de parametrer les executable. cette etape est importante afin d’executer vos scripts.</p>
 <p>Vous deverz rajouter la ligne suivante dans la liste “console_scripts a la fin du fichier:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;my_script = my_package.my_script:main&#39;</span>
@@ -796,18 +797,18 @@ setup<span class="o">(</span>
 <p>ici nous avons ajouter les execetuable exec_1 et exec_2 qui appelle les fonction main de script_1 et script_2</p>
 </div>
 <div class="section" id="id2">
-<h2><span class="section-number">2.6.4.2. </span>C++<a class="headerlink" href="#id2" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.2.4.2. </span>C++<a class="headerlink" href="#id2" title="Lien permanent vers ce titre">¶</a></h2>
 <p>na</p>
 </div>
 </div>
 <div class="section" id="configuration-des-launch">
-<h1><span class="section-number">2.6.5. </span>Configuration des Launch<a class="headerlink" href="#configuration-des-launch" title="Lien permanent vers ce titre">¶</a></h1>
+<h1><span class="section-number">2.2.5. </span>Configuration des Launch<a class="headerlink" href="#configuration-des-launch" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Avant de creer vos fichier launch vous devez creer un dossier specifique dans votre package si ce dernier n’esxiste pas</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir launch
 </pre></div>
 </div>
 <div class="section" id="id3">
-<h2><span class="section-number">2.6.5.1. </span>Python<a class="headerlink" href="#id3" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.2.5.1. </span>Python<a class="headerlink" href="#id3" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Voici maintenant un exemple de fichier launch. ici ce dernier lance 3 executable. beaucoup de parametre peuvent etre ajouter.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">launch</span> <span class="kn">import</span> <span class="n">LaunchDescription</span>
 <span class="kn">from</span> <span class="nn">launch_ros.actions</span> <span class="kn">import</span> <span class="n">Node</span>
@@ -840,23 +841,23 @@ setup<span class="o">(</span>
 </div>
 </div>
 <div class="section" id="commandes-importantes">
-<h1><span class="section-number">2.6.6. </span>Commandes importantes<a class="headerlink" href="#commandes-importantes" title="Lien permanent vers ce titre">¶</a></h1>
+<h1><span class="section-number">2.2.6. </span>Commandes importantes<a class="headerlink" href="#commandes-importantes" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="les-executable">
-<h2><span class="section-number">2.6.6.1. </span>Les executable<a class="headerlink" href="#les-executable" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.2.6.1. </span>Les executable<a class="headerlink" href="#les-executable" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Un exécutable lance un nœud.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run nom_paquet nom_executable
 </pre></div>
 </div>
 </div>
 <div class="section" id="les-launchs">
-<h2><span class="section-number">2.6.6.2. </span>Les launchs<a class="headerlink" href="#les-launchs" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.2.6.2. </span>Les launchs<a class="headerlink" href="#les-launchs" title="Lien permanent vers ce titre">¶</a></h2>
 <p>un launch lance plusieurs executable.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run nom_paquet nom_launch
 </pre></div>
 </div>
 </div>
 <div class="section" id="les-topics">
-<h2><span class="section-number">2.6.6.3. </span>les topics<a class="headerlink" href="#les-topics" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.2.6.3. </span>les topics<a class="headerlink" href="#les-topics" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Lister les topics :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 topic list
 </pre></div>
@@ -871,21 +872,21 @@ setup<span class="o">(</span>
 </div>
 </div>
 <div class="section" id="les-noeuds">
-<h2><span class="section-number">2.6.6.4. </span>les noeuds<a class="headerlink" href="#les-noeuds" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.2.6.4. </span>les noeuds<a class="headerlink" href="#les-noeuds" title="Lien permanent vers ce titre">¶</a></h2>
 <p>lister les noeud :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 node list
 </pre></div>
 </div>
 </div>
 <div class="section" id="rqt-graph">
-<h2><span class="section-number">2.6.6.5. </span>rqt graph<a class="headerlink" href="#rqt-graph" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.2.6.5. </span>rqt graph<a class="headerlink" href="#rqt-graph" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Permet de visualiser les liens entre les nœuds et les topics sous forme visuelle.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run rqt_graph rqt_graph
 </pre></div>
 </div>
 </div>
 <div class="section" id="rviz">
-<h2><span class="section-number">2.6.6.6. </span>rviz<a class="headerlink" href="#rviz" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.2.6.6. </span>rviz<a class="headerlink" href="#rviz" title="Lien permanent vers ce titre">¶</a></h2>
 <p>rviz permet de visualiser l’environnement détecté par le robot. Par exemple visualiser les données du lidar</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rviz2
 </pre></div>
@@ -897,8 +898,8 @@ setup<span class="o">(</span>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Tree-ROS2.html" class="btn btn-neutral float-left" title="2.6. ROS2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Tree-Arduino.html" class="btn btn-neutral float-right" title="2.7. Arduino" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Tree-ROS2.html" class="btn btn-neutral float-left" title="2.2. ROS2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Tree-Raspberry_Pi.html" class="btn btn-neutral float-right" title="2.3. Raspberry PI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

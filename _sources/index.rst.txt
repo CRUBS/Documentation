@@ -24,17 +24,19 @@ Bienvenue sur la documentation du CRUBS!
    FAO/Tree
    Banc-de-test/Tree
 
+.. note::
 
-Les informations relative a la redaction de cette documentation: 
-- :doc:`/Informatique_Programmation/Tree-Doc_sphinx`
+   Les informations relative a la redaction de cette documentation: 
+   - :doc:`/Informatique_Programmation/Tree-Doc_sphinx`
 
 Restant a faire
 ***************
 
 #. Ajouter comment editer la doc sur son pc (github axel)
-#. motorisation robot
+#. motorisation robot (pcb)
 #. Continuer robot 2024
 #. gestion coupe de robotique
 #. tuto sphinx 
 #. tuto ros2
 #. ajouter des warning et des infos
+#. reparer gestion subvention (images)

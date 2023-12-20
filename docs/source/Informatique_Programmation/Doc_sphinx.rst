@@ -1,30 +1,57 @@
 Introduction
 ============
 
-Cette documentation a ete commencer en 2022. L'objectif est de garder une trace du travail realiser par les membres du CRUBS entre 2021 et 2024. c'est 3 année ont ete fructueuse avec un retour a la coupe de france de robotique et il serait dommage de perdre tout le travail realiser. Cette page a donc pour but de permettre une reprise de cette documentation pour continuer le travail. Cette docuemtation est creer dans un language que l'on appel le RestructuredText.
+Cette documentation a été commencée en 2022. L'objectif est de garder une trace du travail realisé par les membres du CRUBS entre 2021 et 2024. 
+Ces 3 années ont été fructueuses avec un retour à la coupe de france de robotique et il serait dommage de perdre tout le travail réalisé. 
+Cette page a donc pour but de permettre une reprise de cette documentation pour continuer le travail. 
+Cette documentation est créee dans un language que l'on appelle le RestructuredText.
 
 
-la `documentation sphinx <https://www.sphinx-doc.org/en/master/>`_ est disponible en ligne et sera utile en cas de besoin
+La `documentation sphinx <https://www.sphinx-doc.org/en/master/>`_ est disponible en ligne et sera utile en cas de besoin.
 
-Info supplementaire sur la syntax du restructuredText : https://sublime-and-sphinx-guide.readthedocs.io/en/latest/lists.html
+Infos supplementaires sur la syntaxe du restructuredText : https://sublime-and-sphinx-guide.readthedocs.io/en/latest/lists.html
 
+
+Éditer la documentation
+***********************
+
+Pour éditer la documentation, il faut tout d'abord récupérer le code source en tant que contributeur pour pouvoir le repartager.
+Pour cela, créez un compte GitHub si vous n'en avez pas déjà un puis demandez à un membre du bureau de vous ajouter en tant que contributeur.
+Ensuite, je vous invite à installer le logiciel GitHub Desktop qui sert d'interface pour communiquer entre les fichiers locaux et GitHub. 
+Il est aussi tout à fait possible d'utiliser les lignes de commandes.
+Une fois le logiciel installé, vous pouvez vous connecter et aller dans *File > Clone Repository*. 
+Normalement le logiciel devrait vous proposer le dépôt de la documentation. Vous pouvez ainsi le cloner sur votre PC.
+
+Une fois le dépôt cloné, vous pouvez maintenant modifier la documentation.
+
+Pour envoyer vos modifications sur le serveur, rendez-vous sur GitHub Desktop. 
+Dans le panneau de droite, vous avez vos modifications qui sont indiquées, à gauche, les fichiers modifiés, en desssous, 
+une zone de texte pour indiquer un résumé des modifications et en dessous un zone pour développer les modifications, si vous le souhaitez.
+Ensuite cliquez sur *commit to main* puis *push*.
+
+.. image:: images/doc_sphinx/Github_desktop.png
+	:scale: 40 %
+	:align: center
+	:class: with_shadow 
+
+Pour récupérer des modifications depuis le serveur, cliquez sur *Fetch* puis *Pull*, sur le bouton en haut de la fenêtre.
 
 Commencement
 ============
 
-Generation
+Génération
 **********
 
 Ordonancement des fichiers et des dossiers
 ******************************************
 
-index
+Index
 *****
 
-compilation
+Compilation
 ***********
 
-Generalités
+Généralités
 ===========
 
 Titres
@@ -40,7 +67,7 @@ Titres
 	maintenant un titre secondaire
 	******************************
 
-	et enfin un titre teriaire
+	et enfin un titre tertiaire
 	^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Format de texte
@@ -56,13 +83,13 @@ texte en *italique*
 
 	texte en **gras**
 
-texte en **italique**
+texte en **gras**
 
 
-Liste et enumeration
+Liste et énumération
 ********************
 
-liste numerauté
+Liste numerotée
 
 .. code-block:: rst
 
@@ -74,7 +101,7 @@ liste numerauté
 #. point 2
 #. point 3
 
-liste a point
+Liste à points
 
 .. code-block:: rst
 
@@ -86,10 +113,10 @@ liste a point
 * point 2
 * point 3
 
-tableaux
+Tableaux
 ********
 
-notes
+Notes
 *****
 
 .. code-block:: rst
@@ -101,7 +128,7 @@ notes
 	ceci est une note
 
 
-warnings
+Warnings
 ********
 
 .. code-block:: rst
@@ -114,15 +141,15 @@ warnings
 
 
 
-Ajout de media
-==============
+Ajout de médias
+===============
 
-Attention les syntaxe sont a respecter imperativement, les tabulation, saut de ligne, espace, etc ...
+Attention les syntaxes sont à respecter imperativement, les tabulations, sauts de ligne, espaces, etc ...
 
-block de code
-*************
+Bloc de code
+************
 
-Exemple d'un block de code a ajouter a la page, vous pouvez evidement remplacer "pyhton" par le language que vous utiliser. 
+Exemple d'un bloc de code à ajouter à la page, vous pouvez evidement remplacer "python" par le langage que vous utilisez. 
 
 .. code-block:: rst
 
@@ -136,7 +163,7 @@ Exemple d'un block de code a ajouter a la page, vous pouvez evidement remplacer 
 		if __name__ == "__main__":
 			main()
 
-images
+Images
 ******
 
 .. code-block:: rst
@@ -146,12 +173,13 @@ images
 	   :align: center
 	   :class: with_shadow float_right
 
-ici l'image est rescale a 20% de sa taille originale, elle est aligner au centre de la page horizontalement. La ligne class, permet de la placer a droite de la page sans faire descendre le texte ce que j'utilise pour les toctree de chaque sujet
+Ici l'image est redimensionnée à 20% de sa taille originale, elle est alignée au centre de la page horizontalement. 
+La ligne class, permet de la placer à droite de la page sans faire descendre le texte, ce que j'utilise pour les toctree de chaque sujet.
 
-beaucoup de parametre existe dans la doc
+Beaucoup de paramètres existent dans la doc.
 
 
-hyperlien
+Hyperlien
 *********
 
 .. code-block:: rst
@@ -159,16 +187,18 @@ hyperlien
 	`exemple de lien <page_web.html>`_
 
 
-lien documentation
-******************
+Lien dans la documentation
+**************************
 
 .. code-block:: rst
 
 	- :doc:`/Chemin/dans/la/doc`
 
 
-Herberger la documentation sur github
-=====================================
+
+
+
+
 
 
 

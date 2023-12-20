@@ -31,6 +31,7 @@ Les informations relative a la redaction de cette documentation:
 Restant a faire
 ***************
 
+#. Ajouter comment editer la doc sur son pc (github axel)
 #. motorisation robot
 #. Continuer robot 2024
 #. gestion coupe de robotique

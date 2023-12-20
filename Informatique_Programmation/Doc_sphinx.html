@@ -83,32 +83,34 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="Tree.html">2. Programmation et Informatique</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="Tree-Doc_sphinx.html">2.1. Doc Sphinx</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">2.1.1. Introduction</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.1.1. Introduction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#editer-la-documentation">2.1.1.1. Éditer la documentation</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#commencement">2.1.2. Commencement</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#installation">2.1.2.1. Installation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#generation">2.1.2.2. Generation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#generation">2.1.2.2. Génération</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ordonancement-des-fichiers-et-des-dossiers">2.1.2.3. Ordonancement des fichiers et des dossiers</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#index">2.1.2.4. index</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#compilation">2.1.2.5. compilation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#index">2.1.2.4. Index</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#compilation">2.1.2.5. Compilation</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#generalites">2.1.3. Generalités</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#generalites">2.1.3. Généralités</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#titres">2.1.3.1. Titres</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#format-de-texte">2.1.3.2. Format de texte</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#liste-et-enumeration">2.1.3.3. Liste et enumeration</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tableaux">2.1.3.4. tableaux</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#notes">2.1.3.5. notes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#warnings">2.1.3.6. warnings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#liste-et-enumeration">2.1.3.3. Liste et énumération</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tableaux">2.1.3.4. Tableaux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#notes">2.1.3.5. Notes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#warnings">2.1.3.6. Warnings</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#ajout-de-media">2.1.4. Ajout de media</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#block-de-code">2.1.4.1. block de code</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#images">2.1.4.2. images</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#hyperlien">2.1.4.3. hyperlien</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#lien-documentation">2.1.4.4. lien documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ajout-de-medias">2.1.4. Ajout de médias</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bloc-de-code">2.1.4.1. Bloc de code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#images">2.1.4.2. Images</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hyperlien">2.1.4.3. Hyperlien</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lien-dans-la-documentation">2.1.4.4. Lien dans la documentation</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#herberger-la-documentation-sur-github">2.1.5. Herberger la documentation sur github</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="Tree-ROS2.html">2.2. ROS2</a><ul>
@@ -554,9 +556,28 @@
              
   <div class="section" id="introduction">
 <h1><span class="section-number">2.1.1. </span>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Cette documentation a ete commencer en 2022. L’objectif est de garder une trace du travail realiser par les membres du CRUBS entre 2021 et 2024. c’est 3 année ont ete fructueuse avec un retour a la coupe de france de robotique et il serait dommage de perdre tout le travail realiser. Cette page a donc pour but de permettre une reprise de cette documentation pour continuer le travail. Cette docuemtation est creer dans un language que l’on appel le RestructuredText.</p>
-<p>la <a class="reference external" href="https://www.sphinx-doc.org/en/master/">documentation sphinx</a> est disponible en ligne et sera utile en cas de besoin</p>
-<p>Info supplementaire sur la syntax du restructuredText : <a class="reference external" href="https://sublime-and-sphinx-guide.readthedocs.io/en/latest/lists.html">https://sublime-and-sphinx-guide.readthedocs.io/en/latest/lists.html</a></p>
+<p>Cette documentation a été commencée en 2022. L’objectif est de garder une trace du travail realisé par les membres du CRUBS entre 2021 et 2024.
+Ces 3 années ont été fructueuses avec un retour à la coupe de france de robotique et il serait dommage de perdre tout le travail réalisé.
+Cette page a donc pour but de permettre une reprise de cette documentation pour continuer le travail.
+Cette documentation est créee dans un language que l’on appelle le RestructuredText.</p>
+<p>La <a class="reference external" href="https://www.sphinx-doc.org/en/master/">documentation sphinx</a> est disponible en ligne et sera utile en cas de besoin.</p>
+<p>Infos supplementaires sur la syntaxe du restructuredText : <a class="reference external" href="https://sublime-and-sphinx-guide.readthedocs.io/en/latest/lists.html">https://sublime-and-sphinx-guide.readthedocs.io/en/latest/lists.html</a></p>
+<div class="section" id="editer-la-documentation">
+<h2><span class="section-number">2.1.1.1. </span>Éditer la documentation<a class="headerlink" href="#editer-la-documentation" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour éditer la documentation, il faut tout d’abord récupérer le code source en tant que contributeur pour pouvoir le repartager.
+Pour cela, créez un compte GitHub si vous n’en avez pas déjà un puis demandez à un membre du bureau de vous ajouter en tant que contributeur.
+Ensuite, je vous invite à installer le logiciel GitHub Desktop qui sert d’interface pour communiquer entre les fichiers locaux et GitHub.
+Il est aussi tout à fait possible d’utiliser les lignes de commandes.
+Une fois le logiciel installé, vous pouvez vous connecter et aller dans <em>File &gt; Clone Repository</em>.
+Normalement le logiciel devrait vous proposer le dépôt de la documentation. Vous pouvez ainsi le cloner sur votre PC.</p>
+<p>Une fois le dépôt cloné, vous pouvez maintenant modifier la documentation.</p>
+<p>Pour envoyer vos modifications sur le serveur, rendez-vous sur GitHub Desktop.
+Dans le panneau de droite, vous avez vos modifications qui sont indiquées, à gauche, les fichiers modifiés, en desssous,
+une zone de texte pour indiquer un résumé des modifications et en dessous un zone pour développer les modifications, si vous le souhaitez.
+Ensuite cliquez sur <em>commit to main</em> puis <em>push</em>.</p>
+<a class="with-shadow reference internal image-reference" href="../_images/Github_desktop.png"><img alt="../_images/Github_desktop.png" class="with-shadow align-center" src="../_images/Github_desktop.png" style="width: 857.6px; height: 617.6px;" /></a>
+<p>Pour récupérer des modifications depuis le serveur, cliquez sur <em>Fetch</em> puis <em>Pull</em>, sur le bouton en haut de la fenêtre.</p>
+</div>
 </div>
 <div class="section" id="commencement">
 <h1><span class="section-number">2.1.2. </span>Commencement<a class="headerlink" href="#commencement" title="Lien permanent vers ce titre">¶</a></h1>
@@ -576,20 +597,20 @@
 </div>
 </div>
 <div class="section" id="generation">
-<h2><span class="section-number">2.1.2.2. </span>Generation<a class="headerlink" href="#generation" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.1.2.2. </span>Génération<a class="headerlink" href="#generation" title="Lien permanent vers ce titre">¶</a></h2>
 </div>
 <div class="section" id="ordonancement-des-fichiers-et-des-dossiers">
 <h2><span class="section-number">2.1.2.3. </span>Ordonancement des fichiers et des dossiers<a class="headerlink" href="#ordonancement-des-fichiers-et-des-dossiers" title="Lien permanent vers ce titre">¶</a></h2>
 </div>
 <div class="section" id="index">
-<h2><span class="section-number">2.1.2.4. </span>index<a class="headerlink" href="#index" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.1.2.4. </span>Index<a class="headerlink" href="#index" title="Lien permanent vers ce titre">¶</a></h2>
 </div>
 <div class="section" id="compilation">
-<h2><span class="section-number">2.1.2.5. </span>compilation<a class="headerlink" href="#compilation" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.1.2.5. </span>Compilation<a class="headerlink" href="#compilation" title="Lien permanent vers ce titre">¶</a></h2>
 </div>
 </div>
 <div class="section" id="generalites">
-<h1><span class="section-number">2.1.3. </span>Generalités<a class="headerlink" href="#generalites" title="Lien permanent vers ce titre">¶</a></h1>
+<h1><span class="section-number">2.1.3. </span>Généralités<a class="headerlink" href="#generalites" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="titres">
 <h2><span class="section-number">2.1.3.1. </span>Titres<a class="headerlink" href="#titres" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>ceci est texte
@@ -600,7 +621,7 @@
 <span class="gh">maintenant un titre secondaire</span>
 <span class="gh">******************************</span>
 
-<span class="gh">et enfin un titre teriaire</span>
+<span class="gh">et enfin un titre tertiaire</span>
 <span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
 </pre></div>
 </div>
@@ -614,11 +635,11 @@
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>texte en <span class="gs">**gras**</span>
 </pre></div>
 </div>
-<p>texte en <strong>italique</strong></p>
+<p>texte en <strong>gras</strong></p>
 </div>
 <div class="section" id="liste-et-enumeration">
-<h2><span class="section-number">2.1.3.3. </span>Liste et enumeration<a class="headerlink" href="#liste-et-enumeration" title="Lien permanent vers ce titre">¶</a></h2>
-<p>liste numerauté</p>
+<h2><span class="section-number">2.1.3.3. </span>Liste et énumération<a class="headerlink" href="#liste-et-enumeration" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Liste numerotée</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="m">#.</span> point 1
 <span class="m">#.</span> point 2
 <span class="m">#.</span> point 3
@@ -629,7 +650,7 @@
 <li><p>point 2</p></li>
 <li><p>point 3</p></li>
 </ol>
-<p>liste a point</p>
+<p>Liste à points</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="m">*</span> point 1
 <span class="m">*</span> point 2
 <span class="m">*</span> point 3
@@ -642,10 +663,10 @@
 </ul>
 </div>
 <div class="section" id="tableaux">
-<h2><span class="section-number">2.1.3.4. </span>tableaux<a class="headerlink" href="#tableaux" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.1.3.4. </span>Tableaux<a class="headerlink" href="#tableaux" title="Lien permanent vers ce titre">¶</a></h2>
 </div>
 <div class="section" id="notes">
-<h2><span class="section-number">2.1.3.5. </span>notes<a class="headerlink" href="#notes" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.1.3.5. </span>Notes<a class="headerlink" href="#notes" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
         ceci est une note
 </pre></div>
@@ -656,7 +677,7 @@
 </div>
 </div>
 <div class="section" id="warnings">
-<h2><span class="section-number">2.1.3.6. </span>warnings<a class="headerlink" href="#warnings" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.1.3.6. </span>Warnings<a class="headerlink" href="#warnings" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">warning</span><span class="p">::</span>
         ceci est un warning
 </pre></div>
@@ -667,12 +688,12 @@
 </div>
 </div>
 </div>
-<div class="section" id="ajout-de-media">
-<h1><span class="section-number">2.1.4. </span>Ajout de media<a class="headerlink" href="#ajout-de-media" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Attention les syntaxe sont a respecter imperativement, les tabulation, saut de ligne, espace, etc …</p>
-<div class="section" id="block-de-code">
-<h2><span class="section-number">2.1.4.1. </span>block de code<a class="headerlink" href="#block-de-code" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Exemple d’un block de code a ajouter a la page, vous pouvez evidement remplacer « pyhton » par le language que vous utiliser.</p>
+<div class="section" id="ajout-de-medias">
+<h1><span class="section-number">2.1.4. </span>Ajout de médias<a class="headerlink" href="#ajout-de-medias" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Attention les syntaxes sont à respecter imperativement, les tabulations, sauts de ligne, espaces, etc …</p>
+<div class="section" id="bloc-de-code">
+<h2><span class="section-number">2.1.4.1. </span>Bloc de code<a class="headerlink" href="#bloc-de-code" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Exemple d’un bloc de code à ajouter à la page, vous pouvez evidement remplacer « python » par le langage que vous utilisez.</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> <span class="k">python</span>
 
         <span class="kn">import</span> <span class="nn">math</span>
@@ -686,31 +707,29 @@
 </div>
 </div>
 <div class="section" id="images">
-<h2><span class="section-number">2.1.4.2. </span>images<a class="headerlink" href="#images" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.1.4.2. </span>Images<a class="headerlink" href="#images" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> chemin/de/limage.png
    <span class="nc">:scale:</span> 20 %
    <span class="nc">:align:</span> center
    <span class="nc">:class:</span> with_shadow float_right
 </pre></div>
 </div>
-<p>ici l’image est rescale a 20% de sa taille originale, elle est aligner au centre de la page horizontalement. La ligne class, permet de la placer a droite de la page sans faire descendre le texte ce que j’utilise pour les toctree de chaque sujet</p>
-<p>beaucoup de parametre existe dans la doc</p>
+<p>Ici l’image est redimensionnée à 20% de sa taille originale, elle est alignée au centre de la page horizontalement.
+La ligne class, permet de la placer à droite de la page sans faire descendre le texte, ce que j’utilise pour les toctree de chaque sujet.</p>
+<p>Beaucoup de paramètres existent dans la doc.</p>
 </div>
 <div class="section" id="hyperlien">
-<h2><span class="section-number">2.1.4.3. </span>hyperlien<a class="headerlink" href="#hyperlien" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.1.4.3. </span>Hyperlien<a class="headerlink" href="#hyperlien" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="s">`exemple de lien </span><span class="si">&lt;page_web.html&gt;</span><span class="s">`_</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="lien-documentation">
-<h2><span class="section-number">2.1.4.4. </span>lien documentation<a class="headerlink" href="#lien-documentation" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="lien-dans-la-documentation">
+<h2><span class="section-number">2.1.4.4. </span>Lien dans la documentation<a class="headerlink" href="#lien-dans-la-documentation" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="m">-</span> <span class="na">:doc:</span><span class="nv">`/Chemin/dans/la/doc`</span>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="herberger-la-documentation-sur-github">
-<h1><span class="section-number">2.1.5. </span>Herberger la documentation sur github<a class="headerlink" href="#herberger-la-documentation-sur-github" title="Lien permanent vers ce titre">¶</a></h1>
 </div>
 
 

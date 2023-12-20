@@ -39,8 +39,6 @@ Pour récupérer des modifications depuis le serveur, cliquez sur *Fetch* puis *
 Commencement
 ============
 
-Génération
-=======
 Installation
 ************
 
@@ -59,7 +57,7 @@ linux (Debian / Ubuntu)
 	apt-get install python3-sphinx
 
 
-Generation
+Génération
 **********
 
 Ordonancement des fichiers et des dossiers

@@ -40,6 +40,26 @@ Commencement
 ============
 
 Génération
+=======
+Installation
+************
+
+Windows
+^^^^^^^
+
+.. code-block:: bash
+
+	pip install -U sphinx
+
+linux (Debian / Ubuntu)
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: bash
+
+	apt-get install python3-sphinx
+
+
+Generation
 **********
 
 Ordonancement des fichiers et des dossiers

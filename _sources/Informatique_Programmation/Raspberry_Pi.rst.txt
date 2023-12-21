@@ -27,7 +27,7 @@ Mises à jours
 Je recommande d'utiliser l'interface graphqiue pour ces premieres etapes.
 
 
-commencons par mettre a jour la pi
+Commencons par mettre a jour la pi
 
 .. code-block:: bash
 	
@@ -37,7 +37,7 @@ commencons par mettre a jour la pi
 	sudo apt upgrade
 	sudo apt-get upgrade
 
-ensuite il va falloir installer le service de ssh
+Ensuite il va falloir installer le service de ssh
 
 .. code-block:: bash
 
@@ -47,7 +47,7 @@ ensuite il va falloir installer le service de ssh
 	sudo systemctl start ssh
 	sudo systemctl status ssh
 
-verifions que le service ssh c'est bien installer, vous devriez le voir actif comme ci dessous
+Verifions que le service ssh c'est bien installer, vous devriez le voir actif comme ci dessous
 
 .. image:: images/raspi/ssh_systemctl.png
    :scale: 75 %

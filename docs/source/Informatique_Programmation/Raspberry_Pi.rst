@@ -1,7 +1,7 @@
 Introduction
 ============
-
-Les Raspberry Pi sont des "mini ordinateur". Ces dernier peuvent recevoir different OS d'une declinaison linux telle que `Ubuntu 22.04 <https://releases.ubuntu.com/jammy/>` que nous utilisons pour les robots. Une distribution plus legere est RaspiOS aussi appeler Raspbian.
+ <https
+Les Raspberry Pi sont des "mini ordinateur". Ces dernier peuvent recevoir different OS d'une declinaison linux telle que `Ubuntu 22.04://releases.ubuntu.com/jammy/>`_ que nous utilisons pour les robots. Une distribution plus legere est RaspiOS aussi appeler Raspbian.
 
 - :doc:`/Informatique_Programmation/Tree-Ubuntu`
 - :doc:`/Informatique_Programmation/Tree-Raspbian`

@@ -20,7 +20,7 @@ Pour cela, créez un compte GitHub si vous n'en avez pas déjà un puis demandez
 Ensuite, je vous invite à installer le logiciel GitHub Desktop qui sert d'interface pour communiquer entre les fichiers locaux et GitHub. 
 Il est aussi tout à fait possible d'utiliser les lignes de commandes.
 Une fois le logiciel installé, vous pouvez vous connecter et aller dans *File > Clone Repository*. 
-Normalement le logiciel devrait vous proposer le dépôt de la documentation. Vous pouvez ainsi le cloner sur votre PC.
+Normalement le logiciel devrait vous proposer le dépôt de la documentation. Vous pouvez ainsi le cloner sur votre PC. Vous pouvez aussi retrouver le dépôt sur le `GitHub du CRUBS <https://github.com/CRUBS/Documentation>`_.
 
 Une fois le dépôt cloné, vous pouvez maintenant modifier la documentation.
 

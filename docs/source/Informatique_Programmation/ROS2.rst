@@ -22,7 +22,9 @@ Si vous avez déjà une version de ros ou de ros2 installer sur votre pc nous re
 	sudo apt-get purge ros-*
 	sudo apt-get autoremove
 
-Attention il est possible que cette démarche d'installation ne fonctionne plus, à ce moment veuillez vous referez à la documentation de ros2 et mettez à jour cette documentation : https://docs.ros.org/en/humble/Installation/Alternatives/Ubuntu-Development-Setup.html
+.. note::
+
+	Attention il est possible que cette démarche d'installation ne fonctionne plus, à ce moment veuillez vous referez à la documentation de ros2 et mettez à jour cette documentation : https://docs.ros.org/en/humble/Installation/Alternatives/Ubuntu-Development-Setup.html
 
 Commençons par mettre à jour la Pi.
 

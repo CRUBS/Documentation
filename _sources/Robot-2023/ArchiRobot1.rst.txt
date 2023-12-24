@@ -60,7 +60,7 @@ Cet année 3 elevateur ont ete monter sur le premier robot pour soulever les pil
    :scale: 60 %
    :align: center
 
-Apres une année avec ce systeme ce dernier necessite quelque modifications mais le principe est concluant et sera reutiliser sur les futurs robot
+Apres une année avec ce systeme ce dernier necessite quelque modifications mais le principe est concluant et peut etre reutiliser sur les futurs robot
 
 Prehenseur des piles
 ********************

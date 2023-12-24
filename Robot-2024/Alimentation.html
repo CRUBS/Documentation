@@ -261,7 +261,27 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Robot-2023/Tree-ArchiRobot2.html">3.3. Architecture Robot 2 POU</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/ArchiRobot2.html">3.3.1. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/ArchiRobot2.html">3.3.1. Introduction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/ArchiRobot2.html#objectifs">3.3.1.1. Objectifs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/ArchiRobot2.html#architecture">3.3.1.2. Architecture</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/ArchiRobot2.html#strategie-cdfr">3.3.2. Strategie CdFR</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/ArchiRobot2.html#deplacement">3.3.3. Deplacement</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/ArchiRobot2.html#roue">3.3.3.1. Roue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/ArchiRobot2.html#motorisation">3.3.3.2. Motorisation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/ArchiRobot2.html#actionneurs">3.3.4. Actionneurs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/ArchiRobot2.html#prehenseur-des-cerises">3.3.4.1. Prehenseur des cerises</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/ArchiRobot2.html#depose-des-cerises">3.3.4.2. Depose des cerises</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2023/ArchiRobot2.html#cartes">3.3.5. Cartes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/ArchiRobot2.html#raspberry-pi-4">3.3.5.1. Raspberry pi 4</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2023/ArchiRobot2.html#arduino-mega-et-ramps1-6">3.3.5.2. Arduino Mega et ramps1.6</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Robot-2023/Tree-Configuration_Ubuntu.html">3.4. Configuration_Ubuntu</a><ul>
@@ -556,7 +576,7 @@
              
   <div class="section" id="introduction">
 <h1><span class="section-number">4.4.1. </span>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h1>
-<p>La carte d’alimentation realiser jusque la est certe fonctionelle mais est tres encombrante. il est maintenant necessaire de passer a l’etape au dessus et de realiser une carte d’alimentation professionelle. nous allons reduire la carte de la carte en utiliser des cms et en regroupant les composant. il serait bon que cette carte ne soit pas a refaire chaque année et qu’elle soit suffisement polyvalente pour repondre a tous les besoins pouvant se presenter</p>
+<p>La carte d’alimentation realiser jusque la est certe fonctionelle mais est tres encombrante. il est maintenant necessaire de passer a l’etape au dessus et de realiser une carte d’alimentation plus professionelle. nous allons reduire la carte de la carte en utiliser des cms et en regroupant les composant. il serait bon que cette carte ne soit pas a refaire chaque année et qu’elle soit suffisement polyvalente pour repondre a tous les besoins pouvant se presenter</p>
 <p>la realisation de cette nouvelle carte fait l’objet d’un projet lors de l’année 2023-2024</p>
 </div>
 <div class="section" id="source-d-alimentation">
@@ -579,7 +599,7 @@
 </div>
 <div class="section" id="niveau-de-la-batterie">
 <h2><span class="section-number">4.4.3.3. </span>Niveau de la batterie<a class="headerlink" href="#niveau-de-la-batterie" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La tension de la batterie est image de son niveau de charge, en effet cette derniere delivre une tension de 20.5V a pleine charge et descent jusqu’a 16.5V avant d’arreter de delivrer du courant. nous avons donc besoin d’un retour du niveau de tension de la batterie.
+<p>La tension de la batterie est image de son niveau de charge, en effet cette derniere delivre une tension de 21V a pleine charge et descent jusqu’a 16.5V avant d’arreter de delivrer du courant. nous avons donc besoin d’un retour du niveau de tension de la batterie.
 Cette année nous decidons de changer pour afficher directement le niveau de la batterie sur la carte d’alimentation. a l’aide d’un composant, le lm3914n permet d’alimenter ou jusqu’a 10 led en fonction d’une tension qui varie sur une plage voulue</p>
 </div>
 </div>

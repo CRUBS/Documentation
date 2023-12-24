@@ -261,7 +261,27 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="Tree-ArchiRobot2.html">3.3. Architecture Robot 2 POU</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">3.3.1. Introduction</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3.3.1. Introduction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#objectifs">3.3.1.1. Objectifs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#architecture">3.3.1.2. Architecture</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#strategie-cdfr">3.3.2. Strategie CdFR</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deplacement">3.3.3. Deplacement</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#roue">3.3.3.1. Roue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#motorisation">3.3.3.2. Motorisation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#actionneurs">3.3.4. Actionneurs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#prehenseur-des-cerises">3.3.4.1. Prehenseur des cerises</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#depose-des-cerises">3.3.4.2. Depose des cerises</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#cartes">3.3.5. Cartes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#raspberry-pi-4">3.3.5.1. Raspberry pi 4</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#arduino-mega-et-ramps1-6">3.3.5.2. Arduino Mega et ramps1.6</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="Tree-Configuration_Ubuntu.html">3.4. Configuration_Ubuntu</a><ul>
@@ -556,6 +576,63 @@
              
   <div class="section" id="introduction">
 <h1><span class="section-number">3.3.1. </span>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="objectifs">
+<h2><span class="section-number">3.3.1.1. </span>Objectifs<a class="headerlink" href="#objectifs" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le robot n°2 sera le secondaire, il aura pour but de :</p>
+<ol class="arabic simple">
+<li><p>Ramasser les cerises disponibles sur le plateau.</p></li>
+<li><p>Ranger les cerises restantes dans le panier.</p></li>
+<li><p>Défendre les gâteaux montés par le robot principal.</p></li>
+<li><p>Mettre les roues dans le plat, à la fin du service.</p></li>
+<li><p>Se déguiser pour faire la fête.</p></li>
+<li><p>Calculer l’addition.</p></li>
+</ol>
+</div>
+<div class="section" id="architecture">
+<h2><span class="section-number">3.3.1.2. </span>Architecture<a class="headerlink" href="#architecture" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Choix d’une base diffrentielle à 2 roues de ?mm en experimentation. Le robot principal etant assez imposant, ce dernier devra etre de taille tres reduite et eviter les prehenseur qui pourraient augmenter son perimetre</p>
+</div>
+</div>
+<div class="section" id="strategie-cdfr">
+<h1><span class="section-number">3.3.2. </span>Strategie CdFR<a class="headerlink" href="#strategie-cdfr" title="Lien permanent vers ce titre">¶</a></h1>
+<p>strategie utiliser et deplacement sequntiel choisis pour les matchs a la cdfr</p>
+</div>
+<div class="section" id="deplacement">
+<h1><span class="section-number">3.3.3. </span>Deplacement<a class="headerlink" href="#deplacement" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="roue">
+<h2><span class="section-number">3.3.3.1. </span>Roue<a class="headerlink" href="#roue" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+<div class="section" id="motorisation">
+<h2><span class="section-number">3.3.3.2. </span>Motorisation<a class="headerlink" href="#motorisation" title="Lien permanent vers ce titre">¶</a></h2>
+<p>utilisation des moteurs pas a pas car deja une experience</p>
+<p>Plus d’info:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="Tree-Motorisation.html"><span class="doc">Motorisation</span></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="actionneurs">
+<h1><span class="section-number">3.3.4. </span>Actionneurs<a class="headerlink" href="#actionneurs" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Pour marquer plus de points il est possible de ramener les cerises presente dans les distributeur sur le terrain dans un panier concu par nos soins et deposé sur le board du terrain en debut de matcch.</p>
+<div class="section" id="prehenseur-des-cerises">
+<h2><span class="section-number">3.3.4.1. </span>Prehenseur des cerises<a class="headerlink" href="#prehenseur-des-cerises" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Un actionneur supplementaire a donc ete ajouter sur le cote du robot permettant de ramasser les cerises presente dans les disctributeur de cerises. les cerises sont alors amener en haut du robot dans une reserve.</p>
+</div>
+<div class="section" id="depose-des-cerises">
+<h2><span class="section-number">3.3.4.2. </span>Depose des cerises<a class="headerlink" href="#depose-des-cerises" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous avons rajouter une porte actionnable par un servo-moteur pour liberer les cerises prensetes dnas la reserve et les faire tomber dans le panier</p>
+</div>
+</div>
+<div class="section" id="cartes">
+<h1><span class="section-number">3.3.5. </span>Cartes<a class="headerlink" href="#cartes" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="raspberry-pi-4">
+<h2><span class="section-number">3.3.5.1. </span>Raspberry pi 4<a class="headerlink" href="#raspberry-pi-4" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Fait tourner ros2 pour faire fonctionner le robot, communique avec les autres cartes</p>
+</div>
+<div class="section" id="arduino-mega-et-ramps1-6">
+<h2><span class="section-number">3.3.5.2. </span>Arduino Mega et ramps1.6<a class="headerlink" href="#arduino-mega-et-ramps1-6" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Une arduino mega equipper d’un shield ramps 1.6 est utiliser uniquement pour le controle des moteurs, cette dernier recoit ces ordres par liaison serie de la pi4. elle controle aussi le relais du moteur de la remonté des cerises et le servomoteur deposant les cerises dans le panier</p>
+</div>
 </div>
 
 

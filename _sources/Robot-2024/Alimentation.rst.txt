@@ -1,11 +1,9 @@
 Introduction
 ============
 
-La carte d'alimentation realiser jusque la est certe fonctionelle mais est tres encombrante. il est maintenant necessaire de passer a l'etape au dessus et de realiser une carte d'alimentation professionelle. nous allons reduire la carte de la carte en utiliser des cms et en regroupant les composant. il serait bon que cette carte ne soit pas a refaire chaque année et qu'elle soit suffisement polyvalente pour repondre a tous les besoins pouvant se presenter
+La carte d'alimentation realiser jusque la est certe fonctionelle mais est tres encombrante. il est maintenant necessaire de passer a l'etape au dessus et de realiser une carte d'alimentation plus professionelle. nous allons reduire la carte de la carte en utiliser des cms et en regroupant les composant. il serait bon que cette carte ne soit pas a refaire chaque année et qu'elle soit suffisement polyvalente pour repondre a tous les besoins pouvant se presenter
 
 la realisation de cette nouvelle carte fait l'objet d'un projet lors de l'année 2023-2024
-
-
 
 Source d'alimentation
 =====================
@@ -46,7 +44,7 @@ Protection
 Niveau de la batterie
 *********************
 
-La tension de la batterie est image de son niveau de charge, en effet cette derniere delivre une tension de 20.5V a pleine charge et descent jusqu'a 16.5V avant d'arreter de delivrer du courant. nous avons donc besoin d'un retour du niveau de tension de la batterie.
+La tension de la batterie est image de son niveau de charge, en effet cette derniere delivre une tension de 21V a pleine charge et descent jusqu'a 16.5V avant d'arreter de delivrer du courant. nous avons donc besoin d'un retour du niveau de tension de la batterie.
 Cette année nous decidons de changer pour afficher directement le niveau de la batterie sur la carte d'alimentation. a l'aide d'un composant, le lm3914n permet d'alimenter ou jusqu'a 10 led en fonction d'une tension qui varie sur une plage voulue
 
 

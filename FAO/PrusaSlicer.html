@@ -482,6 +482,8 @@
 <li class="toctree-l1 current"><a class="reference internal" href="Tree.html">7. FAO</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="Tree-PrusaSlicer.html">7.1. PrusaSlicer</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">7.1.1. PrusaSlicer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#recuperation-des-configurations">7.1.2. Récupération des configurations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#generation-d-un-fichier-gcode">7.1.3. Génération d’un fichier gcode</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="Tree-CharlyRobot.html">7.2. CharlyRobot</a><ul>
@@ -576,6 +578,45 @@
              
   <div class="section" id="prusaslicer">
 <h1><span class="section-number">7.1.1. </span>PrusaSlicer<a class="headerlink" href="#prusaslicer" title="Lien permanent vers ce titre">¶</a></h1>
+<a class="with-shadow float-right reference internal image-reference" href="../_images/prusa_slicer_logo.png"><img alt="../_images/prusa_slicer_logo.png" class="with-shadow float-right align-center" src="../_images/prusa_slicer_logo.png" style="width: 384.0px; height: 120.0px;" /></a>
+<p>PrusaSlicer est un logiciel qui génère des fichiers <em>gcode</em> pour ensuite imprimer une pièce en 3D.
+Ce logiciel est disponible gratuitement pour les principaux systèmes d’exploitation.
+Il peut être téléchargé sur le <a class="reference external" href="https://www.prusa3d.com/fr/page/prusaslicer_424/">site de Prusa3D</a>.</p>
+</div>
+<div class="section" id="recuperation-des-configurations">
+<h1><span class="section-number">7.1.2. </span>Récupération des configurations<a class="headerlink" href="#recuperation-des-configurations" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Il est possible de récupérer des configurations existantes créées par d’autres personnes.
+Pour récupérer celles pour les imprimantes du CRUBS, rendez-vous sur le Google Drive du CRUBS
+puis naviguez jusqu’au dossier <em>Impression 3D</em> puis téléchargez les configurations.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CRUBS</span> <span class="o">&gt;</span> <span class="n">Ressources</span> <span class="o">&gt;</span> <span class="n">Impression</span> <span class="mi">3</span><span class="n">D</span>
+</pre></div>
+</div>
+<p>Maintenant dans le logiciel PrusaSlicer, importez la configuration.</p>
+<a class="with-shadow reference internal image-reference" href="../_images/prusa_import_config.jpeg"><img alt="../_images/prusa_import_config.jpeg" class="with-shadow align-center" src="../_images/prusa_import_config.jpeg" style="width: 640.0px; height: 326.40000000000003px;" /></a>
+<p>Une fois la configuration importée, il faut la sauvegarder. Pour cela, il faut se rendre dans chacun des trois onglets
+de réglages puis cliquer sur la disquette pour enregistrer.
+Il est nécessaire de changer le nom. Répétez l’opération pour les deux autres onglets de réglages.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Sans cette étape, il faudra importer la configuration à chaque démarrage du logiciel.</p>
+</div>
+</div>
+<div class="section" id="generation-d-un-fichier-gcode">
+<h1><span class="section-number">7.1.3. </span>Génération d’un fichier gcode<a class="headerlink" href="#generation-d-un-fichier-gcode" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Pour généré ce fameux fichier <em>gcode</em>, il faut enregistrer la pièce à imprimer au format <em>stl</em> ou <em>3mf</em>.
+Dans SolidWorks, faites <em>enregistrer-sous</em> puis sélectionnez le bon format.</p>
+<p>Pour importer la pièce dans PrusaSlicer, il suffit de faire un glisser-déposer du fichier.</p>
+<p>Avec un clic de la souris, il est possible de changer le point de vue.</p>
+<p>Pour modifier la position ou l’orientation de la pièce, il suffit de cliquer sur le bouton adéquat à gauche.
+Veillez à ce que la pièce soit positionnée de la manière la plus stable et en évitant qu’il y ait des impressions
+dans le vide.</p>
+<p>Sur le panneau de droite, vous pouvez choisir de mettre des supports ou encore le remplissage de la pièce.</p>
+<a class="with-shadow reference internal image-reference" href="../_images/prusa_placement_piece.png"><img alt="../_images/prusa_placement_piece.png" class="with-shadow align-center" src="../_images/prusa_placement_piece.png" style="width: 931.1999999999999px; height: 592.1999999999999px;" /></a>
+<p>Une fois que tout est bon, cliquez sur la touche <em>tab</em> pour découper la pièce.
+Des informations s’affichent désormais en haut à gauche et en bas à droite concernant l’impression.
+Les sliders autour de la vue principale permettent de voir les étapes de l’impression.</p>
+<a class="with-shadow reference internal image-reference" href="../_images/prusa_decoupe_piece.png"><img alt="../_images/prusa_decoupe_piece.png" class="with-shadow align-center" src="../_images/prusa_decoupe_piece.png" style="width: 931.1999999999999px; height: 592.1999999999999px;" /></a>
+<p>Il n’y a plus qu’à exporter le <em>gcode</em> et à le mettre dans l’imprimante.</p>
 </div>
 
 

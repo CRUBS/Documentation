@@ -1,32 +1,45 @@
 Introduction
 ============
 
-ROS 2, ou Robot Operating System 2, est une plateforme open-source conçue pour faciliter le développement de logiciels pour les robots. Il s'agit d'une évolution de ROS, offrant une architecture plus modulaire et des améliorations de performance par rapport à son prédécesseur. ROS 2 a été conçu pour être plus adaptable à un large éventail de matériel et de systèmes d'exploitation, ce qui en fait une solution polyvalente pour la robotique. Il offre des outils et des bibliothèques pour la gestion des communications, la gestion des périphériques, la planification de trajectoires, et bien plus encore, facilitant ainsi le développement de robots et de systèmes robotiques complexes.
+ROS 2, ou *Robot Operating System 2*, est une plateforme open-source conçue pour faciliter le développement de logiciels
+pour les robots. Il s'agit d'une évolution de ROS, offrant une architecture plus modulaire et des améliorations
+de performance par rapport à son prédécesseur. ROS 2 a été conçu pour être plus adaptable à un large éventail
+de matériels et de systèmes d'exploitation, ce qui en fait une solution polyvalente pour la robotique.
+Il offre des outils et des bibliothèques pour la gestion des communications, la gestion des périphériques,
+la planification de trajectoires, et bien plus encore, facilitant ainsi le développement de robots et
+de systèmes robotiques complexes.
 
 .. image:: images/ros2/ROS_topic.gif
    :scale: 100 %
    :align: center
 
 
-La distribution ros2 que nous utilisons est "Humble", dont voici la doc : https://docs.ros.org/en/humble/Tutorials.html
+La distribution ROS2 que nous utilisons est "Humble", dont voici la documentation officielle :
+https://docs.ros.org/en/humble/Tutorials.html
 
 Installation et Setup
 =====================
 
-Impératif : ROS2 doit être installer sur une version de l'OS Ubuntu 22.0x, une version inférieure telle qu'un Ubuntu 20.0x ne pourra installer ROS2.
+.. warning::
+    Impératif : ROS2 doit être installé sur une version de l'OS Ubuntu 22.0x, une version antérieure
+    telle qu'un Ubuntu 20.0x ne pourra installer ROS2.
 
-Si vous avez déjà une version de ros ou de ros2 installer sur votre pc nous recommandons de les retirer pour ne pas rencontrer de problème par la suite.
+Si vous avez déjà une version de ROS ou de ROS2 d'installée sur votre pc nous recommandons de les retirer
+pour ne pas rencontrer de problème par la suite.
 
 .. code-block:: bash
 
 	sudo apt-get purge ros-*
 	sudo apt-get autoremove
 
+Voici désormais les étapes pour l'installation de ROS2 Humble. Ces étapes sont valides pour un PC
+comme pour une Raspberry Pi du moment que le système d'exploitation est Ubuntu.
+
 .. note::
 
-	Attention il est possible que cette démarche d'installation ne fonctionne plus, à ce moment veuillez vous referez à la documentation de ros2 et mettez à jour cette documentation : https://docs.ros.org/en/humble/Installation/Alternatives/Ubuntu-Development-Setup.html
+	Attention il est possible que cette démarche d'installation ne fonctionne plus, à ce moment veuillez vous référer à la documentation de ROS2 et mettez à jour cette documentation : https://docs.ros.org/en/humble/Installation/Alternatives/Ubuntu-Development-Setup.html
 
-Commençons par mettre à jour la Pi.
+Commençons par mettre à jour le gestionnaire de paquets de l'ordinateur.
 
 .. code-block:: bash
 	
@@ -36,7 +49,7 @@ Commençons par mettre à jour la Pi.
 	sudo apt upgrade
 	sudo apt-get upgrade
 
-Vérifions la configuration en utf-8.
+Vérifions que la configuration en utf-8 est bien en anglais américain.
 
 .. code-block:: bash
 
@@ -61,13 +74,13 @@ Téléchargement des dépôts ROS2.
 	sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
 
 
-	# Ajout du repo a la liste des paquets
+	# Ajout du dépôt à la liste des paquets
 	echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
 
 	sudo apt update
 	sudo apt upgrade
 
-Installations de ros2 et de ces composantes de navigation, cela peut prendre un bon moment.
+Installation de ROS2 et de ces composantes de navigation, cela peut prendre un bon moment.
 
 .. code-block:: bash
 
@@ -81,7 +94,9 @@ Installations de ros2 et de ces composantes de navigation, cela peut prendre un 
 
 	sudo apt install ros-humble-navigation2 ros-humble-nav2-bringup ros-humble-turtlebot3*
 
-Installation et sourçage des variables d'environnement de service dds pour la communication à distance. Cela peut être très long. Une fenêtre vous demandant d'accepter la licence RTI s'ouvrira pendant l'installation, vous devez accepter.
+Installation et sourçage des variables d'environnement de service dds pour la communication à distance.
+Cela peut être très long. Une fenêtre vous demandant d'accepter la licence RTI qui s'ouvrira pendant l'installation,
+vous devez accepter. Cette étape n'est pas obligatoire au fonctionnement de ROS2.
 
 .. code-block:: bash
 
@@ -89,19 +104,19 @@ Installation et sourçage des variables d'environnement de service dds pour la c
 
 	cd /opt/rti.com/rti_connext_dds-6.0.1/resource/scripts && source ./rtisetenv_x64Linux4gcc7.3.0.bash; cd -
 
-Installation de colcon pour build les packages.
+Installation de *colcon* pour compiler les packages.
 
 .. code-block:: bash
 
 	sudo apt install python3-colcon-common-extensions
 	
-Lancement de la demo pour vérifier la bonne installation de ros2.
+Lancement de la démo pour vérifier la bonne installation de ROS2.
 
 .. code-block:: bash
 
 	ros2 run demo_nodes_cpp talker
 
-Enfin, on peut supprimer les paquets téléchargés déjà installer puis reboot.
+Enfin, on peut supprimer les paquets téléchargés déjà installer puis redémarrer.
 
 .. code-block:: bash
 
@@ -113,49 +128,52 @@ Enfin, on peut supprimer les paquets téléchargés déjà installer puis reboot
 Bien commencer
 ==============
 
-Creation d'un workspace
+Création d'un workspace
 ***********************
 
-Un workspace, littéralement "espace de travail", est un dossier qui contient vos fichiers source (les packages), les install, les logs et les fichiers sources compilés.
+Un workspace, littéralement "espace de travail", est un dossier qui contient vos fichiers source (les packages),
+les *install*, les *logs* et les fichiers sources compilés.
 
 
 .. code-block:: bash
 
 	mkdir -p ~/ros2_ws/src
 
-Vous créer ici le workspace de nom "ros2_ws" (vous pouvez l'appeler comme vous le souhaitez.) et par la même ocasion le dossier src qui contiendra les packages.
+Vous créez ici le workspace de nom "ros2_ws" (vous pouvez l'appeler comme vous le souhaitez.)
+et par la même occasion le dossier *src* qui contiendra les packages.
 
 
 .. warning::
 
-	attention votre workspace doit etre creer par l'utilisateur et non le root. vous pourvez verifier avec la commande suivante a qui appartient le dossier dans lequel vous vous placer
+	Attention votre workspace doit etre créé par l'utilisateur et non le root. Vous pouvez vérifier avec la commande suivante à qui appartient le dossier dans lequel vous vous placez.
 
 .. code-block:: bash
 
 	ll
 
-vous pouvez voir sur l'image ci dessous a qui appatienne les dossiers:
+Vous pouvez, grâce à cette commande, savoir qui est le propriétaire du dossier.
 
-pour modifier le proprietaire du fichier :
+Pour modifier le propriétaire du fichier :
 
 .. code-block:: bash
 
 	sudo chown nom_utilisateur nom_dossier
 
-maintenant le dossier nous appartient
+Maintenant le dossier nous appartient.
 
 Création d'un package
 *********************
 
-Afin de séparer les différentes parties d'un projet, il est recommandé de créer plusieurs package dans le dossier src de votre espace de travail.
+Afin de séparer les différentes parties d'un projet, il est recommandé de créer plusieurs packages dans le dossier src
+de votre espace de travail.
 
-On commence par se rendre dans le dossier source de notre workspace précédemment créer.
+On commence par se rendre dans le dossier source de notre workspace précédemment créé.
 
 .. code-block:: bash
 
 	cd ~/ros2_ws/src
 
-Puis on créer le package.
+Puis on crée le package.
 
 python
 ^^^^^^
@@ -182,30 +200,30 @@ Voici un premier nœud type dans lequel on retrouve tout ce qui est nécessaire 
 
 	import rclpy #lib ro2
 	from rclpy.node import Node #import de la classe Node
-	from std_msgs.msg import String #import du type de message de topic String, cette ligne doit etre adapté
+	from std_msgs.msg import String #import du type de message de topic String, cette ligne doit etre adaptée au cas par cas
 
-	#création de notre neoud, ce dernier est un objet herité de la classe Node de la librairie
+	#création de notre neoud, ce dernier est un objet herité de la classe Node de la librairie ros2
 	class MyNode(Node):
 	    def __init__(self):
-	        super().__init__('my_node') #nom du noeud en parametre
-	        self.publisher_ = self.create_publisher(String, 'my_topic', 10) #creation d'un publisher (type de message, nom du topic, timeout)
-	        self.subscription_ = self.create_subscription(String, 'my_topic', self.callback, 10) #creation d'un subscriber (type de message, nom du topic, fonction a appeler, timeout)
-	        self.timer_ = self.create_timer(1.0, self.timer_callback) #creation d'un timer (periode, fonction a appeler)
+	        super().__init__('my_node') #nom du noeud en paramètre
+	        self.publisher_ = self.create_publisher(String, 'my_topic', 10) #création d'un publisher (type de message, nom du topic, timeout)
+	        self.subscription_ = self.create_subscription(String, 'my_topic', self.callback, 10) #création d'un subscriber (type de message, nom du topic, fonction à appeler, timeout)
+	        self.timer_ = self.create_timer(1.0, self.timer_callback) #création d'un timer (période, fonction à appeler)
 	        self.get_logger().info('Node initialized')
 
 	    def callback(self, msg):
-	    	#cette fonction est appeler a chaque fois qu'un message est lu
-	        self.get_logger().info('Received message: "%s"' % msg.data) #renvoie du message lu
+	    	#cette fonction est appelée à chaque fois qu'un message est lu
+	        self.get_logger().info('Received message: "%s"' % msg.data) #renvoie le message lu
 
 	    def timer_callback(self):
-	    	# cette fonction est appeler a une certaine frequence definis
-	        msg = String() #creation de l'objet msg
-	        msg.data = 'Hello, ROS 2!' #on remplis le message
+	    	# cette fonction est appelée à une certaine fréquence définie à la création du timer
+	        msg = String() #création de l'objet msg
+	        msg.data = 'Hello, ROS 2!' #on remplit le message
 	        self.publisher_.publish(msg) #on publie sur le publisher
 	        self.get_logger().info('Published message: "%s"' % msg.data)
 
-	#en dessous les lignes suivante sont obligatoire et toujours en fin de programme
-	#creation de la fonction main 
+	#en dessous les lignes suivantes sont obligatoire et toujours en fin de programme
+	#création de la fonction main
 	def main(args=None):
 	    rclpy.init(args=args)
 	    node = MyNode()
@@ -216,12 +234,13 @@ Voici un premier nœud type dans lequel on retrouve tout ce qui est nécessaire 
 	    main()
 
 
-Build d'un workspace avec colcon
-********************************
+Compilation d'un workspace avec colcon
+**************************************
 
-À chaque fois qu'un fichier est modifié, il est nécessaire de compiler de nouveau votre espace de travail. Pour cela, placer vous dans le vôtre workspace puis entrer la commande suivante
+À chaque fois qu'un fichier est modifié, il est nécessaire de compiler de nouveau votre espace de travail.
+Pour cela, placez-vous dans votre workspace puis entrez la commande suivante.
 
-Commencer par vous placer dans votre workspace :
+Commencez par vous placer dans votre workspace :
 
 .. code-block:: bash
 
@@ -233,22 +252,24 @@ Puis vous pouvez compiler.
 
 	colcon build
 
-Vous pouvez aussi build un package en particulier pour gagner du temps
+Vous pouvez aussi compiler un package en particulier pour gagner du temps
 
 .. code-block:: bash
 
 	colcon build --packages-select my_package
 
-Une fois le build terminer il est nécessaire de sourcer de nouveau votre travail. La compilation à créer le fichier sh nécessaire à l'installation.
+Une fois la compilation terminée, il est nécessaire de sourcer de nouveau votre travail.
+La compilation a créé le fichier bash (.sh) nécessaire à l'installation.
 
 .. code-block:: bash
 
 	source install/setup.sh
 
-alias
+Alias
 ^^^^^
 
-Pour simplifier la compilation, je recommande de créer un alias pour ne pas à avoir a lancer les deux ligne précédente, pour cela, nous allons éditer le fichier bashrc qui gère votre terminal.
+Pour simplifier la compilation, je recommande de créer un alias pour ne pas à avoir à lancer
+les deux lignes précédentes, pour cela, nous allons éditer le fichier *.bashrc* qui gère votre terminal.
 
 .. code-block:: bash
 
@@ -260,32 +281,33 @@ Et y rajouter la ligne suivante à la fin :
 
 	alias rb='colcon build && source install/setup.sh'
 
-Maintenant en entrant la commande 'rb' dans votre terminal, la compilation puis le sourçage s'effectuera.
+Maintenant en entrant la commande 'rb' dans votre terminal, la compilation puis le sourçage s'effectueront.
 
 
-Configuration des executables
+Configuration des exécutables
 =============================
 
 Python
 ******
 
-Lors de la creation d'un package un fichier setup.py est automatiquement creer. ce fichier permet de parametrer les executable. cette etape est importante afin d'executer vos scripts.
+Lors de la création d'un package un fichier setup.py est automatiquement créé.
+Ce fichier permet de paramétrer les executable. Cette étape est importante afin d'executer vos scripts.
 
-Vous deverz rajouter la ligne suivante dans la liste 'console_scripts a la fin du fichier:
+Vous devez rajouter la ligne suivante dans la liste 'console_scripts' à la fin du fichier :
 
 .. code-block:: bash
 
 	'my_script = my_package.my_script:main'
 
-ce qui signifie :
+Ce qui signifie :
 
 .. code-block:: text
 
 	nom_de_l_executable = nom_du_package.nom_du_script:main
 
-attention a bien suivre la structure du noeud presenter si dessus
+Attention a bien suivre la structure du nœud présenté ci-dessus.
 
-vous pouvez en ajouter plusieurs tel que:
+Vous pouvez en ajouter plusieurs tel que :
 
 .. code-block:: bash
 
@@ -317,7 +339,7 @@ vous pouvez en ajouter plusieurs tel que:
 	    },
 	)
 
-ici nous avons ajouter les execetuable exec_1 et exec_2 qui appelle les fonction main de script_1 et script_2
+Ici nous avons ajouté les exécutables exec_1 et exec_2 qui appellent les fonctions *main* de *script_1* et *script_2*.
 
 C++
 ***
@@ -329,7 +351,7 @@ Configuration des Launch
 ========================
 
 
-Avant de creer vos fichier launch vous devez creer un dossier specifique dans votre package si ce dernier n'esxiste pas
+Avant de créer vos fichiers *launch* vous devez créer un dossier spécifique dans votre package si ce dernier n'existe pas.
 
 .. code-block:: bash
 
@@ -338,7 +360,7 @@ Avant de creer vos fichier launch vous devez creer un dossier specifique dans vo
 Python
 ******
 
-Voici maintenant un exemple de fichier launch. ici ce dernier lance 3 executable. beaucoup de parametre peuvent etre ajouter.
+Voici maintenant un exemple de fichier *launch*. Ici ce dernier lance 3 executables. Beaucoup de paramètres peuvent être ajoutés.
 
 
 .. code-block:: python
@@ -369,13 +391,13 @@ Voici maintenant un exemple de fichier launch. ici ce dernier lance 3 executable
 	        )
 	    ])
 
-un launch file peut lancer des executable present dans un autre package que celui ou se trouve votre launch file
+Un launch file peut lancer des exécutables present dans un autre package que celui où se trouve votre launch file.
 
 Commandes importantes
 =====================
 
-Les executable
-**************
+Les exécutables
+***************
 
 Un exécutable lance un nœud.
 
@@ -387,14 +409,14 @@ Un exécutable lance un nœud.
 Les launchs
 ***********
 
-un launch lance plusieurs executable.
+Un launch lance plusieurs exécutables.
 
 .. code-block:: bash
 	
 	ros2 run nom_paquet nom_launch
 
 
-les topics
+Les topics
 **********
 
 Lister les topics :
@@ -403,24 +425,24 @@ Lister les topics :
 
 	ros2 topic list
 
-Ecouter un topic
+Écouter un topic :
 
 .. code-block:: bash
 
 	ros2 topic echo /nom_du_topic
 
 
-Info sur le topic
+Infos sur le topic :
 
 .. code-block:: bash
 
 	ros2 topic info /nom_du_topic
 
 
-les noeuds
+Les noeuds
 **********
 
-lister les noeud :
+Lister les nœuds :
 
 .. code-block:: bash
 
@@ -441,7 +463,7 @@ Permet de visualiser les liens entre les nœuds et les topics sous forme visuell
 rviz
 ****
 
-rviz permet de visualiser l'environnement détecté par le robot. Par exemple visualiser les données du lidar
+rviz permet de visualiser l'environnement détecté par le robot. Par exemple visualiser les données du lidar.
 
 .. code-block:: bash
 

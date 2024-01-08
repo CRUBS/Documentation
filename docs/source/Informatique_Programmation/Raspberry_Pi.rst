@@ -8,7 +8,7 @@ Les Raspberry Pi sont des "mini-ordinateurs". Ces derniers peuvent recevoir diff
 Ci-dessous une photo d'une Raspberry Pi 3.
 
 .. image:: images/raspi/raspi3.png
-	:scale: 75 %
+	:scale: 40 %
 	:align: center
 
 Demarage

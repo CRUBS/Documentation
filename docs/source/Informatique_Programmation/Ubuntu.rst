@@ -6,9 +6,9 @@ Introduction
 Hotspot WIFI et IP fixes
 ========================
 
-Nous allons maitenant configurer un hotspot wifi afin de se connecter sur la pi en ssh et de permetre aux robot et balises de communiquer sur un meme reseaux
+Nous allons maintenant configurer un hotspot wifi afin de se connecter sur la Pi en ssh et de permettre aux robots et aux autres périphérique de communiquer sur un même réseaux.
 
-installons les outils de reseaux qui ne sont pas encore present apres la mise a jour
+Installons les outils de réseaux qui ne sont pas encore présents après la mise à jour.
 
 .. code-block:: bash
 
@@ -16,19 +16,19 @@ installons les outils de reseaux qui ne sont pas encore present apres la mise a 
 	sudo apt install wpasupplicant
 	sudo apt install ifupdown
 
-desactivation de cloud init
+Désactivation de cloud init
 
 .. code-block:: bash
 
 	sudo bash -c "echo 'network: {config: disabled}' > /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg"
 
-Nous allons maintenant modifier le fichier de configuration du reseau, nous en profiterons pour ajouter des ip fixes pour faciliter les acces en ssh avec ces dernieres.
+Nous allons maintenant modifier le fichier de configuration du réseau, nous en profiterons pour ajouter des IP fixes pour faciliter les accès en SSH avec ces dernières.
 
 .. code-block:: bash
 	
 	sudo nano /etc/netplan/*.yaml
 
-puis rentrer le texte suivant en prenant sois de modifier "yourssid" et "yourpassword" par le nom du resau wifi et le mot de passe que vous voulez.  
+Puis rentrer le texte suivant en prenant sois de modifier "yourssid" et "yourpassword" par le nom du réseau wifi et le mot de passe que vous voulez.  
 
 .. code-block:: bash
 
@@ -50,23 +50,23 @@ puis rentrer le texte suivant en prenant sois de modifier "yourssid" et "yourpas
 	          password: "yourpassword"
 	          mode: ap
 
-rappel : ctrl + x puis y pour quitter le fichier
+Rappel : **ctrl + x** puis **y** pour quitter le fichier
 
-desactivons l'ipv6 qui ne nous sera pas necessaire, dans le fichier suivant: 
+Désactivons l'ipv6 qui ne nous sera pas nécessaire, dans le fichier suivant : 
 
 .. code-block:: bash
 
 	sudo nano /etc/sysctl.conf
 
-rajouter la ligne suivante a la fin du fichier :
+Rajouter la ligne suivante à la fin du fichier :
 
 .. code-block:: bash
 
 	net.ipv6.conf.all.disable_ipv6=1
 
-Avant d'appliquer cette configuration nous devons imperativement oublier tout les reseaux wifi sur laquel la pi c'est connecter. en effet cette derniere ne peut pas emmetre de reseau en meme temps qu'elle est connecter a un autre
+Avant d'appliquer cette configuration nous devons impérativement oublier tous les réseaux wifi sur lequel la Pi s'est auparavant connectée. En effet, cette dernière ne peut pas emmètre de réseau en même temps qu'elle est connectée à un autre. Nous ne voulons donc pas qu'elle se connecte à un ancien réseau wifi par mégarde.
 
-une fois les wifi oublier nous pouvons maintenant appliquer notre configuration et redemarer
+Une fois les wifi oublié, nous pouvons maintenant appliquer notre configuration et redémarrer.
 
 .. code-block:: bash
 
@@ -75,72 +75,75 @@ une fois les wifi oublier nous pouvons maintenant appliquer notre configuration 
 	sudo netplan apply
 	sudo reboot
 
-un reseau wifi devrais maitenant etre disponible des que la pi aura redemarer
+Un réseau wifi devrais maintenant être disponible dès que la Pi aura redémarré.
 
 .. image:: images/ubuntu/wifi.png
    :scale: 100 %
    :align: center
 
 
-noter que vous pourez toujours connecter la pi a un reseau wifi (par exmple pour l'installation de ros2) mais cette derniere ne pourra pas emmetre son reseau et il faudra penser a lui faire oublier la derniere connection wifi par securite
+Noter que vous pourrez toujours connecter la Pi à un réseau wifi (par exemple pour l'installation de ros2) mais cette dernière ne pourra pas emmètre son réseau et il faudra penser à lui faire oublier la dernière connexion wifi par sécurité.
 
 Commandes utiles
 ****************
 
-quelque commande utile concernant le wifi avec le terminal
+Quelques commandes utiles concernant le wifi avec le terminal
 
-desactivation et reactivation du hotspot
+Désactivation et réactivation du hotspot
 
 .. code-block:: bash
 	
 	nmcli radio wwan off
 
-lister les wifi disponible
+Lister les wifi disponibles.
 
 .. code-block:: bash
 
 	nmcli dev wifi list
 
-se connecter a un wifi
+Se connecter à un wifi.
 
 .. code-block:: bash
 
 	sudo nmcli dev wifi connect network-ssid password "network-password"
 
-en remplacant network-ssid par le nom du wifi present dans la liste et "network-password" par le mot de passe (garder les "")
+En remplaçant network-ssid par le nom du wifi présent dans la liste et "network-password" par le mot de passe (garder les "")
 
-pour oublier un reseau
-commencer par trouver votre reseau que vous voulez oublier dans la liste avec la commande suivante
+Pour oublier un réseau :
+Commencer par trouver votre réseau que vous voulez oublier dans la liste avec la commande suivante
 
 .. code-block:: bash
 
 	nmcli -t -f TYPE,UUID,NAME con 
 
-vous devriez obtenir un resultat du genre : 802-11-wireless:12345678-31d1-51e7-a60e-3a52e52b4495:YourWifiName, copie la suite de chiffre et lettre pour l'ajouter dans la commande si dessous
+Vous devriez obtenir un résultat du genre : 802-11-wireless:12345678-31d1-51e7-a60e-3a52e52b4495:YourWifiName, copie la suite de chiffres et lettres pour l'ajouter dans la commande ci-dessous
 
 .. code-block:: bash
 
 	sudo nmcli c delete choosedUUID
 
-exemple : sudo nmcli c delete 12345678-31d1-51e7-a60e-3a52e52b4495
+Exemple :
+
+.. code-block:: bash
+
+	sudo nmcli c delete 12345678-31d1-51e7-a60e-3a52e52b4495
 
 
 SSH
 ===
 
-Pour ce connecter en ssh il faut utiliser la commande suivante sur votre pc:
-
+Pour se connecter en SSH il faut utiliser la commande suivante sur votre PC :
 .. code-block:: bash
 
 	ssh utilisateur@addressip
 
-a partir de se que nous avons mit en place, nous avons donc:
+À partir de ce que nous avons mis en place, nous avons donc :
 
 wlan0
 *****
 
-sur l'interface wlan0 apres s'etre connecter au reseaux wifi emit par la pi
-rentrer la commande suivante dans un terminal
+Sur l'interface wlan0 après s'etre connecter au réseau wifi émit par la Pi
+Rentrer la commande suivante dans un terminal
 
 .. code-block:: bash
 
@@ -149,9 +152,9 @@ rentrer la commande suivante dans un terminal
 eth0
 ****
 
-sur l'interface eth0 apres avoir connecter un cable ethernet:
+Sur l'interface eth0 après avoir connecté un câble ethernet :
 
-Brancher le cable ethernet puis direction le panneau de controle windows (touche Win puis rechercher panel). Réseau et Internet > Centre de résau et partage > Ethernet > Propriete > cocher puis doucle cliquer Protocole Internet version 4 (TCP/IPv4)
+Brancher le câble ethernet puis direction le panneau de contrôle Windows (touche Win puis rechercher panel). Réseau et Internet > Centre de résau et partage > Ethernet > Propriété > cocher puis doucle cliquer Protocole Internet version 4 (TCP/IPv4)
 
 .. image:: images/ubuntu/setup_eth0_windows_1.png
    :scale: 25 %
@@ -161,25 +164,25 @@ Brancher le cable ethernet puis direction le panneau de controle windows (touche
    :scale: 25 %
    :align: center
 
-renseigner maintenant une addresse IP sur le meme reseau. ici par exemple 192.168.2.5 avec le meme masque 255.255.255.0.
-Je recommande vivement d'enlever ces changements des la manipulation fini. en effet vous risquez d'avoir de gros probleme des que vous vous connecterez a un autre reseaux ethernet
+Renseigner maintenant une adresse IP sur le même réseau. Ici par exemple 192.168.2.5 avec le même masque 255.255.255.0.
+Je recommande vivement d'enlever ces changements dès la manipulation finie. En effet, vous risquez d'avoir de gros problèmes dès que vous vous connecterez à un autre réseaux ethernet
 
-enfin vous pouvez retourner dans un terminal pour rentrer la commande suivante
+Enfin, vous pouvez retourner dans un terminal pour rentrer la commande suivante.
 
 .. code-block:: bash
 
 	ssh crubs@192.168.2.10
 
-depanage
+Dépanage
 ********
 
-l'erreur ci dessous vous empechant de vous connecter en ssh peut subvenir sur votre pc.
+L'erreur ci-dessous vous empêchant de vous connecter en SSH peut subvenir sur votre PC.
 
 .. image:: images/ubuntu/error_ssh.png
    :scale: 75 %
    :align: center
 
-Rentrez simplement la commande suivante puis reessayer la connection ssh en acceptant le message avec y.
+Rentrez simplement la commande suivante puis réessayer la connexion SSH en acceptant le message avec **y**.
 
 .. code-block:: bash
 
@@ -187,20 +190,20 @@ Rentrez simplement la commande suivante puis reessayer la connection ssh en acce
 	ssh-keygen -R 192.168.1.10
 
 
-Fixer nom des ports USB
-=======================
+Fixer le nom des ports USB
+==========================
 
-Afin de piloter le robot, deux cartes arduino sont utiliser se qui amene a un probleme d'identification de ces dernieres par les codes. en effet au demarage la pi attribues un nom de paripherique a chaque appareil en fonction de la vitesse de demarage des cartes, ce qui est aleatoire. nous devons donc faire en sorte d'attribuer un nom fixe en fonction de l'appereil connecter.
+Afin de piloter le robot, deux cartes arduino sont utiliser ce qui amène à un problème d'identification de ces dernières par les codes. En effet au démarrage, le pi attribue un nom de périphérique à chaque appareil en fonction de la vitesse de démarrage des cartes, ce qui est aléatoire. Nous devons donc faire en sorte d'attribuer un nom fixe en fonction de l'appareil connecté.
 
-commecez par debrancher tout les paripherique de la pi et rallumer
+Commencez par débrancher tous les périphériques de la Pi et rallumer la.
 
-pour tout cette serie d'etape nous devons passer en super utilisateur
+Pour tous cette série d'étape, nous devons passer en super utilisateur.
 
 .. code-block:: bash
 
 	sudo su -
 
-brancher une premier carte puis identifier son nom actuel:
+Brancher une première carte puis identifier son nom actuel :
 
 .. code-block:: bash
 
@@ -208,7 +211,7 @@ brancher une premier carte puis identifier son nom actuel:
 
 .. image
 
-une fois le port identifier, ici ttyACM1, nous devons recuperer les données de la carte
+Une fois le port identifié, ici ttyACM1, nous devons récupérer les données de la carte
 
 .. code-block:: bash
 
@@ -216,16 +219,16 @@ une fois le port identifier, ici ttyACM1, nous devons recuperer les données de 
 
 .. image de ce qui faut recup
 
-reperer les premier idProduct et idVendor et noter les.
+Repérer les premiers idProduct et idVendor à apparaître et noter les.
 
-toujours en tant que super utilisateur nous devons creer une nouvelle regle
+Toujours en tant que super utilisateur, nous devons maintenant créer une nouvelle règle.
 
 .. code-block:: bash
 
 	cd etc/udev/rules.d/
 	sudo nano 10-usb-serial.rules
 
-ajouter la ligne suivante avec les parametre idVendor et idProduct obtenus
+Ajouter la ligne suivante avec les paramètre idVendor et idProduct obtenus
 
 .. code-block:: bash
 
@@ -233,25 +236,25 @@ ajouter la ligne suivante avec les parametre idVendor et idProduct obtenus
 
 .. image
 
-vous pouvez appliquer la regle fraichement creer avec la commande suivante mais je vous recommande de redemarer quand meme
+Vous pouvez appliquer la règle fraîchement créé avec la commande suivante, mais je vous recommande de redémarrer quand même.
 
 .. code-block:: bash
 
 	sudo udevadm trigger
 	sudo reboot
 
-apres redemarage vous pouvez verifier de la maniere suivante
+Après redémarrage, vous pouvez vérifier de la manière suivante.
 
 .. code-block:: bash
 
 	ls -l /dev/NouveauNom
 
-et vous devriez obtenir le resultat suivant
+Et vous devriez obtenir le résultat suivant.
 
 .. image
 
-vous pouvez appliquer de nouveau la meme methode en changeant la carte a nommer et en suivant les etapes precedante
-tuto suivis : https://dominoc925.blogspot.com/2019/11/fix-usb-serial-adapters-to-static.html
+Vous pouvez appliquer de nouveau la même méthode en changeant la carte à nommer et en suivant les étapes précédentes.
+Tuto suivis : https://dominoc925.blogspot.com/2019/11/fix-usb-serial-adapters-to-static.html
 
 
 Autres commandes 
@@ -260,64 +263,64 @@ Autres commandes
 Interface graphique
 *******************
 
-Desactivation de l'interface graphique :
+Désactivation de l'interface graphique :
 
 .. code-block:: bash
 
 	sudo systemctl set-default multi-user.target
 
-Réactivation de l'interface graphique (necessite la bonne version de l'OS)
+Réactivation de l'interface graphique (nécessite la bonne version de l'OS) :
 
 .. code-block:: bash
 
 	sudo systemctl set-default graphical.target
 
 
-Activation des Interfaces de bus
-================================
+Activation des Interfaces des differents bus
+============================================
 
 I2C
 ***
 
-Pour utiliser de l'I2C sur Ubuntu commencer par vérifier si c'est activer
+Pour utiliser de l'I2C sur Ubuntu commencé par vérifier si il n'est pas déjà active
 
 .. code-block:: bash
 
 	sudo raspi-config nonint get_i2c
 
-Si sa renvoie un 1 il n'est pas ativé il faut alors utilisé:
+Si ça renvoie un 1 il n'est pas activé il faut alors utiliser :
 
 .. code-block:: bash
 
 	sudo raspi-config nonint do_i2c 0
 
-Ensuite nous allons vérifier si nous avons les permissions:
+Ensuite, nous allons vérifier si nous avons les permissions :
 
 .. code-block:: bash
 
 	ls -l /dev/i2c*
 
-Voila un exemple de sortie possible:
+Voilà un exemple de sortie possible :
 
 .. code-block:: bash
 
 	crw------- 1 root dialout 89, 1 Sep 19 18:59 /dev/i2c-1
 
-Dans ce cas il y a 2 groupe qui ont la permission d'utiliser l'i2c il peut donc s'ajouter au groupe dialout avec:
+Dans ce cas, il y a 2 groupes qui ont la permission d'utiliser l'I2C il peut donc s'ajouter au groupe dialout avec :
 
 .. code-block:: bash
 
 	sudo usermod -aG dialout crubs
 
-en remplacent crubs par le nom de la session
+En remplacent CRUBS par le nom de la session.
 
-Nous pouvons maintenant installer un outil permettant de detecter les addresses des composants present sur le bus
+Nous pouvons maintenant installer un outil permettant de détecter les adresses des composants présents sur le bus.
 
 .. code-block:: bash
 
 	sudo apt install i2c-tools
 	
-vous pouvez maintenant utiliser la commande suivante pour lancer la detection
+Vous pouvez maintenant utiliser la commande suivante pour lancer la recherche de composants presents sur le bus.
 
 .. code-block:: bash
 

@@ -39,3 +39,4 @@ TODO :
 #. [nico] continuer tuto sphinx 
 #. continuer tuto ros2
 #. ajouter des warning et des infos
+#. [nico] manque des images dans :doc:`/Informatique_Programmation/Tree-Ubuntu`

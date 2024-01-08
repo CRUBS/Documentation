@@ -13,14 +13,14 @@ Partenariat et Subvention
    Partenariat_et_Subvention
 
 +-------------------------+-------------------------+
-| Rédacteur               | - LOUVEAU Nicolas       |
+| Rédacteurs              | - LOUVEAU Nicolas       |
 +-------------------------+-------------------------+
 | Année d'écriture        | - 2022-2023             |
 |                         | - 2023-2024             |
 +-------------------------+-------------------------+
-| Dernière modification   | -                       |
+| Dernière modification   | - 08/01/2024            |
 +-------------------------+-------------------------+
 | Statut d'écriture       | - en cours              |
 +-------------------------+-------------------------+
-| Statut de relecture     | -                       |
+| Statut de relecture     | - Scribens              |
 +-------------------------+-------------------------+

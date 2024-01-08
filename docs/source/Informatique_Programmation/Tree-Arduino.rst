@@ -13,7 +13,7 @@ Arduino
    Arduino
 
 +-------------------------+-------------------------+
-| Rédacteur               | - LOUVEAU Nicolas       |
+| Rédacteurs              | - LOUVEAU Nicolas       |
 +-------------------------+-------------------------+
 | Année d'écriture        | - 2022-2023             |
 |                         | - 2023-2024             |

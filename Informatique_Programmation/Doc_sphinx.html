@@ -623,6 +623,11 @@ Ensuite cliquez sur <em>commit to main</em> puis <em>push</em>.</p>
 </div>
 <div class="section" id="generation">
 <h2><span class="section-number">2.1.2.2. </span>Génération<a class="headerlink" href="#generation" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Si vous souhaitez démarrer votre propre projet, vous pouvez utiliser la commande suivante :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sphinx-quickstart
+</pre></div>
+</div>
+<p>Cette étape n’est pas nécessaire si vous souhaitez simplement participer à la documentation du CRUBS.</p>
 </div>
 <div class="section" id="ordonancement-des-fichiers-et-des-dossiers">
 <h2><span class="section-number">2.1.2.3. </span>Ordonancement des fichiers et des dossiers<a class="headerlink" href="#ordonancement-des-fichiers-et-des-dossiers" title="Lien permanent vers ce titre">¶</a></h2>
@@ -632,6 +637,13 @@ Ensuite cliquez sur <em>commit to main</em> puis <em>push</em>.</p>
 </div>
 <div class="section" id="compilation">
 <h2><span class="section-number">2.1.2.5. </span>Compilation<a class="headerlink" href="#compilation" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour ne pas toujours avoir besoin de push sur github vos modifications et attendre la mise à jour de la doc, il est possible de compiler cette dernière en local.</p>
+<p>Vous pouvez récupérer les fichier make.bat et Makefile, disponible sur <a class="reference external" href="https://github.com/CRUBS/Documentation/tree/main/docs">github</a></p>
+<p>Ajoutez ces fichiers à la racine des fichiers de la documentation (comme sur github) puis vous pouvez exécuter la compilation dans un terminal de la manière suivante :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make html
+</pre></div>
+</div>
+<p>De cette manière un dossier “build” sera générer et vous trouverez dans ce dernier un fichier “index.html”, ouvrez-le avec votre navigateur web préfère et voilà !</p>
 </div>
 </div>
 <div class="section" id="generalites">
@@ -748,12 +760,14 @@ La ligne class, permet de la placer à droite de la page sans faire descendre le
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="s">`exemple de lien </span><span class="si">&lt;page_web.html&gt;</span><span class="s">`_</span>
 </pre></div>
 </div>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">exemple de lien</a></p>
 </div>
 <div class="section" id="lien-dans-la-documentation">
 <h2><span class="section-number">2.1.4.4. </span>Lien dans la documentation<a class="headerlink" href="#lien-dans-la-documentation" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="m">-</span> <span class="na">:doc:</span><span class="nv">`/Chemin/dans/la/doc`</span>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="m">-</span> <span class="na">:doc:</span><span class="nv">`/Informatique_et_Programmation/Tree-Doc_sphinx`</span>
 </pre></div>
 </div>
+<p><span class="xref std std-doc">/Informatique_et_Programmation/Tree-Doc_sphinx</span></p>
 </div>
 </div>
 

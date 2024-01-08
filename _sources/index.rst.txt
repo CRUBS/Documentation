@@ -22,12 +22,12 @@ Bienvenue sur la documentation du CRUBS!
    Voron-0.1/Tree
    CAO/Tree
    FAO/Tree
-   Banc-de-test/Tree
+   .. Banc-de-test/Tree
 
 .. note::
 
-   Les informations relative a la redaction de cette documentation: 
-   - :doc:`/Informatique_Programmation/Tree-Doc_sphinx`
+   Les informations relative a la redaction de cette documentation : 
+   :doc:`/Informatique_Programmation/Tree-Doc_sphinx`
 
 TODO :
 ******

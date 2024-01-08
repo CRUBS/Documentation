@@ -17,7 +17,6 @@ FSDIE
 =====
 
 .. image:: images/sub/fsdie.png
-
 	:scale: 50 %
 	:align: center
 
@@ -49,7 +48,6 @@ Coriolis Composites
 ===================
 
 .. image:: images/sub/coriolis.png
-
 	:scale: 100 %
 	:align: center
 
@@ -68,7 +66,6 @@ IGUS
 ====
 
 .. image:: images/sub/igus.png
-
 	:scale: 30 %
 	:align: center
 

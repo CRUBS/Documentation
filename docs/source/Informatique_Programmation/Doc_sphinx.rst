@@ -60,6 +60,14 @@ linux (Debian / Ubuntu)
 Génération
 **********
 
+Si vous souhaitez démarrer votre propre projet, vous pouvez utiliser la commande suivante :
+
+.. code-block:: bash
+
+	sphinx-quickstart
+
+Cette étape n'est pas nécessaire si vous souhaitez simplement participer à la documentation du CRUBS.
+
 Ordonancement des fichiers et des dossiers
 ******************************************
 
@@ -68,6 +76,18 @@ Index
 
 Compilation
 ***********
+Pour ne pas toujours avoir besoin de push sur github vos modifications et attendre la mise à jour de la doc, il est possible de compiler cette dernière en local.
+
+Vous pouvez récupérer les fichier make.bat et Makefile, disponible sur `github <https://github.com/CRUBS/Documentation/tree/main/docs>`_
+
+Ajoutez ces fichiers à la racine des fichiers de la documentation (comme sur github) puis vous pouvez exécuter la compilation dans un terminal de la manière suivante :
+
+.. code-block:: bash
+
+	make html
+
+De cette manière un dossier 'build' sera générer et vous trouverez dans ce dernier un fichier 'index.html', ouvrez-le avec votre navigateur web préfère et voilà !
+
 
 Généralités
 ===========
@@ -204,13 +224,17 @@ Hyperlien
 
 	`exemple de lien <page_web.html>`_
 
+`exemple de lien <https://www.youtube.com/watch?v=dQw4w9WgXcQ>`_
+
 
 Lien dans la documentation
 **************************
 
 .. code-block:: rst
 
-	- :doc:`/Chemin/dans/la/doc`
+	- :doc:`/Informatique_et_Programmation/Tree-Doc_sphinx`
+
+:doc:`/Informatique_et_Programmation/Tree-Doc_sphinx`
 
 
 

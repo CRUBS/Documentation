@@ -222,9 +222,9 @@ Hyperlien
 
 .. code-block:: rst
 
-	`exemple de lien <page_web.html>`_
+	Ceci est un `exemple de lien <page_web.html>`_
 
-`exemple de lien <https://www.youtube.com/watch?v=dQw4w9WgXcQ>`_
+Ceci est un `exemple de lien <https://www.youtube.com/watch?v=dQw4w9WgXcQ>`_
 
 
 Lien dans la documentation
@@ -232,9 +232,9 @@ Lien dans la documentation
 
 .. code-block:: rst
 
-	- :doc:`/Informatique_et_Programmation/Tree-Doc_sphinx`
+	:doc:`/Informatique_Programmation/Tree-Doc_sphinx`
 
-:doc:`/Informatique_et_Programmation/Tree-Doc_sphinx`
+:doc:`/Informatique_Programmation/Tree-Doc_sphinx`
 
 
 

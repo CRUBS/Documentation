@@ -15,13 +15,14 @@ Information concernant la realisation de cette doc
    Doc_sphinx
 
 +-------------------------+-------------------------+
-| Rédacteur               | - LOUVEAU Nicolas       |
+| Rédacteurs              | - LOUVEAU Nicolas       |
+|                         | - TRÉMAUDANT Axel       |
 +-------------------------+-------------------------+
 | Année d'écriture        | - 2023-2024             |
 +-------------------------+-------------------------+
-| Dernière modification   | - 29/11/2023            |
+| Dernière modification   | - 08/01/2024            |
 +-------------------------+-------------------------+
 | Statut d'écriture       | - en cours              |
 +-------------------------+-------------------------+
-| Statut de relecture     | - 0                     |
+| Statut de relecture     | - Axel                  |
 +-------------------------+-------------------------+

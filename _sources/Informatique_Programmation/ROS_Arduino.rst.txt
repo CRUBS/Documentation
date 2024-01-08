@@ -1,6 +1,8 @@
-OUTDATED
+.. warning:
 
-Nous n'utilisons pas ros1 car ce dernier ne tourne plus a partir des version superieur a 22.04 de Ubuntu 
+	OUTDATED
+
+	Nous n'utilisons pas ros1 car ce dernier ne tourne plus a partir des version superieur a 22.04 de Ubuntu 
 
 Installation et Setup
 =====================

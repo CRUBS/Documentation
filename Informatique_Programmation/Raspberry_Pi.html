@@ -66,7 +66,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../Gestion/Partenariat_et_Subvention.html#dossier">1.2.1.1. Dossier</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../Gestion/Partenariat_et_Subvention.html#ecole-bde">1.2.2. Ecole / BDE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Gestion/Partenariat_et_Subvention.html#ecole-bde">1.2.2. École / BDE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Gestion/Partenariat_et_Subvention.html#fsdie">1.2.3. FSDIE</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Gestion/Partenariat_et_Subvention.html#id1">1.2.3.1. 2022-2023</a></li>
 </ul>
@@ -162,7 +162,7 @@
 <li class="toctree-l4"><a class="reference internal" href="Raspbian.html#prerequis">2.4.3.1. Prerequis</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Raspbian.html#addresse-ip-fixe-en-wifi">2.4.3.2. Addresse IP fixe en wifi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Raspbian.html#configuration-du-server-dhcp">2.4.3.3. Configuration du server DHCP</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Raspbian.html#parametrage-du-reseau-wifi">2.4.3.4. Parametrage du reseau wifi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Raspbian.html#parametrage-du-reseau-wifi">2.4.3.4. Paramétrage du réseau wifi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Raspbian.html#test">2.4.3.5. Test</a></li>
 </ul>
 </li>
@@ -177,15 +177,15 @@
 <li class="toctree-l3"><a class="reference internal" href="Ubuntu.html#ssh">2.5.3. SSH</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="Ubuntu.html#wlan0">2.5.3.1. wlan0</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Ubuntu.html#eth0">2.5.3.2. eth0</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Ubuntu.html#depanage">2.5.3.3. depanage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Ubuntu.html#depanage">2.5.3.3. Dépanage</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="Ubuntu.html#fixer-nom-des-ports-usb">2.5.4. Fixer nom des ports USB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Ubuntu.html#fixer-le-nom-des-ports-usb">2.5.4. Fixer le nom des ports USB</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Ubuntu.html#autres-commandes">2.5.5. Autres commandes</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="Ubuntu.html#interface-graphique">2.5.5.1. Interface graphique</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="Ubuntu.html#activation-des-interfaces-de-bus">2.5.6. Activation des Interfaces de bus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Ubuntu.html#activation-des-interfaces-des-differents-bus">2.5.6. Activation des Interfaces des differents bus</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="Ubuntu.html#i2c">2.5.6.1. I2C</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Ubuntu.html#spi">2.5.6.2. SPI</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Ubuntu.html#can">2.5.6.3. CAN</a></li>
@@ -529,26 +529,25 @@
              
   <div class="section" id="introduction">
 <h1><span class="section-number">2.3.1. </span>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h1>
-<blockquote>
-<div><p>&lt;https</p>
-</div></blockquote>
-<p>Les Raspberry Pi sont des « mini ordinateur ». Ces dernier peuvent recevoir different OS d’une declinaison linux telle que <a href="#id1"><span class="problematic" id="id2">`Ubuntu 22.04://releases.ubuntu.com/jammy/&gt;`_</span></a> que nous utilisons pour les robots. Une distribution plus legere est RaspiOS aussi appeler Raspbian.</p>
+<p>Les Raspberry Pi sont des « mini-ordinateurs ». Ces derniers peuvent recevoir diffèrent OS d’une déclinaison Linux telle que <a class="reference external" href="https://releases.ubuntu.com/jammy/">Ubuntu 22</a> que nous utilisons pour les robots. Une distribution plus legere est RaspiOS aussi appeler Raspbian.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="Tree-Ubuntu.html"><span class="doc">Ubuntu</span></a></p></li>
 <li><p><a class="reference internal" href="Tree-Raspbian.html"><span class="doc">Raspbian OS</span></a></p></li>
 </ul>
+<p>Ci-dessous une photo d’une Raspberry Pi 3.</p>
+<a class="reference internal image-reference" href="../_images/raspi31.png"><img alt="../_images/raspi31.png" class="align-center" src="../_images/raspi31.png" style="width: 637.5px; height: 746.25px;" /></a>
 </div>
 <div class="section" id="demarage">
 <h1><span class="section-number">2.3.2. </span>Demarage<a class="headerlink" href="#demarage" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="installation">
 <h2><span class="section-number">2.3.2.1. </span>Installation<a class="headerlink" href="#installation" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Afin d’installer un os sur une la carte SD vous pouvez utiliser <a class="reference external" href="https://www.raspberrypi.com/software/">Raspberry Pi Imager</a> qui est un logiciel vous permettant de selectionner l’OS de votre choix</p>
+<p>Afin d’installer un OS sur une la carte SD vous pouvez utiliser <a class="reference external" href="https://www.raspberrypi.com/software/">Raspberry Pi Imager</a> qui est un logiciel vous permettant de selectionner l’OS de votre choix.</p>
 <a class="reference internal image-reference" href="../_images/raspi_imager1.png"><img alt="../_images/raspi_imager1.png" class="align-center" src="../_images/raspi_imager1.png" style="width: 511.5px; height: 344.25px;" /></a>
 </div>
 <div class="section" id="mises-a-jours">
 <h2><span class="section-number">2.3.2.2. </span>Mises à jours<a class="headerlink" href="#mises-a-jours" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Je recommande d’utiliser l’interface graphqiue pour ces premieres etapes.</p>
-<p>Commencons par mettre a jour la pi</p>
+<p>Je recommande d’utiliser l’interface graphique pour ces premières étapes.</p>
+<p>Commençons par mettre à jour la Pi.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span>
 sudo apt update
 sudo apt-get update
@@ -556,7 +555,7 @@ sudo apt upgrade
 sudo apt-get upgrade
 </pre></div>
 </div>
-<p>Ensuite il va falloir installer le service de ssh</p>
+<p>Ensuite, il va falloir installer le service de ssh</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install openssh-client
 sudo apt-get install openssh-server
 sudo systemctl <span class="nb">enable</span> ssh
@@ -564,7 +563,7 @@ sudo systemctl start ssh
 sudo systemctl status ssh
 </pre></div>
 </div>
-<p>Verifions que le service ssh c’est bien installer, vous devriez le voir actif comme ci dessous</p>
+<p>Vérifions que le service ssh c’est bien installer, vous devriez le voir actif comme ci-dessous.</p>
 <a class="reference internal image-reference" href="../_images/ssh_systemctl.png"><img alt="../_images/ssh_systemctl.png" class="align-center" src="../_images/ssh_systemctl.png" style="width: 810.0px; height: 450.0px;" /></a>
 </div>
 </div>

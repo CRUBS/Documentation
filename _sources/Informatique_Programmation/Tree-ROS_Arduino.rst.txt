@@ -1,7 +1,7 @@
 ROS-Arduino
 ===========
 
-.. warning:
+.. warning::
 
    OUTDATED
 

@@ -17,6 +17,7 @@ FSDIE
 =====
 
 .. image:: images/sub/fsdie.png
+
 	:scale: 50 %
 	:align: center
 
@@ -48,8 +49,9 @@ Coriolis Composites
 ===================
 
 .. image:: images/sub/coriolis.png
-:scale: 100 %
-:align: center
+
+	:scale: 100 %
+	:align: center
 
 Coriolis Composites develops, produces and commercializes robotic cells and value-added software for automated composite additive manufacturing. Its strong expertise in composite technologies allows Coriolis Composites to offer off-the-shelf and tailored solutions to your industry.
 
@@ -66,8 +68,9 @@ IGUS
 ====
 
 .. image:: images/sub/igus.png
-:scale: 50 %
-:align: center
+
+	:scale: 30 %
+	:align: center
 
 
 IGUS est une entreprise spécialisée dans la réalisation de pièce mécanique plastique sans graisse.

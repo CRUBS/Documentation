@@ -33,7 +33,9 @@ Nous devons maintenant activer le service SSH. Si cela n'est pas déjà fait, re
 
 Vous arrivez sur une nouvelle interface, vous pouvez naviguer avec les touches flèches et entrer.
 Interface Options > SSH, on vous demande ensuite si vous voulez activer le SSH, choisissez évidemment **OUI** puis **Ok**. Vous pourrez quitter la fenêtre avec Echap.
+
 .. image:: images/raspbian/raspi_config.png
+
 	:scale: 75 %
 	:align: center
 

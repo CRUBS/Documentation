@@ -164,36 +164,35 @@ Voici comment mettre en place une interuption sur le timer 3 avec arduino
 
 il suffit maintenenant de dupliquer la partie presente dans le setup et le l'interruption en ramplacant les 3 par le numero de celui que vous souhaiter utiliser. De cette maniere chaque moteur fonctionera sur son interrution. attention, toute les carte arduino ne possede pas les meme timer dans le cas d'une arduino mega il y a 4 timer 16 bits ainsi le moteur 1er est controler par le timer1, le 2nd par le timer3, le 3eme par le timer4 et enfin le 4eme moteur par le timer5.
 
-!!!!!! confli servo.h !!!!!!!
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. warning::
 
-la biliotheque servo.h utilise les timer afin de piloter des servomoteurs. a la compilation vous aurez donc une erreur indiquant la sur utilisation d'un vecteur. il est donc neccessaire de modifier la bibliotheque pour que cette derniere n'utilise pas le timer que nous utilisons.
-Pour cela diriger dans votre dossier d'instalation d'Arduino IDE. pour moi arduino-1.8.19. suivez ensuite le chemin suivant:
-arduino-1.8.19 > libraries > Servo > src > avr
-ouvre ensuite le fichier ServoTimers.h, trouvez ensuite les lignes suivantes qui correspondent a votre processeur, ici pour un arduino mega:
+	la biliotheque servo.h utilise les timer afin de piloter des servomoteurs. a la compilation vous aurez donc une erreur indiquant la sur utilisation d'un vecteur. il est donc neccessaire de modifier la bibliotheque pour que cette derniere n'utilise pas le timer que nous utilisons.
+	Pour cela diriger dans votre dossier d'instalation d'Arduino IDE. pour moi arduino-1.8.19. suivez ensuite le chemin suivant:
+	arduino-1.8.19 > libraries > Servo > src > avr
+	ouvre ensuite le fichier ServoTimers.h, trouvez ensuite les lignes suivantes qui correspondent a votre processeur, ici pour un arduino mega:
 
-.. code-block:: cpp
+	.. code-block:: cpp
 
-	// Say which 16 bit timers can be used and in what order
-	#if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
-	#define _useTimer5
-	#define _useTimer1
-	#define _useTimer3
-	#define _useTimer4
-	typedef enum { _timer1, _timer3, _timer4, _timer5, _Nbr_16timers } timer16_Sequence_t;
+		// Say which 16 bit timers can be used and in what order
+		#if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
+		#define _useTimer5
+		#define _useTimer1
+		#define _useTimer3
+		#define _useTimer4
+		typedef enum { _timer1, _timer3, _timer4, _timer5, _Nbr_16timers } timer16_Sequence_t;
 
-nous allons devoir desactiver l'utilisation de notre timer. pour cela on retire tout simplement ce qui mentionne notre timer 3 tel que:
-cette action est evidement aplicable pour tout les timer qui devrais etre utiliser par des interuptions
+	nous allons devoir desactiver l'utilisation de notre timer. pour cela on retire tout simplement ce qui mentionne notre timer 3 tel que:
+	cette action est evidement aplicable pour tout les timer qui devrais etre utiliser par des interuptions
 
-.. code-block:: cpp
+	.. code-block:: cpp
 
-	// Say which 16 bit timers can be used and in what order
-	#if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
-	#define _useTimer5
-	#define _useTimer1
-	#define _useTimer4
-	typedef enum { _timer1, _timer4, _timer5, _Nbr_16timers } timer16_Sequence_t;
+		// Say which 16 bit timers can be used and in what order
+		#if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
+		#define _useTimer5
+		#define _useTimer1
+		#define _useTimer4
+		typedef enum { _timer1, _timer4, _timer5, _Nbr_16timers } timer16_Sequence_t;
 
-nous pouvons maintenant rouvir ArduinoIDE et recompiler sans encombre notre programme
+	nous pouvons maintenant rouvir ArduinoIDE et recompiler sans encombre notre programme
 
 

@@ -22,5 +22,5 @@ Partenariat et Subvention
 +-------------------------+-------------------------+
 | Statut d'écriture       | - en cours              |
 +-------------------------+-------------------------+
-| Statut de relecture     | - Scribens              |
+| Statut de relecture     | - Axel                  |
 +-------------------------+-------------------------+

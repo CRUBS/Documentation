@@ -291,7 +291,7 @@ Python
 ******
 
 Lors de la création d'un package un fichier setup.py est automatiquement créé.
-Ce fichier permet de paramétrer les executable. Cette étape est importante afin d'executer vos scripts.
+Ce fichier permet de paramétrer les executable. Cette étape est importante afin d'exécuter vos scripts.
 
 Vous devez rajouter la ligne suivante dans la liste 'console_scripts' à la fin du fichier :
 

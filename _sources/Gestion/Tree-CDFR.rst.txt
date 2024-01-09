@@ -21,5 +21,5 @@ Coupe de France de Robotique
 +-------------------------+-------------------------+
 | Statut d'écriture       | - en cours              |
 +-------------------------+-------------------------+
-| Statut de relecture     | - Scribens              |
+| Statut de relecture     | - Axel                  |
 +-------------------------+-------------------------+

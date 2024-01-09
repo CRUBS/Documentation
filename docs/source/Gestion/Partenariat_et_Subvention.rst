@@ -48,7 +48,7 @@ Coriolis Composites
 ===================
 
 .. image:: images/sub/coriolis.png
-	:scale: 100 %
+	:scale: 120 %
 	:align: center
 
 Coriolis Composites develops, produces and commercializes robotic cells and value-added software for automated composite additive manufacturing. Its strong expertise in composite technologies allows Coriolis Composites to offer off-the-shelf and tailored solutions to your industry.
@@ -66,7 +66,7 @@ IGUS
 ====
 
 .. image:: images/sub/igus.png
-	:scale: 30 %
+	:scale: 20 %
 	:align: center
 
 

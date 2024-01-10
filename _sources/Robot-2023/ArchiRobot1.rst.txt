@@ -5,8 +5,8 @@ Objectifs
 *********
 Le robot n°1 sera le principal, il aura pour but de :
 
-#. Faire les gateaux.
-#. Mettre les cerises précharcher sur les gateaux.
+#. Faire les gâteaux.
+#. Mettre les cerises préchargées sur les gâteaux.
 #. Mettre les roues dans le plat, à la fin du service.
 #. Se déguiser pour faire la fête.
 #. Calculer l’addition.
@@ -14,16 +14,16 @@ Le robot n°1 sera le principal, il aura pour but de :
 Architecture
 ************
 
-Choix d'une base holonome à 4 roues de 58mm. 4 roues pour concerver le code de l'année precedante, le developpement revelera malheureusement qu'il est necessaire de revoir le code.
-Les differents prehenseur montés sur les elevateur seront monter dans les espaces vide entre chaque branche de la base holonome
+Choix d'une base holonome à 4 roues de 58mm. 4 roues pour conserver le code de l'année précédente, le développement révélera malheureusement qu'il est nécessaire de revoir le code.
+Les différents préhenseur montés sur les élévateurs seront montés dans les espaces vides entre chaque branche de la base holonome
 
 
-Strategie CdFR
+Stratégie CdFR
 ==============
 
-strategie utiliser et deplacement sequntiel choisis pour les matchs a la cdfr
+Stratégie utilisée et déplacement séquentiel choisis pour les matchs à la CDFR
 
-Deplacement
+Déplacement
 ===========
 
 Roue
@@ -34,14 +34,14 @@ Roue
    :align: center
 
 roue holonome pour la base holonome, achat sur aliexpress
-2 ranger de 5 rouleaux, 58mm de rayon
+2 rangées de 5 rouleaux, 58mm de rayon
 
 https://fr.aliexpress.com/item/4001228422666.html?spm=a2g0o.order_list.order_list_main.31.21ef5e5bDfrTIG&gatewayAdapt=glo2fra
 
 Motorisation
 ************
 
-utilisation des moteurs pas a pas car deja une experience
+utilisation des moteurs pas à pas, car déjà une expérience
 
 Plus d'info:
 
@@ -50,24 +50,24 @@ Plus d'info:
 Actionneurs
 ===========
 
-Elevateur
+Élévateur
 *********
 
-Un des objectifs de cet année etait de tester un mecanisme du robot. le but est de reutiliser cette partie du robot tous les ans sans avoir a le refaire : L'elevateur. chaque année le sujet de la coupe implique d'avoir a lever un objet pour le deplacer, le role de l'elevateur sera de faire ce mouvement vertical et seul un prehenseur qui se monte dessus devra etre reingenierer chaque année.
-Cet année 3 elevateur ont ete monter sur le premier robot pour soulever les piles de gateaux
+Un des objectifs de cette année était de tester un mécanisme du robot. Le but est de réutiliser cette partie du robot tous les ans sans avoir à le refaire : L'élévateur. Chaque année le sujet de la coupe implique d'avoir à lever un objet pour le déplacer, le rôle de l'élévateur sera de faire ce mouvement vertical et seul un préhenseur qui se monte dessus devra être de nouveau travaillé chaque année.
+Cette année 3 élévateurs ont été monter sur le premier robot pour soulever les piles de gâteaux
 
 .. image:: images/robot1/schema_elevateur.png
    :scale: 60 %
    :align: center
 
-Apres une année avec ce systeme ce dernier necessite quelque modifications mais le principe est concluant et peut etre reutiliser sur les futurs robot
+Après une année avec ce système, ce dernier nécessite quelques modifications, mais le principe est concluant et peut être réutilisé sur les futurs robots
 
-Prehenseur des piles
+Préhenseur des piles
 ********************
 
-Pour attraper les piles genoise, creme et de glacage nous avons develloper une prehenseur qui se monte sur les elevateurs
+Pour attraper les piles génoises, crème et de glaçage nous avons développé une préhenseur qui se monte sur les élévateurs
 
-Le but de ce prehenseur est d'inserer deux ailette dans les trou au centre des piles et d'acrter ces deux ailette pour exercer une pression un pression sur les parois du trou. l'elevateur permettra d'attraper les piles a differente hauteur pour attraper 1, 2 ou 3 elements pour ainsi reconstituer les gateaux avec la bonne recette
+Le but de ce préhenseur est d'insérer deux ailettes dans les trous au centre des piles et d'écarter ces deux ailettes pour exercer une pression sur les parois du trou. l'élévateur permettra d'attraper les piles à différente hauteur pour attraper 1, 2 ou 3 éléments pour ainsi reconstituer les gâteaux avec la bonne recette
 
 .. image:: images/robot1/schema_prehenseur.png
    :scale: 70 %
@@ -78,13 +78,13 @@ Le but de ce prehenseur est d'inserer deux ailette dans les trou au centre des p
    :align: center
 
 
-Par manque de temps nous avons pas pu utiliser les actionneur a leur plein potentiel. Nous les avons reduis a une simple tige metalique qui plonge au centre des piles et qui traine les piles en meme temps que le robots ce deplace
+Par manque de temps nous n’avons pas pu utiliser les actionneurs à leur plein potentiel. Nous les avons réduits à une simple tige métallique qui plonge au centre des piles et qui traîne les piles en même temps que le robot se déplace.
 
-Depose des cerises
+Dépose des cerises
 ******************
 
-Pour marquer plus de points il est possible de poser une cerise par gateaux.
-Un actionneur supplementaire a donc ete ajouter sur le cote restant du robot
+Pour marquer plus de points, il est possible de poser une cerise par gâteaux.
+Un actionneur supplémentaire a donc été ajouté sur le côté restant du robot
 
 .. image:: images/robot1/schema_distributeur.png
    :scale: 70 %
@@ -105,10 +105,10 @@ Fait tourner ros2 pour faire fonctionner le robot, communique avec les autres ca
 Arduino Mega et ramps1.6
 ************************
 
-Une arduino mega equipper d'un shield ramps 1.6 est utiliser uniquement pour le controle des moteurs, cette dernier recoit ces ordres par liaison serie de la pi4
+Une Arduino méga équiper d'un shield ramps 1.6 est utilisé uniquement pour le contrôle des moteurs, cette dernière reçoit ces ordres par liaison série de la pi4
 
 Arduino Uno
 ***********
 
-Une arduino uno est utiliser pour controler les servo moteur et pour lire les valeur des differents capteur et sonde
-dans son cas elle recevais les ordre des servomoteur de la pi4 et envoyais les donner de l'imu, de tension et de courant a cette derniere
+Une Arduino uno est utilisé pour contrôler les servomoteurs et pour lire les valeurs des différents capteur et sonde
+dans son cas elle recevait les ordres des servomoteurs de la pi4 et envoyais les donner de l'imu, de tension et de courant a cette dernière

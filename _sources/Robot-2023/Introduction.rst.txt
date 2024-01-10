@@ -29,7 +29,7 @@ Généralités
 ***********
 
 Nous tentons de faire deux robots cette année.
-Nous préparons un robot principal, durable dans les années. Le but étants de ne pas avoir à concevoir un nouveau robot chaque année.
+Nous préparons un robot principal, durable dans les années. Le but étant de ne pas avoir à concevoir un nouveau robot chaque année.
 
 Préhenseurs
 ***********
@@ -56,9 +56,9 @@ Détection d'obstacle
 ********************
 
 Dans un premier temps, nous avons lancé deux membres du club sur le développement d'un système de détection.
-Le principe était d'utiliser les 3 mats présents sur les bords du plateau comme émetteur infrarouge et équipe les robots adverses comme allié des cartes réceptrice. Les carte emmetrices étaient équiper de plusieurs leds infrarouges disposés en cercle, ces dernières émettait chacune leur tour un code correspondant a leur numéro. Les cartes réceptrices sont équipées avec plusieurs récepteurs infrarouges disposés en cercle ce qui permettait de détecter quel récepteur captait quels leds infrarouges ce qui permettait de trianguler les robots.
+Le principe était d'utiliser les 3 mâts présents sur les bords du plateau comme émetteur infrarouge et équipe les robots adverses comme allié des cartes réceptrices. Les cartes émettrices étaient équipées de plusieurs LEDs infrarouges disposées en cercle, ces dernières émettaient chacune leur tour un code correspondant à leur numéro. Les cartes réceptrices sont équipées avec plusieurs récepteurs infrarouges disposés en cercle, ce qui permettait de détecter quel récepteur captait quels LEDs infrarouges ce qui permettait de trianguler les robots.
 
-Les résultats ont malheureusement montré une faible précision, plaçant les robots avec une imprécision allant de 2cm à 15cm prêt ce qui n'etait pas concevable
+Les résultats ont malheureusement montré une faible précision, plaçant les robots avec une imprécision allant de 2cm à 15cm près ce qui n'était pas concevable
 
 Nous avons donc en cours d'année fait l'acquisition de lidar avec des paquets déjà disponible pour ros2:
 
@@ -73,8 +73,8 @@ Objectifs
 *********
 Le robot n°1 sera le principal, il aura pour but de :
 
-#. Faire les gateaux.
-#. Mettre les cerises précharcher sur les gateaux.
+#. Faire les gâteaux.
+#. Mettre les cerises préchargées sur les gâteaux.
 #. Mettre les roues dans le plat, à la fin du service.
 #. Se déguiser pour faire la fête.
 #. Calculer l’addition.
@@ -82,8 +82,8 @@ Le robot n°1 sera le principal, il aura pour but de :
 Architecture
 ************
 
-Choix d'une base holonome à 4 roues de 58mm. 4 roues pour concerver le code de l'année precedante, le developpement revelera malheureusement qu'il est necessaire de revoir le code.
-Les differents prehenseur montés sur les elevateur seront monter dans les espaces vide entre chaque branche de la base holonome
+Choix d'une base holonome à 4 roues de 58mm. 4 roues pour conserver le code de l'année précédente, le développement révélera malheureusement qu'il est nécessaire de revoir le code.
+Les différents préhenseur montés sur les élévateurs seront montés dans les espaces vides entre chaque branche de la base holonome.
 
 
 Robot n°2 POU
@@ -105,5 +105,5 @@ Le robot n°2 sera le secondaire, il aura pour but de :
 Architecture
 ************
 
-Choix d'une toute petite base différentiel, 2 roues a l'arrière, 1 roue folle a l'avant.
-Le but de ce robot est de tester la base différentielle et d'en tirer des informations. 
+Choix d'une toute petite base différentielle, 2 roues à l'arrière, 1 roue folle à l'avant.
+Le but de ce robot est de tester la base différentielle et d'en tirer des informations.

@@ -297,20 +297,20 @@
 <li class="toctree-l3"><a class="reference internal" href="Configuration_Ubuntu.html#ssh">3.4.4. SSH</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="Configuration_Ubuntu.html#wlan0">3.4.4.1. wlan0</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Configuration_Ubuntu.html#eth0">3.4.4.2. eth0</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Configuration_Ubuntu.html#depanage">3.4.4.3. depanage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Configuration_Ubuntu.html#depanage">3.4.4.3. Dépanage</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="Configuration_Ubuntu.html#fixer-nom-des-ports-usb">3.4.5. Fixer nom des ports USB</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Configuration_Ubuntu.html#ros2-au-demarrage">3.4.6. ROS2 au demarrage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Configuration_Ubuntu.html#ros2-au-demarrage">3.4.6. ROS2 au démarrage</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="Tree-Motorisation.html">3.5. Motorisation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="Motorisation.html">3.5.1. Introduction</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="Motorisation.html#principe-de-fonctionnement-des-nema">3.5.1.1. Principe de fonctionnement des nema</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Motorisation.html#principe-de-fonctionnement-des-nemas">3.5.1.1. Principe de fonctionnement des Némas</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="Motorisation.html#pilotage-des-moteurs">3.5.2. Pilotage des moteurs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Motorisation.html#les-interuptions">3.5.3. Les interuptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Motorisation.html#les-interruptions">3.5.3. Les interruptions</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="Motorisation.html#confli-servo-h">3.5.3.1. !!!!!! confli servo.h !!!!!!!</a></li>
 </ul>
 </li>
@@ -323,7 +323,7 @@
 <li class="toctree-l4"><a class="reference internal" href="Alimentation.html#protection">3.6.2.2. Protection</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Alimentation.html#mesure-de-tension">3.6.2.3. Mesure de Tension</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Alimentation.html#mesure-du-courant">3.6.2.4. Mesure du Courant</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Alimentation.html#le-shema-electrique">3.6.2.5. Le shema electrique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Alimentation.html#le-schema-electrique">3.6.2.5. Le schéma électrique</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Alimentation.html#le-pcb">3.6.2.6. Le PCB</a></li>
 </ul>
 </li>
@@ -331,7 +331,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="Tree-Lidar.html">3.7. Lidar</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="Lidar.html">3.7.1. Introduction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Lidar.html#cablage">3.7.2. Cablage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Lidar.html#cablage">3.7.2. Câblage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Lidar.html#installation">3.7.3. Installation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Lidar.html#lancement-du-lidar">3.7.4. Lancement du lidar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Lidar.html#visualisation-du-lidar">3.7.5. Visualisation du lidar</a></li>
@@ -533,22 +533,24 @@
 <h2><span class="section-number">3.3.1.1. </span>Objectifs<a class="headerlink" href="#objectifs" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Le robot n°2 sera le secondaire, il aura pour but de :</p>
 <ol class="arabic simple">
-<li><p>ramasser les cerises disponibles sur le plateau.</p></li>
-<li><p>ranger les cerises restantes dans le panier.</p></li>
-<li><p>défendre les gâteaux montés par le robot principal.</p></li>
-<li><p>mettre les roues dans le plat, à la fin du service.</p></li>
-<li><p>se déguiser pour faire la fête.</p></li>
-<li><p>calculer l’addition.</p></li>
+<li><p>Ramasser les cerises disponibles sur le plateau.</p></li>
+<li><p>Ranger les cerises restantes dans le panier.</p></li>
+<li><p>Défendre les gâteaux montés par le robot principal.</p></li>
+<li><p>Mettre les roues dans le plat, à la fin du service.</p></li>
+<li><p>Se déguiser pour faire la fête.</p></li>
+<li><p>Calculer l’addition.</p></li>
 </ol>
 </div>
 <div class="section" id="architecture">
 <h2><span class="section-number">3.3.1.2. </span>Architecture<a class="headerlink" href="#architecture" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Choix d’une base différentielle à 2 roues de ?mm en expérimentation. Le robot principal étant assez imposant, ce dernier devra être de taille très réduite et éviter les préhenseurs qui pourraient augmenter son périmètre.</p>
+<p>Choix d’une base différentielle à 2 roues de ?mm en expérimentation. Le robot principal étant assez imposant,
+ce dernier devra donc être de taille très réduite. Il faut donc éviter les préhenseurs qui pourraient augmenter
+son périmètre.</p>
 </div>
 </div>
 <div class="section" id="strategie-cdfr">
 <h1><span class="section-number">3.3.2. </span>Stratégie CdFR<a class="headerlink" href="#strategie-cdfr" title="Lien permanent vers ce titre">¶</a></h1>
-<p>stratégie utilisée et déplacement séquentiel choisis pour les matchs à la CDFR</p>
+<p>Stratégie utilisée et déplacement séquentiel choisis pour les matchs à la CDFR.</p>
 </div>
 <div class="section" id="deplacement">
 <h1><span class="section-number">3.3.3. </span>Déplacement<a class="headerlink" href="#deplacement" title="Lien permanent vers ce titre">¶</a></h1>
@@ -557,7 +559,7 @@
 </div>
 <div class="section" id="motorisation">
 <h2><span class="section-number">3.3.3.2. </span>Motorisation<a class="headerlink" href="#motorisation" title="Lien permanent vers ce titre">¶</a></h2>
-<p>utilisation des moteurs pas à pas, car déjà une expérience</p>
+<p>Utilisation des moteurs pas à pas, car déjà une expérience.</p>
 <p>Plus d’info:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="Tree-Motorisation.html"><span class="doc">Motorisation</span></a></p></li>
@@ -566,25 +568,30 @@
 </div>
 <div class="section" id="actionneurs">
 <h1><span class="section-number">3.3.4. </span>Actionneurs<a class="headerlink" href="#actionneurs" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Pour marquer plus de points, il est possible de ramener les cerises présentes dans les distributeurs sur le terrain dans un panier conçu par nos soins et déposé sur le bord du terrain en début de match.</p>
+<p>Pour marquer plus de points, il est possible de ramener les cerises présentes dans les distributeurs sur le terrain
+dans un panier conçu par nos soins et déposé sur le bord du terrain en début de match.</p>
 <div class="section" id="prehenseur-des-cerises">
 <h2><span class="section-number">3.3.4.1. </span>Préhenseur des cerises<a class="headerlink" href="#prehenseur-des-cerises" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Un actionneur supplémentaire a donc été ajouté sur le côté du robot permettant de ramasser les cerises présentes dans les distributeurs de cerises. Les cerises sont alors amenées en haut du robot dans une réserve.</p>
+<p>Un actionneur supplémentaire a donc été ajouté sur le côté du robot permettant de ramasser les cerises présentes
+dans les distributeurs de cerises. Les cerises sont alors amenées en haut du robot dans une réserve.</p>
 </div>
 <div class="section" id="depose-des-cerises">
 <h2><span class="section-number">3.3.4.2. </span>Dépose des cerises<a class="headerlink" href="#depose-des-cerises" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Nous avons rajouté une porte actionnable par un servomoteur pour libérer les cerises présentes dans la réserve et les faire tomber dans le panier</p>
+<p>Nous avons rajouté une porte actionnable par un servomoteur pour libérer les cerises présentes dans la réserve
+et les faire tomber dans le panier.</p>
 </div>
 </div>
 <div class="section" id="cartes">
 <h1><span class="section-number">3.3.5. </span>Cartes<a class="headerlink" href="#cartes" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="raspberry-pi-4">
 <h2><span class="section-number">3.3.5.1. </span>Raspberry pi 4<a class="headerlink" href="#raspberry-pi-4" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Fait tourner ros2 pour faire fonctionner le robot, communique avec les autres cartes</p>
+<p>Fait tourner ROS2 pour faire fonctionner le robot, communique avec les autres cartes.</p>
 </div>
 <div class="section" id="arduino-mega-et-ramps1-6">
 <h2><span class="section-number">3.3.5.2. </span>Arduino Mega et ramps1.6<a class="headerlink" href="#arduino-mega-et-ramps1-6" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Une Arduino méga équiper d’un shield ramps 1.6 est utilisé uniquement pour le contrôle des moteurs, cette dernière reçoit ces ordres par liaison série de la pi4. elle contrôle aussi le relais du moteur de la remonté des cerises et le servomoteur déposant les cerises dans le panier</p>
+<p>Une Arduino méga équiper d’un shield <em>ramps 1.6</em> est utilisé uniquement pour le contrôle des moteurs,
+cette dernière reçoit ces ordres par liaison série de la Pi. Elle contrôle aussi le relais du moteur
+lors de la remonté des cerises et le servomoteur déposant les cerises dans le panier.</p>
 </div>
 </div>
 

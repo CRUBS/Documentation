@@ -26,7 +26,7 @@ Bienvenue sur la documentation du CRUBS!
 
 .. note::
 
-   Les informations relative a la redaction de cette documentation : 
+   Les informations relative à la rédaction de cette documentation :
    :doc:`/Informatique_Programmation/Tree-Doc_sphinx`
 
 TODO :

@@ -297,20 +297,20 @@
 <li class="toctree-l3"><a class="reference internal" href="Configuration_Ubuntu.html#ssh">3.4.4. SSH</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="Configuration_Ubuntu.html#wlan0">3.4.4.1. wlan0</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Configuration_Ubuntu.html#eth0">3.4.4.2. eth0</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Configuration_Ubuntu.html#depanage">3.4.4.3. depanage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Configuration_Ubuntu.html#depanage">3.4.4.3. Dépanage</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="Configuration_Ubuntu.html#fixer-nom-des-ports-usb">3.4.5. Fixer nom des ports USB</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Configuration_Ubuntu.html#ros2-au-demarrage">3.4.6. ROS2 au demarrage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Configuration_Ubuntu.html#ros2-au-demarrage">3.4.6. ROS2 au démarrage</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="Tree-Motorisation.html">3.5. Motorisation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="Motorisation.html">3.5.1. Introduction</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="Motorisation.html#principe-de-fonctionnement-des-nema">3.5.1.1. Principe de fonctionnement des nema</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Motorisation.html#principe-de-fonctionnement-des-nemas">3.5.1.1. Principe de fonctionnement des Némas</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="Motorisation.html#pilotage-des-moteurs">3.5.2. Pilotage des moteurs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Motorisation.html#les-interuptions">3.5.3. Les interuptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Motorisation.html#les-interruptions">3.5.3. Les interruptions</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="Motorisation.html#confli-servo-h">3.5.3.1. !!!!!! confli servo.h !!!!!!!</a></li>
 </ul>
 </li>
@@ -323,7 +323,7 @@
 <li class="toctree-l4"><a class="reference internal" href="Alimentation.html#protection">3.6.2.2. Protection</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Alimentation.html#mesure-de-tension">3.6.2.3. Mesure de Tension</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Alimentation.html#mesure-du-courant">3.6.2.4. Mesure du Courant</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Alimentation.html#le-shema-electrique">3.6.2.5. Le shema electrique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Alimentation.html#le-schema-electrique">3.6.2.5. Le schéma électrique</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Alimentation.html#le-pcb">3.6.2.6. Le PCB</a></li>
 </ul>
 </li>
@@ -331,7 +331,7 @@
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="Tree-Lidar.html">3.7. Lidar</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">3.7.1. Introduction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#cablage">3.7.2. Cablage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cablage">3.7.2. Câblage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#installation">3.7.3. Installation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lancement-du-lidar">3.7.4. Lancement du lidar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#visualisation-du-lidar">3.7.5. Visualisation du lidar</a></li>
@@ -529,11 +529,16 @@
              
   <div class="section" id="introduction">
 <h1><span class="section-number">3.7.1. </span>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Afin de permetre aux robots de reperer leur environnement et principalement les robots adversaires, plusieur solutions existent. Apres avoir observer des resultats trop imprecis avec les prototypes des balises, nous avons du nous rabattratre sur la solution la plus couteuse qui est l’achat de deux lidar. Nous avons selectionner les LD06, ces derniers sont deja utiliser dans le domaine de la robotique et par des equipes de la coupe de france ainsi tous les packages ROS2 existent pour ce dernier</p>
+<p>Afin de permettre aux robots de repérer leur environnement et principalement les robots adversaires,
+plusieurs solutions existent. Après avoir observé des résultats trop imprécis avec les prototypes des balises,
+nous avons dû nous rabattre sur la solution la plus couteuse qui est l’achat de deux lidars.
+Nous avons sélectionné les LD06, ces derniers sont déjà utilisés dans le domaine de la robotique et par des équipes
+de la coupe de France. De plus, tous les packages ROS2 existent pour ce dernier.</p>
 </div>
 <div class="section" id="cablage">
-<h1><span class="section-number">3.7.2. </span>Cablage<a class="headerlink" href="#cablage" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Un module de conversion ttl vers serie est necessaire afin de connecter le lidar a la pi en USB (ref : CP2102). voici le cablage :</p>
+<h1><span class="section-number">3.7.2. </span>Câblage<a class="headerlink" href="#cablage" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Un module de conversion ttl vers série est nécessaire afin de connecter le lidar à la Pi en USB (ref : CP2102).
+Voici le câblage :</p>
 <ol class="arabic simple">
 <li><p>lidar pin 1 : blanc : tx -&gt; module ttl : rx</p></li>
 <li><p>lidar pin 2 : jaune : pwm -&gt; N/A</p></li>
@@ -543,45 +548,50 @@
 </div>
 <div class="section" id="installation">
 <h1><span class="section-number">3.7.3. </span>Installation<a class="headerlink" href="#installation" title="Lien permanent vers ce titre">¶</a></h1>
-<p>tuto video suivis : <a class="reference external" href="https://www.youtube.com/watch?v=OJWAsV6-0GE">https://www.youtube.com/watch?v=OJWAsV6-0GE</a></p>
-<p>creation d’un workspace avant de telecharger les paquets:</p>
+<p>Tuto vidéo suivi : <a class="reference external" href="https://www.youtube.com/watch?v=OJWAsV6-0GE">https://www.youtube.com/watch?v=OJWAsV6-0GE</a></p>
+<p>Création d’un workspace avant de télécharger les paquets :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p ldlidar_ros2_ws/src
 <span class="nb">cd</span> ldlidar_ros2_ws/src
 </pre></div>
 </div>
-<p>puis copie d’un repertoire git</p>
+<p>Puis copie d’un répertoire git.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/ldrobotSensorTeam/ldlidar_stl_ros2.git
 <span class="nb">cd</span> ~
 </pre></div>
 </div>
-<p>vous pouvez desormais brancher le lidar et verfier avec la commande suivante le nom de son ports USB</p>
+<p>Vous pouvez désormais brancher le lidar et vérifier avec la commande suivante le nom de son port USB.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls /dev/ttyUSB*
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../_images/port_name.png"><img alt="../_images/port_name.png" class="align-center" src="../_images/port_name.png" style="width: 359.0px; height: 37.0px;" /></a>
-<p>noter bien le numero du port USB, dans mon cas /dev/ttyUSB0
-ajoutons lui les droits</p>
+<p>Notez bien le numero du port USB, dans mon cas /dev/ttyUSB0/</p>
+<p>Ajoutons lui les droits.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo chmod <span class="m">777</span> /dev/ttyUSB0
 </pre></div>
 </div>
-<p>nous allons maintenant modifier le fichier de launch du lidar afin de lui indiquer le ports sur lequel ce dernier est connecter</p>
+<p>Nous allons maintenant modifier le fichier de launch du lidar afin de lui indiquer le port sur lequel ce dernier
+est connecté.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~
 <span class="nb">cd</span> ldlidar_ros2_ws/src/ldlidar_stl_ros2/launch
 nano ld06.launch.py
 </pre></div>
 </div>
-<p>maintenant trouvez la ligne suivante et modifier la en fonction de votre ports USB utiliser par le lidar, dans mon cas le /dev/ttyUSB0  est deja indiquer par defaut a la ligne 45</p>
+<p>Maintenant trouvez la ligne suivante et modifiez-la en fonction du port USB utilisé par le lidar, dans mon cas
+le /dev/ttyUSB0  est déjà indiqué par défaut à la ligne 45.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;port_name&#39;</span><span class="p">:</span> <span class="s1">&#39;/dev/ttyUSB0&#39;</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../_images/launch_file.png"><img alt="../_images/launch_file.png" class="align-center" src="../_images/launch_file.png" style="width: 411.0px; height: 356.0px;" /></a>
-<p>une fois la modification effectuer pour pouvez fermer et enregistrer le fichier avec ctrl+x puis y</p>
-<p>a l’avanir le nom du port usb utiliser sera fixer en tant que “/dev/Lidar_LD06” (se referer au tuto dans la configuration Ubuntu).</p>
+<p>Une fois la modification effectuée, pour pouvez fermer et enregistrer le fichier avec ctrl+x puis y.</p>
+<p>À l’avanir, le nom du port USB utilisé sera fixé en tant que “/dev/Lidar_LD06” (se referer au tuto dans
+la configuration Ubuntu).</p>
+<p><a class="reference internal" href="Tree-Configuration_Ubuntu.html"><span class="doc">Configuration_Ubuntu</span></a></p>
 </div>
 <div class="section" id="lancement-du-lidar">
 <h1><span class="section-number">3.7.4. </span>Lancement du lidar<a class="headerlink" href="#lancement-du-lidar" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Maintenant que le package du lidar est correctement configurer, nous allons pouvoir le faire fonctionner afin de visualiser notre environnemment</p>
-<p>Nous devons build le package puis sourcer les variables d’environnement</p>
+<p>Maintenant que le package du lidar est correctement configuré, nous allons pouvoir le faire fonctionner
+afin de visualiser notre environnement.</p>
+<p>Nous devons compiler le package puis sourcer les variables d’environnement.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~
 <span class="nb">cd</span> ldlidar_ros2_ws
 colcon build
@@ -589,28 +599,29 @@ colcon build
 <span class="nb">source</span> ~/.bashrc
 </pre></div>
 </div>
-<p>nous pouvons enfin lancer le noeud du lidar</p>
+<p>Nous pouvons enfin lancer le noeud du lidar.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 launch ldlidar_stl_ros2 ld06.launch.py
 </pre></div>
 </div>
-<p>dans un nouveau terminal vous pouvez verifier que le topic /scan est bien present</p>
+<p>dans un nouveau terminal vous pouvez verifier que le topic <em>/scan</em> est bien present.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 topic list
 </pre></div>
 </div>
 </div>
 <div class="section" id="visualisation-du-lidar">
 <h1><span class="section-number">3.7.5. </span>Visualisation du lidar<a class="headerlink" href="#visualisation-du-lidar" title="Lien permanent vers ce titre">¶</a></h1>
-<p>lancer le lidar comme vu au dessus puis lancement de rviz</p>
+<p>Lancer le lidar comme vu au dessus puis lancement de rviz.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rviz2
 </pre></div>
 </div>
-<p>en bas a gauche de la fenetre cliquer sur Add puis dans le volets qui viens de s’ouvrir choisir LaserScan et Ok</p>
-<p>vous allez maintenant devoir selectionner plusieurs parametre du menu de gauche</p>
+<p>En bas à gauche de la fenêtre, cliquer sur <em>Add</em> puis dans le volet qui vient de s’ouvrir, choisir <em>LaserScan</em> et <em>Ok</em>.</p>
+<p>Vous allez maintenant devoir sélectionner plusieurs paramètres du menu de gauche.</p>
 <ol class="arabic simple">
 <li><p>dans Global Options &gt; Fixed Frame choisir base_link</p></li>
 <li><p>dans LaserScan &gt; Topic choisir /scan</p></li>
 </ol>
-<p>des points de couleurs de couleur devrais apparaitre dans l’interface centrale de rviz representant les resultats du lidar</p>
+<p>Des points de couleurs devraient apparaitre dans l’interface centrale de rviz représentant les éléments captés
+par le lidar.</p>
 </div>
 
 

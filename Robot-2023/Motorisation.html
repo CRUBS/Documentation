@@ -297,20 +297,20 @@
 <li class="toctree-l3"><a class="reference internal" href="Configuration_Ubuntu.html#ssh">3.4.4. SSH</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="Configuration_Ubuntu.html#wlan0">3.4.4.1. wlan0</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Configuration_Ubuntu.html#eth0">3.4.4.2. eth0</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Configuration_Ubuntu.html#depanage">3.4.4.3. depanage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Configuration_Ubuntu.html#depanage">3.4.4.3. Dépanage</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="Configuration_Ubuntu.html#fixer-nom-des-ports-usb">3.4.5. Fixer nom des ports USB</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Configuration_Ubuntu.html#ros2-au-demarrage">3.4.6. ROS2 au demarrage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Configuration_Ubuntu.html#ros2-au-demarrage">3.4.6. ROS2 au démarrage</a></li>
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="Tree-Motorisation.html">3.5. Motorisation</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">3.5.1. Introduction</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#principe-de-fonctionnement-des-nema">3.5.1.1. Principe de fonctionnement des nema</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#principe-de-fonctionnement-des-nemas">3.5.1.1. Principe de fonctionnement des Némas</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#pilotage-des-moteurs">3.5.2. Pilotage des moteurs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#les-interuptions">3.5.3. Les interuptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#les-interruptions">3.5.3. Les interruptions</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#confli-servo-h">3.5.3.1. !!!!!! confli servo.h !!!!!!!</a></li>
 </ul>
 </li>
@@ -323,7 +323,7 @@
 <li class="toctree-l4"><a class="reference internal" href="Alimentation.html#protection">3.6.2.2. Protection</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Alimentation.html#mesure-de-tension">3.6.2.3. Mesure de Tension</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Alimentation.html#mesure-du-courant">3.6.2.4. Mesure du Courant</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Alimentation.html#le-shema-electrique">3.6.2.5. Le shema electrique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Alimentation.html#le-schema-electrique">3.6.2.5. Le schéma électrique</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Alimentation.html#le-pcb">3.6.2.6. Le PCB</a></li>
 </ul>
 </li>
@@ -331,7 +331,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="Tree-Lidar.html">3.7. Lidar</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="Lidar.html">3.7.1. Introduction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Lidar.html#cablage">3.7.2. Cablage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Lidar.html#cablage">3.7.2. Câblage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Lidar.html#installation">3.7.3. Installation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Lidar.html#lancement-du-lidar">3.7.4. Lancement du lidar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Lidar.html#visualisation-du-lidar">3.7.5. Visualisation du lidar</a></li>
@@ -529,10 +529,13 @@
              
   <div class="section" id="introduction">
 <h1><span class="section-number">3.5.1. </span>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Afin de piloter les roues des robots, nous avons fait le choix d’opter pour des moteur pas à pas (nema 17 2 phases) ces derniers ont la possibilité d’etre facilement utilisable a partir d’une carte arduino equipper d’un shield pouvant accueilleir jusqu’a 5 drivers de moteur pas à pas, le tout forme ce que l’on appelle une RAMPS c’est un systeme beaucoup utilisé dans le dommaine des imprimante 3D.</p>
+<p>Afin de piloter les roues des robots, nous avons fait le choix d’opter pour des moteur pas à pas (Néma 17 2 phases).
+Ces derniers ont la possibilité d’être facilement utilisables à partir d’une carte Arduino équippée d’un shield
+pouvant accueillir jusqu’à 5 drivers de moteurs pas à pas. Le tout forme ce que l’on appelle une RAMPS.
+C’est un systeme beaucoup utilisé dans le domaine des imprimantes 3D.</p>
 <a class="reference internal image-reference" href="../_images/ramps16.png"><img alt="../_images/ramps16.png" class="align-center" src="../_images/ramps16.png" style="width: 647.1px; height: 576.0px;" /></a>
-<div class="section" id="principe-de-fonctionnement-des-nema">
-<h2><span class="section-number">3.5.1.1. </span>Principe de fonctionnement des nema<a class="headerlink" href="#principe-de-fonctionnement-des-nema" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="principe-de-fonctionnement-des-nemas">
+<h2><span class="section-number">3.5.1.1. </span>Principe de fonctionnement des Némas<a class="headerlink" href="#principe-de-fonctionnement-des-nemas" title="Lien permanent vers ce titre">¶</a></h2>
 <a class="reference internal image-reference" href="../_images/nema_pos.png"><img alt="../_images/nema_pos.png" class="align-center" src="../_images/nema_pos.png" style="width: 663.2px; height: 299.2px;" /></a>
 <p><a class="reference external" href="https://www.youtube.com/watch?v=jPTvo6boZkk">https://www.youtube.com/watch?v=jPTvo6boZkk</a></p>
 <p><a class="reference external" href="https://www.youtube.com/watch?time_continue=0&amp;v=eyqwLiowZiU&amp;embeds_referring_euri=https%3A%2F%2Faccu-components.com%2F">https://www.youtube.com/watch?time_continue=0&amp;v=eyqwLiowZiU&amp;embeds_referring_euri=https%3A%2F%2Faccu-components.com%2F</a></p>
@@ -540,16 +543,17 @@
 </div>
 <div class="section" id="pilotage-des-moteurs">
 <h1><span class="section-number">3.5.2. </span>Pilotage des moteurs<a class="headerlink" href="#pilotage-des-moteurs" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Une fois brancher sur une ramps, le nema peuvent facilement etre piloter par l’arduino, le tout est de savoir comment.</p>
+<p>Une fois branché sur une ramps, les Némas peuvent facilement être pilotés par l’Arduino, le tout est de savoir comment.</p>
 <a class="reference internal image-reference" href="../_images/tmc_2209.png"><img alt="../_images/tmc_2209.png" class="align-center" src="../_images/tmc_2209.png" style="width: 480.0px; height: 480.0px;" /></a>
 <ol class="arabic simple">
-<li><p>EN : le pin enable permet d’alimenter le moteur, en general un niveau 0 allimentera le moteur et un niveau 1 le coupera</p></li>
-<li><p>DIR : ce pin permet simplement de definir le sens du moteur selon le niveau logique du pin</p></li>
-<li><p>STEP : ce pin est le plus important ce dernier va piloter la vitesse de rotation du moteur. a partir de l’envoie d’un signal carre, chaque periode de ce signal permettra d’effectuer un micro pas</p></li>
-<li><p>MS0, MS1, MS2 : ces pins du drivers vont permettre de choisir le nombre de micro pas a ajouter au nema. le controle du niveau logique de ces dernier ne se fait pas par l’arduino mais mais des cavalier qui se trouve sous chaque drivers. pour savoir le nombre de micro pas choisis il faut se refferer a un tableau qui est propre a chaque drivers. placer un cavalier correspond a un niveau logique 1</p></li>
-<li><p>A1, A2, B1, B2: sont les sortie, ces pin vont directement piloter le bobinage des nemas.</p></li>
+<li><p>EN : le pin enable permet d’alimenter le moteur, en général un niveau 0 alimentera le moteur et un niveau 1 le coupera</p></li>
+<li><p>DIR : ce pin permet simplement de définir le sens du moteur selon le niveau logique du pin</p></li>
+<li><p>STEP : ce pin est le plus important, ce dernier va piloter la vitesse de rotation du moteur. À partir de l’envoi d’un signal carré, chaque période de ce signal permettra d’effectuer un micro pas</p></li>
+<li><p>MS0, MS1, MS2 : ces pins du drivers vont permettre de choisir le nombre de micro pas à ajouter au Néma. Le control du niveau logique de ces derniers ne se fait pas par l’Arduino mais mais des cavaliers qui se trouvent sous chaque drivers. Pour savoir le nombre de micro pas choisis il faut se réferer à un tableau qui est propre à chaque driver. Placer un cavalier correspond à un niveau logique 1</p></li>
+<li><p>A1, A2, B1, B2: sont les sorties, ces pins vont directement piloter le bobinage des Némas.</p></li>
 </ol>
-<p>la solution qui est la plus simple a mettre en oeuvre reste de creer une boucle qui inverse l’etat du pin de sortie celon une certaine periode tel que :</p>
+<p>La solution qui est la plus simple à mettre en oeuvre reste de créer une boucle qui inverse l’état du pin de sortie
+selon une certaine période tel que :</p>
 <div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span> <span class="nb">setup</span><span class="p">()</span> <span class="p">{</span>
         <span class="nf">pinMode</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="kr">INPUT</span><span class="p">);</span>
 <span class="p">}</span>
@@ -560,57 +564,84 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>cette methode a l’avantage d’etre tres simple a mettre en oeuvre mais reste tres gourmant en temps pour un microprocesseur. Ainsi cette methode reste tres bien dans le cas du clignotement d’une led a base frequence mais pour genrer un signal carre a haute frequence cela risque de poser probleme. En effet des que l’on ajoute plusieurs moteur avec cette methode, la vitesse maximale pouvant etre atteinte diminue et un programe plus complet penera a effectuer le reste de ces intruction. Par ailleur il n’est pas non plus garanti que le delay soit respecter et la periode de notre signal de sortie risque d’etre fortement impacter</p>
-<p>Pour eviter cela il existe une autre solution, l’utilisation des interruptions.</p>
+<p>Cette methode à l’avantage d’être tres simple à mettre en oeuvre mais reste très gourmande en temps
+pour un microprocesseur. Ainsi cette methode reste très bien dans le cas du clignotement d’une led à basse fréquence,
+mais pour générer un signal carré à haute fréquence cela risque de poser probleme.
+En effet, dès que l’on ajoute plusieurs moteurs avec cette méthode, la vitesse maximale pouvant être atteinte
+diminue et un programme plus complet peinera à effectuer le reste de ces intructions. Par ailleurs,
+il n’est pas non plus garanti que le délais soit respecté et la période de notre signal de sortie risque
+d’être fortement impactée.</p>
+<p>Pour éviter cela, il existe une autre solution, l’utilisation des interruptions.</p>
 </div>
-<div class="section" id="les-interuptions">
-<h1><span class="section-number">3.5.3. </span>Les interuptions<a class="headerlink" href="#les-interuptions" title="Lien permanent vers ce titre">¶</a></h1>
-<p>afin de piloter de piloter les moteur de maniere tres precise nous llons donc utiliser les interuptions. les interuptions utilise les timers, ces derniers correspondent a un compteur mais ce dernier a l’avantage de ne pas etre impacter par le niveau d’utilisatyion du proceseur. en d’autre therme, meme si le programme est lourd en calcul, le timer continuera de s’incrementer avec la frequence du processeur.</p>
-<p>C’est la que les interuptions interviennent. ce dernier est une fonction qui sera executer au moment un timer aura atteint la valeur voulu. Ainsi, nous allons pouvoir generer un signal carre en inverser l’etat d’un port arduino a chaque fois que le timer atteint la valeur souhaiter, et en faisant varier cette valeur nous allons pouvoir changer la frequence de ce signal carree.</p>
-<p>celon les microprocesseur, les timers sont coder sur un certain nombre d’octet, ainsi lors ce  que l’on veut se servir d’un timer il faut faire attention a ce que notre periode puisse etre compter. il exsite une solution dans le cas ou la valeur maximale ne peut pas etre atteinte : les prescalaire. il faudra donc attendre qu’un premier registre du timer ateigne la valeur du prescalaire avant d’incrementer de un le registre du timer de l’interuption. nous pouvons ainis compter bien plus loin.</p>
-<p>Voici comment mettre en place une interuption sur le timer 3 avec arduino</p>
-<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="nf">pinMode</span><span class="p">(</span><span class="mi">36</span><span class="p">,</span> <span class="kr">OUTPUT</span><span class="p">);</span> <span class="c1">//creation d&#39;un port temoin pour lire le signal</span>
-<span class="kr">volatile</span> <span class="kr">int</span> <span class="n">period</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">;</span> <span class="c1">//creation de la periode variable</span>
+<div class="section" id="les-interruptions">
+<h1><span class="section-number">3.5.3. </span>Les interruptions<a class="headerlink" href="#les-interruptions" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Afin de piloter les moteurs de manière très précise, nous allons donc utiliser les interruptions. Les interruptions
+utilisent les timers, ces derniers correspondent à un compteur mais à l’avantage de ne pas être impacté par le niveau
+d’utilisation du processeur. En d’autres termes, même si le programme est lourd en calcul, le timer continuera
+de s’incrémenter avec la fréquence du processeur.</p>
+<p>C’est là que les interruptions interviennent. Cette dernière est une fonction qui sera executée au moment où
+un timer aura atteint la valeur voulue. Ainsi, nous allons pouvoir générer un signal carré en inversant l’état
+d’un port Arduino à chaque fois que le timer atteint la valeur souhaitée, et en faisant varier cette valeur,
+nous allons pouvoir changer la fréquence de ce signal carré.</p>
+<p>Selon les microprocesseurs, les timers sont codés sur un certain nombre d’octets, ainsi lorsque l’on veut
+se servir d’un timer il faut faire attention à ce que notre période puisse être comptée. Il existe une solution
+dans le cas où la valeur maximale ne peut pas être atteinte : les pré-scalaires. Il faudra donc attendre
+qu’un premier registre du timer atteigne la valeur du pré-scalaire avant d’incrémenter de un le registre du timer
+de l’interruption. Nous pouvons ainsi compter bien plus loin.</p>
+<p>Voici comment mettre en place une interruption sur le timer 3 avec Arduino :</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="nf">pinMode</span><span class="p">(</span><span class="mi">36</span><span class="p">,</span> <span class="kr">OUTPUT</span><span class="p">);</span> <span class="c1">//création d&#39;un port témoin pour lire le signal</span>
+<span class="kr">volatile</span> <span class="kr">int</span> <span class="n">period</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">;</span> <span class="c1">//création de la période variable</span>
 
 <span class="kr">void</span> <span class="nb">setup</span><span class="p">()</span> <span class="p">{</span>
 
-        <span class="n">noInterrupt</span><span class="p">();</span> <span class="c1">//desactivation des interruptions le temps de travailler dessus</span>
+        <span class="n">noInterrupt</span><span class="p">();</span> <span class="c1">//désactivation des interruptions le temps de travailler dessus</span>
         <span class="n">TCCR3A</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">//reset du registre A du timer 3</span>
         <span class="n">TCCR3B</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">//reset du registre B du timer 3</span>
-        <span class="n">TCCR3B</span> <span class="o">|=</span> <span class="n">B00000001</span><span class="p">;</span> <span class="c1">//ecriture dans le registre B du timer 3 pour definir qu&#39;il n&#39;y a pas de prescaler</span>
-        <span class="n">TCNT3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">//remise a 0 du compteur</span>
-        <span class="n">OCR3A</span> <span class="o">=</span> <span class="n">period</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="c1">//creation de la valeur de comparaison</span>
+        <span class="n">TCCR3B</span> <span class="o">|=</span> <span class="n">B00000001</span><span class="p">;</span> <span class="c1">//écriture dans le registre B du timer 3 pour définir qu&#39;il n&#39;y a pas de pré-scaler</span>
+        <span class="n">TCNT3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">//remise à 0 du compteur</span>
+        <span class="n">OCR3A</span> <span class="o">=</span> <span class="n">period</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="c1">//création de la valeur de comparaison</span>
 
-        <span class="n">TIMSK3</span> <span class="o">|=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">OCIE3A</span><span class="p">);</span> <span class="c1">// on allume l&#39;interuption sur la comparaison du timer</span>
+        <span class="n">TIMSK3</span> <span class="o">|=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">OCIE3A</span><span class="p">);</span> <span class="c1">// on allume l&#39;interruption sur la comparaison du timer</span>
 
-        <span class="nf">interrupts</span><span class="p">();</span> <span class="n">et</span> <span class="n">on</span> <span class="n">fini</span> <span class="n">par</span> <span class="n">ralumer</span> <span class="n">les</span> <span class="n">interuptions</span>
+        <span class="nf">interrupts</span><span class="p">();</span> <span class="n">et</span> <span class="n">on</span> <span class="n">fini</span> <span class="n">par</span> <span class="n">réallumer</span> <span class="n">les</span> <span class="n">interruptions</span>
 <span class="p">}</span>
 
-<span class="c1">//ici la fonction de l&#39;interuption, elle sera executer a chaque fois que la comparaison entre</span>
-<span class="n">la</span> <span class="n">valeur</span> <span class="n">de</span> <span class="n">OCR3A</span> <span class="n">et</span> <span class="n">celle</span> <span class="n">du</span> <span class="n">timer</span> <span class="n">sera</span> <span class="n">egale</span>
-<span class="nf">ISR</span><span class="p">(</span><span class="n">TIMER3_COMPA_vect</span><span class="p">){</span>
+<span class="c1">//ici la fonction de l&#39;interruption, elle sera exécutée à chaque fois que la comparaison entre</span>
+<span class="c1">//la valeur de OCR3A et celle du timer sera égale</span>
+<span class="n">ISR</span><span class="p">(</span><span class="n">TIMER3_COMPA_vect</span><span class="p">){</span>
         <span class="nf">digitalWrite</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="o">!</span><span class="nf">digitalRead</span><span class="p">(</span><span class="mi">13</span><span class="p">));</span> <span class="c1">//inversion du pin 13 pour faire tourner le moteur</span>
 
-        <span class="n">OCR3A</span> <span class="o">=</span> <span class="n">period</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="c1">// on reetabli la valeur de comparaison par securiter</span>
-        <span class="n">TCNT3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">//on remet le compteur a 0</span>
+        <span class="n">OCR3A</span> <span class="o">=</span> <span class="n">period</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="c1">// on réetablie la valeur de comparaison par sécurité</span>
+        <span class="n">TCNT3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">//on remet le compteur à 0</span>
 <span class="p">}</span>
 
-<span class="c1">// la variable period peut etre modifier pendant l&#39;evolution du programme</span>
-<span class="c1">//cela peut se faire directement dans la boucle loop ou dans une fonction via un message ROS ou serie par exemple.</span>
-<span class="c1">//cela se fait en inserant le block suivant:</span>
+<span class="c1">// la variable period peut être modifiée pendant l&#39;évolution du programme</span>
+<span class="c1">//cela peut se faire directement dans la boucle loop ou dans une fonction via un message ROS ou série par exemple.</span>
+<span class="c1">//cela se fait en insérant le block suivant:</span>
 <span class="nf">noInterrupts</span><span class="p">();</span>
 <span class="n">period</span> <span class="o">=</span> <span class="n">newval</span><span class="p">;</span>
 <span class="n">OCR3A</span> <span class="o">=</span> <span class="n">period</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
 <span class="nf">interrupts</span><span class="p">();</span>
 </pre></div>
 </div>
-<p>il suffit maintenenant de dupliquer la partie presente dans le setup et le l’interruption en ramplacant les 3 par le numero de celui que vous souhaiter utiliser. De cette maniere chaque moteur fonctionera sur son interrution. attention, toute les carte arduino ne possede pas les meme timer dans le cas d’une arduino mega il y a 4 timer 16 bits ainsi le moteur 1er est controler par le timer1, le 2nd par le timer3, le 3eme par le timer4 et enfin le 4eme moteur par le timer5.</p>
+<p>Il suffit maintenant de dupliquer la partie présente dans le setup et le l’interruption en ramplaçant les 3
+par le numéro de celui que vous souhaitez utiliser. De cette manière, chaque moteur fonctionnera sur son interruption.</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Attention, toute les cartes Arduino ne possèdent pas les mêmes timers. Dans le cas d’une Arduino mega,</p>
+</div>
+<p>il y a 4 timers 16 bits ainsi le moteur 1er est contrôler par le timer1, le 2nd par le timer3,
+le 3eme par le timer4 et enfin le 4eme moteur par le timer5.</p>
 <div class="section" id="confli-servo-h">
 <h2><span class="section-number">3.5.3.1. </span>!!!!!! confli servo.h !!!!!!!<a class="headerlink" href="#confli-servo-h" title="Lien permanent vers ce titre">¶</a></h2>
-<p>la biliotheque servo.h utilise les timer afin de piloter des servomoteurs. a la compilation vous aurez donc une erreur indiquant la sur utilisation d’un vecteur. il est donc neccessaire de modifier la bibliotheque pour que cette derniere n’utilise pas le timer que nous utilisons.
-Pour cela diriger dans votre dossier d’instalation d’Arduino IDE. pour moi arduino-1.8.19. suivez ensuite le chemin suivant:
-arduino-1.8.19 &gt; libraries &gt; Servo &gt; src &gt; avr
-ouvre ensuite le fichier ServoTimers.h, trouvez ensuite les lignes suivantes qui correspondent a votre processeur, ici pour un arduino mega:</p>
+<p>La bibliothèque <em>servo.h</em> utilise les timers afin de piloter des servomoteurs. À la compilation vous aurez
+donc une erreur indiquant la sur-utilisation d’un vecteur. Il est donc nécessaire de modifier la bibliotheque
+pour que cette dernière n’utilise pas le timer que nous utilisons.</p>
+<p>Pour cela dirigez-vous dans votre dossier d’installation d’Arduino IDE. Pour moi <em>arduino-1.8.19</em>. Suivez ensuite
+le chemin suivant:
+arduino-1.8.19 &gt; libraries &gt; Servo &gt; src &gt; avr</p>
+<p>Ouvrer ensuite le fichier <em>ServoTimers.h</em>, trouvez ensuite les lignes suivantes qui correspondent à votre processeur,
+ici pour un Arduino mega :</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Say which 16 bit timers can be used and in what order</span>
 <span class="cp">#if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)</span>
 <span class="cp">#define _useTimer5</span>
@@ -620,8 +651,9 @@ ouvre ensuite le fichier ServoTimers.h, trouvez ensuite les lignes suivantes qui
 <span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span> <span class="n">_timer1</span><span class="p">,</span> <span class="n">_timer3</span><span class="p">,</span> <span class="n">_timer4</span><span class="p">,</span> <span class="n">_timer5</span><span class="p">,</span> <span class="n">_Nbr_16timers</span> <span class="p">}</span> <span class="n">timer16_Sequence_t</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>nous allons devoir desactiver l’utilisation de notre timer. pour cela on retire tout simplement ce qui mentionne notre timer 3 tel que:
-cette action est evidement aplicable pour tout les timer qui devrais etre utiliser par des interuptions</p>
+<p>Nous allons devoir désactiver l’utilisation de notre timer. Pour cela, on retire tout simplement ce qui mentionne
+notre timer 3 tel que :
+(cette action est évidemment applicable pour tous les timers qui devraient être utilisés par des interruptions)</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Say which 16 bit timers can be used and in what order</span>
 <span class="cp">#if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)</span>
 <span class="cp">#define _useTimer5</span>
@@ -630,8 +662,8 @@ cette action est evidement aplicable pour tout les timer qui devrais etre utilis
 <span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span> <span class="n">_timer1</span><span class="p">,</span> <span class="n">_timer4</span><span class="p">,</span> <span class="n">_timer5</span><span class="p">,</span> <span class="n">_Nbr_16timers</span> <span class="p">}</span> <span class="n">timer16_Sequence_t</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>nous pouvons maintenant rouvir ArduinoIDE et recompiler sans encombre notre programme</p>
-<p>c’est un mecanisme materiel du mp qui permet au peripherique d’indiquer qu’ils ont besoin d’une ressource (delamotte)</p>
+<p>Nous pouvons maintenant rouvrir ArduinoIDE et recompiler sans encombre notre programme/</p>
+<p>C’est un mécanisme matériel du mp qui permet au périphérique d’indiquer qu’ils ont besoin d’une ressource (Delamotte)</p>
 </div>
 </div>
 

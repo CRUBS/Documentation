@@ -1,12 +1,17 @@
 Introduction
 ============
 
-Afin de permetre aux robots de reperer leur environnement et principalement les robots adversaires, plusieur solutions existent. Apres avoir observer des resultats trop imprecis avec les prototypes des balises, nous avons du nous rabattratre sur la solution la plus couteuse qui est l'achat de deux lidar. Nous avons selectionner les LD06, ces derniers sont deja utiliser dans le domaine de la robotique et par des equipes de la coupe de france ainsi tous les packages ROS2 existent pour ce dernier
+Afin de permettre aux robots de repérer leur environnement et principalement les robots adversaires,
+plusieurs solutions existent. Après avoir observé des résultats trop imprécis avec les prototypes des balises,
+nous avons dû nous rabattre sur la solution la plus couteuse qui est l'achat de deux lidars.
+Nous avons sélectionné les LD06, ces derniers sont déjà utilisés dans le domaine de la robotique et par des équipes
+de la coupe de France. De plus, tous les packages ROS2 existent pour ce dernier.
 
-Cablage
+Câblage
 =======
 
-Un module de conversion ttl vers serie est necessaire afin de connecter le lidar a la pi en USB (ref : CP2102). voici le cablage :
+Un module de conversion ttl vers série est nécessaire afin de connecter le lidar à la Pi en USB (ref : CP2102).
+Voici le câblage :
 
 #. lidar pin 1 : blanc : tx -> module ttl : rx
 #. lidar pin 2 : jaune : pwm -> N/A
@@ -16,23 +21,23 @@ Un module de conversion ttl vers serie est necessaire afin de connecter le lidar
 Installation
 ============
 
-tuto video suivis : https://www.youtube.com/watch?v=OJWAsV6-0GE
+Tuto vidéo suivi : https://www.youtube.com/watch?v=OJWAsV6-0GE
 
-creation d'un workspace avant de telecharger les paquets:
+Création d'un workspace avant de télécharger les paquets :
 
 .. code-block:: bash
 
 	mkdir -p ldlidar_ros2_ws/src
 	cd ldlidar_ros2_ws/src
 
-puis copie d'un repertoire git
+Puis copie d'un répertoire git.
 
 .. code-block:: bash
 
 	git clone https://github.com/ldrobotSensorTeam/ldlidar_stl_ros2.git
 	cd ~
 
-vous pouvez desormais brancher le lidar et verfier avec la commande suivante le nom de son ports USB
+Vous pouvez désormais brancher le lidar et vérifier avec la commande suivante le nom de son port USB.
 
 .. code-block:: bash
 
@@ -42,14 +47,16 @@ vous pouvez desormais brancher le lidar et verfier avec la commande suivante le 
    :scale: 100 %
    :align: center
 
-noter bien le numero du port USB, dans mon cas /dev/ttyUSB0
-ajoutons lui les droits 
+Notez bien le numero du port USB, dans mon cas /dev/ttyUSB0/
+
+Ajoutons lui les droits.
 
 .. code-block:: bash
 
 	sudo chmod 777 /dev/ttyUSB0
 
-nous allons maintenant modifier le fichier de launch du lidar afin de lui indiquer le ports sur lequel ce dernier est connecter
+Nous allons maintenant modifier le fichier de launch du lidar afin de lui indiquer le port sur lequel ce dernier
+est connecté.
 
 .. code-block:: bash
 
@@ -57,7 +64,8 @@ nous allons maintenant modifier le fichier de launch du lidar afin de lui indiqu
 	cd ldlidar_ros2_ws/src/ldlidar_stl_ros2/launch
 	nano ld06.launch.py
 
-maintenant trouvez la ligne suivante et modifier la en fonction de votre ports USB utiliser par le lidar, dans mon cas le /dev/ttyUSB0  est deja indiquer par defaut a la ligne 45
+Maintenant trouvez la ligne suivante et modifiez-la en fonction du port USB utilisé par le lidar, dans mon cas
+le /dev/ttyUSB0  est déjà indiqué par défaut à la ligne 45.
 
 .. code-block:: python
 
@@ -67,16 +75,20 @@ maintenant trouvez la ligne suivante et modifier la en fonction de votre ports U
    :scale: 100 %
    :align: center
 
-une fois la modification effectuer pour pouvez fermer et enregistrer le fichier avec ctrl+x puis y
+Une fois la modification effectuée, pour pouvez fermer et enregistrer le fichier avec ctrl+x puis y.
 
-a l'avanir le nom du port usb utiliser sera fixer en tant que '/dev/Lidar_LD06' (se referer au tuto dans la configuration Ubuntu). 
+À l'avanir, le nom du port USB utilisé sera fixé en tant que '/dev/Lidar_LD06' (se referer au tuto dans
+la configuration Ubuntu).
+
+:doc:`/Robot-2023/Tree-Configuration_Ubuntu`
 
 Lancement du lidar
 ==================
 
-Maintenant que le package du lidar est correctement configurer, nous allons pouvoir le faire fonctionner afin de visualiser notre environnemment
+Maintenant que le package du lidar est correctement configuré, nous allons pouvoir le faire fonctionner
+afin de visualiser notre environnement.
 
-Nous devons build le package puis sourcer les variables d'environnement
+Nous devons compiler le package puis sourcer les variables d'environnement.
 
 .. code-block:: bash
 
@@ -86,13 +98,13 @@ Nous devons build le package puis sourcer les variables d'environnement
 	source install/setup.sh
 	source ~/.bashrc
 
-nous pouvons enfin lancer le noeud du lidar
+Nous pouvons enfin lancer le noeud du lidar.
 
 .. code-block:: bash
 
 	ros2 launch ldlidar_stl_ros2 ld06.launch.py
 
-dans un nouveau terminal vous pouvez verifier que le topic /scan est bien present
+dans un nouveau terminal vous pouvez verifier que le topic */scan* est bien present.
 
 .. code-block:: bash
 
@@ -101,20 +113,21 @@ dans un nouveau terminal vous pouvez verifier que le topic /scan est bien presen
 Visualisation du lidar
 ======================
 
-lancer le lidar comme vu au dessus puis lancement de rviz
+Lancer le lidar comme vu au dessus puis lancement de rviz.
 
 .. code-block:: bash
 
 	rviz2
 
-en bas a gauche de la fenetre cliquer sur Add puis dans le volets qui viens de s'ouvrir choisir LaserScan et Ok
+En bas à gauche de la fenêtre, cliquer sur *Add* puis dans le volet qui vient de s'ouvrir, choisir *LaserScan* et *Ok*.
 
-vous allez maintenant devoir selectionner plusieurs parametre du menu de gauche
+Vous allez maintenant devoir sélectionner plusieurs paramètres du menu de gauche.
 
 #. dans Global Options > Fixed Frame choisir base_link
 #. dans LaserScan > Topic choisir /scan
 
-des points de couleurs de couleur devrais apparaitre dans l'interface centrale de rviz representant les resultats du lidar
+Des points de couleurs devraient apparaitre dans l'interface centrale de rviz représentant les éléments captés
+par le lidar.
 
 
 

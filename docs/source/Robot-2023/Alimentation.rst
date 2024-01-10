@@ -1,11 +1,14 @@
 Source d'alimentation
 =====================
 
-Apres une mauvaise experience avec les baterie LIPO deja presente au club, nous avons fait le choix de changer de source d'alimentation pour les robot. Nous nous sommes inspirer de ce que nous avons pu voir lors de la coupe de france de robotqiue et nous avons opter pour des batterie de perceuse. toujours dans le but de faire des economie nous avons achetr ceux disponible chez action.
+Après une mauvaise experience avec les batteries LIPO deja presente au club, nous avons fait le choix de changer
+de source d'alimentation pour les robot. Nous nous sommes inspiré de ce que nous avons pu voir lors
+de la coupe de france de robotique et nous avons opté pour des batterie de perceuse.
+Toujours dans le but de faire des économies, nous avons acheté celles disponibles chez Action.
 
-Afin de recuperer l'energie des batterie nous avons creer notre propre adapteur pour la batterie
+Afin de récupérer l'énergie des batteries nous avons créé notre propre adaptateur pour la batterie.
 
-nous asssurons desormais d'avoir une source d'energie fiable, facilement et rapidement rechargeable
+Nous asssurons desormais d'avoir une source d'energie fiable, facilement et rapidement rechargeable.
 
 .. image:: images/alimentation/batterie.png
    :scale: 30 %
@@ -16,8 +19,16 @@ Carte d'alimentation
 
 Conversion
 **********
-Le robot est composer de plusieurs type de carte et de composant ces derniers sont soit alimenter en 5V, 7V ou 12V, nous avons donc besoin de reduire la tension de la baterie a ces differents dont nous avons besoin. il existe plusieurs moyen de reduire la tension, les regulateur de tension lineaire type L7805CV en sont capables, en revanche ces derniers ne sont pas reglable est ne surporte pas toujours les besoins en courant. Nous somme tourner vers une autre soltuion les buck-converter type lm2596, ces derniers surporte les gros courant et la tension de sortie peut etre regler ce qui est un bon avantage si on souhaite changer l'un des niveaux de tension ou s'en reservir sur d'autre projet
-Pour nos besoin nous avons besoin de converter avec une limite de 5A pour le moteurs en 12V, les module de 3A suffiront pour le 5V et le 7V
+Le robot est composé de plusieurs types de carte et de composant ces derniers sont soit alimentés en 5V, 7V ou 12V,
+nous avons donc besoin de reduire la tension de la batterie à ces differentes tensions dont nous avons besoin.
+Il existe plusieurs moyen de réduire la tension, les régulateurs de tension linéaires type L7805CV en sont capables,
+en revanche ces derniers ne sont pas réglables et ne surportent pas toujours les besoins en courant.
+Nous nous somme tournés vers une autre solution, les buck-converter type lm2596,
+ces derniers surportent les gros courants et la tension de sortie peut être réglée ce qui est un bon avantage
+si on souhaite changer l'un des niveaux de tension ou s'en reservir sur d'autres projets.
+
+Nous avons besoin de convertir avec une limite de 5A pour le moteurs en 12V,
+les modules de 3A suffiront pour le 5V et le 7V.
 
 .. image:: images/alimentation/buck_5a.png
    :scale: 35 %
@@ -32,43 +43,66 @@ Pour nos besoin nous avons besoin de converter avec une limite de 5A pour le mot
 Protection
 **********
 
-trois type de protection on ete ajouter a la carte d'alimentation.
+Trois types de protection on été ajoutées à la carte d'alimentation.
 
-la premiere est un simple bouton d'arret urgence qui est ajouter en serie de l'alimentation. Le reglement de la competition oblige la presence d'un bouton d'arret du'rgence d'un diametre d'au mooins 20mm. par ailleur ce dernier nous permet d'arreter rapidement le robot en cas de probleme le bouton d'alimentation etant difficile a atteindre (mais joli)
+La premiere est un simple bouton d'arrêt d'urgence qui est ajouté en série de l'alimentation.
+Le réglement de la compétition oblige la présence d'un bouton d'arret d'urgence d'un diamètre d'au moins 20mm.
+Par ailleur, ce dernier nous permet d'arrêter rapidement le robot en cas de problème, le bouton d'alimentation
+étant difficile à atteindre (mais joli).
 
-La seconde est une protection contre les cours circuit, un fusible a ete ajouter en amont de chaque de buck-converter. ce dernier fondera dans le cas d'un courant supperieur a la capacite du buck converter pour les protefer ou d'un courant excessivement grand dans le cas d'un cours circuit pour limiter les degats sur le reste du systeme
+La seconde est une protection contre les court-circuits, un fusible a été ajouté en amont de chaque de buck-converter.
+Ce dernier fondera dans le cas d'un courant suppérieur à la capacité du buck converter pour les protéger
+ou d'un courant excessivement grand dans le cas d'un court-circuit pour limiter les dégats sur le reste du systeme.
 
-enfin la derniere protection est un diode anti retour placer en ammont du buck-converter qui alimente les moteurs des roues. en effet les moteurs pas a pas agissent comme generatrice lors que le robot est hors tension et que l'on bouge ce dernier, la tension generer est alors renvoyer dans la carte d'alimentation, traverse dans le mauvais sens le buck converter 12v puis part alimenter les deux autres convertisseur. cela a pour effet de faire booter en sous alimentation la pi et les autres cartes arduino ce qui n'est pas bon pour ces cartes. pour palier a ca, la diode d'anti retour emepechera la tension generer de poursuivre son chemin apres avoir traverser le buck converter de 12V et n'alimentera donc pas le reste du circuit
-Attention les moteur pas a pas consome beaucoup de courant, la diode anti-retour doit etre correctement dimmensionner, dans notre cas, la diode resiste a 6A
+Enfin la dernière protection est un diode anti-retour placée en amont du buck-converter qui alimente
+les moteurs des roues. En effet, les moteurs pas à pas agissent comme génératrice lorsque le robot est hors tension
+et que l'on bouge ce dernier, la tension générée est alors renvoyée dans la carte d'alimentation,
+traverse dans le mauvais sens le buck converter 12v puis part alimenter les deux autres convertisseur.
+Cela a pour effet de faire booter en sous alimentation la Pi et les autres cartes Arduino, ce qui n'est pas bon
+pour ces cartes. Pour palier à ça, la diode d'anti-retour empêchera la tension générée de poursuivre son chemin
+après avoir traversé le buck converter de 12V et n'alimentera donc pas le reste du circuit.
+
+Attention les moteur pas à pas consomment beaucoup de courant, la diode anti-retour doit être correctement
+dimensionnée, dans notre cas, la diode résiste à 6A.
 
 
 Mesure de Tension
 *****************
 
-La tension de la batterie est image de son niveau de charge, en effet cette derniere delivre une tension de 20.5V a pleine charge et descent jusqu'a 16.5V avant d'arreter de delivrer du courant. nous avons donc besoin d'un retour du niveau de tension de la batterie.
-Pour cela nous mettons en place un pont diviseur de tension d'un rapport de 5 avec une resistance de 10K et 40K, ainsi la tension au borne de la resistance de 10k est 5x inferieur a celle de la batterie et evoluera donc entre 4.1V et 3.3V. cette tension peut etre mesurer par un port analogique de l'arduino Uno avant d'etre remonter par liaison serie a la pi pour etre publier sur un topic et afficher sur l'ecran LCD pour nous permettre de surveiller
+La tension de la batterie est image de son niveau de charge, en effet, cette derniere délivre une tension de 20.5V
+à pleine charge et descend jusqu'à 16.5V avant d'arrêter de deélivrer du courant.
+Nous avons donc besoin d'un retour du niveau de tension de la batterie.
+Pour cela, nous mettons en place un pont diviseur de tension d'un rapport de 5 avec une résistance de 10K et 40K,
+ainsi la tension aux bornes de la résistance de 10k est 5x inférieure à celle de la batterie et évoluera
+donc entre 4.1V et 3.3V. cette tension peut être mesurée par un port analogique de l'Arduino Uno avant
+d'être remontée par liaison série à la Pi pour être publié sur un topic et affiché sur l'ezran LCD pour
+nous permettre de surveiller l'état de la batterie.
 
 
 
 Mesure du Courant
 *****************
 
-Afin de nous assurer que le courant conssomer par le robot est correct nous avons fait le choix d'integrer un module de mesure du courant, le ACS712. Le module en question est ajouter en serie de l'alimentation sur la carte. Une fois la mesure relever par l'arduino uno, cette derniere est ensuite renvoyer par liaison serie a la pi afin de l'afficher sur l'ecran LCD et de le publier sur les topic ros2.
+Afin de nous assurer que le courant consommé par le robot est correct, nous avons fait le choix d'intégrer
+un module de mesure du courant, le ACS712. Le module en question est ajouté en série de l'alimentation sur la carte.
+Une fois la mesure relevée par l'Arduino Uno, cette dernière est ensuite renvoyée par liaison série à la Pi
+afin de l'afficher sur l'écran LCD et de le publier sur les topic ROS2.
 
-Le module de mesure de courant s'est averer etre tres compliquer a lire, instable et inutile. ce module ne sera pas a conserver.
+Le module de mesure de courant s'est avéré être très compliqué à lire, instable et inutile.
+Ce module ne sera pas à conserver.
 
 .. image:: images/alimentation/acs712.png
    :scale: 35 %
    :align: center
 
-Le pcb a ete designer grace a KiCad et a ete realiser sur la CIF
+Le pcb a été designée grâce à *KiCad* et a été réalisé sur la CIF.
 
 - :doc:`/CAO/Tree-KiCad`
 - :doc:`/FAO/Tree-CIF`
 
 
-Le shema electrique
-*******************
+Le schéma électrique
+********************
 
 .. image:: images/alimentation/Schema.png
    :scale: 100 %

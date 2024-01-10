@@ -33,6 +33,7 @@ TODO :
 ******
 
 #. [nico] correction orthographe ptn
+#. finir robot 2023 un jour
 #. [nico tristan] motorisation robot (pcb)
 #. Continuer robot 2024
 #. gestion coupe de robotique

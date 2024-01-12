@@ -68,11 +68,122 @@ Si vous souhaitez démarrer votre propre projet, vous pouvez utiliser la command
 
 Cette étape n'est pas nécessaire si vous souhaitez simplement participer à la documentation du CRUBS.
 
-Ordonancement des fichiers et des dossiers
-******************************************
 
-Index
-*****
+
+Toctree, index et ordonnancement des fichiers
+*********************************************
+
+L'ordonnancement des fichiers de la documentation se fait d'une certaine manière qu'il faut continuer de suivre pour garder une certaine cohérence. 
+
+Le concept important à comprendre est celui de "toctree". Un toctree est un fichier .rst qui créer un sommaire, une arborescence et déclare ainsi les articles a affiché dans la documentation.
+
+La documentation est organisée de la manière suivante:
+
+.. code-block:: txt
+
+	Documentation
+	├─index.rst
+	├─Dossier_partie_1
+	|	├─Tree.rst
+	|	├─Tree_Article_1.rst
+	|	├─Tree_Article_2.rst
+	|	├─Tree_Arcticle_X.rst
+	|	├─Article_1.rst
+	|	├─Article_2.rst
+	|	├─ . . .
+	|	└─Article_X.Rst
+	|
+	├─Dossier_partie_2
+	|	├─Tree.rst
+	|	├─Tree_Article_1.rst
+	|	├─Tree_Article_2.rst
+	|	├─Tree_Arcticle_X.rst
+	|	├─Article_1.rst
+	|	├─Article_2.rst
+	|	├─ . . .
+	|	└─Article_X.Rst
+	. . . 
+	└─Dossier_partie_X
+		└─ . . .
+
+Le fichier "index.rst" doit impérativement porter ce nom, une fois compiler ce dernier portera le nom de "index.html" et permettra d'ouvrir la documentation. Ce dernier est le sommaire principal de la doc. C'est donc un toctree dans lequel vous devez appeler le fichier "Tree.rst" de chaque partie. par exemple (index de la doc) :
+
+.. code-block:: rst
+
+	Bienvenue sur la documentation du CRUBS!
+	========================================
+
+	.. toctree::
+	   :maxdepth: 2
+	   :numbered:
+	   :caption: Contents:
+
+	   Gestion/Tree
+	   Informatique_Programmation/Tree
+	   Robot-2023/Tree
+	   Robot-2024/Tree
+	   Voron-0.1/Tree
+	   CAO/Tree
+	   FAO/Tree
+
+Le fichier "Tree.rst" présent dans chaque partie permet de créer le sommaire de la partie, il appelle les sommaires de chaque article. par exemple (Tree de la partie FAO) :
+
+.. code-block:: rst
+
+	FAO
+	===
+
+	Fabrication Assisté par Ordinateur
+
+	.. toctree::
+	   :maxdepth: 2
+
+	   Tree-PrusaSlicer
+	   Tree-CharlyRobot
+	   Tree-CIF
+   
+
+Enfin, le fichier "Tree-XXXXXX.rst" permet de créer un sommaire intermédiaire pour chaque article. Un article a alors son sommaire (toctree). On retrouve alors un seul fichier de déclarer, par exemple (Tree-PrusaSlicer.rst) :
+
+.. doc-sphinx:: rst
+
+	PrusaSlicer
+	===========
+
+	Logiciel de préparation des fichiers *gcode* pour l'impression 3D.
+
+	.. toctree::
+	   :maxdepth: 1
+	   :caption: Contents:
+
+	   PrusaSlicer
+
+
+.. note::
+
+	Notez que les toctree sont seulement des "fonction" au sein d'un fichier rst. Il est donc tout à fait possible d'ajouter des notes, des images, des tableaux, etc, dans un sommaire pour les rendre plus vivants, par exemple :
+	:doc:`/Informatique_Programmation/Tree-Doc_sphinx` 
+
+Pour résumer schématiquement, voilà ce que ça donne :
+
+.. image:: images/doc_sphinx/schema_tree.png
+   :scale: 80 %
+   :align: center
+
+
+Vous voulez créer une partie :
+
+* Ajouter un dossier a la racine de la doc
+* Préparer un dossier "Tree.rst" pour les futurs articles dans ce dossier
+* Ajouter ce fichier "Tree.rst" dans le fichier "index.rst" à la suite des autres : "Nom_partie/Tree"
+
+Vous voulez créer un nouvel article dans une partie existante, dans un même dossier :
+
+* Créer votre article "Nom_article.rst" comme vous le souhaitez
+* Créer un toctree "Tree-Nom_article.rst", servez-vous des existants comme exemple
+* Ajouter l'article que vous avez créé au toctree qui lui est dédié que vous venez de créer
+* Ajouter le toctree de votre article a "Tree.rst" à la suite des autres: "Tree_Nom-article"
+
 
 Compilation
 ***********
@@ -91,6 +202,7 @@ De cette manière un dossier 'build' sera générer et vous trouverez dans ce de
 
 Généralités
 ===========
+
 
 Titres
 ******

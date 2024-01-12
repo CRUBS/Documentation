@@ -578,6 +578,8 @@ Ensuite cliquez sur <em>commit to main</em> puis <em>push</em>.</p>
 </div>
 <div class="section" id="toctree-index-et-ordonnancement-des-fichiers">
 <h2><span class="section-number">2.1.2.3. </span>Toctree, index et ordonnancement des fichiers<a class="headerlink" href="#toctree-index-et-ordonnancement-des-fichiers" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="explications">
+<h3><span class="section-number">2.1.2.3.1. </span>Explications :<a class="headerlink" href="#explications" title="Lien permanent vers ce titre">¶</a></h3>
 <p>L’ordonnancement des fichiers de la documentation se fait d’une certaine manière qu’il faut continuer de suivre pour garder une certaine cohérence.</p>
 <p>Le concept important à comprendre est celui de « toctree ». Un toctree est un fichier .rst qui créer un sommaire, une arborescence et déclare ainsi les articles a affiché dans la documentation.</p>
 <p>La documentation est organisée de la manière suivante:</p>
@@ -587,7 +589,7 @@ Ensuite cliquez sur <em>commit to main</em> puis <em>push</em>.</p>
 |       ├─Tree.rst
 |       ├─Tree_Article_1.rst
 |       ├─Tree_Article_2.rst
-|       ├─Tree_Arcticle_X.rst
+|       ├─Tree_Article_X.rst
 |       ├─Article_1.rst
 |       ├─Article_2.rst
 |       ├─ . . .
@@ -597,7 +599,7 @@ Ensuite cliquez sur <em>commit to main</em> puis <em>push</em>.</p>
 |       ├─Tree.rst
 |       ├─Tree_Article_1.rst
 |       ├─Tree_Article_2.rst
-|       ├─Tree_Arcticle_X.rst
+|       ├─Tree_Article_X.rst
 |       ├─Article_1.rst
 |       ├─Article_2.rst
 |       ├─ . . .
@@ -647,19 +649,23 @@ Fabrication Assisté par Ordinateur
 </div>
 <p>Pour résumer schématiquement, voilà ce que ça donne :</p>
 <a class="reference internal image-reference" href="../_images/schema_tree.png"><img alt="../_images/schema_tree.png" class="align-center" src="../_images/schema_tree.png" style="width: 1162.4px; height: 654.4000000000001px;" /></a>
-<p>Vous voulez créer une partie :</p>
-<ul class="simple">
+</div>
+<div class="section" id="a-vous-de-jouez">
+<h3><span class="section-number">2.1.2.3.2. </span>À vous de jouez :<a class="headerlink" href="#a-vous-de-jouez" title="Lien permanent vers ce titre">¶</a></h3>
+<p><strong>Vous voulez créer une partie :</strong></p>
+<ol class="arabic simple">
 <li><p>Ajouter un dossier a la racine de la doc</p></li>
 <li><p>Préparer un dossier « Tree.rst » pour les futurs articles dans ce dossier</p></li>
 <li><p>Ajouter ce fichier « Tree.rst » dans le fichier « index.rst » à la suite des autres : « Nom_partie/Tree »</p></li>
-</ul>
-<p>Vous voulez créer un nouvel article dans une partie existante, dans un même dossier :</p>
-<ul class="simple">
+</ol>
+<p><strong>Vous voulez créer un nouvel article dans une partie existante, dans un même dossier :</strong></p>
+<ol class="arabic simple">
 <li><p>Créer votre article « Nom_article.rst » comme vous le souhaitez</p></li>
 <li><p>Créer un toctree « Tree-Nom_article.rst », servez-vous des existants comme exemple</p></li>
 <li><p>Ajouter l’article que vous avez créé au toctree qui lui est dédié que vous venez de créer</p></li>
 <li><p>Ajouter le toctree de votre article a « Tree.rst » à la suite des autres: « Tree_Nom-article »</p></li>
-</ul>
+</ol>
+</div>
 </div>
 <div class="section" id="compilation">
 <h2><span class="section-number">2.1.2.4. </span>Compilation<a class="headerlink" href="#compilation" title="Lien permanent vers ce titre">¶</a></h2>

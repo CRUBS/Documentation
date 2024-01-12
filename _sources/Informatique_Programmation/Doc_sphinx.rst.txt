@@ -73,6 +73,9 @@ Cette étape n'est pas nécessaire si vous souhaitez simplement participer à la
 Toctree, index et ordonnancement des fichiers
 *********************************************
 
+Explications :
+^^^^^^^^^^^^^^
+
 L'ordonnancement des fichiers de la documentation se fait d'une certaine manière qu'il faut continuer de suivre pour garder une certaine cohérence. 
 
 Le concept important à comprendre est celui de "toctree". Un toctree est un fichier .rst qui créer un sommaire, une arborescence et déclare ainsi les articles a affiché dans la documentation.
@@ -87,7 +90,7 @@ La documentation est organisée de la manière suivante:
 	|	├─Tree.rst
 	|	├─Tree_Article_1.rst
 	|	├─Tree_Article_2.rst
-	|	├─Tree_Arcticle_X.rst
+	|	├─Tree_Article_X.rst
 	|	├─Article_1.rst
 	|	├─Article_2.rst
 	|	├─ . . .
@@ -97,7 +100,7 @@ La documentation est organisée de la manière suivante:
 	|	├─Tree.rst
 	|	├─Tree_Article_1.rst
 	|	├─Tree_Article_2.rst
-	|	├─Tree_Arcticle_X.rst
+	|	├─Tree_Article_X.rst
 	|	├─Article_1.rst
 	|	├─Article_2.rst
 	|	├─ . . .
@@ -171,18 +174,22 @@ Pour résumer schématiquement, voilà ce que ça donne :
    :align: center
 
 
-Vous voulez créer une partie :
+À vous de jouez :
+^^^^^^^^^^^^^^^^^
 
-* Ajouter un dossier a la racine de la doc
-* Préparer un dossier "Tree.rst" pour les futurs articles dans ce dossier
-* Ajouter ce fichier "Tree.rst" dans le fichier "index.rst" à la suite des autres : "Nom_partie/Tree"
+**Vous voulez créer une partie :**
 
-Vous voulez créer un nouvel article dans une partie existante, dans un même dossier :
+#. Ajouter un dossier a la racine de la doc
+#. Préparer un dossier "Tree.rst" pour les futurs articles dans ce dossier
+#. Ajouter ce fichier "Tree.rst" dans le fichier "index.rst" à la suite des autres : "Nom_partie/Tree"
 
-* Créer votre article "Nom_article.rst" comme vous le souhaitez
-* Créer un toctree "Tree-Nom_article.rst", servez-vous des existants comme exemple
-* Ajouter l'article que vous avez créé au toctree qui lui est dédié que vous venez de créer
-* Ajouter le toctree de votre article a "Tree.rst" à la suite des autres: "Tree_Nom-article"
+
+**Vous voulez créer un nouvel article dans une partie existante, dans un même dossier :**
+
+#. Créer votre article "Nom_article.rst" comme vous le souhaitez
+#. Créer un toctree "Tree-Nom_article.rst", servez-vous des existants comme exemple
+#. Ajouter l'article que vous avez créé au toctree qui lui est dédié que vous venez de créer
+#. Ajouter le toctree de votre article a "Tree.rst" à la suite des autres: "Tree_Nom-article"
 
 
 Compilation

@@ -177,19 +177,22 @@ Pour résumer schématiquement, voilà ce que ça donne :
 À vous de jouez :
 ^^^^^^^^^^^^^^^^^
 
-**Vous voulez créer une partie :**
+.. note::
 
-#. Ajouter un dossier a la racine de la doc
-#. Préparer un dossier "Tree.rst" pour les futurs articles dans ce dossier
-#. Ajouter ce fichier "Tree.rst" dans le fichier "index.rst" à la suite des autres : "Nom_partie/Tree"
+	**Vous voulez créer une partie :**
 
+	#. Ajouter un dossier a la racine de la doc
+	#. Préparer un dossier "Tree.rst" pour les futurs articles dans ce dossier
+	#. Ajouter ce fichier "Tree.rst" dans le fichier "index.rst" à la suite des autres : "Nom_partie/Tree"
 
-**Vous voulez créer un nouvel article dans une partie existante, dans un même dossier :**
+.. note::
 
-#. Créer votre article "Nom_article.rst" comme vous le souhaitez
-#. Créer un toctree "Tree-Nom_article.rst", servez-vous des existants comme exemple
-#. Ajouter l'article que vous avez créé au toctree qui lui est dédié que vous venez de créer
-#. Ajouter le toctree de votre article a "Tree.rst" à la suite des autres: "Tree_Nom-article"
+	**Vous voulez créer un nouvel article dans une partie existante, dans un même dossier :**
+
+	#. Créer votre article "Nom_article.rst" comme vous le souhaitez
+	#. Créer un toctree "Tree-Nom_article.rst", servez-vous des existants comme exemple
+	#. Ajouter l'article que vous avez créé au toctree qui lui est dédié que vous venez de créer
+	#. Ajouter le toctree de votre article a "Tree.rst" à la suite des autres: "Tree_Nom-article"
 
 
 Compilation

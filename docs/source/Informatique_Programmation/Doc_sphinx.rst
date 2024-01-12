@@ -195,6 +195,11 @@ Pour résumer schématiquement, voilà ce que ça donne :
 	#. Ajouter le toctree de votre article a "Tree.rst" à la suite des autres: "Tree_Nom-article"
 
 
+.. warning::
+
+	N'oubliez pas de push régulièrement votre travail sur github. La documentation est recompilée en ligne est actualisé automatiquement quelques minutes après le push.
+
+
 Compilation
 ***********
 Pour ne pas toujours avoir besoin de push sur github vos modifications et attendre la mise à jour de la doc, il est possible de compiler cette dernière en local.

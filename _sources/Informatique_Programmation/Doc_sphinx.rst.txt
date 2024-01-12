@@ -148,12 +148,12 @@ Le fichier "Tree.rst" présent dans chaque partie permet de créer le sommaire d
 
 Enfin, le fichier "Tree-XXXXXX.rst" permet de créer un sommaire intermédiaire pour chaque article. Un article a alors son sommaire (toctree). On retrouve alors un seul fichier de déclarer, par exemple (Tree-PrusaSlicer.rst) :
 
-.. doc-sphinx:: rst
+.. code-block:: rst
 
 	PrusaSlicer
 	===========
 
-	Logiciel de préparation des fichiers *gcode* pour l'impression 3D.
+	Logiciel de préparation des fichiers gcode pour l'impression 3D.
 
 	.. toctree::
 	   :maxdepth: 1
@@ -177,7 +177,7 @@ Pour résumer schématiquement, voilà ce que ça donne :
 À vous de jouez :
 ^^^^^^^^^^^^^^^^^
 
-.. note::
+.. tip::
 
 	**Vous voulez créer une partie :**
 
@@ -185,7 +185,7 @@ Pour résumer schématiquement, voilà ce que ça donne :
 	#. Préparer un dossier "Tree.rst" pour les futurs articles dans ce dossier
 	#. Ajouter ce fichier "Tree.rst" dans le fichier "index.rst" à la suite des autres : "Nom_partie/Tree"
 
-.. note::
+.. tip::
 
 	**Vous voulez créer un nouvel article dans une partie existante, dans un même dossier :**
 
@@ -305,6 +305,28 @@ Warnings
 	ceci est un warning
 
 
+Astuces
+*******
+
+.. code-block:: rst
+
+	.. tip::
+		ceci est une astuce
+
+.. tip::
+		ceci est une astuce
+
+Dangers
+*******
+
+.. code-block:: rst
+
+	.. danger::
+		ceci est un danger
+
+.. danger::
+		ceci est un danger
+
 
 Ajout de médias
 ===============
@@ -362,30 +384,6 @@ Lien dans la documentation
 	:doc:`/Informatique_Programmation/Tree-Doc_sphinx`
 
 :doc:`/Informatique_Programmation/Tree-Doc_sphinx`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

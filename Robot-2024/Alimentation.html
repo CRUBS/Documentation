@@ -386,7 +386,12 @@
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="Tree-Alimentation.html">4.4. Alimentation</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">4.4.1. Introduction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#source-d-alimentation">4.4.2. Source d’alimentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sources-d-alimentation">4.4.2. Sources d’alimentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#batterie">4.4.2.1. Batterie</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alim-externe">4.4.2.2. Alim externe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#choix-de-l-alim">4.4.2.3. Choix de l’alim</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#carte-d-alimentation">4.4.3. Carte d’alimentation</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#conversion">4.4.3.1. Conversion</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#protection">4.4.3.2. Protection</a></li>
@@ -533,12 +538,23 @@
 <p>La carte d’alimentation realiser jusque la est certe fonctionelle mais est tres encombrante. il est maintenant necessaire de passer a l’etape au dessus et de realiser une carte d’alimentation plus professionelle. nous allons reduire la carte de la carte en utiliser des cms et en regroupant les composant. il serait bon que cette carte ne soit pas a refaire chaque année et qu’elle soit suffisement polyvalente pour repondre a tous les besoins pouvant se presenter</p>
 <p>la realisation de cette nouvelle carte fait l’objet d’un projet lors de l’année 2023-2024</p>
 </div>
-<div class="section" id="source-d-alimentation">
-<h1><span class="section-number">4.4.2. </span>Source d’alimentation<a class="headerlink" href="#source-d-alimentation" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="sources-d-alimentation">
+<h1><span class="section-number">4.4.2. </span>Sources d’alimentation<a class="headerlink" href="#sources-d-alimentation" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="batterie">
+<h2><span class="section-number">4.4.2.1. </span>Batterie<a class="headerlink" href="#batterie" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Apres une bonne experience avec les baterie de perceuse. Nous concervons cette source d’alimentation pour les futurs robots</p>
 <p>Afin de recuperer l’energie des batterie nous avons creer notre propre adapteur pour la batterie</p>
 <p>nous asssurons desormais d’avoir une source d’energie fiable, facilement et rapidement rechargeable</p>
 <a class="reference internal image-reference" href="../_images/batterie1.png"><img alt="../_images/batterie1.png" class="align-center" src="../_images/batterie1.png" style="width: 240.0px; height: 240.0px;" /></a>
+</div>
+<div class="section" id="alim-externe">
+<h2><span class="section-number">4.4.2.2. </span>Alim externe<a class="headerlink" href="#alim-externe" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous faisons desormais en sorte que le robot puisse ettre alimenter par une alimentation externe (les alim de stabilisé de labo) pour ne pas vider les baterie de perceuse inutilement</p>
+</div>
+<div class="section" id="choix-de-l-alim">
+<h2><span class="section-number">4.4.2.3. </span>Choix de l’alim<a class="headerlink" href="#choix-de-l-alim" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le robot pouvant etre alimenter soit par une batterie soi par une alim externe, nous rajoutons un interupteur permettant de selectionner la source d’alimentation</p>
+</div>
 </div>
 <div class="section" id="carte-d-alimentation">
 <h1><span class="section-number">4.4.3. </span>Carte d’alimentation<a class="headerlink" href="#carte-d-alimentation" title="Lien permanent vers ce titre">¶</a></h1>
@@ -550,6 +566,7 @@
 </div>
 <div class="section" id="protection">
 <h2><span class="section-number">4.4.3.2. </span>Protection<a class="headerlink" href="#protection" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Entre nous … on fout une diode 6 Ampère avant la carte d’alimentation et c’est protegé non ? Et comme on est motiver on rajoute un fusible rearmable par sortie et un fusible 5A en entrée de la carte pour la forme :)</p>
 </div>
 <div class="section" id="niveau-de-la-batterie">
 <h2><span class="section-number">4.4.3.3. </span>Niveau de la batterie<a class="headerlink" href="#niveau-de-la-batterie" title="Lien permanent vers ce titre">¶</a></h2>
@@ -559,6 +576,20 @@ Cette année nous decidons de changer pour afficher directement le niveau de la 
 </div>
 <div class="section" id="realisations">
 <h1><span class="section-number">4.4.4. </span>Réalisations<a class="headerlink" href="#realisations" title="Lien permanent vers ce titre">¶</a></h1>
+<p>La carte comporte donc :</p>
+<ul class="simple">
+<li><p>le connecteur l’entree de tension</p></li>
+<li><p>le connecteur pour le bouton d’alimentation</p></li>
+<li><p>le connecteur pour l’arret d’urgence notez que l’arret d’urgence ne coupe pas la pi et l’esp 32</p></li>
+<li><p>la retour d’une niveau de batterie</p></li>
+<li><p>un buck converter 12V 5A pour les 3 sortie moteurs</p></li>
+<li><p>un buck converter 5V 5A pour la PI (non coupé par l’AU)</p></li>
+<li><p>un buck converter 9V 3A pour l’esp32 (non coupé par l’AU)</p></li>
+<li><p>deux buck converter 5V 3A pour 2*10 sorties</p></li>
+<li><p>un buck converter 9V 3A pour 10 sorties</p></li>
+<li><p>un buck converter 3.3V 3A pour 10 sorties</p></li>
+<li><p>un buck converter 12V 3A pour 10 sorties</p></li>
+</ul>
 <div class="section" id="le-shema-electrique">
 <h2><span class="section-number">4.4.4.1. </span>Le shema electrique<a class="headerlink" href="#le-shema-electrique" title="Lien permanent vers ce titre">¶</a></h2>
 </div>

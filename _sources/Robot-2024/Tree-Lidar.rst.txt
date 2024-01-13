@@ -1,6 +1,10 @@
 Amelioration du LIDAR
 =====================
 
+.. danger::
+   Terrorisme pour les yeux, les fautes d'othographes de Nicolas n'ont pas été corrigées
+
+
 .. image:: images/lidar/ld06.png
    :scale: 20 %
    :align: center

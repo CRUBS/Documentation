@@ -386,7 +386,12 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Robot-2024/Tree-Alimentation.html">4.4. Alimentation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Robot-2024/Alimentation.html">4.4.1. Introduction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Robot-2024/Alimentation.html#source-d-alimentation">4.4.2. Source d’alimentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Robot-2024/Alimentation.html#sources-d-alimentation">4.4.2. Sources d’alimentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2024/Alimentation.html#batterie">4.4.2.1. Batterie</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2024/Alimentation.html#alim-externe">4.4.2.2. Alim externe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Robot-2024/Alimentation.html#choix-de-l-alim">4.4.2.3. Choix de l’alim</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../Robot-2024/Alimentation.html#carte-d-alimentation">4.4.3. Carte d’alimentation</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Robot-2024/Alimentation.html#conversion">4.4.3.1. Conversion</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Robot-2024/Alimentation.html#protection">4.4.3.2. Protection</a></li>
@@ -635,6 +640,8 @@ par le numéro de celui que vous souhaitez utiliser. De cette manière, chaque m
 le 3eme par le timer4 et enfin le 4eme moteur par le timer5.</p>
 <div class="section" id="confli-servo-h">
 <h2><span class="section-number">3.5.3.1. </span>!!!!!! confli servo.h !!!!!!!<a class="headerlink" href="#confli-servo-h" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
 <p>La bibliothèque <em>servo.h</em> utilise les timers afin de piloter des servomoteurs. À la compilation vous aurez
 donc une erreur indiquant la sur-utilisation d’un vecteur. Il est donc nécessaire de modifier la bibliotheque
 pour que cette dernière n’utilise pas le timer que nous utilisons.</p>
@@ -664,7 +671,7 @@ notre timer 3 tel que :
 </pre></div>
 </div>
 <p>Nous pouvons maintenant rouvrir ArduinoIDE et recompiler sans encombre notre programme/</p>
-<p>C’est un mécanisme matériel du mp qui permet au périphérique d’indiquer qu’ils ont besoin d’une ressource (Delamotte)</p>
+</div>
 </div>
 </div>
 

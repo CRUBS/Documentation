@@ -1,6 +1,10 @@
 Introduction
 ============
 
+.. danger::
+   Terrorisme pour les yeux, les fautes d'othographes de Nicolas n'ont pas été corrigées
+
+
 .. image:: images/logo_cdfr_senior_2024.png
    :scale: 30 %
    :align: center

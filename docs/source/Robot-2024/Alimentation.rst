@@ -5,8 +5,11 @@ La carte d'alimentation realiser jusque la est certe fonctionelle mais est tres 
 
 la realisation de cette nouvelle carte fait l'objet d'un projet lors de l'année 2023-2024
 
-Source d'alimentation
-=====================
+Sources d'alimentation
+======================
+
+Batterie
+********
 
 Apres une bonne experience avec les baterie de perceuse. Nous concervons cette source d'alimentation pour les futurs robots
 
@@ -17,6 +20,21 @@ nous asssurons desormais d'avoir une source d'energie fiable, facilement et rapi
 .. image:: images/alimentation/batterie.png
    :scale: 30 %
    :align: center
+
+Alim externe
+************
+
+Nous faisons desormais en sorte que le robot puisse ettre alimenter par une alimentation externe (les alim de stabilisé de labo) pour ne pas vider les baterie de perceuse inutilement
+
+
+Choix de l'alim
+***************
+
+Le robot pouvant etre alimenter soit par une batterie soi par une alim externe, nous rajoutons un interupteur permettant de selectionner la source d'alimentation
+
+.. ajouter la carte 
+
+
 
 Carte d'alimentation
 ====================
@@ -40,6 +58,8 @@ Le robot est composer de plusieurs type de carte et de composant ces derniers so
 Protection
 **********
 
+Entre nous ... on fout une diode 6 Ampère avant la carte d'alimentation et c'est protegé non ? Et comme on est motiver on rajoute un fusible rearmable par sortie et un fusible 5A en entrée de la carte pour la forme :)
+
 
 Niveau de la batterie
 *********************
@@ -51,6 +71,20 @@ Cette année nous decidons de changer pour afficher directement le niveau de la 
 
 Réalisations
 ============
+
+La carte comporte donc :
+
+* le connecteur l'entree de tension
+* le connecteur pour le bouton d'alimentation
+* le connecteur pour l'arret d'urgence notez que l'arret d'urgence ne coupe pas la pi et l'esp 32
+* la retour d'une niveau de batterie
+* un buck converter 12V 5A pour les 3 sortie moteurs
+* un buck converter 5V 5A pour la PI (non coupé par l'AU)
+* un buck converter 9V 3A pour l'esp32 (non coupé par l'AU)
+* deux buck converter 5V 3A pour 2*10 sorties
+* un buck converter 9V 3A pour 10 sorties
+* un buck converter 3.3V 3A pour 10 sorties
+* un buck converter 12V 3A pour 10 sorties
 
 
 

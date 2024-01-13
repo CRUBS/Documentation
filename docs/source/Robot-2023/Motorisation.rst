@@ -130,42 +130,42 @@ le 3eme par le timer4 et enfin le 4eme moteur par le timer5.
 !!!!!! confli servo.h !!!!!!!
 *****************************
 
-La bibliothèque *servo.h* utilise les timers afin de piloter des servomoteurs. À la compilation vous aurez
-donc une erreur indiquant la sur-utilisation d'un vecteur. Il est donc nécessaire de modifier la bibliotheque
-pour que cette dernière n'utilise pas le timer que nous utilisons.
+.. danger::
 
-Pour cela dirigez-vous dans votre dossier d'installation d'Arduino IDE. Pour moi *arduino-1.8.19*. Suivez ensuite
-le chemin suivant:
-arduino-1.8.19 > libraries > Servo > src > avr
+	La bibliothèque *servo.h* utilise les timers afin de piloter des servomoteurs. À la compilation vous aurez
+	donc une erreur indiquant la sur-utilisation d'un vecteur. Il est donc nécessaire de modifier la bibliotheque
+	pour que cette dernière n'utilise pas le timer que nous utilisons.
 
-Ouvrer ensuite le fichier *ServoTimers.h*, trouvez ensuite les lignes suivantes qui correspondent à votre processeur,
-ici pour un Arduino mega :
+	Pour cela dirigez-vous dans votre dossier d'installation d'Arduino IDE. Pour moi *arduino-1.8.19*. Suivez ensuite
+	le chemin suivant:
+	arduino-1.8.19 > libraries > Servo > src > avr
 
-.. code-block:: cpp
+	Ouvrer ensuite le fichier *ServoTimers.h*, trouvez ensuite les lignes suivantes qui correspondent à votre processeur,
+	ici pour un Arduino mega :
 
-	// Say which 16 bit timers can be used and in what order
-	#if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
-	#define _useTimer5
-	#define _useTimer1
-	#define _useTimer3
-	#define _useTimer4
-	typedef enum { _timer1, _timer3, _timer4, _timer5, _Nbr_16timers } timer16_Sequence_t;
+	.. code-block:: cpp
 
-Nous allons devoir désactiver l'utilisation de notre timer. Pour cela, on retire tout simplement ce qui mentionne
-notre timer 3 tel que :
-(cette action est évidemment applicable pour tous les timers qui devraient être utilisés par des interruptions)
+		// Say which 16 bit timers can be used and in what order
+		#if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
+		#define _useTimer5
+		#define _useTimer1
+		#define _useTimer3
+		#define _useTimer4
+		typedef enum { _timer1, _timer3, _timer4, _timer5, _Nbr_16timers } timer16_Sequence_t;
 
-.. code-block:: cpp
+	Nous allons devoir désactiver l'utilisation de notre timer. Pour cela, on retire tout simplement ce qui mentionne
+	notre timer 3 tel que :
+	(cette action est évidemment applicable pour tous les timers qui devraient être utilisés par des interruptions)
 
-	// Say which 16 bit timers can be used and in what order
-	#if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
-	#define _useTimer5
-	#define _useTimer1
-	#define _useTimer4
-	typedef enum { _timer1, _timer4, _timer5, _Nbr_16timers } timer16_Sequence_t;
+	.. code-block:: cpp
 
-Nous pouvons maintenant rouvrir ArduinoIDE et recompiler sans encombre notre programme/
+		// Say which 16 bit timers can be used and in what order
+		#if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
+		#define _useTimer5
+		#define _useTimer1
+		#define _useTimer4
+		typedef enum { _timer1, _timer4, _timer5, _Nbr_16timers } timer16_Sequence_t;
 
+	Nous pouvons maintenant rouvrir ArduinoIDE et recompiler sans encombre notre programme/
 
-C'est un mécanisme matériel du mp qui permet au périphérique d'indiquer qu'ils ont besoin d'une ressource (Delamotte)
 

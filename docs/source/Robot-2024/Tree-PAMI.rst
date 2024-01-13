@@ -1,24 +1,21 @@
-Alimentation
-============
-
-.. danger::
-   Terrorisme pour les yeux, les fautes d'othographes de Nicolas n'ont pas été corrigées
+PAMI
+====
 
 .. toctree::
    :maxdepth: 2
    :caption: Contenu:
+   
+   PAMI
 
-   Alimentation
-
 +-------------------------+-------------------------+
-| Rédacteur               | - LOUVEAU Nicolas       |
+| Rédacteur               | -                       |
 +-------------------------+-------------------------+
-| Année d'écriture        | - 2023-2024             |
+| Année d'écriture        | -                       |
 +-------------------------+-------------------------+
-| Dernière modification   | - 26/10/2023            |
+| Dernière modification   | -                       |
 +-------------------------+-------------------------+
 | Statut d'écriture       | - en cours              |
 +-------------------------+-------------------------+
-| Statut de relecture     | - 0                     |
+| Statut de relecture     | -                       |
 +-------------------------+-------------------------+
 

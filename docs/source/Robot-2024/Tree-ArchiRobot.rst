@@ -1,6 +1,9 @@
 Architecture Robot Principal
 ============================
 
+.. danger::
+   Terrorisme pour les yeux, les fautes d'othographes de Nicolas n'ont pas été corrigées
+
 
 .. toctree::
    :maxdepth: 2

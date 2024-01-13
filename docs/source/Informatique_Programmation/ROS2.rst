@@ -20,7 +20,7 @@ https://docs.ros.org/en/humble/Tutorials.html
 Installation et Setup
 =====================
 
-.. warning::
+.. danger::
     Impératif : ROS2 doit être installé sur une version de l'OS Ubuntu 22.0x, une version antérieure
     telle qu'un Ubuntu 20.0x ne pourra installer ROS2.
 

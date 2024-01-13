@@ -345,18 +345,18 @@
 <li class="toctree-l3"><a class="reference internal" href="Introduction.html">4.1.1. Sujet</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Introduction.html#choix">4.1.2. Choix</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="Introduction.html#generalites">4.1.2.1. Généralités</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Introduction.html#prehenseurs">4.1.2.2. Prehenseurs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Introduction.html#prehenseurs">4.1.2.2. Préhenseurs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Introduction.html#alimentation">4.1.2.3. Alimentation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Introduction.html#motorisation">4.1.2.4. Motorisation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Introduction.html#detection-d-obstacle">4.1.2.5. Detection d’obstacle</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="Introduction.html#robot-principal">4.1.3. Robot Principal</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Introduction.html#robot-principal">4.1.3. Robot principal</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="Introduction.html#objectifs">4.1.3.1. Objectifs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Introduction.html#architecture">4.1.3.2. Architecture</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="Introduction.html#pami-petit-actionneur-mobile-independant">4.1.4. PAMI (Petit actionneur mobile independant)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Introduction.html#pami-petit-actionneur-mobile-independant">4.1.4. PAMI (petit actionneur mobile indépendant)</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="Introduction.html#id1">4.1.4.1. Objectifs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Introduction.html#id2">4.1.4.2. Architecture</a></li>
 </ul>
@@ -366,12 +366,12 @@
 <li class="toctree-l2 current"><a class="reference internal" href="Tree-ArchiRobot.html">4.2. Architecture Robot Principal</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">4.2.1. Architecture Robot Principal</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#commun">4.2.2. Commun</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#systeme-de-transmission">4.2.2.1. Systeme de transmission</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#systeme-de-transmission">4.2.2.1. Système de transmission</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#alimentation">4.2.2.2. Alimentation</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#base-diferentielle">4.2.3. Base diferentielle</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#base-holonome">4.2.4. Base Holonome</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#base-differentielle">4.2.3. Base différentielle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#base-holonome">4.2.4. Base holonome</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="Tree-ArchiPAMI.html">4.3. Architecture PAMIs</a><ul>
@@ -399,7 +399,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="Alimentation.html#realisations">4.4.4. Réalisations</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="Alimentation.html#le-shema-electrique">4.4.4.1. Le shema electrique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Alimentation.html#le-schema-electrique">4.4.4.1. Le schéma électrique</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Alimentation.html#le-pcb">4.4.4.2. Le PCB</a></li>
 </ul>
 </li>
@@ -427,6 +427,11 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="Tree-Lidar.html">4.6. Amelioration du LIDAR</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="Lidar.html">4.6.1. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Lidar.html#ameliorations">4.6.2. Améliorations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Lidar.html#structure">4.6.2.1. Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Lidar.html#leds">4.6.2.2. LEDs</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -535,13 +540,13 @@
              
   <div class="section" id="architecture-robot-principal">
 <h1><span class="section-number">4.2.1. </span>Architecture Robot Principal<a class="headerlink" href="#architecture-robot-principal" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Contrairement aux années precedante nous ne pouvons realiser deux robots cette année, le second etant remplacé par les PAMI. Nous devons faire le choix de la base de utiliser. Nous realiserons tout de meme une base holonome a 3 roue et une base differentielle afin de tester ces dernieres.</p>
+<p>Contrairement aux années précédant, nous, ne pouvons réaliser deux robots cette année, le second étant remplacé par les PAMI. Nous devons faire le choix de la base de utiliser. Nous réaliserons tout de même une base holonome a 3 roues et une base différentielle afin de tester ces dernières.</p>
 </div>
 <div class="section" id="commun">
 <h1><span class="section-number">4.2.2. </span>Commun<a class="headerlink" href="#commun" title="Lien permanent vers ce titre">¶</a></h1>
-<p>L’objectif en realisant ces deux bases est qu’elles comportent le plus de pieces communes. Ainsi ormis les base et plafond, les roues et des pieces de fixation particuliere toutes les pieces sont communes aux deux robots</p>
+<p>L’objectif en réalisant ces deux bases est qu’elles comportent le plus de pièces communes. Ainsi hormis les base et plafond, les roues et des pièces de fixation particulière toutes les pièces sont communes aux deux robots.</p>
 <div class="section" id="systeme-de-transmission">
-<h2><span class="section-number">4.2.2.1. </span>Systeme de transmission<a class="headerlink" href="#systeme-de-transmission" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">4.2.2.1. </span>Système de transmission<a class="headerlink" href="#systeme-de-transmission" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="Tree-ArchiRobot.html"><span class="doc">Architecture Robot Principal</span></a></p></li>
 </ul>
@@ -553,11 +558,11 @@
 </ul>
 </div>
 </div>
-<div class="section" id="base-diferentielle">
-<h1><span class="section-number">4.2.3. </span>Base diferentielle<a class="headerlink" href="#base-diferentielle" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="base-differentielle">
+<h1><span class="section-number">4.2.3. </span>Base différentielle<a class="headerlink" href="#base-differentielle" title="Lien permanent vers ce titre">¶</a></h1>
 </div>
 <div class="section" id="base-holonome">
-<h1><span class="section-number">4.2.4. </span>Base Holonome<a class="headerlink" href="#base-holonome" title="Lien permanent vers ce titre">¶</a></h1>
+<h1><span class="section-number">4.2.4. </span>Base holonome<a class="headerlink" href="#base-holonome" title="Lien permanent vers ce titre">¶</a></h1>
 </div>
 
 

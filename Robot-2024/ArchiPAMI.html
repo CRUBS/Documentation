@@ -345,18 +345,18 @@
 <li class="toctree-l3"><a class="reference internal" href="Introduction.html">4.1.1. Sujet</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Introduction.html#choix">4.1.2. Choix</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="Introduction.html#generalites">4.1.2.1. Généralités</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Introduction.html#prehenseurs">4.1.2.2. Prehenseurs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Introduction.html#prehenseurs">4.1.2.2. Préhenseurs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Introduction.html#alimentation">4.1.2.3. Alimentation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Introduction.html#motorisation">4.1.2.4. Motorisation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Introduction.html#detection-d-obstacle">4.1.2.5. Detection d’obstacle</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="Introduction.html#robot-principal">4.1.3. Robot Principal</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Introduction.html#robot-principal">4.1.3. Robot principal</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="Introduction.html#objectifs">4.1.3.1. Objectifs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Introduction.html#architecture">4.1.3.2. Architecture</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="Introduction.html#pami-petit-actionneur-mobile-independant">4.1.4. PAMI (Petit actionneur mobile independant)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Introduction.html#pami-petit-actionneur-mobile-independant">4.1.4. PAMI (petit actionneur mobile indépendant)</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="Introduction.html#id1">4.1.4.1. Objectifs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Introduction.html#id2">4.1.4.2. Architecture</a></li>
 </ul>
@@ -366,12 +366,12 @@
 <li class="toctree-l2"><a class="reference internal" href="Tree-ArchiRobot.html">4.2. Architecture Robot Principal</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="ArchiRobot.html">4.2.1. Architecture Robot Principal</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ArchiRobot.html#commun">4.2.2. Commun</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="ArchiRobot.html#systeme-de-transmission">4.2.2.1. Systeme de transmission</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ArchiRobot.html#systeme-de-transmission">4.2.2.1. Système de transmission</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ArchiRobot.html#alimentation">4.2.2.2. Alimentation</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="ArchiRobot.html#base-diferentielle">4.2.3. Base diferentielle</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ArchiRobot.html#base-holonome">4.2.4. Base Holonome</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArchiRobot.html#base-differentielle">4.2.3. Base différentielle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArchiRobot.html#base-holonome">4.2.4. Base holonome</a></li>
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="Tree-ArchiPAMI.html">4.3. Architecture PAMIs</a><ul class="current">
@@ -399,7 +399,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="Alimentation.html#realisations">4.4.4. Réalisations</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="Alimentation.html#le-shema-electrique">4.4.4.1. Le shema electrique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Alimentation.html#le-schema-electrique">4.4.4.1. Le schéma électrique</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Alimentation.html#le-pcb">4.4.4.2. Le PCB</a></li>
 </ul>
 </li>
@@ -427,6 +427,11 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="Tree-Lidar.html">4.6. Amelioration du LIDAR</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="Lidar.html">4.6.1. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Lidar.html#ameliorations">4.6.2. Améliorations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Lidar.html#structure">4.6.2.1. Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Lidar.html#leds">4.6.2.2. LEDs</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -535,20 +540,20 @@
              
   <div class="section" id="architecture-pamis">
 <h1><span class="section-number">4.3.1. </span>Architecture PAMIs<a class="headerlink" href="#architecture-pamis" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Les PAMI anciennement PMI ont ete reintroduit cette année en remplacement du second robot. C’est derniers sont des mini robots qui interviennent en fin de match. Nous pouvons en realiser autant que nous voulons du moment que ces dernier rentrent tous dans leur zone de demarage et qu’ils font une taille minimale</p>
-<p>cette année ces dernier ont pour objectif de rentrer en contact avec les plantes que nous avons depose. pour valider les points c’est un pami par zone et nous pouvons rentrer en contact avec le pot ou les feuille.</p>
-<p>L’objectif est de se simplifier la vie sans reinventer tous ce qui a ete fait jusque ici. ainis concernant le controle des moteurs nous reutilisons le meme principe que pour la motorisation du robot principal. Un microcontroleur qui s’occupera des deux encodeur et des deux pwm pour les moteur.</p>
+<p>Les PAMI anciennement PMI ont été réintroduit cette année en remplacement du second robot. Ces derniers sont des mini robots qui interviennent en fin de match. Nous pouvons en réaliser autant que nous voulons du moment que ces derniers rentrent tous dans leur zone de démarrage et qu’ils font une taille minimale.</p>
+<p>Cette année ces derniers ont pour objectif de rentrer en contact avec les plantes que nous avons déposer. Pour valider les points, c’est un PAMI par zone et nous pouvons rentrer en contact avec le pot ou les feuilles.</p>
+<p>L’objectif est de se simplifier la vie sans réinventer tout ce qui a été fait jusqu’ici. Ainsi concernant le contrôle des moteurs nous réutilisons le même principe que pour la motorisation du robot principal. Un microcontrôleur qui s’occupera des deux encodeurs et des deux PWM pour le pont en H des moteurs.</p>
 </div>
 <div class="section" id="tout-comme-sur-le-robot">
 <h1><span class="section-number">4.3.2. </span>Tout comme sur le robot<a class="headerlink" href="#tout-comme-sur-le-robot" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="motorisation">
 <h2><span class="section-number">4.3.2.1. </span>Motorisation<a class="headerlink" href="#motorisation" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pour comprendre les changement apporter je vous conseil de vous refere aux travaux realiser sur le robot :</p>
+<p>Pour comprendre les changements apporter je vous conseil de vous réfère aux travaux réaliser sur le robot :</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="Tree-Motorisation.html"><span class="doc">Motorisation</span></a></p></li>
 </ul>
-<p>le microcontroleur utiliser est un dsPIC33CK256MP502. la differences avec celui utilser sur le robot est la nombre de module QEI ici porter a deux, ce qui permet de lire les encodeurs des deux moteur sans monter deux microcontroleur.</p>
-<p>le pont en h n’est pas un l298N comme sur le robot, des module hw-354 feront largement l’affaire, nous recuperons simplement le composant qui nous interesse.</p>
+<p>Le microcontrôleur utiliser est un dsPIC33CK256MP502. la différence avec celui utilisé sur le robot est la nombre de module QEI ici porter a deux, ce qui permet de lire les encodeurs des deux moteurs sans monter deux microcontrôleurs.</p>
+<p>Le pont en h n’est pas un l298N comme sur le robot, des modules hw-354 feront largement l’affaire, nous récupérons simplement le composant qui nous intéresse.</p>
 </div>
 <div class="section" id="alimentation">
 <h2><span class="section-number">4.3.2.2. </span>Alimentation<a class="headerlink" href="#alimentation" title="Lien permanent vers ce titre">¶</a></h2>

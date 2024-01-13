@@ -1,8 +1,6 @@
 Alimentation
 ============
 
-.. danger::
-   Terrorisme pour les yeux, les fautes d'othographes de Nicolas n'ont pas été corrigées
 
 .. toctree::
    :maxdepth: 2
@@ -19,6 +17,6 @@ Alimentation
 +-------------------------+-------------------------+
 | Statut d'écriture       | - en cours              |
 +-------------------------+-------------------------+
-| Statut de relecture     | - 0                     |
+| Statut de relecture     | - Antitode              |
 +-------------------------+-------------------------+
 

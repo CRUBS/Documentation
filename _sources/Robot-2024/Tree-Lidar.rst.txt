@@ -1,8 +1,9 @@
 Amelioration du LIDAR
 =====================
 
-.. danger::
-   Terrorisme pour les yeux, les fautes d'othographes de Nicolas n'ont pas été corrigées
+.. tip::
+   Les informations relatives au Lidar sont disponibles sur la documentation de 2023 :
+   :doc:`/Robot-2023/Tree-Lidar`
 
 
 .. image:: images/lidar/ld06.png
@@ -26,6 +27,6 @@ Amelioration du LIDAR
 +-------------------------+-------------------------+
 | Statut d'écriture       | - en cours              |
 +-------------------------+-------------------------+
-| Statut de relecture     | - 0                     |
+| Statut de relecture     | - Antitode              |
 +-------------------------+-------------------------+
 

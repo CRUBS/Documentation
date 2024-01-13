@@ -1,14 +1,39 @@
 Introduction
 ============
 
-Cet page est dedier aux amelioration portes au mats de reperage du robot et donc du lidar. je vous renvoie vers l'article concernant les infos du lidar :
+Cette page est dédiée aux améliorations du mât de repérage du robot et donc du lidar. Je vous renvoie vers l'article concernant les informations du lidar (installation, référence, etc ... :
+:doc:`/Robot-2023/Tree-Lidar`
 
-- :doc:`/Robot-2023/Tree-Lidar`
+Pendant l'édition 2023 de la coupe, nous avons eu plusieurs idées permettant d'amélioration le mât:
 
-pendant l'edition 2023 de la coupe, nous avons eu plusieurs idee permetant d'amelioration le mat:
+#. Hauteur de la plateforme dédier a l'équipe adverse réglable
+#. Cacher le socle du lidar, car ce dernier ne scan pas
+#. Ajouter un cercle de LED autour du lidar et coder une visualisation des informations perçue par le lidar sur ce cercle
 
-#. hauteur de la plteform dedier a l'equippe adverse reglable
-#. cacher le socle du lidar car ce dernier ne scan pas
-#. ajouter un cercle de led autour du lidar et coder une visualisation des informations percu par le lidar sur ce cercle
+Ces 3 points font l'objet d'un projet pour l'année 2023-2024
 
-ces 3 points font l'objet d'un projet pour l'année 2023-2024
+
+Améliorations
+=============
+
+Structure
+*********
+
+
+
+
+
+
+LEDs
+****
+
+La référence des LEDs est un anneau de WS2812b, ce sont des LEDs "adressable", des LEDs RGB dont on peut contrôler la couleur individuellement.
+
+.. image:: images/lidar/anneau_leds.png
+   :scale: 60 %
+   :align: center
+
+Ce genre de ruban LED peut normalement être commandé par une Raspberry, mais après beaucoup de temps passer dessus nous n'avons pas réussi depuis Ubuntu 22.04 (alors que nous avons réussi sur Raspbian). Nous faisons donc le choix de piloter les LEDs depuis l'esp32 et les informations du lidar seront transmises de la PI à l'esp32 sur le bus I²C.
+
+
+

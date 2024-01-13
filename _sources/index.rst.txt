@@ -24,13 +24,13 @@ Bienvenue sur la documentation du CRUBS!
    FAO/Tree
    .. Banc-de-test/Tree
 
-.. note::
+.. tip::
 
-   Les informations relative à la rédaction de cette documentation :
+   Les informations relatives à la rédaction de cette documentation permettant sa poursuite sont disponibles ici :
    :doc:`/Informatique_Programmation/Tree-Doc_sphinx`
 
 TODO :
-******
+======
 
 #. [nico] correction orthographe ptn
 #. finir robot 2023 un jour
@@ -40,3 +40,8 @@ TODO :
 #. ajouter des warning et des infos
 #. [nico] manque des images dans :doc:`/Informatique_Programmation/Tree-Ubuntu`
 #. voron puis deplacer voron dans fao
+
+.. danger::
+   Niveau de relecture :
+   0 < Scribens < Antitode < Axel
+   En gros si une page n'a pas été relue par axel ça risque de piquer les yeux

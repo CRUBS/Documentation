@@ -544,10 +544,10 @@
 Ces derniers ont la possibilité d’être facilement utilisables à partir d’une carte Arduino équippée d’un shield
 pouvant accueillir jusqu’à 5 drivers de moteurs pas à pas. Le tout forme ce que l’on appelle une RAMPS.
 C’est un systeme beaucoup utilisé dans le domaine des imprimantes 3D.</p>
-<a class="reference internal image-reference" href="../_images/ramps16.png"><img alt="../_images/ramps16.png" class="align-center" src="../_images/ramps16.png" style="width: 647.1px; height: 576.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/ramps16.png"><img alt="../_images/ramps16.png" class="align-center" src="../_images/ramps16.png" style="width: 460.16px; height: 409.6px;" /></a>
 <div class="section" id="principe-de-fonctionnement-des-nemas">
 <h2><span class="section-number">3.5.1.1. </span>Principe de fonctionnement des Némas<a class="headerlink" href="#principe-de-fonctionnement-des-nemas" title="Lien permanent vers ce titre">¶</a></h2>
-<a class="reference internal image-reference" href="../_images/nema_pos.png"><img alt="../_images/nema_pos.png" class="align-center" src="../_images/nema_pos.png" style="width: 663.2px; height: 299.2px;" /></a>
+<a class="reference internal image-reference" href="../_images/nema_pos.png"><img alt="../_images/nema_pos.png" class="align-center" src="../_images/nema_pos.png" style="width: 580.3px; height: 261.8px;" /></a>
 <p><a class="reference external" href="https://www.youtube.com/watch?v=jPTvo6boZkk">https://www.youtube.com/watch?v=jPTvo6boZkk</a></p>
 <p><a class="reference external" href="https://www.youtube.com/watch?time_continue=0&amp;v=eyqwLiowZiU&amp;embeds_referring_euri=https%3A%2F%2Faccu-components.com%2F">https://www.youtube.com/watch?time_continue=0&amp;v=eyqwLiowZiU&amp;embeds_referring_euri=https%3A%2F%2Faccu-components.com%2F</a></p>
 </div>
@@ -555,7 +555,7 @@ C’est un systeme beaucoup utilisé dans le domaine des imprimantes 3D.</p>
 <div class="section" id="pilotage-des-moteurs">
 <h1><span class="section-number">3.5.2. </span>Pilotage des moteurs<a class="headerlink" href="#pilotage-des-moteurs" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Une fois branché sur une ramps, les Némas peuvent facilement être pilotés par l’Arduino, le tout est de savoir comment.</p>
-<a class="reference internal image-reference" href="../_images/tmc_2209.png"><img alt="../_images/tmc_2209.png" class="align-center" src="../_images/tmc_2209.png" style="width: 480.0px; height: 480.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/tmc_2209.png"><img alt="../_images/tmc_2209.png" class="align-center" src="../_images/tmc_2209.png" style="width: 390.0px; height: 390.0px;" /></a>
 <ol class="arabic simple">
 <li><p>EN : le pin enable permet d’alimenter le moteur, en général un niveau 0 alimentera le moteur et un niveau 1 le coupera</p></li>
 <li><p>DIR : ce pin permet simplement de définir le sens du moteur selon le niveau logique du pin</p></li>
@@ -639,10 +639,8 @@ de l’interruption. Nous pouvons ainsi compter bien plus loin.</p>
 par le numéro de celui que vous souhaitez utiliser. De cette manière, chaque moteur fonctionnera sur son interruption.</p>
 <div class="admonition warning">
 <p class="admonition-title">Avertissement</p>
-<p>Attention, toute les cartes Arduino ne possèdent pas les mêmes timers. Dans le cas d’une Arduino mega,</p>
+<p>Attention, toute les cartes Arduino ne possèdent pas les mêmes timers. Dans le cas d’une Arduino mega, il y a 4 timers 16 bits ainsi le 1er moteur est contrôler par le timer1, le 2nd par le timer3, le 3eme par le timer4 et enfin le 4eme moteur par le timer5. (Le timer2 est un timer 8bit que nous ne pouvons pas utiliser).</p>
 </div>
-<p>il y a 4 timers 16 bits ainsi le moteur 1er est contrôler par le timer1, le 2nd par le timer3,
-le 3eme par le timer4 et enfin le 4eme moteur par le timer5.</p>
 <div class="section" id="confli-servo-h">
 <h2><span class="section-number">3.5.3.1. </span>!!!!!! confli servo.h !!!!!!!<a class="headerlink" href="#confli-servo-h" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="admonition danger">

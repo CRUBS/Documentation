@@ -42,8 +42,7 @@ notre demande.
 
 Il y a plusieurs conditions à remplir pour déposer un dossier de financement auprès de la FSDIE :
 
-* Être une association et présenter tous les documents nécessaires, ce n’est pas notre cas, mais nous pouvons déposer
-un dossier au nom du BDE et utiliser leurs papiers.
+* Être une association et présenter tous les documents nécessaires, ce n’est pas notre cas, mais nous pouvons déposer un dossier au nom du BDE et utiliser leurs papiers.
 * Pour les projets de plus de 500€ présenter un cofinancement du projet, donc une autre subvention d'une entreprise.
 * Présenter un dossier complet selon leur modèle.
 * À la fin du projet présenter un bilan moral et financier.

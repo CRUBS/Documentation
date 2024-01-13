@@ -37,7 +37,6 @@ Interface Options > SSH, on vous demande ensuite si vous voulez activer le SSH, 
 puis **Ok**. Vous pourrez quitter la fenêtre avec *Echap*.
 
 .. image:: images/raspbian/raspi_config.png
-
 	:scale: 75 %
 	:align: center
 

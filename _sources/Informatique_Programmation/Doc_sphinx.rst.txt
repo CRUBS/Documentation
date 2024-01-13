@@ -84,7 +84,7 @@ une arborescence et déclare ainsi les articles à afficher dans la documentatio
 
 La documentation est organisée de la manière suivante:
 
-.. code-block:: txt
+.. code-block:: text
 
 	Documentation
 	├─index.rst

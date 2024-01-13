@@ -76,9 +76,11 @@ Toctree, index et ordonnancement des fichiers
 Explications :
 ^^^^^^^^^^^^^^
 
-L'ordonnancement des fichiers de la documentation se fait d'une certaine manière qu'il faut continuer de suivre pour garder une certaine cohérence. 
+L'ordonnancement des fichiers de la documentation se fait d'une certaine manière qu'il faut continuer de suivre
+pour garder une certaine cohérence.
 
-Le concept important à comprendre est celui de "toctree". Un toctree est un fichier .rst qui créer un sommaire, une arborescence et déclare ainsi les articles a affiché dans la documentation.
+Le concept important à comprendre est celui de "toctree". Un toctree est un fichier *.rst* qui créer un sommaire,
+une arborescence et déclare ainsi les articles à afficher dans la documentation.
 
 La documentation est organisée de la manière suivante:
 
@@ -109,7 +111,9 @@ La documentation est organisée de la manière suivante:
 	└─Dossier_partie_X
 		└─ . . .
 
-Le fichier "index.rst" doit impérativement porter ce nom, une fois compiler ce dernier portera le nom de "index.html" et permettra d'ouvrir la documentation. Ce dernier est le sommaire principal de la doc. C'est donc un toctree dans lequel vous devez appeler le fichier "Tree.rst" de chaque partie. par exemple (index de la doc) :
+Le fichier "index.rst" doit impérativement porter ce nom, une fois compilé ce dernier portera le nom de "index.html"
+et permettra d'ouvrir la documentation. Ce dernier est le sommaire principal de la doc. C'est donc un toctree
+dans lequel vous devez appeler le fichier "Tree.rst" de chaque partie. par exemple (index de la doc) :
 
 .. code-block:: rst
 
@@ -129,7 +133,8 @@ Le fichier "index.rst" doit impérativement porter ce nom, une fois compiler ce 
 	   CAO/Tree
 	   FAO/Tree
 
-Le fichier "Tree.rst" présent dans chaque partie permet de créer le sommaire de la partie, il appelle les sommaires de chaque article. par exemple (Tree de la partie FAO) :
+Le fichier "Tree.rst" présent dans chaque partie permet de créer le sommaire de la partie, il appelle les sommaires
+de chaque article. Par exemple (Tree de la partie FAO) :
 
 .. code-block:: rst
 
@@ -146,7 +151,8 @@ Le fichier "Tree.rst" présent dans chaque partie permet de créer le sommaire d
 	   Tree-CIF
    
 
-Enfin, le fichier "Tree-XXXXXX.rst" permet de créer un sommaire intermédiaire pour chaque article. Un article a alors son sommaire (toctree). On retrouve alors un seul fichier de déclarer, par exemple (Tree-PrusaSlicer.rst) :
+Enfin, le fichier "Tree-XXXXXX.rst" permet de créer un sommaire intermédiaire pour chaque article. Un article a alors
+son sommaire (toctree). On retrouve alors un seul fichier de déclarer, par exemple (Tree-PrusaSlicer.rst) :
 
 .. code-block:: rst
 
@@ -164,7 +170,7 @@ Enfin, le fichier "Tree-XXXXXX.rst" permet de créer un sommaire intermédiaire 
 
 .. note::
 
-	Notez que les toctree sont seulement des "fonction" au sein d'un fichier rst. Il est donc tout à fait possible d'ajouter des notes, des images, des tableaux, etc, dans un sommaire pour les rendre plus vivants, par exemple :
+	Notez que les toctree sont seulement des "fonctions" au sein d'un fichier *rst*. Il est donc tout à fait possible d'ajouter des notes, des images, des tableaux, etc, dans un sommaire pour les rendre plus vivants, par exemple :
 	:doc:`/Informatique_Programmation/Tree-Doc_sphinx` 
 
 Pour résumer schématiquement, voilà ce que ça donne :
@@ -181,7 +187,7 @@ Pour résumer schématiquement, voilà ce que ça donne :
 
 	**Vous voulez créer une partie :**
 
-	#. Ajouter un dossier a la racine de la doc
+	#. Ajouter un dossier à la racine de la doc
 	#. Préparer un dossier "Tree.rst" pour les futurs articles dans ce dossier
 	#. Ajouter ce fichier "Tree.rst" dans le fichier "index.rst" à la suite des autres : "Nom_partie/Tree"
 
@@ -192,27 +198,31 @@ Pour résumer schématiquement, voilà ce que ça donne :
 	#. Créer votre article "Nom_article.rst" comme vous le souhaitez
 	#. Créer un toctree "Tree-Nom_article.rst", servez-vous des existants comme exemple
 	#. Ajouter l'article que vous avez créé au toctree qui lui est dédié que vous venez de créer
-	#. Ajouter le toctree de votre article a "Tree.rst" à la suite des autres: "Tree_Nom-article"
+	#. Ajouter le toctree de votre article à "Tree.rst" à la suite des autres: "Tree_Nom-article"
 
 
 .. warning::
 
-	N'oubliez pas de push régulièrement votre travail sur github. La documentation est recompilée en ligne est actualisé automatiquement quelques minutes après le push.
+	N'oubliez pas d'envoyer régulièrement votre travail sur Github (commit et push). La documentation est recompilée en ligne et est actualisé automatiquement quelques minutes après le push.
 
 
 Compilation
 ***********
-Pour ne pas toujours avoir besoin de push sur github vos modifications et attendre la mise à jour de la doc, il est possible de compiler cette dernière en local.
+Pour ne pas toujours avoir besoin de push sur github vos modifications et attendre la mise à jour de la doc,
+il est possible de compiler cette dernière en local.
 
-Vous pouvez récupérer les fichier make.bat et Makefile, disponible sur `github <https://github.com/CRUBS/Documentation/tree/main/docs>`_
+Vous pouvez récupérer les fichier make.bat et Makefile, disponible sur
+`Github <https://github.com/CRUBS/Documentation/tree/main/docs>`_
 
-Ajoutez ces fichiers à la racine des fichiers de la documentation (comme sur github) puis vous pouvez exécuter la compilation dans un terminal de la manière suivante :
+Ajoutez ces fichiers à la racine des fichiers de la documentation (comme sur Github) puis vous pouvez exécuter
+la compilation dans un terminal de la manière suivante :
 
 .. code-block:: bash
 
 	make html
 
-De cette manière un dossier 'build' sera générer et vous trouverez dans ce dernier un fichier 'index.html', ouvrez-le avec votre navigateur web préfère et voilà !
+De cette manière un dossier 'build' sera généré et vous trouverez dans ce dernier un fichier 'index.html',
+ouvrez-le avec votre navigateur web préféré et voilà !
 
 
 Généralités
@@ -331,12 +341,13 @@ Dangers
 Ajout de médias
 ===============
 
-Attention les syntaxes sont à respecter imperativement, les tabulations, sauts de ligne, espaces, etc ...
+.. warning::
+    Attention les syntaxes sont à respecter impérativement, les tabulations, sauts de ligne, espaces, etc ...
 
 Bloc de code
 ************
 
-Exemple d'un bloc de code à ajouter à la page, vous pouvez evidement remplacer "python" par le langage que vous utilisez. 
+Exemple d'un bloc de code à ajouter à la page, vous pouvez évidement remplacer "python" par le langage que vous utilisez.
 
 .. code-block:: rst
 
@@ -360,8 +371,9 @@ Images
 	   :align: center
 	   :class: with_shadow float_right
 
-Ici l'image est redimensionnée à 20% de sa taille originale, elle est alignée au centre de la page horizontalement. 
-La ligne class, permet de la placer à droite de la page sans faire descendre le texte, ce que j'utilise pour les toctree de chaque sujet.
+Ici, l'image est redimensionnée à 20% de sa taille originale et est alignée au centre de la page horizontalement.
+La ligne *class*, permet de la placer à droite de la page sans faire descendre le texte, ce que j'utilise
+pour les toctree de chaque sujet.
 
 Beaucoup de paramètres existent dans la doc.
 

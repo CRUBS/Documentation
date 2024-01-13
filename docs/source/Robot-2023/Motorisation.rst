@@ -7,14 +7,14 @@ pouvant accueillir jusqu'à 5 drivers de moteurs pas à pas. Le tout forme ce qu
 C'est un systeme beaucoup utilisé dans le domaine des imprimantes 3D.
 
 .. image:: images/motorisation/ramps16.png
-	:scale: 45 %
+	:scale: 32 %
 	:align: center
 
 Principe de fonctionnement des Némas
 ************************************
 
 .. image:: images/motorisation/nema_pos.png
-	:scale: 80 %
+	:scale: 70 %
 	:align: center
 
 https://www.youtube.com/watch?v=jPTvo6boZkk
@@ -28,7 +28,7 @@ Pilotage des moteurs
 Une fois branché sur une ramps, les Némas peuvent facilement être pilotés par l'Arduino, le tout est de savoir comment.
 
 .. image:: images/motorisation/tmc_2209.png
-	:scale: 80 %
+	:scale: 65 %
 	:align: center
 
 
@@ -123,9 +123,7 @@ Il suffit maintenant de dupliquer la partie présente dans le setup et le l'inte
 par le numéro de celui que vous souhaitez utiliser. De cette manière, chaque moteur fonctionnera sur son interruption.
 
 .. warning::
-    Attention, toute les cartes Arduino ne possèdent pas les mêmes timers. Dans le cas d'une Arduino mega,
-il y a 4 timers 16 bits ainsi le moteur 1er est contrôler par le timer1, le 2nd par le timer3,
-le 3eme par le timer4 et enfin le 4eme moteur par le timer5.
+    Attention, toute les cartes Arduino ne possèdent pas les mêmes timers. Dans le cas d'une Arduino mega, il y a 4 timers 16 bits ainsi le 1er moteur est contrôler par le timer1, le 2nd par le timer3, le 3eme par le timer4 et enfin le 4eme moteur par le timer5. (Le timer2 est un timer 8bit que nous ne pouvons pas utiliser).
 
 !!!!!! confli servo.h !!!!!!!
 *****************************

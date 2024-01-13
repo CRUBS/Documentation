@@ -89,7 +89,7 @@ La carte comporte donc :
 
 
 Le schéma électrique
-*******************
+********************
 
 
 

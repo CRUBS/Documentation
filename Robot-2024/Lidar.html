@@ -348,7 +348,7 @@
 <li class="toctree-l4"><a class="reference internal" href="Introduction.html#prehenseurs">4.1.2.2. Préhenseurs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Introduction.html#alimentation">4.1.2.3. Alimentation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Introduction.html#motorisation">4.1.2.4. Motorisation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Introduction.html#detection-d-obstacle">4.1.2.5. Detection d’obstacle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Introduction.html#detection-d-obstacles">4.1.2.5. Détection d’obstacles</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="Introduction.html#robot-principal">4.1.3. Robot principal</a><ul>
@@ -356,7 +356,7 @@
 <li class="toctree-l4"><a class="reference internal" href="Introduction.html#architecture">4.1.3.2. Architecture</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="Introduction.html#pami-petit-actionneur-mobile-independant">4.1.4. PAMI (petit actionneur mobile indépendant)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Introduction.html#pami-petit-actionneur-mobile-independant">4.1.4. PAMI (Petit Actionneur Mobile Indépendant)</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="Introduction.html#id1">4.1.4.1. Objectifs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Introduction.html#id2">4.1.4.2. Architecture</a></li>
 </ul>
@@ -540,13 +540,14 @@
              
   <div class="section" id="introduction">
 <h1><span class="section-number">4.6.1. </span>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Cette page est dédiée aux améliorations du mât de repérage du robot et donc du lidar. Je vous renvoie vers l’article concernant les informations du lidar (installation, référence, etc … :
-<a class="reference internal" href="../Robot-2023/Tree-Lidar.html"><span class="doc">Lidar</span></a></p>
-<p>Pendant l’édition 2023 de la coupe, nous avons eu plusieurs idées permettant d’amélioration le mât:</p>
+<p>Cette page est dédiée aux améliorations du mât de repérage du robot et donc du lidar. Je vous renvoie vers l’article
+concernant les informations du lidar (installation, référence, etc.) :</p>
+<p><a class="reference internal" href="../Robot-2023/Tree-Lidar.html"><span class="doc">Lidar</span></a></p>
+<p>Pendant l’édition 2023 de la coupe, nous avons eu plusieurs idées permettant d’amélioration le mât :</p>
 <ol class="arabic simple">
-<li><p>Hauteur de la plateforme dédier a l’équipe adverse réglable</p></li>
+<li><p>Hauteur de la plateforme dédiée à l’équipe adverse réglable</p></li>
 <li><p>Cacher le socle du lidar, car ce dernier ne scan pas</p></li>
-<li><p>Ajouter un cercle de LED autour du lidar et coder une visualisation des informations perçue par le lidar sur ce cercle</p></li>
+<li><p>Ajouter un cercle de LED autour du lidar et coder une visualisation des informations perçues par le lidar sur ce cercle.</p></li>
 </ol>
 <p>Ces 3 points font l’objet d’un projet pour l’année 2023-2024</p>
 </div>
@@ -557,9 +558,12 @@
 </div>
 <div class="section" id="leds">
 <h2><span class="section-number">4.6.2.2. </span>LEDs<a class="headerlink" href="#leds" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La référence des LEDs est un anneau de WS2812b, ce sont des LEDs « adressable », des LEDs RGB dont on peut contrôler la couleur individuellement.</p>
+<p>La référence des LEDs est un anneau de WS2812b, ce sont des LEDs « adressables », des LEDs RGB dont on peut contrôler
+la couleur individuellement.</p>
 <a class="reference internal image-reference" href="../_images/anneau_leds.png"><img alt="../_images/anneau_leds.png" class="align-center" src="../_images/anneau_leds.png" style="width: 600.0px; height: 504.0px;" /></a>
-<p>Ce genre de ruban LED peut normalement être commandé par une Raspberry, mais après beaucoup de temps passer dessus nous n’avons pas réussi depuis Ubuntu 22.04 (alors que nous avons réussi sur Raspbian). Nous faisons donc le choix de piloter les LEDs depuis l’esp32 et les informations du lidar seront transmises de la PI à l’esp32 sur le bus I²C.</p>
+<p>Ce genre de ruban LED peut normalement être commandé par une Raspberry, mais après beaucoup de temps passé dessus,
+nous n’avons pas réussi depuis Ubuntu 22.04 (alors que nous avons réussi sur Raspbian). Nous faisons donc le choix
+de piloter les LEDs depuis l’ESP32 et les informations du lidar seront transmises de la PI à l’esp32 sur le bus I²C.</p>
 </div>
 </div>
 

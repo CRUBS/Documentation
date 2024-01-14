@@ -27,6 +27,6 @@ Amelioration du LIDAR
 +-------------------------+-------------------------+
 | Statut d'écriture       | - en cours              |
 +-------------------------+-------------------------+
-| Statut de relecture     | - Antitode              |
+| Statut de relecture     | - Axel                  |
 +-------------------------+-------------------------+
 

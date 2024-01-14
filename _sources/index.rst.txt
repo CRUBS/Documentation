@@ -38,7 +38,7 @@ TODO :
 #. continuer tuto ros2
 #. ajouter des warning et des infos
 #. [nico] manque des images dans :doc:`/Informatique_Programmation/Tree-Ubuntu`
-#. [Axel ou Nico] Voron (deja deplacer dans fao :doc:`/FAO/Voron` )
+#. [Axel ou Nico] Voron (deja deplacer dans FAO :doc:`/FAO/Tree-Voron` )
 
 .. danger::
    Niveau de relecture :

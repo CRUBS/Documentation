@@ -17,8 +17,8 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Doc Outil Crubs'
-copyright = '2023, CRUBS'
+project = 'Documentation CRUBS'
+copyright = '204, CRUBS'
 author = 'CRUBS'
 
 # The full version, including alpha/beta/rc tags

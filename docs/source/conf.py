@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Documentation CRUBS'
-copyright = '204, CRUBS'
+copyright = '2024, CRUBS'
 author = 'CRUBS'
 
 # The full version, including alpha/beta/rc tags

@@ -7,6 +7,7 @@ Fabrication Assisté par Ordinateur
    :maxdepth: 2
 
    Tree-PrusaSlicer
+   Tree-Voron
    Tree-CharlyRobot
    Tree-CIF
    

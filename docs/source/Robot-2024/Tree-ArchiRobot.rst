@@ -16,6 +16,6 @@ Architecture Robot Principal
 +-------------------------+-------------------------+
 | Statut d'écriture       | - en cours              |
 +-------------------------+-------------------------+
-| Statut de relecture     | - Antitode              |
+| Statut de relecture     | - Axel                  |
 +-------------------------+-------------------------+
 

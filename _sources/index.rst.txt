@@ -25,7 +25,6 @@ Bienvenue sur la documentation du CRUBS!
    .. Banc-de-test/Tree
 
 .. tip::
-
    Les informations relatives à la rédaction de cette documentation permettant sa poursuite sont disponibles ici :
    :doc:`/Informatique_Programmation/Tree-Doc_sphinx`
 
@@ -39,9 +38,11 @@ TODO :
 #. continuer tuto ros2
 #. ajouter des warning et des infos
 #. [nico] manque des images dans :doc:`/Informatique_Programmation/Tree-Ubuntu`
-#. voron puis deplacer voron dans fao
+#. [Axel ou Nico] Voron (deja deplacer dans fao :doc:`/FAO/Voron` )
 
 .. danger::
    Niveau de relecture :
+
    0 < Scribens < Antitode < Axel
+
    En gros si une page n'a pas été relue par axel ça risque de piquer les yeux

@@ -31,14 +31,12 @@ Bienvenue sur la documentation du CRUBS!
 TODO :
 ======
 
-#. [nico] correction orthographe ptn
 #. finir robot 2023 un jour
 #. [nico tristan] motorisation robot (pcb)
 #. Continuer robot 2024
 #. continuer tuto ros2
 #. ajouter des warning et des infos
 #. [nico] manque des images dans :doc:`/Informatique_Programmation/Tree-Ubuntu`
-#. [Axel ou Nico] Voron (deja deplacer dans FAO :doc:`/FAO/Tree-Voron` )
 
 .. danger::
    Niveau de relecture :

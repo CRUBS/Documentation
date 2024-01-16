@@ -28,9 +28,10 @@ Bienvenue sur la documentation du CRUBS!
    :caption: Contents:
 
    Gestion/Tree
-   Informatique_Programmation/Tree
    Robot-2023/Tree
    Robot-2024/Tree
+   Electronique/Tree
+   Informatique_Programmation/Tree
    Voron-0.1/Tree
    CAO/Tree
    FAO/Tree
@@ -47,7 +48,8 @@ TODO :
 #. continuer tuto ros2
 #. ajouter des warning et des infos
 #. [nico] manque des images dans :doc:`/Informatique_Programmation/Tree-Ubuntu`
-#. changer le nom des toctree de "content" a autre chose
+#. Changer le nom des toctree de "content" a autre chose
+#. Pertinance robot 2022 ? (freertos, roues mecanum, apocalypse, retour a la coupe ...)
 
 .. danger::
    Niveau de relecture :

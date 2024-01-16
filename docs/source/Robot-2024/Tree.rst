@@ -1,11 +1,6 @@
 Robots Coupe de France de Robotique 2024
 ========================================
 
-.. image:: images/team_cdfr_2023.png
-   :scale: 35 %
-   :align: center
-   :class: with_shadow float_right
-
 .. toctree::
    :maxdepth: 2
    :caption: Contenu:
@@ -16,6 +11,7 @@ Robots Coupe de France de Robotique 2024
    Tree-Alimentation
    Tree-Motorisation
    Tree-Lidar
+   Tree-IMU
    
    
 

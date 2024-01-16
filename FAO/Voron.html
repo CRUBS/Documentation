@@ -499,6 +499,8 @@
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="Tree-Voron.html">6.2. Imprimante 3D Voron 0.1</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">6.2.1. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#utilisation">6.2.2. Utilisation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#maintenance">6.2.3. Maintenance</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="Tree-CharlyRobot.html">6.3. CharlyRobot</a><ul>
@@ -541,7 +543,43 @@
              
   <div class="section" id="introduction">
 <h1><span class="section-number">6.2.1. </span>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h1>
-<p>L’imprimante 3D Voron0.1 est un projet communautaire opensource. Tous les inforamtions relatives a l’imprimante est disponible sur le <a class="reference external" href="https://vorondesign.com/voron0.1">site officiel de Voron</a></p>
+<p>L’imprimante 3D Voron0.1 est un projet communautaire opensource. Toutes les informations relatives à l’imprimante sont
+disponibles sur le <a class="reference external" href="https://vorondesign.com/voron0.1">site officiel de Voron</a>. C’est une imprimante de petite taille
+et réputée pour sa vitesse et sa précision d’impression.</p>
+<p>Voici une image de la Voron du CRUBS.</p>
+<a class="with-shadow reference internal image-reference" href="../_images/voron.jpg"><img alt="../_images/voron.jpg" class="with-shadow align-center" src="../_images/voron.jpg" style="width: 346.8px; height: 462.40000000000003px;" /></a>
+<p>Toutes les pièces rouges ont été imprimées en ABS et les autres pièces ont été achetées puis montées afin de donner
+cette imprimante.</p>
+<p>De par sa petite taille et avec sa caisse de transport, la Voron est un atout à emporter à
+la coupe de France de robotique.</p>
+<a class="with-shadow reference internal image-reference" href="../_images/caisse_voron.jpg"><img alt="../_images/caisse_voron.jpg" class="with-shadow align-center" src="../_images/caisse_voron.jpg" style="width: 346.8px; height: 462.40000000000003px;" /></a>
+</div>
+<div class="section" id="utilisation">
+<h1><span class="section-number">6.2.2. </span>Utilisation<a class="headerlink" href="#utilisation" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Pour utiliser la Voron, il faut, comme pour toutes les imprimantes, préparer un fichier <em>gcode</em>. Au CRUBS,
+nous utilisons le logiciel PrusaSlicer.</p>
+<p><a class="reference internal" href="PrusaSlicer.html"><span class="doc">PrusaSlicer</span></a></p>
+<p>La Voron n’a pas d’interface utilisateur directe. Cependant, elle génère un réseau wifi auquel on peut se connecter
+et accéder à une page web qui sert d’interface pour contrôler l’imprimante. En se connectant à la bonne adresse IP
+depuis votre navigateur, vous accédez à la page principale de la Voron.</p>
+<a class="with-shadow reference internal image-reference" href="../_images/main_voron.png"><img alt="../_images/main_voron.png" class="with-shadow align-center" src="../_images/main_voron.png" style="width: 1056.0px; height: 531.0px;" /></a>
+<p>Depuis cette page, il est possible de gérer différents paramètres de la Voron en instantané.</p>
+<p>Tout à gauche, vous avez l’onglet <em>G-CODE FILES</em> qui contient tous les fichiers gcode qui ont été importés.
+Cette sur cette page que vous pouvez importer vos fichiers gcode et les lancer.</p>
+<p>Les autres onglets ont une utilisation plus faible, je vous laisse donc regarder par vous-mêmes si vous en avez
+la curiosité.</p>
+</div>
+<div class="section" id="maintenance">
+<h1><span class="section-number">6.2.3. </span>Maintenance<a class="headerlink" href="#maintenance" title="Lien permanent vers ce titre">¶</a></h1>
+<p>La Voron est une imprimante qui nécessite, comme toutes les imprimantes, un certain niveau de maintenance.</p>
+<p>Une grande majorité des pièces imprimées l’ont été en double en matériau ABS au cas où il y a casse
+de l’une d’entre elle. Donc après remplacement de la pièce cassée, je vous invite fortement à ressortir cette pièce.
+Toutes les pièces sont disponibles dans le dossier <em>Pieces_Voron</em> de l’onglet <em>G-CODE FILES</em>. Attention,
+les fichiers gcode ne correspondent peut être pas pour le filament avec lequel vous voulez imprimer la pièce.
+Dans ce cas, vous devrez recréer le gcode à partir de la CAO
+(disponible sur le <a class="reference external" href="https://vorondesign.com/voron0.1">site de Voron</a>).</p>
+<p>Pour le démontage et le remontage de la Voron, je vous incite fortement à regarder le manuel d’assemblage, en effet,
+le montage de la Voron est assez complexe.</p>
 </div>
 
 

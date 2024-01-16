@@ -56,23 +56,33 @@ sur le week-end de l'ascension.
 Historique
 ==========
 
-Édition 2023-2024
-*****************
+Édition 2023-2024 : Farming mars
+********************************
 
-- :doc:`/Robot-2024/Tree`
+.. image:: images/cdfr/logo_2024.png
+	:scale: 5 %
+	:align: center
+	:class: with_shadow float_right
 
-Sujet : Farming mars
+:doc:`/Robot-2024/Tree`
 
-Objectifs : Fiabiliser les réalisations
+Objectifs : Fiabiliser les réalisations et aller plus loins
 
-Édition 2022-2023
-*****************
+.. image:: images/cdfr/table_2024.png
+	:scale: 35 %
+	:align: center
 
-- :doc:`/Robot-2023/Tree`
+Édition 2022-2023 : The cherry on the cake
+******************************************
 
-Sujet : The cherry on the cake
+.. image:: images/cdfr/logo_2023.png
+	:scale: 35 %
+	:align: center
+	:class: with_shadow float_right
 
-Objectif : participer aux 5 matchs
+:doc:`/Robot-2023/Tree`
+
+Objectif : Participer aux 5 matchs
 
 Le club s'est rendu prêt à la compétition. Nous sommes partis à 9 en 4 voitures. Nous avons logé en mobil-home
 (7 places) dans le `camping Le Pavillon <https://www.campinglepavillon.com/>`_ à proximité de la Roche-sur-Yon.
@@ -88,13 +98,19 @@ Nous sommes partis le mercredi matin et nous sommes repartis le dimanche matin.
 
 Classement : 43ème 
 
+.. image:: images/cdfr/table_2023.png
+	:scale: 65 %
+	:align: center
 
-Édition 2021-2022
-*****************
+Édition 2021-2022 : Age of bots
+*******************************
 
-Sujet : Age of bots
+.. image:: images/cdfr/logo_2022.png
+	:scale: 65 %
+	:align: center
+	:class: with_shadow float_right
 
-Objectif : S'homologuer
+Objectif : Retourner à la coupe et s'homologuer
 
 Le club s'est enfin rendu de nouveau à la compétition après plusieurs années. Le robot n'était pas tout à fait préparé
 et a réussi de justesse s'homologuer et participer à un seul match. Les roulements de sommeil se sont moyennement
@@ -106,10 +122,17 @@ bien organisés, mais tout le monde survécu et on en garde quand même un bon s
 
 Classement : 64ème
 
-Édition 2020-2021
-*****************
+.. image:: images/cdfr/table_2022.png
+	:scale: 40 %
+	:align: center
 
-Sujet : Sail the world
+Édition 2020-2021 : Sail the world
+**********************************
+
+.. image:: images/cdfr/logo_2021.png
+	:scale: 75 %
+	:align: center
+	:class: with_shadow float_right
 
 Le club avait très peu de membres cette année (quelques 5A) et n'a pas pu se rendre à la competition.
 
@@ -118,22 +141,42 @@ Le club avait très peu de membres cette année (quelques 5A) et n'a pas pu se r
 L'organisation de la coupe de France a constaté à la suite de la compétition que beaucoup d'équipes on sévèrement
 pâtis du Covid-19, perte des connaissances des club, fermetures (pas de relève), etc.
 
-Édition 2019-2020
-*****************
+.. image:: images/cdfr/table_2021.png
+	:scale: 35 %
+	:align: center
 
-Sujet : Sail the world
+Édition 2019-2020  : Sail the world
+***********************************
+
+.. image:: images/cdfr/logo_2021.png
+	:scale: 75 %
+	:align: center
+	:class: with_shadow float_right
 
 La compétition a été annulée pour cause de Covid et le sujet a été reporté à l'édition 2020-2021.
 
-Édition 2018-2019
-*****************
+.. image:: images/cdfr/table_2021.png
+	:scale: 35 %
+	:align: center
 
-Sujet : Atom Factory
+Édition 2018-2019 : Atom Factory
+********************************
+
+logo introuvable
 
 Abandon, pas de participation de la part du club.
 
-Édition 2017-2018
-*****************
+.. image:: images/cdfr/table_2019.png
+	:scale: 35 %
+	:align: center
+
+Édition 2017-2018 : Robot cities
+********************************
+
+.. image:: images/cdfr/logo_2018.png
+	:scale: 50 %
+	:align: center
+	:class: with_shadow float_right
 
 Sujet : Robot cities
 
@@ -141,10 +184,17 @@ Participation du CRUBS sous le nom d'équipe "Les pinalouest".
 
 L'équipe ne semble pas avoir été homologuée, à vérifier.
 
-Édition 2016-2017
-*****************
+.. image:: images/cdfr/table_2018.png
+	:scale: 50 %
+	:align: center
 
-Sujet :
+Édition 2016-2017 : Moon village
+********************************
+
+.. image:: images/cdfr/logo_2017.png
+	:scale: 15 %
+	:align: center
+	:class: with_shadow float_right
 
 Participation du CRUBS sous le nom d'équipe "Les pinalouest".
 
@@ -153,3 +203,7 @@ Participation du CRUBS sous le nom d'équipe "Les pinalouest".
 4 machs joué pour un score total de 146
 
 Classement : 83ème
+
+.. image:: images/cdfr/table_2017.png
+	:scale: 45 %
+	:align: center

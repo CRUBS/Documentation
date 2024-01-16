@@ -10,6 +10,18 @@ Bienvenue sur la documentation du CRUBS!
    :scale: 60 %
    :align: center
 
+
+.. tip::
+   Recherches récurrentes :
+
+   * `Site internet <https://clubrobotiqueubs.wixsite.com/crubs>`_ et `Github <https://github.com/CRUBS>`_  du club 
+   * Coupe de Robotique 2023 : :doc:`/Robot-2023/Tree`
+   * Coupe de Robotique 2024 : :doc:`/Robot-2024/Tree`
+   * Les informations relatives à la rédaction de cette documentation permettant sa poursuite sont disponibles ici : :doc:`/Informatique_Programmation/Tree-Doc_sphinx`
+   * Installation ROS2 humble : :doc:`/Informatique_Programmation/Tree-ROS2`
+
+
+
 .. toctree::
    :maxdepth: 2
    :numbered:
@@ -24,9 +36,7 @@ Bienvenue sur la documentation du CRUBS!
    FAO/Tree
    .. Banc-de-test/Tree
 
-.. tip::
-   Les informations relatives à la rédaction de cette documentation permettant sa poursuite sont disponibles ici :
-   :doc:`/Informatique_Programmation/Tree-Doc_sphinx`
+
 
 TODO :
 ======
@@ -37,6 +47,7 @@ TODO :
 #. continuer tuto ros2
 #. ajouter des warning et des infos
 #. [nico] manque des images dans :doc:`/Informatique_Programmation/Tree-Ubuntu`
+#. changer le nom des toctree de "content" a autre chose
 
 .. danger::
    Niveau de relecture :

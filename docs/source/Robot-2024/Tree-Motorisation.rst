@@ -1,11 +1,6 @@
 Motorisation
 ============
 
-.. image:: images/lidar/ld06.png
-   :scale: 20 %
-   :align: center
-   :class: with_shadow float_right
-
 
 .. toctree::
    :maxdepth: 2

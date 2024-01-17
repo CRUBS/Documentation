@@ -6,8 +6,8 @@
    :caption: Contenu:
 
    Tree-Lois
+   Tree-Composants
    Tree-Filtres
-   Tree-Transistors_Mosfets
    Tree-Motorisation
    
    

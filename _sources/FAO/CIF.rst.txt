@@ -17,7 +17,7 @@ Import des fichiers de fabrications
 * Lancer Percival
 * Fichier → ouvrir → nouveau circuit
 
-.. image:: images/cif/image1.png
+.. image:: images/cif/Image1.png
 	:scale: 100 %
 	:align: center
 
@@ -28,7 +28,7 @@ Détourage de la carte
 
 Valider le contour  de carte proposé par défaut.
 
-.. image:: images/cif/image2.png
+.. image:: images/cif/Image2.png
 	:scale: 100 %
 	:align: center
 
@@ -37,7 +37,7 @@ Choix du détourage :
 * extérieur pour découper la carte
 * intérieur pour les trous de fixations
 
-.. image:: images/cif/image3.png
+.. image:: images/cif/Image3.png
 	:scale: 100 %
 	:align: center
 
@@ -66,11 +66,11 @@ On reste en recadrage par défaut et ne laissez pas le logiciel modifier la prof
 Transfert vers le module d’usinage fraisage Galaad
 **************************************************
 
-.. image:: images/cif/image4.png
+.. image:: images/cif/Image4.png
 	:scale: 100 %
 	:align: center
 
-.. image:: images/cif/image5.png
+.. image:: images/cif/Image5.png
 	:scale: 100 %
 	:align: center
 
@@ -91,11 +91,11 @@ Mesure de planéité
 
 Mettre le palpeur de planéité en place au niveau de la broche et le connecter
 
-.. image:: images/cif/image6.png
+.. image:: images/cif/Image6.png
 	:scale: 100 %
 	:align: center
 
-.. image:: images/cif/image7.png
+.. image:: images/cif/Image7.png
 	:scale: 100 %
 	:align: center
 
@@ -108,26 +108,26 @@ Lancer le relevé de planéité
 * Renseigner les positions sud-ouest et nord-est en fonction de la dimension du brut
 * Régler le nombre de relevés de manière à avoir une marge ≤ 20mm
 
-.. image:: images/cif/image8.png
+.. image:: images/cif/Image8.png
 	:scale: 100 %
 	:align: center
 
 Lancer le palpage, récupérer la 1er valeur Za en sud-ouest. Za sera ensuite utilisée pour déterminer l’origine pièce en Z.
 
-.. image:: images/cif/image9.png
+.. image:: images/cif/Image9.png
 	:scale: 100 %
 	:align: center
 
 Accès à l'interface d'usinage  
 *****************************
 
-.. image:: images/cif/image11.png
+.. image:: images/cif/Image11.png
 	:scale: 100 %
 	:align: center
 
 Vérifier et si besoin régler la séquence des outils 1-3-4-2
 
-.. image:: images/cif/image10.png
+.. image:: images/cif/Image10.png
 	:scale: 100 %
 	:align: center
 
@@ -136,12 +136,12 @@ Vérifier et si besoin régler la séquence des outils 1-3-4-2
 * Boite de dialogue ''Charger l’outil n°1'' →  OK
 * Fixer l’origine pièce X=10, Y=17,  Z=Za-8,25
 
-.. image:: images/cif/image12.png
+.. image:: images/cif/Image12.png
 	:scale: 100 %
 	:align: center
 
 Lancement de l'usinage
 
-.. image:: images/cif/image13.png
+.. image:: images/cif/Image13.png
 	:scale: 100 %
 	:align: center

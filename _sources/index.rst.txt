@@ -50,6 +50,7 @@ TODO :
 #. [nico] manque des images dans :doc:`/Informatique_Programmation/Tree-Ubuntu`
 #. Changer le nom des toctree de "content" a autre chose
 #. Pertinance robot 2022 ? (freertos, roues mecanum, apocalypse, retour a la coupe ...)
+#. CIF
 
 .. danger::
    Niveau de relecture :

@@ -536,6 +536,23 @@
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="Tree-CIF.html">7.4. CIF</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">7.4.1. CIF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-percival-preparation-de-lusinage">7.4.2. Module Percival: Préparation de l’usinage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#import-des-fichiers-de-fabrications">7.4.2.1. Import des fichiers de fabrications</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#detourage-de-la-carte">7.4.2.2. Détourage de la carte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cas-dun-pcb-simple-face">7.4.2.3. Cas d’un PCB simple face</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#contours-d-isolations">7.4.2.4. Contours  d’isolations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#redimensionner">7.4.2.5. Redimensionner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transfert-vers-le-module-dusinage-fraisage-galaad">7.4.2.6. Transfert vers le module d’usinage fraisage Galaad</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#reglage-et-preparation-de-l-usinage-sous-galaad">7.4.3. Réglage et préparation de l’usinage sous Galaad</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#relever-la-dimension-du-brut">7.4.3.1. Relever la dimension du brut</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#choisir-et-coller-le-brut-sur-le-plateau-de-la-machine">7.4.3.2. Choisir et coller le brut sur le plateau de la machine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mesure-de-planeite">7.4.3.3. Mesure de planéité</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lancer-le-releve-de-planeite">7.4.3.4. Lancer le relevé de planéité</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#acces-a-l-interface-d-usinage">7.4.3.5. Accès à l’interface d’usinage</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -570,6 +587,101 @@
              
   <div class="section" id="cif">
 <h1><span class="section-number">7.4.1. </span>CIF<a class="headerlink" href="#cif" title="Lien permanent vers ce titre">¶</a></h1>
+<p>La CNC CIF  permet de lancer un usinage avec 4 outils différents:
+* Fraise javelot hélicoïdale
+* Fraise de 2mm
+* Forêt 0,9mm et 1,2mm</p>
+<p>A l’Ensibs,  cette machine est principalement dédiée au fraisage des circuits imprimés. Le logiciel intégré  Galaad comprend plusieurs modules FAO et s’interface avec le directeur de commande de la CNC.</p>
+</div>
+<div class="section" id="module-percival-preparation-de-lusinage">
+<h1><span class="section-number">7.4.2. </span>Module Percival: Préparation de l’usinage<a class="headerlink" href="#module-percival-preparation-de-lusinage" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="import-des-fichiers-de-fabrications">
+<h2><span class="section-number">7.4.2.1. </span>Import des fichiers de fabrications<a class="headerlink" href="#import-des-fichiers-de-fabrications" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li><p>Lancer Percival</p></li>
+<li><p>Fichier → ouvrir → nouveau circuit</p></li>
+</ul>
+<a class="reference internal image-reference" href="FAO/images/cif/image1.png"><img alt="FAO/images/cif/image1.png" class="align-center" src="FAO/images/cif/image1.png" /></a>
+<p>Fixer les chemins des différents répertoires : côtés soudures et composants, perçage.</p>
+</div>
+<div class="section" id="detourage-de-la-carte">
+<h2><span class="section-number">7.4.2.2. </span>Détourage de la carte<a class="headerlink" href="#detourage-de-la-carte" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Valider le contour  de carte proposé par défaut.</p>
+<a class="reference internal image-reference" href="FAO/images/cif/image2.png"><img alt="FAO/images/cif/image2.png" class="align-center" src="FAO/images/cif/image2.png" /></a>
+<p>Choix du détourage :</p>
+<ul class="simple">
+<li><p>extérieur pour découper la carte</p></li>
+<li><p>intérieur pour les trous de fixations</p></li>
+</ul>
+<a class="reference internal image-reference" href="FAO/images/cif/image3.png"><img alt="FAO/images/cif/image3.png" class="align-center" src="FAO/images/cif/image3.png" /></a>
+</div>
+<div class="section" id="cas-dun-pcb-simple-face">
+<h2><span class="section-number">7.4.2.3. </span>Cas d’un PCB simple face<a class="headerlink" href="#cas-dun-pcb-simple-face" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour faciliter les manipulations, il est préférable de fermer la couche n° 2 :</p>
+<ul class="simple">
+<li><p>Affiche→ couche n°2</p></li>
+<li><p>fichier → fermer la couche</p></li>
+</ul>
+</div>
+<div class="section" id="contours-d-isolations">
+<h2><span class="section-number">7.4.2.4. </span>Contours  d’isolations<a class="headerlink" href="#contours-d-isolations" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li><p>Usinage → Contours d’isolations → Calculer les contours</p></li>
+</ul>
+<p>Si le résultat semble correcte passez à l’opération suivante sinon retoucher le circuit sous <a class="reference internal" href="../CAO/Tree-KiCad.html"><span class="doc">KiCad</span></a>.</p>
+</div>
+<div class="section" id="redimensionner">
+<h2><span class="section-number">7.4.2.5. </span>Redimensionner<a class="headerlink" href="#redimensionner" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Fichier → Dimension</p>
+<p>On reste en recadrage par défaut et ne laissez pas le logiciel modifier la profondeur de perçage.</p>
+</div>
+<div class="section" id="transfert-vers-le-module-dusinage-fraisage-galaad">
+<h2><span class="section-number">7.4.2.6. </span>Transfert vers le module d’usinage fraisage Galaad<a class="headerlink" href="#transfert-vers-le-module-dusinage-fraisage-galaad" title="Lien permanent vers ce titre">¶</a></h2>
+<a class="reference internal image-reference" href="FAO/images/cif/image4.png"><img alt="FAO/images/cif/image4.png" class="align-center" src="FAO/images/cif/image4.png" /></a>
+<a class="reference internal image-reference" href="FAO/images/cif/image5.png"><img alt="FAO/images/cif/image5.png" class="align-center" src="FAO/images/cif/image5.png" /></a>
+</div>
+</div>
+<div class="section" id="reglage-et-preparation-de-l-usinage-sous-galaad">
+<h1><span class="section-number">7.4.3. </span>Réglage et préparation de l’usinage sous Galaad<a class="headerlink" href="#reglage-et-preparation-de-l-usinage-sous-galaad" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="relever-la-dimension-du-brut">
+<h2><span class="section-number">7.4.3.1. </span>Relever la dimension du brut<a class="headerlink" href="#relever-la-dimension-du-brut" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Fichier → Dimension du brut</p>
+</div>
+<div class="section" id="choisir-et-coller-le-brut-sur-le-plateau-de-la-machine">
+<h2><span class="section-number">7.4.3.2. </span>Choisir et coller le brut sur le plateau de la machine<a class="headerlink" href="#choisir-et-coller-le-brut-sur-le-plateau-de-la-machine" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+<div class="section" id="mesure-de-planeite">
+<h2><span class="section-number">7.4.3.3. </span>Mesure de planéité<a class="headerlink" href="#mesure-de-planeite" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Mettre le palpeur de planéité en place au niveau de la broche et le connecter</p>
+<a class="reference internal image-reference" href="FAO/images/cif/image6.png"><img alt="FAO/images/cif/image6.png" class="align-center" src="FAO/images/cif/image6.png" /></a>
+<a class="reference internal image-reference" href="FAO/images/cif/image7.png"><img alt="FAO/images/cif/image7.png" class="align-center" src="FAO/images/cif/image7.png" /></a>
+</div>
+<div class="section" id="lancer-le-releve-de-planeite">
+<h2><span class="section-number">7.4.3.4. </span>Lancer le relevé de planéité<a class="headerlink" href="#lancer-le-releve-de-planeite" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li><p>Paramètre→ Machine → complet → avancé</p></li>
+<li><p>Décocher/coher   “”Activer la correction de planéité en Z””</p></li>
+<li><p>Renseigner les positions sud-ouest et nord-est en fonction de la dimension du brut</p></li>
+<li><p>Régler le nombre de relevés de manière à avoir une marge ≤ 20mm</p></li>
+</ul>
+<a class="reference internal image-reference" href="FAO/images/cif/image8.png"><img alt="FAO/images/cif/image8.png" class="align-center" src="FAO/images/cif/image8.png" /></a>
+<p>Lancer le palpage, récupérer la 1er valeur Za en sud-ouest. Za sera ensuite utilisée pour déterminer l’origine pièce en Z.</p>
+<a class="reference internal image-reference" href="FAO/images/cif/image9.png"><img alt="FAO/images/cif/image9.png" class="align-center" src="FAO/images/cif/image9.png" /></a>
+</div>
+<div class="section" id="acces-a-l-interface-d-usinage">
+<h2><span class="section-number">7.4.3.5. </span>Accès à l’interface d’usinage<a class="headerlink" href="#acces-a-l-interface-d-usinage" title="Lien permanent vers ce titre">¶</a></h2>
+<a class="reference internal image-reference" href="FAO/images/cif/image11.png"><img alt="FAO/images/cif/image11.png" class="align-center" src="FAO/images/cif/image11.png" /></a>
+<p>Vérifier et si besoin régler la séquence des outils 1-3-4-2</p>
+<a class="reference internal image-reference" href="FAO/images/cif/image10.png"><img alt="FAO/images/cif/image10.png" class="align-center" src="FAO/images/cif/image10.png" /></a>
+<ul class="simple">
+<li><p>Origine pièce</p></li>
+<li><p>Boite de dialogue “”Charger l’outil n°1”” →  OK</p></li>
+<li><p>Fixer l’origine pièce X=10, Y=17,  Z=Za-8,25</p></li>
+</ul>
+<a class="reference internal image-reference" href="FAO/images/cif/image12.png"><img alt="FAO/images/cif/image12.png" class="align-center" src="FAO/images/cif/image12.png" /></a>
+<p>Lancement de l’usinage</p>
+<a class="reference internal image-reference" href="FAO/images/cif/image13.png"><img alt="FAO/images/cif/image13.png" class="align-center" src="FAO/images/cif/image13.png" /></a>
+</div>
 </div>
 
 

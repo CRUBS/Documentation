@@ -25,7 +25,7 @@ Bienvenue sur la documentation du CRUBS!
 .. toctree::
    :maxdepth: 2
    :numbered:
-   :caption: Contents:
+   :caption: Sommaire:
 
    Gestion/Tree
    Robot-2023/Tree

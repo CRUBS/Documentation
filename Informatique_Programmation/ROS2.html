@@ -930,6 +930,14 @@ setup<span class="o">(</span>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 topic info /nom_du_topic
 </pre></div>
 </div>
+<p>Publier sur un topic :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 topic pub &lt;topic_name&gt; &lt;msg_type&gt; <span class="s1">&#39;&lt;args&gt;&#39;</span>
+</pre></div>
+</div>
+<p>exemple :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 topic pub --once /turtle1/cmd_vel geometry_msgs/msg/Twist <span class="s2">&quot;{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.8}}&quot;</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="les-noeuds">
 <h2><span class="section-number">5.2.6.4. </span>Les noeuds<a class="headerlink" href="#les-noeuds" title="Lien permanent vers ce titre">¶</a></h2>

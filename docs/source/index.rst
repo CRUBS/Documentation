@@ -48,9 +48,8 @@ TODO :
 #. continuer tuto ros2
 #. ajouter des warning et des infos
 #. [nico] manque des images dans :doc:`/Informatique_Programmation/Tree-Ubuntu`
-#. Changer le nom des toctree de "content" a autre chose
 #. Pertinance robot 2022 ? (freertos, roues mecanum, apocalypse, retour a la coupe ...)
-#. CIF
+#. continuer CIF
 
 .. danger::
    Niveau de relecture :

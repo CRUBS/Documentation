@@ -3,7 +3,7 @@ Programmation et Informatique
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contenu:
+   :caption: Sommaire:
 
    Tree-Doc_sphinx
    Tree-ROS2

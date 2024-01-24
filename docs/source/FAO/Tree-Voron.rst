@@ -11,7 +11,7 @@ Imprimante 3D Voron 0.1 du CRUBS.
 
 .. toctree::
    :maxdepth: 1
-   :caption: Contents:
+   :caption: Sommaire:
 
    Voron
 

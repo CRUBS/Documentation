@@ -8,7 +8,7 @@ Partenariat et Subvention
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contenu:
+   :caption: Sommaire:
    
    Partenariat_et_Subvention
 

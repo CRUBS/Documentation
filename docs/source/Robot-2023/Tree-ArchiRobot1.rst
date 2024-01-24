@@ -8,7 +8,7 @@ Architecture Robot 1 PI
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contenu:
+   :caption: Sommaire:
    
    ArchiRobot1
 

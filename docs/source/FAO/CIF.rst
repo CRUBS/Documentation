@@ -1,7 +1,7 @@
 CIF
 ===
 
-La CNC CIF  permet de lancer un usinage avec 4 outils différents:
+La CNC CIF permet de lancer un usinage avec 4 outils différents:
 * Fraise javelot hélicoïdale
 * Fraise de 2mm
 * Forêt 0,9mm et 1,2mm

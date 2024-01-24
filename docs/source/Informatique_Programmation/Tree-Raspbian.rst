@@ -8,7 +8,7 @@ Raspbian OS
    
 .. toctree::
    :maxdepth: 2
-   :caption: Contenu:
+   :caption: Sommaire:
 
    Raspbian
 

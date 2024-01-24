@@ -9,6 +9,6 @@ ROS-Arduino
 
 .. toctree::
    :maxdepth: 1
-   :caption: Contenu:
+   :caption: Sommaire:
 
    ROS_Arduino

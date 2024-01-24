@@ -8,7 +8,7 @@ Configuration_Ubuntu
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contenu:
+   :caption: Sommaire:
 
    Configuration_Ubuntu
 

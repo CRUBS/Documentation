@@ -11,7 +11,7 @@ Logiciel de préparation des fichiers *gcode* pour l'impression 3D.
 
 .. toctree::
    :maxdepth: 1
-   :caption: Contents:
+   :caption: Sommaire:
 
    PrusaSlicer
 

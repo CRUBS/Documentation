@@ -3,7 +3,7 @@ IMU
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contenu:
+   :caption: Sommaire:
    
    IMU
 

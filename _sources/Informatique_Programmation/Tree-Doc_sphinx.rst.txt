@@ -10,7 +10,7 @@ Information concernant la realisation de cette doc
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Sommaire:
 
    Doc_sphinx
 

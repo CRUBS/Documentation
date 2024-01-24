@@ -8,7 +8,7 @@ Architecture Robot 2 POU
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contenu:
+   :caption: Sommaire:
    
    ArchiRobot2
 

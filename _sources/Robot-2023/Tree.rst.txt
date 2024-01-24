@@ -8,7 +8,7 @@ Robots Coupe de France de Robotique 2023
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contenu:
+   :caption: Sommaire:
 
    Tree-Introduction
    Tree-ArchiRobot1

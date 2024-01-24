@@ -11,7 +11,7 @@ KiCad est une suite logicielle libre de conception pour l'électronique pour le 
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contenu:
+   :caption: Sommaire:
 
    KiCad
 

@@ -10,6 +10,6 @@ Logiciel de conception de piece 3D
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Sommaire:
 
    Solidworks

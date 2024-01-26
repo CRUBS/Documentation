@@ -743,10 +743,12 @@ d’attribuer un nom fixe en fonction de l’appareil connecté.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls -l /dev/ttyACM*
 </pre></div>
 </div>
+<p><strong>TODO: image missing</strong></p>
 <p>Une fois le port identifié, ici ttyACM1, nous devons récupérer les données de la carte</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>udevadm info --name<span class="o">=</span>/dev/ttyACM0 --attribute-walk
 </pre></div>
 </div>
+<p><strong>TODO: image missing</strong></p>
 <p>Repérer les premiers idProduct et idVendor à apparaître et notez les.</p>
 <p>Toujours en tant que super utilisateur, nous devons maintenant créer une nouvelle règle.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> etc/udev/rules.d/
@@ -757,6 +759,7 @@ sudo nano <span class="m">10</span>-usb-serial.rules
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">SUBSYSTEM</span><span class="o">==</span><span class="s2">&quot;tty&quot;</span>, ATTRS<span class="o">{</span>idVendor<span class="o">}==</span><span class="s2">&quot;2341&quot;</span>, ATTRS<span class="o">{</span>idProduct<span class="o">}==</span><span class="s2">&quot;0042&quot;</span>, <span class="nv">SYMLINK</span><span class="o">+=</span><span class="s2">&quot;NouveauNom&quot;</span>
 </pre></div>
 </div>
+<p><strong>TODO: image missing</strong></p>
 <p>Vous pouvez appliquer la règle fraîchement créé avec la commande suivante, mais je vous recommande de redémarrer quand-même.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo udevadm trigger
 sudo reboot
@@ -767,6 +770,7 @@ sudo reboot
 </pre></div>
 </div>
 <p>Et vous devriez obtenir le résultat suivant.</p>
+<p><strong>TODO: image missing</strong></p>
 <p>Vous pouvez appliquer de nouveau la même méthode en changeant la carte à nommer et en suivant les étapes précédentes.
 Tuto suivis : <a class="reference external" href="https://dominoc925.blogspot.com/2019/11/fix-usb-serial-adapters-to-static.html">https://dominoc925.blogspot.com/2019/11/fix-usb-serial-adapters-to-static.html</a></p>
 </div>
@@ -814,7 +818,7 @@ Tuto suivis : <a class="reference external" href="https://dominoc925.blogspot.co
 </pre></div>
 </div>
 <p>Vous pouvez maintenant utiliser la commande suivante pour lancer la recherche de composants présents sur le bus.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>i2cdetect i2c-1
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>i2cdetect -1 y
 </pre></div>
 </div>
 </div>

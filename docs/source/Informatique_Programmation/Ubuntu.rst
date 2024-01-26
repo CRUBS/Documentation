@@ -226,6 +226,8 @@ Brancher une première carte puis identifier son nom actuel :
 
 	ls -l /dev/ttyACM*
 
+**TODO: image missing**
+
 .. image
 
 Une fois le port identifié, ici ttyACM1, nous devons récupérer les données de la carte
@@ -233,6 +235,8 @@ Une fois le port identifié, ici ttyACM1, nous devons récupérer les données d
 .. code-block:: bash
 
 	udevadm info --name=/dev/ttyACM0 --attribute-walk
+
+**TODO: image missing**
 
 .. image de ce qui faut recup
 
@@ -251,6 +255,8 @@ Ajouter la ligne suivante avec les paramètre idVendor et idProduct obtenus
 
 	SUBSYSTEM=="tty", ATTRS{idVendor}=="2341", ATTRS{idProduct}=="0042", SYMLINK+="NouveauNom"
 
+**TODO: image missing**
+
 .. image
 
 Vous pouvez appliquer la règle fraîchement créé avec la commande suivante, mais je vous recommande de redémarrer quand-même.
@@ -267,6 +273,8 @@ Après redémarrage, vous pouvez vérifier de la manière suivante.
 	ls -l /dev/NouveauNom
 
 Et vous devriez obtenir le résultat suivant.
+
+**TODO: image missing**
 
 .. image
 
@@ -341,7 +349,7 @@ Vous pouvez maintenant utiliser la commande suivante pour lancer la recherche de
 
 .. code-block:: bash
 
-	i2cdetect i2c-1
+	i2cdetect -1 y
 
 SPI
 ***

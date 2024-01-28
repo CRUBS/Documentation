@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3.7. IMU &mdash; Documentation Documentation CRUBS 1.0.0</title>
+  <title>Bus I²C &mdash; Documentation Documentation CRUBS 1.0.0</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -18,9 +18,7 @@
         <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="3.7.1. IMU" href="IMU.html" />
-    <link rel="prev" title="3.6.1. Introduction" href="Lidar.html" /> 
+    <link rel="search" title="Recherche" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -43,7 +41,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Sommaire:</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../Gestion/Tree.html">1. Gestion</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Gestion/Tree-CDFR.html">1.1. Coupe de France de Robotique</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Gestion/CDFR.html">1.1.1. Coupe de France de robotique</a></li>
@@ -209,7 +207,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="Tree.html">3. Robots Coupe de France de Robotique 2024</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Tree.html">3. Robots Coupe de France de Robotique 2024</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Tree-Introduction.html">3.1. Introduction</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="Introduction.html">3.1.1. Sujet</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Introduction.html#choix">3.1.2. Choix</a><ul>
@@ -301,10 +299,6 @@
 <li class="toctree-l4"><a class="reference internal" href="Lidar.html#leds">3.6.2.2. LEDs</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">3.7. IMU</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="IMU.html">3.7.1. IMU</a></li>
 </ul>
 </li>
 </ul>
@@ -590,10 +584,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="Tree.html"><span class="section-number">3. </span>Robots Coupe de France de Robotique 2024</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">3.7. </span>IMU</li>
+      <li class="breadcrumb-item active">Bus I²C</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/Robot-2024/Tree-IMU.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/Robot-2024/Bus_I2C.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -601,61 +594,32 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="imu">
-<h1><span class="section-number">3.7. </span>IMU<a class="headerlink" href="#imu" title="Lien permanent vers ce titre">¶</a></h1>
-<div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">Sommaire:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="IMU.html">3.7.1. IMU</a></li>
-</ul>
+  <div class="section" id="bus-i2c">
+<h1>Bus I²C<a class="headerlink" href="#bus-i2c" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Afin de faire communiquer la raspberry pi avec tous les composants necessaires au robot (Cartes moteur, esp32, capteurs, etc) nous avons fait le choix de realiser un bus. Nous avons chercher dans un premier temps a mettre en place un bus CAN qui presentait beaucoup d’avantage interessant, malheureusement, nous n’avons pas recu a mettre en place la communication sur les cartes pilotes moteurs et sur un esp32. Nous nous sommes donc rabattu sur le bus I²C, plus commun est disponible sur beaucoup de composants mais moins robuste et moins modulable que ce nous avoins initialement prevus avec le bus CAN.</p>
 </div>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p>Rédacteur</p></td>
-<td><ul class="simple">
-<li></li>
-</ul>
-</td>
-</tr>
-<tr class="row-even"><td><p>Année d’écriture</p></td>
-<td><ul class="simple">
-<li></li>
-</ul>
-</td>
-</tr>
-<tr class="row-odd"><td><p>Dernière modification</p></td>
-<td><ul class="simple">
-<li></li>
-</ul>
-</td>
-</tr>
-<tr class="row-even"><td><p>Statut d’écriture</p></td>
-<td><ul class="simple">
-<li></li>
-</ul>
-</td>
-</tr>
-<tr class="row-odd"><td><p>Statut de relecture</p></td>
-<td><ul class="simple">
-<li></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
+<div class="section" id="id1">
+<h1>???<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h1>
+</div>
+<div class="section" id="id2">
+<h1>???<a class="headerlink" href="#id2" title="Lien permanent vers ce titre">¶</a></h1>
+</div>
+<div class="section" id="id3">
+<h1>???<a class="headerlink" href="#id3" title="Lien permanent vers ce titre">¶</a></h1>
+</div>
+<div class="section" id="noeud-interface-i2c">
+<h1>Noeud interface I²C<a class="headerlink" href="#noeud-interface-i2c" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Cette partie concerne la description du noeud qui s’occupe de la communication I²C entre la Pi et les differents composants.</p>
+<div class="section" id="logique">
+<h2>Logique<a class="headerlink" href="#logique" title="Lien permanent vers ce titre">¶</a></h2>
+<p>expliquer la structure et la logique du pgrm</p>
+</div>
 </div>
 
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Lidar.html" class="btn btn-neutral float-left" title="3.6.1. Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="IMU.html" class="btn btn-neutral float-right" title="3.7.1. IMU" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

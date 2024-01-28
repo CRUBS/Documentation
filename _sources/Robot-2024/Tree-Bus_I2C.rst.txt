@@ -1,11 +1,11 @@
-IMU
-===
+Bus I²C
+=======
 
 .. toctree::
    :maxdepth: 2
    :caption: Sommaire:
    
-   IMU
+   Bus_I2C
 
 +-------------------------+-------------------------+
 | Rédacteur               | -                       |

@@ -605,6 +605,7 @@ concernant les informations du lidar (installation, référence, etc.) :</p>
 <p><a class="reference internal" href="../Robot-2023/Tree-Lidar.html"><span class="doc">Lidar</span></a></p>
 <p>Pendant l’édition 2023 de la coupe, nous avons eu plusieurs idées permettant d’amélioration le mât :</p>
 <ol class="arabic simple">
+<li><p>Ameliorer la fixation du mat du lidar au robot</p></li>
 <li><p>Hauteur de la plateforme dédiée à l’équipe adverse réglable</p></li>
 <li><p>Cacher le socle du lidar, car ce dernier ne scan pas</p></li>
 <li><p>Ajouter un cercle de LED autour du lidar et coder une visualisation des informations perçues par le lidar sur ce cercle.</p></li>
@@ -615,15 +616,17 @@ concernant les informations du lidar (installation, référence, etc.) :</p>
 <h1><span class="section-number">3.6.2. </span>Améliorations<a class="headerlink" href="#ameliorations" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="structure">
 <h2><span class="section-number">3.6.2.1. </span>Structure<a class="headerlink" href="#structure" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Concernant la fixation du lidar nous avons decider realiser un emboitement avec des aimant. un cercle avec des aimant est present sur le robot et un autre dans le mat avec des aiamnt dans le meme sens. nous avons fait en sorte qu’une paire d’aimant soit dans le sens inverse des autre afin de creer un detrompeur pour mettre le mats dans le bon sens</p>
+<p><strong>TODO iamge</strong></p>
+<p>dans la partie haute du mat une piece principale pour fixer le lidar, l’anneau led et 3 inserts. La platforme superieur contient 3 vis, qui vont dans les inserts de la partie principale, de cette maniere il est possible de regler la hauteur de la partie principale en tournant les vis</p>
+<p><strong>TODO image</strong></p>
 </div>
 <div class="section" id="leds">
 <h2><span class="section-number">3.6.2.2. </span>LEDs<a class="headerlink" href="#leds" title="Lien permanent vers ce titre">¶</a></h2>
 <p>La référence des LEDs est un anneau de WS2812b, ce sont des LEDs « adressables », des LEDs RGB dont on peut contrôler
 la couleur individuellement.</p>
 <a class="reference internal image-reference" href="../_images/anneau_leds.png"><img alt="../_images/anneau_leds.png" class="align-center" src="../_images/anneau_leds.png" style="width: 600.0px; height: 504.0px;" /></a>
-<p>Ce genre de ruban LED peut normalement être commandé par une Raspberry, mais après beaucoup de temps passé dessus,
-nous n’avons pas réussi depuis Ubuntu 22.04 (alors que nous avons réussi sur Raspbian). Nous faisons donc le choix
-de piloter les LEDs depuis l’ESP32 et les informations du lidar seront transmises de la PI à l’esp32 sur le bus I²C.</p>
+<p>Ce genre de ruban LED peut normalement être commandé par une Raspberry, mais après beaucoup de temps passé dessus, nous n’avons pas réussi depuis Ubuntu 22.04 (alors que nous avons réussi sur Raspbian). Nous faisons donc le choix de piloter les LEDs depuis l’ESP32 et les informations du lidar seront transmises de la PI à l’esp32 sur le bus I²C.</p>
 </div>
 </div>
 

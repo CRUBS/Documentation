@@ -11,7 +11,7 @@ Robots Coupe de France de Robotique 2024
    Tree-Alimentation
    Tree-Motorisation
    Tree-Lidar
-   Tree-IMU
+   Tree-Bus_I2C
    
    
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bus I²C &mdash; Documentation Documentation CRUBS 1.0.0</title>
+  <title>3.7.1. Bus I²C &mdash; Documentation Documentation CRUBS 1.0.0</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -18,7 +18,9 @@
         <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Recherche" href="../search.html" /> 
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="4. Électronique" href="../Electronique/Tree.html" />
+    <link rel="prev" title="3.7. Bus I²C" href="Tree-Bus_I2C.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -41,7 +43,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Sommaire:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../Gestion/Tree.html">1. Gestion</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Gestion/Tree-CDFR.html">1.1. Coupe de France de Robotique</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Gestion/CDFR.html">1.1.1. Coupe de France de robotique</a></li>
@@ -207,7 +209,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Tree.html">3. Robots Coupe de France de Robotique 2024</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="Tree.html">3. Robots Coupe de France de Robotique 2024</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Tree-Introduction.html">3.1. Introduction</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="Introduction.html">3.1.1. Sujet</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Introduction.html#choix">3.1.2. Choix</a><ul>
@@ -297,6 +299,25 @@
 <li class="toctree-l3"><a class="reference internal" href="Lidar.html#ameliorations">3.6.2. Améliorations</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="Lidar.html#structure">3.6.2.1. Structure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Lidar.html#leds">3.6.2.2. LEDs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="Tree-Bus_I2C.html">3.7. Bus I²C</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3.7.1. Bus I²C</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">3.7.2. ???</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#carte-electronique">3.7.3. Carte electronique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#composants-sur-le-bus">3.7.4. Composants sur le bus</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pcf8574">3.7.4.1. PCF8574</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cartes-moteurs">3.7.4.2. Cartes moteurs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#esp32">3.7.4.3. ESP32</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#imu">3.7.4.4. Imu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#capteurs-temps-de-vol-vl53l0x">3.7.4.5. Capteurs temps de vol VL53L0X</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ecran-lcd-2004">3.7.4.6. Ecran LCD 2004</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#noeud-interface-i2c">3.7.5. Noeud interface I²C</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#logique">3.7.5.1. Logique</a></li>
 </ul>
 </li>
 </ul>
@@ -584,7 +605,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Bus I²C</li>
+          <li class="breadcrumb-item"><a href="Tree.html"><span class="section-number">3. </span>Robots Coupe de France de Robotique 2024</a></li>
+          <li class="breadcrumb-item"><a href="Tree-Bus_I2C.html"><span class="section-number">3.7. </span>Bus I²C</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">3.7.1. </span>Bus I²C</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/Robot-2024/Bus_I2C.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -595,49 +618,49 @@
            <div itemprop="articleBody">
              
   <div class="section" id="bus-i2c">
-<h1>Bus I²C<a class="headerlink" href="#bus-i2c" title="Lien permanent vers ce titre">¶</a></h1>
+<h1><span class="section-number">3.7.1. </span>Bus I²C<a class="headerlink" href="#bus-i2c" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Afin de faire communiquer la raspberry pi avec tous les composants necessaires au robot (Cartes moteur, esp32, capteurs, etc) nous avons fait le choix de realiser un bus. Nous avons chercher dans un premier temps a mettre en place un bus CAN qui presentait beaucoup d’avantage interessant, malheureusement, nous n’avons pas recu a mettre en place la communication sur les cartes pilotes moteurs et sur un esp32. Nous nous sommes donc rabattu sur le bus I²C, plus commun est disponible sur beaucoup de composants mais moins robuste et moins modulable que ce nous avoins initialement prevus avec le bus CAN.</p>
 </div>
 <div class="section" id="id1">
-<h1>???<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h1>
+<h1><span class="section-number">3.7.2. </span>???<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h1>
 </div>
 <div class="section" id="carte-electronique">
-<h1>Carte electronique<a class="headerlink" href="#carte-electronique" title="Lien permanent vers ce titre">¶</a></h1>
+<h1><span class="section-number">3.7.3. </span>Carte electronique<a class="headerlink" href="#carte-electronique" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Afin de simplifier les connections nous avons réaliser une carte avec un bornier de connecteur dupont, une ligne ground, une ligne SCL et un SDA. sur la meme carte nous avons rajouter deux PCF8574 et la possibilité de choisir leur adresses. Ces composants rajoutent 8 sorties digitales dont il est possible de controller l’etat des sorties a partir d’un bytes (8 bits, une par sortie).</p>
 </div>
 <div class="section" id="composants-sur-le-bus">
-<h1>Composants sur le bus<a class="headerlink" href="#composants-sur-le-bus" title="Lien permanent vers ce titre">¶</a></h1>
+<h1><span class="section-number">3.7.4. </span>Composants sur le bus<a class="headerlink" href="#composants-sur-le-bus" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Voici la liste des composants presents sur le bus I²C que nous avons mis en place :</p>
 <div class="section" id="pcf8574">
-<h2>PCF8574<a class="headerlink" href="#pcf8574" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">3.7.4.1. </span>PCF8574<a class="headerlink" href="#pcf8574" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Il est possible de modifier l’adresses des PCF8574 grace aux jumper a souder disponible a l’arriere de la carte. Ils sont actuellement aux adresses 0x20, 0x21</p>
 </div>
 <div class="section" id="cartes-moteurs">
-<h2>Cartes moteurs<a class="headerlink" href="#cartes-moteurs" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">3.7.4.2. </span>Cartes moteurs<a class="headerlink" href="#cartes-moteurs" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Les 2/3 cartes moteurs sont presentes sur le bus I²C aux adresses 0x51, 0x52 et 0x53.</p>
 </div>
 <div class="section" id="esp32">
-<h2>ESP32<a class="headerlink" href="#esp32" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">3.7.4.3. </span>ESP32<a class="headerlink" href="#esp32" title="Lien permanent vers ce titre">¶</a></h2>
 </div>
 <div class="section" id="imu">
-<h2>Imu<a class="headerlink" href="#imu" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">3.7.4.4. </span>Imu<a class="headerlink" href="#imu" title="Lien permanent vers ce titre">¶</a></h2>
 <p>l’IMU permetant de recuperer les informations des mouvements du robot est a l’adresse 0x??</p>
 </div>
 <div class="section" id="capteurs-temps-de-vol-vl53l0x">
-<h2>Capteurs temps de vol VL53L0X<a class="headerlink" href="#capteurs-temps-de-vol-vl53l0x" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">3.7.4.5. </span>Capteurs temps de vol VL53L0X<a class="headerlink" href="#capteurs-temps-de-vol-vl53l0x" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Les capteur tof (time of flight) present sur le robot permettent de detecter les PAMI, ils sont par defaut à l’adresse 0x29 mais il est possible de changer leur adresse pour en mettre plusieurs sur le meme bus. voici les etapes :</p>
 <p><strong>TODO</strong></p>
 </div>
 <div class="section" id="ecran-lcd-2004">
-<h2>Ecran LCD 2004<a class="headerlink" href="#ecran-lcd-2004" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">3.7.4.6. </span>Ecran LCD 2004<a class="headerlink" href="#ecran-lcd-2004" title="Lien permanent vers ce titre">¶</a></h2>
 <p>0x27</p>
 </div>
 </div>
 <div class="section" id="noeud-interface-i2c">
-<h1>Noeud interface I²C<a class="headerlink" href="#noeud-interface-i2c" title="Lien permanent vers ce titre">¶</a></h1>
+<h1><span class="section-number">3.7.5. </span>Noeud interface I²C<a class="headerlink" href="#noeud-interface-i2c" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Cette partie concerne la description du noeud qui s’occupe de la communication I²C entre la Pi et les differents composants.</p>
 <div class="section" id="logique">
-<h2>Logique<a class="headerlink" href="#logique" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">3.7.5.1. </span>Logique<a class="headerlink" href="#logique" title="Lien permanent vers ce titre">¶</a></h2>
 <p>expliquer la structure et la logique du pgrm</p>
 </div>
 </div>
@@ -645,7 +668,10 @@
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Tree-Bus_I2C.html" class="btn btn-neutral float-left" title="3.7. Bus I²C" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Electronique/Tree.html" class="btn btn-neutral float-right" title="4. Électronique" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

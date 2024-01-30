@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bus I²C &mdash; Documentation Documentation CRUBS 1.0.0</title>
+  <title>3.7. Bus I²C &mdash; Documentation Documentation CRUBS 1.0.0</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -18,7 +18,9 @@
         <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Recherche" href="../search.html" /> 
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="3.7.1. Bus I²C" href="Bus_I2C.html" />
+    <link rel="prev" title="3.6.1. Introduction" href="Lidar.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -41,7 +43,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Sommaire:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../Gestion/Tree.html">1. Gestion</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Gestion/Tree-CDFR.html">1.1. Coupe de France de Robotique</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Gestion/CDFR.html">1.1.1. Coupe de France de robotique</a></li>
@@ -207,7 +209,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Tree.html">3. Robots Coupe de France de Robotique 2024</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="Tree.html">3. Robots Coupe de France de Robotique 2024</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Tree-Introduction.html">3.1. Introduction</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="Introduction.html">3.1.1. Sujet</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Introduction.html#choix">3.1.2. Choix</a><ul>
@@ -297,6 +299,25 @@
 <li class="toctree-l3"><a class="reference internal" href="Lidar.html#ameliorations">3.6.2. Améliorations</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="Lidar.html#structure">3.6.2.1. Structure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Lidar.html#leds">3.6.2.2. LEDs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.7. Bus I²C</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Bus_I2C.html">3.7.1. Bus I²C</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Bus_I2C.html#id1">3.7.2. ???</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Bus_I2C.html#carte-electronique">3.7.3. Carte electronique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Bus_I2C.html#composants-sur-le-bus">3.7.4. Composants sur le bus</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Bus_I2C.html#pcf8574">3.7.4.1. PCF8574</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Bus_I2C.html#cartes-moteurs">3.7.4.2. Cartes moteurs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Bus_I2C.html#esp32">3.7.4.3. ESP32</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Bus_I2C.html#imu">3.7.4.4. Imu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Bus_I2C.html#capteurs-temps-de-vol-vl53l0x">3.7.4.5. Capteurs temps de vol VL53L0X</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Bus_I2C.html#ecran-lcd-2004">3.7.4.6. Ecran LCD 2004</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Bus_I2C.html#noeud-interface-i2c">3.7.5. Noeud interface I²C</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Bus_I2C.html#logique">3.7.5.1. Logique</a></li>
 </ul>
 </li>
 </ul>
@@ -584,7 +605,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Bus I²C</li>
+          <li class="breadcrumb-item"><a href="Tree.html"><span class="section-number">3. </span>Robots Coupe de France de Robotique 2024</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">3.7. </span>Bus I²C</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/Robot-2024/Tree-Bus_I2C.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -595,24 +617,24 @@
            <div itemprop="articleBody">
              
   <div class="section" id="bus-i2c">
-<h1>Bus I²C<a class="headerlink" href="#bus-i2c" title="Lien permanent vers ce titre">¶</a></h1>
+<h1><span class="section-number">3.7. </span>Bus I²C<a class="headerlink" href="#bus-i2c" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Sommaire:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Bus_I2C.html">Bus I²C</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Bus_I2C.html#id1">???</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Bus_I2C.html#carte-electronique">Carte electronique</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Bus_I2C.html#composants-sur-le-bus">Composants sur le bus</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Bus_I2C.html#pcf8574">PCF8574</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Bus_I2C.html#cartes-moteurs">Cartes moteurs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Bus_I2C.html#esp32">ESP32</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Bus_I2C.html#imu">Imu</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Bus_I2C.html#capteurs-temps-de-vol-vl53l0x">Capteurs temps de vol VL53L0X</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Bus_I2C.html#ecran-lcd-2004">Ecran LCD 2004</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Bus_I2C.html">3.7.1. Bus I²C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Bus_I2C.html#id1">3.7.2. ???</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Bus_I2C.html#carte-electronique">3.7.3. Carte electronique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Bus_I2C.html#composants-sur-le-bus">3.7.4. Composants sur le bus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Bus_I2C.html#pcf8574">3.7.4.1. PCF8574</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Bus_I2C.html#cartes-moteurs">3.7.4.2. Cartes moteurs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Bus_I2C.html#esp32">3.7.4.3. ESP32</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Bus_I2C.html#imu">3.7.4.4. Imu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Bus_I2C.html#capteurs-temps-de-vol-vl53l0x">3.7.4.5. Capteurs temps de vol VL53L0X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Bus_I2C.html#ecran-lcd-2004">3.7.4.6. Ecran LCD 2004</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Bus_I2C.html#noeud-interface-i2c">Noeud interface I²C</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Bus_I2C.html#logique">Logique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Bus_I2C.html#noeud-interface-i2c">3.7.5. Noeud interface I²C</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Bus_I2C.html#logique">3.7.5.1. Logique</a></li>
 </ul>
 </li>
 </ul>
@@ -660,7 +682,10 @@
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Lidar.html" class="btn btn-neutral float-left" title="3.6.1. Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Bus_I2C.html" class="btn btn-neutral float-right" title="3.7.1. Bus I²C" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

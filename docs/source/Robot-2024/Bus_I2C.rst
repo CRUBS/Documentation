@@ -52,6 +52,8 @@ Les capteur tof (time of flight) present sur le robot permettent de detecter les
 Ecran LCD 2004
 **************
 
+0x27
+
 
 
 

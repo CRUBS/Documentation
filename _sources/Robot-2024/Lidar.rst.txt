@@ -40,7 +40,7 @@ La référence des LEDs est un anneau de WS2812b, ce sont des LEDs "adressables"
 la couleur individuellement.
 
 .. image:: images/lidar/anneau_leds.png
-   :scale: 60 %
+   :scale: 30 %
    :align: center
 
 Ce genre de ruban LED peut normalement être commandé par une Raspberry, mais après beaucoup de temps passé dessus, nous n'avons pas réussi depuis Ubuntu 22.04 (alors que nous avons réussi sur Raspbian). Nous faisons donc le choix de piloter les LEDs depuis l'ESP32 et les informations du lidar seront transmises de la PI à l'esp32 sur le bus I²C.

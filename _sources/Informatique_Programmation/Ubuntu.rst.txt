@@ -52,6 +52,9 @@ et le mot de passe que vous voulez.
 	        "yourssid":
 	          password: "yourpassword"
 	          mode: ap
+	          networkmanager:
+	            passthrough:
+	              wifi-security.proto: "rsn" # WPA2 only
 
 Rappel : **ctrl + x** puis **y** pour quitter le fichier
 

@@ -5,3 +5,5 @@
 section {
     text-align: justify;
 }
+
+.toctree-wrapper {column_count: 2}

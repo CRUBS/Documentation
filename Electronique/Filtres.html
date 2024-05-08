@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>4.3.1. Filtres &mdash; Documentation Documentation CRUBS 1.0.0</title>
+  <title>4.3.1. Filtre passe-bas &mdash; Documentation Documentation CRUBS 1.0.0</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -16,6 +16,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
@@ -355,7 +356,12 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="Tree-Filtres.html">4.3. Filtres</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">4.3.1. Filtres</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">4.3.1. Filtre passe-bas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fonction-de-transfert-du-premier-ordre">4.3.1.1. Fonction de transfert du premier ordre</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filtre-rc-passif">4.3.1.2. Filtre RC passif</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filtre-actif">4.3.1.3. Filtre actif</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="Tree-Motorisation.html">4.4. Motorisation</a><ul>
@@ -611,7 +617,7 @@
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="Tree.html"><span class="section-number">4. </span>Électronique</a></li>
           <li class="breadcrumb-item"><a href="Tree-Filtres.html"><span class="section-number">4.3. </span>Filtres</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">4.3.1. </span>Filtres</li>
+      <li class="breadcrumb-item active"><span class="section-number">4.3.1. </span>Filtre passe-bas</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/Electronique/Filtres.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -621,8 +627,38 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="filtres">
-<h1><span class="section-number">4.3.1. </span>Filtres<a class="headerlink" href="#filtres" title="Lien permanent vers ce titre">¶</a></h1>
+  <div class="section" id="filtre-passe-bas">
+<h1><span class="section-number">4.3.1. </span>Filtre passe-bas<a class="headerlink" href="#filtre-passe-bas" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Un filtre passe-bas est un filtre qui laisse passer les basses fréquences et atténue les hautes fréquences.</p>
+<div class="section" id="fonction-de-transfert-du-premier-ordre">
+<h2><span class="section-number">4.3.1.1. </span>Fonction de transfert du premier ordre<a class="headerlink" href="#fonction-de-transfert-du-premier-ordre" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Un filtre du premier ordre est défini par la fonction de transfert suivante :
+<span class="math notranslate nohighlight">\(H(jw) = \frac{ signal\ de\ sortie}{signal\ d'entrée } = \frac{ K }{ 1 + j\ \frac { w }{ w_c } }\)</span></p>
+<p>Son module vaut : <span class="math notranslate nohighlight">\(\left| H(jw) \right| = \frac { K }{ \sqrt{ 1 + (\frac { w }{ w_c })^2 }}\)</span></p>
+<p>Son argument vaut : <span class="math notranslate nohighlight">\(\phi (w) = arg(H(jw)) = -arg(1 + j \frac{w}{w_c}) = -arctan(\frac{w}{w_c})\)</span></p>
+</div>
+<div class="section" id="filtre-rc-passif">
+<h2><span class="section-number">4.3.1.2. </span>Filtre RC passif<a class="headerlink" href="#filtre-rc-passif" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Un filtre RC est un circuit passif à base de résistance et de condensateur.</p>
+<a class="with-shadow reference internal image-reference" href="../_images/passe_bas_passif_composants.png"><img alt="../_images/passe_bas_passif_composants.png" class="with-shadow align-center" src="../_images/passe_bas_passif_composants.png" style="width: 150.0px; height: 178.0px;" /></a>
+<a class="with-shadow reference internal image-reference" href="../_images/passe_bas_passif_bode.png"><img alt="../_images/passe_bas_passif_bode.png" class="with-shadow align-center" src="../_images/passe_bas_passif_bode.png" style="width: 576.0px; height: 339.20000000000005px;" /></a>
+<p>Sa fonction de transfert vaut : <span class="math notranslate nohighlight">\(H(jw) = \frac{ signal\ de\ sortie}{signal\ d'entrée } = \frac{ K }{ 1 + jRCw }\)</span></p>
+<p>Sa fréquence de coupure est : <span class="math notranslate nohighlight">\(f_c = \frac{1}{2\pi RC}\ ou\ w_c = \frac{1}{RC}\)</span></p>
+<p>Son gain en décibels vaut : <span class="math notranslate nohighlight">\(G_dB(w) = 20 \log {K} - 10 \log ({1+(wRC)^2})\)</span></p>
+<p>Sa phase en radians vaut : <span class="math notranslate nohighlight">\(\phi (w) = -arctan(wRC)\)</span></p>
+<p>Si <span class="math notranslate nohighlight">\(w \ll w_c \ :\ G_dB \approx 0\ et\ \phi \approx 0\)</span> =&gt; filtre passant</p>
+<p>Si <span class="math notranslate nohighlight">\(w \gg w_c \ :\ G_dB \approx -20 \log {\frac {w}{w_c}}\ et\ \phi \approx -90\)</span> =&gt; signal filtré</p>
+<p>Si <span class="math notranslate nohighlight">\(w=w_c \ :\ G_dB = -3\ dB\)</span></p>
+</div>
+<div class="section" id="filtre-actif">
+<h2><span class="section-number">4.3.1.3. </span>Filtre actif<a class="headerlink" href="#filtre-actif" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Un filtre actif permet d’augmenter le gain dans la bande passante.</p>
+<a class="with-shadow reference internal image-reference" href="../_images/passe_bas_actif_composants.png"><img alt="../_images/passe_bas_actif_composants.png" class="with-shadow align-center" src="../_images/passe_bas_actif_composants.png" style="width: 360.0px; height: 201.6px;" /></a>
+<p>Sa fréquence de coupure est : <span class="math notranslate nohighlight">\(\frac {1}{2 \pi R_2 C}\ ou\ w_c = \frac{1}{R_2 C}\)</span></p>
+<p>Sa fonction de transfert est : <span class="math notranslate nohighlight">\(H(jw) = \frac {-R_2}{R_1} * \frac{1}{1+jR_2 Cw}\)</span></p>
+<p>Si <span class="math notranslate nohighlight">\(w \ll w_c \ :\ H(w) \approx \frac {-R_2}{R_1}\)</span></p>
+<p>Si <span class="math notranslate nohighlight">\(w \gg w_c \ :\ H(w) \approx 0\)</span></p>
+</div>
 </div>
 
 

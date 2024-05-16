@@ -57,8 +57,12 @@ Nous avons donc déposé un dossier à la FSDIE en fin 2022 et nous avons reçu 
 Nous avions présenté un projet nécessitant un budget de 3000 € et nous avions demandé à la FSDIE de financer 40%
 de ce projet soit 1200 €. Nous avions en tant que cofinancement l’entreprise Coriolis Composites.
 
-
 Le dossier présenté est ici sur le drive du club : https://drive.google.com/drive/u/0/folders/1kwcVIV-iy9JuzpI_yzn_k8ba-iMOJs_t
+
+2023-2024
+*********
+
+Le club a de nouveau monté un dossier de demande de financement à hauteur de 3000€ avec une demande de participation de 40% soit 1200€. Malheureusement la FSDIE ne fournit pas plus de 150€ en frais de déplacement pour un projet et seulement 1000€ nous ont été fournis.
 
 Coriolis Composites
 ===================
@@ -79,10 +83,6 @@ notre projet à un employer qui a ensuite présenté ce projet lors d’un conse
 nous accompagner et de financer 40% de notre projet à 3000€. Nous avions ainsi notre cofinancement
 pour le dossier de la FSDIE.
 
-2023-2024
-*********
-Reprise de contact avec notre interlocuteur de l’année précédente, Ivan HARDY. Ce dernier nous réoriente
-vers Matthieu DUPUIS cependant nous n'avons plus de nouvelle de l'entreprise depuis.
 
 IGUS
 ====
@@ -96,7 +96,25 @@ IGUS est une entreprise spécialisée dans la réalisation de pièce mécanique 
 
 2023-2024
 *********
+
 L’entreprise est venue durant l’été 2023 pour poser un *IGUS corner* au sein du club.
 Ce présentoir est gratuit et renouvelé par l’entreprise tous les ans. L’objectif est de travailler avec IGUS afin
 d’obtenir des échantillons permettant d’améliorer les robots. Cette année, nous avons pu obtenir des axes linéaire,
 des paliers d'axe et des billes porteuses.
+
+
+MCA Process
+===========
+
+.. image:: images/sub/mca.png
+	:scale: 20 %
+	:align: center
+
+L'entreprise MCA Process est un spécialiste de l'automatisation et de la robotique basé à Quimper.
+
+2023-2024
+*********
+
+L'entreprise à accepter de financer à hauteur de 40% le projet de participation à la coupe de robotique soit 1200€.
+
+

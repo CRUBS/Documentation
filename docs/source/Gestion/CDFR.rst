@@ -46,12 +46,10 @@ les tabourets pliables, la malle bleue, l'étagère noire démontable, la Voron 
 Maintenant, s'il peut être possible un jour d'utiliser le mini-bus et sa remorque du SUAPS de l'UBS, ça pourrait
 être pas mal :)
 
-Pour l'hébergement, un mobil-home 5~7 place au `camping le Pavillon <https://www.campinglepavillon.com>`_ est suffisant.
-(3 lits simples + 1 lit double + 1 canapé-lit). Attention, il n'y a pas de duvet. Louer le camping du mercredi (16h)
-au dimanche matin (10h) est une bonne chose pour avoir le temps de se reposer un minimum avant de faire la route
-du retour. En revanche, il est nécessaire de faire un trajet de 20 minutes pour rejoindre le camping et
-il faut vraiment s'y prendre en avance pour éviter des tarif exorbitants, la coupe ayant lieu
-sur le week-end de l'ascension.
+Pour l'hébergement plusieurs lieux ont été trouvé :
+
+* Un mobil-home 5~7 place au `camping le Pavillon <https://www.campinglepavillon.com>`_ est suffisant. (3 lits simples + 1 lit double + 1 canapé-lit). Attention, il n'y a pas de duvet. Louer le camping du mercredi (16h) au dimanche matin (10h) est une bonne chose pour avoir le temps de se reposer un minimum avant de faire la route du retour. En revanche, il est nécessaire de faire un trajet de 25 minutes très soporifique pour rejoindre le camping et il faut vraiment s'y prendre en avance pour éviter des tarif exorbitants, la coupe ayant lieu sur le week-end de l'ascension.
+* Un gîte 6 places à 15 minutes de la coupe :`Escale Clopinière 1 <http://escale.clopiniere.free.fr/>`_. Le gîte est suffisant 7~8 personnes avec un lit double et 4 lits simples. Le gîte est tout équipé avec une cuisine avec frigo, deux douches, deux salles de bain et deux toilettes. L'arrivée se fait le mercredi après-midi (16~17h) et le départ le samedi matin (10h) en laissant les clefs a l'intérieur. Bonne expérience.
 
 Historique
 ==========
@@ -68,9 +66,22 @@ Historique
 
 Objectifs : Fiabiliser les réalisations et aller plus loins
 
+Les 4e années encore présentes à Lorient se sont rendues à la compétition, les 5A ont fait le déplacement depuis Paris et la Belgique. Nous étions 7 et nous avons logé dans un gîte très sympa à 15 minutes en voiture de la coupe : `Escale Clopinière 1 <http://escale.clopiniere.free.fr/>`_. Le robot n'a malheureusement pas pu être homologué pour le premier match et les deux PAMI ont été ajoutés à partir du 3e match.
+
+X équipes présentes, X homologuées
+
+* match 2 : 21 pts
+* match 3 : 1 pts
+* match 4 : 38 pts
+* match 5 : 53 pts
+
+Classement : 47ème 
+
+
 .. image:: images/cdfr/table_2024.png
 	:scale: 35 %
 	:align: center
+
 
 Édition 2022-2023 : The cherry on the cake
 ******************************************
@@ -84,9 +95,7 @@ Objectifs : Fiabiliser les réalisations et aller plus loins
 
 Objectif : Participer aux 5 matchs
 
-Le club s'est rendu prêt à la compétition. Nous sommes partis à 9 en 4 voitures. Nous avons logé en mobil-home
-(7 places) dans le `camping Le Pavillon <https://www.campinglepavillon.com/>`_ à proximité de la Roche-sur-Yon.
-Nous sommes partis le mercredi matin et nous sommes repartis le dimanche matin.
+Le club s'est rendu prêt à la compétition. Nous sommes partis à 9 en 4 voitures. Nous avons logé en mobil-home (7 places) dans le `camping Le Pavillon <https://www.campinglepavillon.com/>`_ à proximité de la Roche-sur-Yon. Nous sommes partis le mercredi matin et nous sommes repartis le dimanche matin.
 
 92 équipes présentes, 81 homologuées
 
@@ -112,9 +121,7 @@ Classement : 43ème
 
 Objectif : Retourner à la coupe et s'homologuer
 
-Le club s'est enfin rendu de nouveau à la compétition après plusieurs années. Le robot n'était pas tout à fait préparé
-et a réussi de justesse s'homologuer et participer à un seul match. Les roulements de sommeil se sont moyennement
-bien organisés, mais tout le monde survécu et on en garde quand même un bon souvenir de ce retour à la compétition.
+Le club s'est enfin rendu de nouveau à la compétition après plusieurs années. Le robot n'était pas tout à fait préparé et a réussi de justesse s'homologuer et participer à un seul match. Les roulements de sommeil se sont moyennement bien organisés, mais tout le monde survécu et on en garde quand même un bon souvenir de ce retour à la compétition.
 
 ? Équipe présentes, 66 homologués
 
@@ -138,8 +145,7 @@ Le club avait très peu de membres cette année (quelques 5A) et n'a pas pu se r
 
 À l'issue des 2 années sur le sujet, des prototypes de base différentielle et de préhenseurs ont vu le jour.
 
-L'organisation de la coupe de France a constaté à la suite de la compétition que beaucoup d'équipes on sévèrement
-pâtis du Covid-19, perte des connaissances des club, fermetures (pas de relève), etc.
+L'organisation de la coupe de France a constaté à la suite de la compétition que beaucoup d'équipes on sévèrement pâtis du Covid-19, perte des connaissances des club, fermetures (pas de relève), etc.
 
 .. image:: images/cdfr/table_2021.png
 	:scale: 35 %

@@ -28,6 +28,7 @@ Bienvenue sur la documentation du CRUBS!
    :caption: Sommaire:
 
    Gestion/Tree
+   Robot-2022/Tree
    Robot-2023/Tree
    Robot-2024/Tree
    Electronique/Tree

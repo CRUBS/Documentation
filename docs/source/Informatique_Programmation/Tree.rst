@@ -6,7 +6,6 @@ Programmation et Informatique
    :caption: Sommaire:
 
    Tree-Doc_sphinx
-   Tree-ROS2
    Tree-Raspberry_Pi
    Tree-Raspbian
    Tree-Ubuntu

@@ -18,7 +18,7 @@ Bienvenue sur la documentation du CRUBS!
    * Coupe de Robotique 2023 : :doc:`/Robot-2023/Tree`
    * Coupe de Robotique 2024 : :doc:`/Robot-2024/Tree`
    * Les informations relatives à la rédaction de cette documentation permettant sa poursuite sont disponibles ici : :doc:`/Informatique_Programmation/Tree-Doc_sphinx`
-   * Installation ROS2 humble : :doc:`/Informatique_Programmation/Tree-ROS2`
+   * Installation ROS2 humble : :doc:`/ROS2/Tree`
 
 
 
@@ -31,6 +31,7 @@ Bienvenue sur la documentation du CRUBS!
    Robot-2022/Tree
    Robot-2023/Tree
    Robot-2024/Tree
+   ROS2/Tree
    Electronique/Tree
    Informatique_Programmation/Tree
    Voron-0.1/Tree

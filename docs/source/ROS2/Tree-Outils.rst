@@ -1,5 +1,5 @@
-ROS2
-====
+Caisse à outils
+===============
 
 .. image:: images/ros2/ros2.png
    :scale: 50 %
@@ -10,7 +10,7 @@ ROS2
    :maxdepth: 2
    :caption: Sommaire:
 
-   ROS2
+   Outils
 
 +-------------------------+-------------------------+
 | Rédacteur               | - LOUVEAU Nicolas       |
@@ -19,7 +19,7 @@ ROS2
 | Année d'écriture        | - 2022-2023             |
 |                         | - 2023-2024             |
 +-------------------------+-------------------------+
-| Dernière modification   | - 08/01/2024            |
+| Dernière modification   | - 26/05/2024            |
 +-------------------------+-------------------------+
 | Statut d'écriture       | - en cours              |
 +-------------------------+-------------------------+

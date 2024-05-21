@@ -68,14 +68,14 @@ Objectifs : Fiabiliser les réalisations et aller plus loins
 
 Les 4e années encore présentes à Lorient se sont rendues à la compétition, les 5A ont fait le déplacement depuis Paris et la Belgique. Nous étions 7 et nous avons logé dans un gîte très sympa à 15 minutes en voiture de la coupe : `Escale Clopinière 1 <http://escale.clopiniere.free.fr/>`_. Le robot n'a malheureusement pas pu être homologué pour le premier match et les deux PAMI ont été ajoutés à partir du 3e match.
 
-X équipes présentes, X homologuées
+82 équipes présentes, 78 homologuées
 
 * match 2 : 21 pts
 * match 3 : 1 pts
 * match 4 : 38 pts
 * match 5 : 53 pts
 
-Classement : 47ème 
+Classement : 49ème 
 
 
 .. image:: images/cdfr/table_2024.png

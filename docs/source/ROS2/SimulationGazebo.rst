@@ -49,6 +49,8 @@ jaune à côté du **4**. Choisir le vinyle et l'assigner. Le vinyle est désorm
 
 Il n'y a plus qu'à exporter au format DAE dans le dossier *meshes*.
 
+Cette vidéo explique les étapes pour appliquer une image : https://www.youtube.com/watch?v=Rx-aOHCfTOw
+
 Mise en place
 *************
 
